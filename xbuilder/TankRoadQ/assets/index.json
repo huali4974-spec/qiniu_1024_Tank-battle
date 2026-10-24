@@ -1,0 +1,55 @@
+{
+  "backdrops": [
+    {
+      "name": "road",
+      "path": "road.svg",
+      "x": 240,
+      "y": 180,
+      "bitmapResolution": 1,
+      "imageWidth": 480,
+      "imageHeight": 360
+    }
+  ],
+  "backdropIndex": 0,
+  "map": { "width": 480, "height": 360, "mode": "fillRatio" },
+  "run": { "width": 480, "height": 360 },
+  "physics": false,
+  "autoSetCollisionLayer": true,
+  "maxFPS": 60,
+  "zorder": [
+    "RoadA",
+    "RoadB",
+    "Player",
+    "Enemy",
+    "PlayerShot",
+    "EnemyShot",
+    "Burst",
+    "Result",
+    {
+      "type": "monitor",
+      "name": "Score",
+      "mode": 1,
+      "style": "default",
+      "label": "SCORE",
+      "target": "",
+      "val": "score",
+      "x": -228,
+      "y": 168,
+      "size": 1,
+      "visible": true
+    },
+    {
+      "type": "monitor",
+      "name": "Lives",
+      "mode": 1,
+      "style": "default",
+      "label": "LIVES",
+      "target": "",
+      "val": "lives",
+      "x": 120,
+      "y": 168,
+      "size": 1,
+      "visible": true
+    }
+  ]
+}

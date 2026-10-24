@@ -1,0 +1,31 @@
+{
+  "x": 0,
+  "y": 0,
+  "size": 1,
+  "heading": 0,
+  "visible": false,
+  "rotationStyle": "none",
+  "physicsMode": "no",
+  "collisionShapeType": "none",
+  "costumeIndex": 0,
+  "costumes": [
+    {
+      "name": "win",
+      "path": "win.svg",
+      "x": 180,
+      "y": 70,
+      "bitmapResolution": 1,
+      "imageWidth": 360,
+      "imageHeight": 140
+    },
+    {
+      "name": "lose",
+      "path": "lose.svg",
+      "x": 180,
+      "y": 70,
+      "bitmapResolution": 1,
+      "imageWidth": 360,
+      "imageHeight": 140
+    }
+  ]
+}

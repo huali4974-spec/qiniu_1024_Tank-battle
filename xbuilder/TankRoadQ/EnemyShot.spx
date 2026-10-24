@@ -1,0 +1,20 @@
+onStart => {
+	hide
+}
+
+onCloned data => {
+	setHeading Down
+	show
+	for running {
+		step 5
+		if touching(Edge) {
+			destroy
+		}
+		wait 0.02
+	}
+	destroy
+}
+
+onTouchStart "Player", sprite => {
+	destroy
+}

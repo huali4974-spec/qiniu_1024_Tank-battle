@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="140" viewBox="0 0 360 140">
+  <rect x="5" y="7" width="350" height="126" rx="8" fill="#603e41" opacity=".45"/>
+  <rect x="2" y="2" width="356" height="130" rx="8" fill="#fff2e0" stroke="#b85153" stroke-width="4"/>
+  <path d="M28 28h304" stroke="#f2a870" stroke-width="4" stroke-linecap="round"/>
+  <text x="180" y="82" fill="#a4434a" font-family="Arial,sans-serif" font-size="47" font-weight="900" text-anchor="middle">GAME OVER</text>
+  <text x="180" y="111" fill="#7a5a57" font-family="Arial,sans-serif" font-size="17" font-weight="700" text-anchor="middle">TRY THE ROAD AGAIN</text>
+</svg>

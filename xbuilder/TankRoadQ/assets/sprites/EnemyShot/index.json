@@ -1,0 +1,24 @@
+{
+  "x": 0,
+  "y": 198,
+  "size": 1,
+  "heading": 180,
+  "visible": false,
+  "rotationStyle": "normal",
+  "physicsMode": "no",
+  "collisionShapeType": "rect",
+  "collisionShapeParams": [10, 18],
+  "costumeIndex": 0,
+  "costumes": [
+    {
+      "name": "shot",
+      "path": "shot.svg",
+      "x": 8,
+      "y": 13,
+      "faceRight": 0,
+      "bitmapResolution": 1,
+      "imageWidth": 16,
+      "imageHeight": 26
+    }
+  ]
+}

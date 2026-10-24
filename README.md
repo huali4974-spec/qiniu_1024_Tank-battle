@@ -4,6 +4,8 @@
 
 在线游玩：https://battle-city.js.org
 
+v1.0：适配 XBuilder，并更改画风为 Q 版动画。可导入的项目和使用说明见 [xbuilder/README.md](xbuilder/README.md)。
+
 - 0.4.0 的设计与实现：[resources/introduction.md](resources/introduction.md)
 - 0.3 版本的开发介绍：[知乎专栏](https://zhuanlan.zhihu.com/p/35551654)
 

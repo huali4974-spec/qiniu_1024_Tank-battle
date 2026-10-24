@@ -1,0 +1,19 @@
+onStart => {
+	hide
+}
+
+onCloned data => {
+	show
+	for running {
+		step 8
+		if touching(Edge) {
+			destroy
+		}
+		wait 0.02
+	}
+	destroy
+}
+
+onTouchStart "Enemy", sprite => {
+	destroy
+}

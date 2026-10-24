@@ -1,0 +1,13 @@
+onStart => {
+	hide
+}
+
+onMsg "win", => {
+	setCostume "win"
+	show
+}
+
+onMsg "lose", => {
+	setCostume "lose"
+	show
+}

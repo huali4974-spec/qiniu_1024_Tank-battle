@@ -1,0 +1,11 @@
+var (
+	score = 0
+	lives = 3
+	running = true
+)
+
+onStart => {
+	score = 0
+	lives = 3
+	running = true
+}

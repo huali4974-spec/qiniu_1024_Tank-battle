@@ -1,0 +1,78 @@
+var (
+	lastShot = -1.0
+	invulnerable = false
+)
+
+func takeHit() {
+	if invulnerable || !running {
+		return
+	}
+	lives--
+	Burst.setXYpos xpos, ypos
+	Burst.clone
+	if lives <= 0 {
+		running = false
+		hide
+		broadcast "lose"
+		return
+	}
+	invulnerable = true
+	setXYpos 0, -112
+	wait 1
+	invulnerable = false
+}
+
+onStart => {
+	setXYpos 0, -112
+	setHeading Up
+	show
+	for running {
+		if keyPressed(KeyLeft) || keyPressed(KeyA) {
+			setHeading Left
+			changeXpos -3
+		}
+		if keyPressed(KeyRight) || keyPressed(KeyD) {
+			setHeading Right
+			changeXpos 3
+		}
+		if keyPressed(KeyUp) || keyPressed(KeyW) {
+			setHeading Up
+			changeYpos 3
+		}
+		if keyPressed(KeyDown) || keyPressed(KeyS) {
+			setHeading Down
+			changeYpos -3
+		}
+		if xpos < -104 {
+			setXpos -104
+		}
+		if xpos > 104 {
+			setXpos 104
+		}
+		if ypos < -134 {
+			setYpos -134
+		}
+		if ypos > 134 {
+			setYpos 134
+		}
+		wait 0.02
+	}
+}
+
+onKey KeySpace, => {
+	if !running || timer-lastShot < 0.22 {
+		return
+	}
+	lastShot = timer
+	PlayerShot.setXYpos xpos, ypos
+	PlayerShot.setHeading heading
+	PlayerShot.clone
+}
+
+onTouchStart "Enemy", sprite => {
+	takeHit()
+}
+
+onTouchStart "EnemyShot", sprite => {
+	takeHit()
+}

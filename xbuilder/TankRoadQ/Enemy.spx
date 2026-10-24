@@ -1,0 +1,53 @@
+var (
+	lane = 0
+	ticks = 0
+)
+
+onStart => {
+	hide
+	for running {
+		if lane == 0 {
+			setXYpos -78, 198
+		} else if lane == 1 {
+			setXYpos 0, 198
+		} else {
+			setXYpos 78, 198
+		}
+		clone
+		lane = (lane + 1) % 3
+		wait 1.5
+	}
+}
+
+onCloned data => {
+	ticks = 0
+	setHeading Down
+	show
+	for running {
+		changeYpos -1.7
+		ticks++
+		if ticks == 55 || ticks == 135 {
+			EnemyShot.setXYpos xpos, ypos-24
+			EnemyShot.clone
+		}
+		if ypos < -205 {
+			destroy
+		}
+		wait 0.02
+	}
+	destroy
+}
+
+onTouchStart "PlayerShot", sprite => {
+	if !running {
+		return
+	}
+	score += 100
+	Burst.setXYpos xpos, ypos
+	Burst.clone
+	if score >= 1000 {
+		running = false
+		broadcast "win"
+	}
+	destroy
+}

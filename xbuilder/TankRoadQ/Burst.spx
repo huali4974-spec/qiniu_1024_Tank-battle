@@ -1,0 +1,9 @@
+onStart => {
+	hide
+}
+
+onCloned data => {
+	show
+	wait 0.18
+	destroy
+}

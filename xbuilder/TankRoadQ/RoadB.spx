@@ -1,0 +1,9 @@
+onStart => {
+	for running {
+		changeYpos -2
+		if ypos <= -360 {
+			changeYpos 720
+		}
+		wait 0.02
+	}
+}
