@@ -30,6 +30,7 @@ func takeHit() {
 	}
 	invulnerable = true
 	playerUpgrade = 0
+	playerUpgradeUntil = 0.0
 	setXYpos -48, -456
 	setHeading Up
 	setCostume "up"
@@ -50,6 +51,9 @@ onStart => {
 		wait 0.02
 	}
 	for running {
+		if playerUpgrade > 0 && timer >= playerUpgradeUntil {
+			playerUpgrade = 0
+		}
 		if !gameReady {
 			wait 0.02
 			continue
@@ -89,6 +93,9 @@ onStart => {
 }
 
 onKey KeySpace, => {
+	if playerUpgrade > 0 && timer >= playerUpgradeUntil {
+		playerUpgrade = 0
+	}
 	if !gameReady || !running || timer-lastShot < 0.22-0.03*float64(playerUpgrade) {
 		return
 	}

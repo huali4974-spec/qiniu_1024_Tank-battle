@@ -44,6 +44,23 @@ const reservedCells = stages.map(({ cells }) => new Set([
   ...reserveRoute(cells, [6, 12], true),
   ...reserveRoute(cells, [4, 12], false),
 ]))
+const reachableCells = stages.map(({ cells }) => {
+  const queue = [[4, 12]]
+  const visited = new Set(['4,12'])
+  for (let index = 0; index < queue.length; index++) {
+    const [col, row] = queue[index]
+    for (const [dx, dy] of [[0, -1], [-1, 0], [1, 0], [0, 1]]) {
+      const x = col + dx
+      const y = row + dy
+      const key = `${x},${y}`
+      if (x < 0 || x >= 13 || y < 0 || y >= 13 || visited.has(key)) continue
+      if ('TRE'.includes(cells[y][x][0])) continue
+      visited.add(key)
+      queue.push([x, y])
+    }
+  }
+  return visited
+})
 
 const save = (path, content) => {
   mkdirSync(dirname(path), { recursive: true })
@@ -176,6 +193,28 @@ onMsg "buildBaseWall", => {
   setXYpos 24, -432
   clone
 }` : ''
+  const restoreBaseWall = type === 'B' ? `
+
+onMsg "restoreBaseWall", => {
+  if visible {
+    return
+  }
+  setCostume "8"
+  setXYpos -24, -432
+  clone
+  setCostume "c"
+  setXYpos 0, -432
+  clone
+  setCostume "4"
+  setXYpos 24, -432
+  clone
+  setCostume "a"
+  setXYpos -24, -456
+  clone
+  setCostume "5"
+  setXYpos 24, -456
+  clone
+}` : ''
   save(join(project, `${name}.spx`), `${type === 'T' ? 'var choice = 0\n\n' : ''}func loadSelected(targetStage int, offsetY float64, section int) {
 ${branches}
 }
@@ -189,14 +228,22 @@ onMsg "loadStage", => {
 
 onCloned data => {
   show
-}${baseWall}${buildBaseWall}`)
+}${baseWall}${buildBaseWall}${restoreBaseWall}`)
 }
 
-const spawnOrder = [0, 3, 1, 4, 2, 5]
+const spawnOrder = [0, 4, 8, 11, 1, 5, 9, 10, 2, 6, 7, 3]
 const columnOrder = [0, 6, 12, 3, 9, 1, 11, 5, 7, 2, 10, 4, 8]
 const spawnBranches = stages.map(({ number, cells }, index) => {
-  const slots = spawnOrder.flatMap((row) => columnOrder.flatMap((col) =>
-    cells[row][col] === 'X' ? [placement(col, row)] : [])).slice(0, 24)
+  const byRow = spawnOrder.map((row) => columnOrder.filter((col) =>
+    cells[row][col] === 'X' && reachableCells[index].has(`${col},${row}`))
+    .map((col) => placement(col, row)))
+  const slots = []
+  for (let pass = 0; pass < 13; pass++) {
+    for (const candidates of byRow) {
+      if (candidates[pass]) slots.push(candidates[pass])
+    }
+  }
+  slots.length = Math.min(slots.length, 48)
   if (slots.length < 8) throw new Error(`Stage ${number} has too few enemy spawn points`)
   return `${index === 0 ? '            if' : ' else if'} spawnMap == ${number} {
                 spawnChoice = int(rand(0, ${slots.length - 1}))

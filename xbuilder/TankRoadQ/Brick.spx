@@ -4783,3 +4783,24 @@ onMsg "clearBaseWall", => {
     deleteThisClone
   }
 }
+
+onMsg "restoreBaseWall", => {
+  if visible {
+    return
+  }
+  setCostume "8"
+  setXYpos -24, -432
+  clone
+  setCostume "c"
+  setXYpos 0, -432
+  clone
+  setCostume "4"
+  setXYpos 24, -432
+  clone
+  setCostume "a"
+  setXYpos -24, -456
+  clone
+  setCostume "5"
+  setXYpos 24, -456
+  clone
+}

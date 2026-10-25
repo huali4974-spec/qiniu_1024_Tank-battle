@@ -53,6 +53,8 @@ for (let stage = 1; stage <= 35; stage++) {
   assert(cells.every((row) => row.length === 13))
   assert.equal(cells[12][4], 'X')
   assert(cells[12][6].startsWith('E'))
+  assert.deepEqual([cells[11][5], cells[11][6], cells[11][7], cells[12][5], cells[12][7]].map((cell) => cell.toLowerCase()),
+    ['b8', 'bc', 'b4', 'ba', 'b5'], `Stage ${stage} has a different base wall`)
   maps.push(cells)
   const reserved = new Set([
     ...routeThrough(cells, [6, 12], [6, 0], true),
@@ -97,10 +99,29 @@ for (let stage = 1; stage <= 35; stage++) {
 
   const spawns = [...stageBlock(enemy, stage, 'spawnMap').matchAll(/spawnX = (-?\d+)\s+spawnY = (-?\d+)\+spawnOffset/g)]
     .map(([, x, y]) => [Number(x), Number(y)])
-  assert(spawns.length >= 8 && spawns.length <= 24, `Stage ${stage} has invalid enemy spawn count`)
+  assert(spawns.length >= 8 && spawns.length <= 48, `Stage ${stage} has invalid enemy spawn count`)
   assert.equal(new Set(spawns.map(([x, y]) => `${x},${y}`)).size, spawns.length)
+  assert(spawns.some(([, y]) => y >= 72), `Stage ${stage} has no upper spawn point`)
+  assert(spawns.some(([, y]) => y <= -48), `Stage ${stage} has no lower spawn point`)
+  const reachable = new Set(['4,12'])
+  const queue = [[4, 12]]
+  for (let index = 0; index < queue.length; index++) {
+    const [col, row] = queue[index]
+    for (const [dx, dy] of [[0, -1], [-1, 0], [1, 0], [0, 1]]) {
+      const nextCol = col + dx
+      const nextRow = row + dy
+      const key = `${nextCol},${nextRow}`
+      if (nextCol < 0 || nextCol >= 13 || nextRow < 0 || nextRow >= 13 || reachable.has(key)) continue
+      if ('TRE'.includes(cells[nextRow][nextCol][0])) continue
+      reachable.add(key)
+      queue.push([nextCol, nextRow])
+    }
+  }
   for (const [x, y] of spawns) {
-    assert.equal(cells[6 - y / 24]?.[x / 24 + 6], 'X', `Stage ${stage} enemy spawn is blocked`)
+    const col = x / 24 + 6
+    const row = 6 - y / 24
+    assert.equal(cells[row]?.[col], 'X', `Stage ${stage} enemy spawn is blocked`)
+    assert(reachable.has(`${col},${row}`), `Stage ${stage} enemy spawn cannot reach the base`)
   }
 }
 
@@ -149,7 +170,16 @@ assert.match(enemy, /enemyHP = 3/)
 assert.match(enemy, /enemyHP = 5/)
 assert.match(enemy, /roundNumber >= 3 && spawned >= 8 && spawned % 6 == 2/)
 assert.match(enemy, /roundNumber >= 2 && spawned >= 4 && spawned % 3 == 1/)
-assert.match(main, /broadcastAndWait "resetPlayer"/)
+assert.match(main, /spawned >= 30 && defeated >= 30 && activeEnemies <= 0/)
+assert.match(enemy, /onCloned data => \{\s+spawned\+\+\s+activeEnemies\+\+/)
+const powerUp = readFileSync(join(project, 'PowerUp.spx'), 'utf8')
+const timedEffects = [...powerUp.matchAll(/(playerUpgradeUntil|enemyFreezeUntil|playerShieldUntil|baseFortifiedUntil) = timer \+ (\d+)/g)]
+assert.equal(timedEffects.length, 4)
+assert(timedEffects.every(([, , seconds]) => Number(seconds) === 60))
 assert.match(source.Brick, /onMsg "clearBaseWall"/)
+assert.match(source.Brick, /onMsg "restoreBaseWall"/)
 assert.match(source.Steel, /onMsg "buildBaseWall"/)
+for (const [mask, x, y] of [['8', -24, -432], ['c', 0, -432], ['4', 24, -432], ['a', -24, -456], ['5', 24, -456]]) {
+  assert.match(source.Brick, new RegExp(`setCostume "${mask}"\\s+setXYpos ${x}, ${y}\\s+clone`))
+}
 console.log(`Verified 35 source maps, ${compositeCount} connected composites and spawn points; maximum base terrain ${maxComposite}`)

@@ -8,6 +8,8 @@ var (
 	roundNumber = 1
 	enemyFreezeUntil = 0.0
 	playerShieldUntil = 0.0
+	playerUpgradeUntil = 0.0
+	baseFortifiedUntil = 0.0
 	playerUpgrade = 0
 	baseFortified = false
 	stageIndex = 1
@@ -28,6 +30,8 @@ onStart => {
 	roundNumber = 1
 	enemyFreezeUntil = 0.0
 	playerShieldUntil = 0.0
+	playerUpgradeUntil = 0.0
+	baseFortifiedUntil = 0.0
 	playerUpgrade = 0
 	baseFortified = false
 	gameReady = false
@@ -951,18 +955,23 @@ onStart => {
 	broadcastAndWait "loadStage"
 	wait 0.02
 	gameReady = true
-}
-
-onMsg "roundCleared", => {
-	if !running || !gameReady || defeated < 30 {
-		return
+	for running {
+		if gameReady && spawned >= 30 && defeated >= 30 && activeEnemies <= 0 {
+			gameReady = false
+			broadcastAndWait "roundCleared"
+			roundNumber++
+			spawned = 0
+			defeated = 0
+			activeEnemies = 0
+			broadcastAndWait "resetPlayer"
+			wait 1
+			gameReady = true
+		}
+		if baseFortified && timer >= baseFortifiedUntil {
+			broadcastAndWait "clearBaseWall"
+			broadcastAndWait "restoreBaseWall"
+			baseFortified = false
+		}
+		wait 0.05
 	}
-	gameReady = false
-	roundNumber++
-	spawned = 0
-	defeated = 0
-	activeEnemies = 0
-	broadcastAndWait "resetPlayer"
-	wait 1
-	gameReady = true
 }

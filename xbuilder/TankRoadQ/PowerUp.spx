@@ -18,17 +18,19 @@ onTouchStart "Player", sprite => {
 		if playerUpgrade < 3 {
 			playerUpgrade++
 		}
+		playerUpgradeUntil = timer + 60
 	} else if costumeName == "grenade" {
 		broadcast "grenade"
 	} else if costumeName == "timer" {
-		enemyFreezeUntil = timer + 8
+		enemyFreezeUntil = timer + 60
 	} else if costumeName == "helmet" {
-		playerShieldUntil = timer + 10
+		playerShieldUntil = timer + 60
 	} else if costumeName == "shovel" {
 		if Player.xpos > -45 && Player.xpos < 45 && Player.ypos >= -466 && Player.ypos <= -420 {
 			Player.setXYpos -48, -456
 		}
 		baseFortified = true
+		baseFortifiedUntil = timer + 60
 		broadcastAndWait "clearBaseWall"
 		broadcastAndWait "buildBaseWall"
 	}
