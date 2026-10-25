@@ -17,6 +17,8 @@
   "autoSetCollisionLayer": true,
   "maxFPS": 60,
   "zorder": [
+    "Snow",
+    "River",
     "Brick",
     "Steel",
     "Eagle",
@@ -24,6 +26,7 @@
     "Enemy",
     "PlayerShot",
     "EnemyShot",
+    "Forest",
     "Burst",
     "Result",
     {
@@ -35,6 +38,19 @@
       "target": "",
       "val": "score",
       "x": -220,
+      "y": 168,
+      "size": 1,
+      "visible": true
+    },
+    {
+      "type": "monitor",
+      "name": "Stage",
+      "mode": 1,
+      "style": "default",
+      "label": "STAGE",
+      "target": "",
+      "val": "stageIndex",
+      "x": -48,
       "y": 168,
       "size": 1,
       "visible": true

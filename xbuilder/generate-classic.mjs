@@ -6,11 +6,15 @@ const here = dirname(fileURLToPath(import.meta.url))
 const project = join(here, 'TankRoadQ')
 const assets = join(project, 'assets')
 const sprites = join(assets, 'sprites')
-const stage = JSON.parse(readFileSync(resolve(here, '../src/stages/stage-1.json'), 'utf8').replace(/^\uFEFF/, ''))
-const cells = stage.map.map((line) => line.trim().split(/\s+/))
-if (cells.length !== 13 || cells.some((row) => row.length !== 13)) {
-  throw new Error('The classic stage must have 13 rows and 13 columns')
-}
+const stages = Array.from({ length: 35 }, (_, index) => {
+  const number = index + 1
+  const stage = JSON.parse(readFileSync(resolve(here, `../src/stages/stage-${number}.json`), 'utf8').replace(/^\uFEFF/, ''))
+  const cells = stage.map.map((line) => line.trim().split(/\s+/))
+  if (cells.length !== 13 || cells.some((row) => row.length !== 13) || cells[12][6][0] !== 'E' || cells[12][4] !== 'X') {
+    throw new Error(`Stage ${number} has an invalid layout or starting position`)
+  }
+  return { number, cells }
+})
 
 const save = (path, content) => {
   mkdirSync(dirname(path), { recursive: true })
@@ -49,64 +53,95 @@ const steelSvg = (mask) => {
   return svg(body)
 }
 
-for (const [type, filename, make] of [['B', 'Brick', brickSvg], ['T', 'Steel', steelSvg]]) {
-  const tiles = []
-  const masks = new Set()
-  cells.forEach((row, rowIndex) => row.forEach((cell, colIndex) => {
-    if (!cell.startsWith(type)) return
-    const mask = cell.slice(1).toLowerCase()
-    masks.add(mask)
-    tiles.push({ mask, x: placement(colIndex, rowIndex)[0], y: placement(colIndex, rowIndex)[1] })
-  }))
-  const costumes = [...masks].sort().map((mask) => {
-    save(join(sprites, filename, `${mask}.svg`), make(mask))
-    return { name: mask, path: `${mask}.svg`, x: 12, y: 12, bitmapResolution: 1, imageWidth: 24, imageHeight: 24 }
+const terrainSvg = {
+  River: svg(`<rect width="24" height="24" fill="#3d9fb6"/><path d="M-2 7Q4 3 10 7T26 7M-2 17Q4 13 10 17T26 17" fill="none" stroke="#a8e7e8" stroke-width="2" opacity=".85"/><circle cx="18" cy="12" r="1.3" fill="#d3f5e9"/>`),
+  Snow: svg(`<rect width="24" height="24" fill="#d8ebea"/><path d="M5 6l3 3m9-4l-3 4M4 17l4-2m11 2l-4-2M12 4v3m0 10v3" stroke="#97c1c7" stroke-width="1.3" stroke-linecap="round"/><circle cx="12" cy="12" r="2.4" fill="#f4fbf8"/>`),
+  Forest: svg(`<circle cx="12" cy="14" r="11" fill="#316f50" opacity=".87"/><circle cx="7" cy="9" r="5" fill="#5ba86c"/><circle cx="16" cy="8" r="5" fill="#67b477"/><circle cx="12" cy="16" r="6" fill="#438d5b"/><path d="M6 8l2-2m8 3l2-2m-7 10l2-2" stroke="#b6dca3" stroke-width="1.2" stroke-linecap="round"/>`),
+}
+
+const terrainTypes = [
+  { type: 'B', name: 'Brick', art: brickSvg },
+  { type: 'T', name: 'Steel', art: steelSvg },
+  { type: 'R', name: 'River' },
+  { type: 'S', name: 'Snow' },
+  { type: 'F', name: 'Forest' },
+]
+
+for (const { type, name, art } of terrainTypes) {
+  const layouts = stages.map(({ cells }) => cells.flatMap((row, rowIndex) => row.flatMap((cell, colIndex) => {
+    if (cell[0] !== type) return []
+    const [x, y] = placement(colIndex, rowIndex)
+    return [{ mask: cell.slice(1).toLowerCase(), x, y }]
+  })))
+  const masks = [...new Set(layouts.flatMap((tiles) => tiles.map((tile) => tile.mask)))].sort()
+  const costumes = masks.map((mask) => {
+    const filename = art ? `${mask}.svg` : `${name.toLowerCase()}.svg`
+    save(join(sprites, name, filename), art ? art(mask) : terrainSvg[name])
+    return { name: mask || name.toLowerCase(), path: filename, x: 12, y: 12, bitmapResolution: 1, imageWidth: 24, imageHeight: 24 }
   })
-  const index = {
+  save(join(sprites, name, 'index.json'), JSON.stringify({
     x: 0, y: 0, size: 1, heading: 0, visible: false, rotationStyle: 'none',
     physicsMode: 'no', collisionShapeType: 'rect', collisionShapeParams: [22, 22],
     costumeIndex: 0, costumes,
+  }, null, 2))
+
+  const randomSteel = (cells) => {
+    const positions = []
+    for (let row = 2; row <= 10; row++) {
+      for (let col = 1; col <= 11; col++) {
+        if (cells[row][col] === 'X') positions.push(placement(col, row))
+      }
+    }
+    const count = Math.min(3, Math.floor(positions.length / 4))
+    return Array.from({ length: count }, (_, band) => {
+      const from = Math.floor(band * positions.length / count)
+      const to = Math.floor((band + 1) * positions.length / count)
+      return positions.slice(from, to)
+    }).map((band) => `    choice = int(rand(0, ${band.length - 1}))
+${band.map(([x, y], i) => `${i === 0 ? '    if' : ' else if'} choice == ${i} {
+      setXYpos ${x}, ${y}
+    }`).join('')}
+    setCostume "f"
+    clone`).join('\n')
   }
-  save(join(sprites, filename, 'index.json'), JSON.stringify(index, null, 2))
-  let source = `onStart => {
+
+  const branches = layouts.map((tiles, index) => {
+    const placementCode = tiles.map(({ mask, x, y }) => `${art ? `    setCostume "${mask}"\n` : ''}    setXYpos ${x}, ${y}
+    clone`).join('\n')
+    const extra = type === 'T' ? randomSteel(stages[index].cells) : ''
+    return `${index === 0 ? '  if' : ' else if'} stageIndex == ${index + 1} {
+${placementCode}${extra ? `\n${extra}` : ''}
+  }`
+  }).join('')
+  save(join(project, `${name}.spx`), `${type === 'T' ? 'var choice = 0\n\n' : ''}onMsg "loadStage", => {
   hide
-${tiles.map(({ mask, x, y }) => `  setCostume "${mask}"
-  setXYpos ${x}, ${y}
-  clone`).join('\n')}
+${branches}
 }
 
 onCloned data => {
   show
-}
-`
-  if (type === 'T') {
-    const bands = [
-      [[2, 2], [4, 2], [8, 2], [10, 2]],
-      [[4, 5], [6, 5], [8, 5]],
-      [[2, 9], [4, 9], [8, 9], [10, 9]],
-    ]
-    const positions = bands.map((band) => band.map(([col, row]) => {
-      if (cells[row][col] !== 'X') throw new Error(`Stone slot ${col},${row} is not empty`)
-      return placement(col, row)
-    }))
-    source = `var choice = 0
-
-onStart => {
-  hide
-  setCostume "f"
-${positions.map((band) => `  choice = int(rand(0, ${band.length}))
-${band.map(([x, y], i) => `${i === 0 ? '  if' : ' else if'} choice == ${i} {
-    setXYpos ${x}, ${y}
-  }`).join('')}
-  clone`).join('\n')}
+}`)
 }
 
-onCloned data => {
-  show
-}`
-  }
-  save(join(project, `${filename}.spx`), source)
-}
+const spawnOrder = [0, 3, 1, 4, 2, 5]
+const columnOrder = [0, 6, 12, 3, 9, 1, 11, 5, 7, 2, 10, 4, 8]
+const spawnBranches = stages.map(({ number, cells }, index) => {
+  const slots = spawnOrder.flatMap((row) => columnOrder.flatMap((col) =>
+    cells[row][col] === 'X' ? [placement(col, row)] : [])).slice(0, 24)
+  if (slots.length < 8) throw new Error(`Stage ${number} has too few enemy spawn points`)
+  return `${index === 0 ? '            if' : ' else if'} stageIndex == ${number} {
+                spawnChoice = int(rand(0, ${slots.length - 1}))
+${slots.map(([x, y], choice) => `${choice === 0 ? '                if' : ' else if'} spawnChoice == ${choice} {
+                    spawnX = ${x}
+                    spawnY = ${y}
+                }`).join('')}
+            }`
+}).join('')
+const enemyPath = join(project, 'Enemy.spx')
+const enemySource = readFileSync(enemyPath, 'utf8')
+const spawnBlock = /[ \t]*\/\/ GENERATED SPAWN START[\s\S]*?\/\/ GENERATED SPAWN END/
+if (!spawnBlock.test(enemySource)) throw new Error('Enemy spawn block markers are missing')
+save(enemyPath, enemySource.replace(spawnBlock, `\t\t\t// GENERATED SPAWN START\n${spawnBranches}\n\t\t\t// GENERATED SPAWN END`))
 
 const arena = `<svg xmlns="http://www.w3.org/2000/svg" width="480" height="360" viewBox="0 0 480 360">
   <defs>

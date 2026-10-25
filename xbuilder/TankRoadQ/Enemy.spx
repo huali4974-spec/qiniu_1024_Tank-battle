@@ -2,7 +2,7 @@ var (
 	ticks = 0
 	beforeX = 0.0
 	beforeY = 0.0
-	spawnBand = 0
+	spawnChoice = 0
 	spawnX = 0.0
 	spawnY = 0.0
 	turnChoice = 0
@@ -11,24 +11,2599 @@ var (
 
 onStart => {
 	hide
+	for !gameReady {
+		wait 0.02
+	}
 	for running {
 		if spawned < 20 && activeEnemies < 4 {
-			spawnBand = int(rand(0, 3))
-			if spawnBand == 3 {
-				spawnX = float64((int(rand(0, 2)) - 1) * 48)
-				spawnY = 0
-			} else {
-				spawnX = float64(int(rand(0, 6)) * 48 - 144)
-				if spawnBand == 0 {
-					spawnY = 144
-				} else if spawnBand == 1 {
-					spawnY = 120
-				} else {
-					spawnY = 48
-				}
-			}
+			// GENERATED SPAWN START
+            if stageIndex == 1 {
+                spawnChoice = int(rand(0, 23))
+                if spawnChoice == 0 {
+                    spawnX = -144
+                    spawnY = 144
+                } else if spawnChoice == 1 {
+                    spawnX = 0
+                    spawnY = 144
+                } else if spawnChoice == 2 {
+                    spawnX = 144
+                    spawnY = 144
+                } else if spawnChoice == 3 {
+                    spawnX = -72
+                    spawnY = 144
+                } else if spawnChoice == 4 {
+                    spawnX = 72
+                    spawnY = 144
+                } else if spawnChoice == 5 {
+                    spawnX = -120
+                    spawnY = 144
+                } else if spawnChoice == 6 {
+                    spawnX = 120
+                    spawnY = 144
+                } else if spawnChoice == 7 {
+                    spawnX = -24
+                    spawnY = 144
+                } else if spawnChoice == 8 {
+                    spawnX = 24
+                    spawnY = 144
+                } else if spawnChoice == 9 {
+                    spawnX = -96
+                    spawnY = 144
+                } else if spawnChoice == 10 {
+                    spawnX = 96
+                    spawnY = 144
+                } else if spawnChoice == 11 {
+                    spawnX = -48
+                    spawnY = 144
+                } else if spawnChoice == 12 {
+                    spawnX = 48
+                    spawnY = 144
+                } else if spawnChoice == 13 {
+                    spawnX = -144
+                    spawnY = 72
+                } else if spawnChoice == 14 {
+                    spawnX = 144
+                    spawnY = 72
+                } else if spawnChoice == 15 {
+                    spawnX = -96
+                    spawnY = 72
+                } else if spawnChoice == 16 {
+                    spawnX = 96
+                    spawnY = 72
+                } else if spawnChoice == 17 {
+                    spawnX = -48
+                    spawnY = 72
+                } else if spawnChoice == 18 {
+                    spawnX = 48
+                    spawnY = 72
+                } else if spawnChoice == 19 {
+                    spawnX = -144
+                    spawnY = 120
+                } else if spawnChoice == 20 {
+                    spawnX = 0
+                    spawnY = 120
+                } else if spawnChoice == 21 {
+                    spawnX = 144
+                    spawnY = 120
+                } else if spawnChoice == 22 {
+                    spawnX = -96
+                    spawnY = 120
+                } else if spawnChoice == 23 {
+                    spawnX = 96
+                    spawnY = 120
+                }
+            } else if stageIndex == 2 {
+                spawnChoice = int(rand(0, 23))
+                if spawnChoice == 0 {
+                    spawnX = -144
+                    spawnY = 144
+                } else if spawnChoice == 1 {
+                    spawnX = 0
+                    spawnY = 144
+                } else if spawnChoice == 2 {
+                    spawnX = 144
+                    spawnY = 144
+                } else if spawnChoice == 3 {
+                    spawnX = 72
+                    spawnY = 144
+                } else if spawnChoice == 4 {
+                    spawnX = -120
+                    spawnY = 144
+                } else if spawnChoice == 5 {
+                    spawnX = 120
+                    spawnY = 144
+                } else if spawnChoice == 6 {
+                    spawnX = -24
+                    spawnY = 144
+                } else if spawnChoice == 7 {
+                    spawnX = -96
+                    spawnY = 144
+                } else if spawnChoice == 8 {
+                    spawnX = 96
+                    spawnY = 144
+                } else if spawnChoice == 9 {
+                    spawnX = -48
+                    spawnY = 144
+                } else if spawnChoice == 10 {
+                    spawnX = 48
+                    spawnY = 144
+                } else if spawnChoice == 11 {
+                    spawnX = -144
+                    spawnY = 72
+                } else if spawnChoice == 12 {
+                    spawnX = 0
+                    spawnY = 72
+                } else if spawnChoice == 13 {
+                    spawnX = 144
+                    spawnY = 72
+                } else if spawnChoice == 14 {
+                    spawnX = -120
+                    spawnY = 72
+                } else if spawnChoice == 15 {
+                    spawnX = 120
+                    spawnY = 72
+                } else if spawnChoice == 16 {
+                    spawnX = -24
+                    spawnY = 72
+                } else if spawnChoice == 17 {
+                    spawnX = 24
+                    spawnY = 72
+                } else if spawnChoice == 18 {
+                    spawnX = -96
+                    spawnY = 72
+                } else if spawnChoice == 19 {
+                    spawnX = 96
+                    spawnY = 72
+                } else if spawnChoice == 20 {
+                    spawnX = -48
+                    spawnY = 72
+                } else if spawnChoice == 21 {
+                    spawnX = 48
+                    spawnY = 72
+                } else if spawnChoice == 22 {
+                    spawnX = -144
+                    spawnY = 120
+                } else if spawnChoice == 23 {
+                    spawnX = 0
+                    spawnY = 120
+                }
+            } else if stageIndex == 3 {
+                spawnChoice = int(rand(0, 23))
+                if spawnChoice == 0 {
+                    spawnX = -144
+                    spawnY = 144
+                } else if spawnChoice == 1 {
+                    spawnX = 0
+                    spawnY = 144
+                } else if spawnChoice == 2 {
+                    spawnX = 144
+                    spawnY = 144
+                } else if spawnChoice == 3 {
+                    spawnX = -72
+                    spawnY = 144
+                } else if spawnChoice == 4 {
+                    spawnX = 72
+                    spawnY = 144
+                } else if spawnChoice == 5 {
+                    spawnX = -120
+                    spawnY = 144
+                } else if spawnChoice == 6 {
+                    spawnX = 120
+                    spawnY = 144
+                } else if spawnChoice == 7 {
+                    spawnX = -24
+                    spawnY = 144
+                } else if spawnChoice == 8 {
+                    spawnX = 24
+                    spawnY = 144
+                } else if spawnChoice == 9 {
+                    spawnX = -96
+                    spawnY = 144
+                } else if spawnChoice == 10 {
+                    spawnX = 96
+                    spawnY = 144
+                } else if spawnChoice == 11 {
+                    spawnX = 0
+                    spawnY = 72
+                } else if spawnChoice == 12 {
+                    spawnX = -24
+                    spawnY = 72
+                } else if spawnChoice == 13 {
+                    spawnX = -48
+                    spawnY = 72
+                } else if spawnChoice == 14 {
+                    spawnX = 48
+                    spawnY = 72
+                } else if spawnChoice == 15 {
+                    spawnX = -144
+                    spawnY = 120
+                } else if spawnChoice == 16 {
+                    spawnX = 0
+                    spawnY = 120
+                } else if spawnChoice == 17 {
+                    spawnX = 72
+                    spawnY = 120
+                } else if spawnChoice == 18 {
+                    spawnX = -24
+                    spawnY = 120
+                } else if spawnChoice == 19 {
+                    spawnX = 24
+                    spawnY = 120
+                } else if spawnChoice == 20 {
+                    spawnX = 48
+                    spawnY = 120
+                } else if spawnChoice == 21 {
+                    spawnX = 144
+                    spawnY = 48
+                } else if spawnChoice == 22 {
+                    spawnX = 96
+                    spawnY = 48
+                } else if spawnChoice == 23 {
+                    spawnX = 48
+                    spawnY = 48
+                }
+            } else if stageIndex == 4 {
+                spawnChoice = int(rand(0, 23))
+                if spawnChoice == 0 {
+                    spawnX = -144
+                    spawnY = 144
+                } else if spawnChoice == 1 {
+                    spawnX = 0
+                    spawnY = 144
+                } else if spawnChoice == 2 {
+                    spawnX = 144
+                    spawnY = 144
+                } else if spawnChoice == 3 {
+                    spawnX = -72
+                    spawnY = 144
+                } else if spawnChoice == 4 {
+                    spawnX = 72
+                    spawnY = 144
+                } else if spawnChoice == 5 {
+                    spawnX = -24
+                    spawnY = 144
+                } else if spawnChoice == 6 {
+                    spawnX = 24
+                    spawnY = 144
+                } else if spawnChoice == 7 {
+                    spawnX = 96
+                    spawnY = 144
+                } else if spawnChoice == 8 {
+                    spawnX = -48
+                    spawnY = 144
+                } else if spawnChoice == 9 {
+                    spawnX = 48
+                    spawnY = 144
+                } else if spawnChoice == 10 {
+                    spawnX = 144
+                    spawnY = 72
+                } else if spawnChoice == 11 {
+                    spawnX = -120
+                    spawnY = 72
+                } else if spawnChoice == 12 {
+                    spawnX = -96
+                    spawnY = 72
+                } else if spawnChoice == 13 {
+                    spawnX = -72
+                    spawnY = 120
+                } else if spawnChoice == 14 {
+                    spawnX = 72
+                    spawnY = 120
+                } else if spawnChoice == 15 {
+                    spawnX = 120
+                    spawnY = 120
+                } else if spawnChoice == 16 {
+                    spawnX = -96
+                    spawnY = 120
+                } else if spawnChoice == 17 {
+                    spawnX = 96
+                    spawnY = 120
+                } else if spawnChoice == 18 {
+                    spawnX = -144
+                    spawnY = 48
+                } else if spawnChoice == 19 {
+                    spawnX = 0
+                    spawnY = 48
+                } else if spawnChoice == 20 {
+                    spawnX = 144
+                    spawnY = 48
+                } else if spawnChoice == 21 {
+                    spawnX = -120
+                    spawnY = 48
+                } else if spawnChoice == 22 {
+                    spawnX = -24
+                    spawnY = 48
+                } else if spawnChoice == 23 {
+                    spawnX = 96
+                    spawnY = 48
+                }
+            } else if stageIndex == 5 {
+                spawnChoice = int(rand(0, 23))
+                if spawnChoice == 0 {
+                    spawnX = -144
+                    spawnY = 144
+                } else if spawnChoice == 1 {
+                    spawnX = 0
+                    spawnY = 144
+                } else if spawnChoice == 2 {
+                    spawnX = 144
+                    spawnY = 144
+                } else if spawnChoice == 3 {
+                    spawnX = -72
+                    spawnY = 144
+                } else if spawnChoice == 4 {
+                    spawnX = 72
+                    spawnY = 144
+                } else if spawnChoice == 5 {
+                    spawnX = -120
+                    spawnY = 144
+                } else if spawnChoice == 6 {
+                    spawnX = 120
+                    spawnY = 144
+                } else if spawnChoice == 7 {
+                    spawnX = 24
+                    spawnY = 144
+                } else if spawnChoice == 8 {
+                    spawnX = -96
+                    spawnY = 144
+                } else if spawnChoice == 9 {
+                    spawnX = 96
+                    spawnY = 144
+                } else if spawnChoice == 10 {
+                    spawnX = 48
+                    spawnY = 144
+                } else if spawnChoice == 11 {
+                    spawnX = -120
+                    spawnY = 72
+                } else if spawnChoice == 12 {
+                    spawnX = 120
+                    spawnY = 72
+                } else if spawnChoice == 13 {
+                    spawnX = -24
+                    spawnY = 72
+                } else if spawnChoice == 14 {
+                    spawnX = 48
+                    spawnY = 72
+                } else if spawnChoice == 15 {
+                    spawnX = 0
+                    spawnY = 120
+                } else if spawnChoice == 16 {
+                    spawnX = 144
+                    spawnY = 120
+                } else if spawnChoice == 17 {
+                    spawnX = -72
+                    spawnY = 120
+                } else if spawnChoice == 18 {
+                    spawnX = -120
+                    spawnY = 120
+                } else if spawnChoice == 19 {
+                    spawnX = 120
+                    spawnY = 120
+                } else if spawnChoice == 20 {
+                    spawnX = -24
+                    spawnY = 120
+                } else if spawnChoice == 21 {
+                    spawnX = 24
+                    spawnY = 120
+                } else if spawnChoice == 22 {
+                    spawnX = 0
+                    spawnY = 48
+                } else if spawnChoice == 23 {
+                    spawnX = 144
+                    spawnY = 48
+                }
+            } else if stageIndex == 6 {
+                spawnChoice = int(rand(0, 23))
+                if spawnChoice == 0 {
+                    spawnX = -144
+                    spawnY = 144
+                } else if spawnChoice == 1 {
+                    spawnX = 0
+                    spawnY = 144
+                } else if spawnChoice == 2 {
+                    spawnX = 144
+                    spawnY = 144
+                } else if spawnChoice == 3 {
+                    spawnX = -72
+                    spawnY = 144
+                } else if spawnChoice == 4 {
+                    spawnX = -120
+                    spawnY = 144
+                } else if spawnChoice == 5 {
+                    spawnX = 120
+                    spawnY = 144
+                } else if spawnChoice == 6 {
+                    spawnX = -96
+                    spawnY = 144
+                } else if spawnChoice == 7 {
+                    spawnX = 96
+                    spawnY = 144
+                } else if spawnChoice == 8 {
+                    spawnX = -48
+                    spawnY = 144
+                } else if spawnChoice == 9 {
+                    spawnX = -144
+                    spawnY = 72
+                } else if spawnChoice == 10 {
+                    spawnX = -72
+                    spawnY = 72
+                } else if spawnChoice == 11 {
+                    spawnX = -24
+                    spawnY = 72
+                } else if spawnChoice == 12 {
+                    spawnX = 24
+                    spawnY = 72
+                } else if spawnChoice == 13 {
+                    spawnX = -96
+                    spawnY = 72
+                } else if spawnChoice == 14 {
+                    spawnX = 96
+                    spawnY = 72
+                } else if spawnChoice == 15 {
+                    spawnX = -144
+                    spawnY = 120
+                } else if spawnChoice == 16 {
+                    spawnX = 0
+                    spawnY = 120
+                } else if spawnChoice == 17 {
+                    spawnX = -72
+                    spawnY = 120
+                } else if spawnChoice == 18 {
+                    spawnX = -24
+                    spawnY = 120
+                } else if spawnChoice == 19 {
+                    spawnX = 24
+                    spawnY = 120
+                } else if spawnChoice == 20 {
+                    spawnX = -144
+                    spawnY = 48
+                } else if spawnChoice == 21 {
+                    spawnX = -120
+                    spawnY = 48
+                } else if spawnChoice == 22 {
+                    spawnX = -24
+                    spawnY = 48
+                } else if spawnChoice == 23 {
+                    spawnX = 24
+                    spawnY = 48
+                }
+            } else if stageIndex == 7 {
+                spawnChoice = int(rand(0, 23))
+                if spawnChoice == 0 {
+                    spawnX = -144
+                    spawnY = 144
+                } else if spawnChoice == 1 {
+                    spawnX = 0
+                    spawnY = 144
+                } else if spawnChoice == 2 {
+                    spawnX = 144
+                    spawnY = 144
+                } else if spawnChoice == 3 {
+                    spawnX = -72
+                    spawnY = 144
+                } else if spawnChoice == 4 {
+                    spawnX = 72
+                    spawnY = 144
+                } else if spawnChoice == 5 {
+                    spawnX = -120
+                    spawnY = 144
+                } else if spawnChoice == 6 {
+                    spawnX = 120
+                    spawnY = 144
+                } else if spawnChoice == 7 {
+                    spawnX = -24
+                    spawnY = 144
+                } else if spawnChoice == 8 {
+                    spawnX = -96
+                    spawnY = 144
+                } else if spawnChoice == 9 {
+                    spawnX = 96
+                    spawnY = 144
+                } else if spawnChoice == 10 {
+                    spawnX = -48
+                    spawnY = 144
+                } else if spawnChoice == 11 {
+                    spawnX = -144
+                    spawnY = 72
+                } else if spawnChoice == 12 {
+                    spawnX = 144
+                    spawnY = 72
+                } else if spawnChoice == 13 {
+                    spawnX = -72
+                    spawnY = 72
+                } else if spawnChoice == 14 {
+                    spawnX = 72
+                    spawnY = 72
+                } else if spawnChoice == 15 {
+                    spawnX = 120
+                    spawnY = 72
+                } else if spawnChoice == 16 {
+                    spawnX = 24
+                    spawnY = 72
+                } else if spawnChoice == 17 {
+                    spawnX = -96
+                    spawnY = 72
+                } else if spawnChoice == 18 {
+                    spawnX = -48
+                    spawnY = 72
+                } else if spawnChoice == 19 {
+                    spawnX = 48
+                    spawnY = 72
+                } else if spawnChoice == 20 {
+                    spawnX = -144
+                    spawnY = 120
+                } else if spawnChoice == 21 {
+                    spawnX = 0
+                    spawnY = 120
+                } else if spawnChoice == 22 {
+                    spawnX = 144
+                    spawnY = 120
+                } else if spawnChoice == 23 {
+                    spawnX = 72
+                    spawnY = 120
+                }
+            } else if stageIndex == 8 {
+                spawnChoice = int(rand(0, 23))
+                if spawnChoice == 0 {
+                    spawnX = -144
+                    spawnY = 144
+                } else if spawnChoice == 1 {
+                    spawnX = 0
+                    spawnY = 144
+                } else if spawnChoice == 2 {
+                    spawnX = 144
+                    spawnY = 144
+                } else if spawnChoice == 3 {
+                    spawnX = -72
+                    spawnY = 144
+                } else if spawnChoice == 4 {
+                    spawnX = -120
+                    spawnY = 144
+                } else if spawnChoice == 5 {
+                    spawnX = 120
+                    spawnY = 144
+                } else if spawnChoice == 6 {
+                    spawnX = 96
+                    spawnY = 144
+                } else if spawnChoice == 7 {
+                    spawnX = -48
+                    spawnY = 144
+                } else if spawnChoice == 8 {
+                    spawnX = 48
+                    spawnY = 144
+                } else if spawnChoice == 9 {
+                    spawnX = 120
+                    spawnY = 72
+                } else if spawnChoice == 10 {
+                    spawnX = 0
+                    spawnY = 120
+                } else if spawnChoice == 11 {
+                    spawnX = 144
+                    spawnY = 120
+                } else if spawnChoice == 12 {
+                    spawnX = 120
+                    spawnY = 120
+                } else if spawnChoice == 13 {
+                    spawnX = -48
+                    spawnY = 120
+                } else if spawnChoice == 14 {
+                    spawnX = 48
+                    spawnY = 120
+                } else if spawnChoice == 15 {
+                    spawnX = -144
+                    spawnY = 48
+                } else if spawnChoice == 16 {
+                    spawnX = 144
+                    spawnY = 48
+                } else if spawnChoice == 17 {
+                    spawnX = -72
+                    spawnY = 48
+                } else if spawnChoice == 18 {
+                    spawnX = 72
+                    spawnY = 48
+                } else if spawnChoice == 19 {
+                    spawnX = 120
+                    spawnY = 48
+                } else if spawnChoice == 20 {
+                    spawnX = -24
+                    spawnY = 48
+                } else if spawnChoice == 21 {
+                    spawnX = -96
+                    spawnY = 48
+                } else if spawnChoice == 22 {
+                    spawnX = 96
+                    spawnY = 48
+                } else if spawnChoice == 23 {
+                    spawnX = -48
+                    spawnY = 48
+                }
+            } else if stageIndex == 9 {
+                spawnChoice = int(rand(0, 23))
+                if spawnChoice == 0 {
+                    spawnX = -144
+                    spawnY = 144
+                } else if spawnChoice == 1 {
+                    spawnX = 0
+                    spawnY = 144
+                } else if spawnChoice == 2 {
+                    spawnX = 144
+                    spawnY = 144
+                } else if spawnChoice == 3 {
+                    spawnX = -120
+                    spawnY = 144
+                } else if spawnChoice == 4 {
+                    spawnX = 120
+                    spawnY = 144
+                } else if spawnChoice == 5 {
+                    spawnX = -24
+                    spawnY = 144
+                } else if spawnChoice == 6 {
+                    spawnX = 24
+                    spawnY = 144
+                } else if spawnChoice == 7 {
+                    spawnX = -96
+                    spawnY = 144
+                } else if spawnChoice == 8 {
+                    spawnX = -48
+                    spawnY = 144
+                } else if spawnChoice == 9 {
+                    spawnX = 48
+                    spawnY = 144
+                } else if spawnChoice == 10 {
+                    spawnX = -144
+                    spawnY = 72
+                } else if spawnChoice == 11 {
+                    spawnX = 144
+                    spawnY = 72
+                } else if spawnChoice == 12 {
+                    spawnX = 72
+                    spawnY = 72
+                } else if spawnChoice == 13 {
+                    spawnX = -120
+                    spawnY = 72
+                } else if spawnChoice == 14 {
+                    spawnX = 120
+                    spawnY = 72
+                } else if spawnChoice == 15 {
+                    spawnX = -24
+                    spawnY = 72
+                } else if spawnChoice == 16 {
+                    spawnX = 96
+                    spawnY = 72
+                } else if spawnChoice == 17 {
+                    spawnX = 48
+                    spawnY = 72
+                } else if spawnChoice == 18 {
+                    spawnX = -72
+                    spawnY = 120
+                } else if spawnChoice == 19 {
+                    spawnX = -120
+                    spawnY = 120
+                } else if spawnChoice == 20 {
+                    spawnX = 120
+                    spawnY = 120
+                } else if spawnChoice == 21 {
+                    spawnX = -24
+                    spawnY = 120
+                } else if spawnChoice == 22 {
+                    spawnX = -96
+                    spawnY = 120
+                } else if spawnChoice == 23 {
+                    spawnX = -48
+                    spawnY = 120
+                }
+            } else if stageIndex == 10 {
+                spawnChoice = int(rand(0, 23))
+                if spawnChoice == 0 {
+                    spawnX = -144
+                    spawnY = 144
+                } else if spawnChoice == 1 {
+                    spawnX = 0
+                    spawnY = 144
+                } else if spawnChoice == 2 {
+                    spawnX = 144
+                    spawnY = 144
+                } else if spawnChoice == 3 {
+                    spawnX = -72
+                    spawnY = 144
+                } else if spawnChoice == 4 {
+                    spawnX = 72
+                    spawnY = 144
+                } else if spawnChoice == 5 {
+                    spawnX = -120
+                    spawnY = 144
+                } else if spawnChoice == 6 {
+                    spawnX = 120
+                    spawnY = 144
+                } else if spawnChoice == 7 {
+                    spawnX = -24
+                    spawnY = 144
+                } else if spawnChoice == 8 {
+                    spawnX = 24
+                    spawnY = 144
+                } else if spawnChoice == 9 {
+                    spawnX = -96
+                    spawnY = 144
+                } else if spawnChoice == 10 {
+                    spawnX = 96
+                    spawnY = 144
+                } else if spawnChoice == 11 {
+                    spawnX = -48
+                    spawnY = 144
+                } else if spawnChoice == 12 {
+                    spawnX = 48
+                    spawnY = 144
+                } else if spawnChoice == 13 {
+                    spawnX = -72
+                    spawnY = 72
+                } else if spawnChoice == 14 {
+                    spawnX = -120
+                    spawnY = 72
+                } else if spawnChoice == 15 {
+                    spawnX = 120
+                    spawnY = 72
+                } else if spawnChoice == 16 {
+                    spawnX = -96
+                    spawnY = 72
+                } else if spawnChoice == 17 {
+                    spawnX = 96
+                    spawnY = 72
+                } else if spawnChoice == 18 {
+                    spawnX = -144
+                    spawnY = 120
+                } else if spawnChoice == 19 {
+                    spawnX = 0
+                    spawnY = 120
+                } else if spawnChoice == 20 {
+                    spawnX = 72
+                    spawnY = 120
+                } else if spawnChoice == 21 {
+                    spawnX = -24
+                    spawnY = 120
+                } else if spawnChoice == 22 {
+                    spawnX = 24
+                    spawnY = 120
+                } else if spawnChoice == 23 {
+                    spawnX = -48
+                    spawnY = 120
+                }
+            } else if stageIndex == 11 {
+                spawnChoice = int(rand(0, 23))
+                if spawnChoice == 0 {
+                    spawnX = -144
+                    spawnY = 144
+                } else if spawnChoice == 1 {
+                    spawnX = 0
+                    spawnY = 144
+                } else if spawnChoice == 2 {
+                    spawnX = 144
+                    spawnY = 144
+                } else if spawnChoice == 3 {
+                    spawnX = -72
+                    spawnY = 144
+                } else if spawnChoice == 4 {
+                    spawnX = -120
+                    spawnY = 144
+                } else if spawnChoice == 5 {
+                    spawnX = 120
+                    spawnY = 144
+                } else if spawnChoice == 6 {
+                    spawnX = -96
+                    spawnY = 144
+                } else if spawnChoice == 7 {
+                    spawnX = -48
+                    spawnY = 144
+                } else if spawnChoice == 8 {
+                    spawnX = 48
+                    spawnY = 144
+                } else if spawnChoice == 9 {
+                    spawnX = -144
+                    spawnY = 72
+                } else if spawnChoice == 10 {
+                    spawnX = 0
+                    spawnY = 72
+                } else if spawnChoice == 11 {
+                    spawnX = -72
+                    spawnY = 72
+                } else if spawnChoice == 12 {
+                    spawnX = -24
+                    spawnY = 72
+                } else if spawnChoice == 13 {
+                    spawnX = -96
+                    spawnY = 72
+                } else if spawnChoice == 14 {
+                    spawnX = -48
+                    spawnY = 72
+                } else if spawnChoice == 15 {
+                    spawnX = 48
+                    spawnY = 72
+                } else if spawnChoice == 16 {
+                    spawnX = -144
+                    spawnY = 120
+                } else if spawnChoice == 17 {
+                    spawnX = 0
+                    spawnY = 120
+                } else if spawnChoice == 18 {
+                    spawnX = 144
+                    spawnY = 120
+                } else if spawnChoice == 19 {
+                    spawnX = 72
+                    spawnY = 120
+                } else if spawnChoice == 20 {
+                    spawnX = 120
+                    spawnY = 120
+                } else if spawnChoice == 21 {
+                    spawnX = 96
+                    spawnY = 120
+                } else if spawnChoice == 22 {
+                    spawnX = 48
+                    spawnY = 120
+                } else if spawnChoice == 23 {
+                    spawnX = -144
+                    spawnY = 48
+                }
+            } else if stageIndex == 12 {
+                spawnChoice = int(rand(0, 23))
+                if spawnChoice == 0 {
+                    spawnX = -144
+                    spawnY = 144
+                } else if spawnChoice == 1 {
+                    spawnX = 0
+                    spawnY = 144
+                } else if spawnChoice == 2 {
+                    spawnX = 144
+                    spawnY = 144
+                } else if spawnChoice == 3 {
+                    spawnX = -72
+                    spawnY = 144
+                } else if spawnChoice == 4 {
+                    spawnX = -120
+                    spawnY = 144
+                } else if spawnChoice == 5 {
+                    spawnX = 120
+                    spawnY = 144
+                } else if spawnChoice == 6 {
+                    spawnX = -24
+                    spawnY = 144
+                } else if spawnChoice == 7 {
+                    spawnX = -96
+                    spawnY = 144
+                } else if spawnChoice == 8 {
+                    spawnX = 96
+                    spawnY = 144
+                } else if spawnChoice == 9 {
+                    spawnX = -48
+                    spawnY = 144
+                } else if spawnChoice == 10 {
+                    spawnX = -144
+                    spawnY = 72
+                } else if spawnChoice == 11 {
+                    spawnX = 0
+                    spawnY = 72
+                } else if spawnChoice == 12 {
+                    spawnX = 72
+                    spawnY = 72
+                } else if spawnChoice == 13 {
+                    spawnX = 96
+                    spawnY = 72
+                } else if spawnChoice == 14 {
+                    spawnX = -144
+                    spawnY = 120
+                } else if spawnChoice == 15 {
+                    spawnX = 144
+                    spawnY = 120
+                } else if spawnChoice == 16 {
+                    spawnX = 120
+                    spawnY = 120
+                } else if spawnChoice == 17 {
+                    spawnX = -24
+                    spawnY = 120
+                } else if spawnChoice == 18 {
+                    spawnX = 24
+                    spawnY = 120
+                } else if spawnChoice == 19 {
+                    spawnX = 96
+                    spawnY = 120
+                } else if spawnChoice == 20 {
+                    spawnX = 48
+                    spawnY = 120
+                } else if spawnChoice == 21 {
+                    spawnX = -144
+                    spawnY = 48
+                } else if spawnChoice == 22 {
+                    spawnX = 0
+                    spawnY = 48
+                } else if spawnChoice == 23 {
+                    spawnX = 144
+                    spawnY = 48
+                }
+            } else if stageIndex == 13 {
+                spawnChoice = int(rand(0, 23))
+                if spawnChoice == 0 {
+                    spawnX = -144
+                    spawnY = 144
+                } else if spawnChoice == 1 {
+                    spawnX = 0
+                    spawnY = 144
+                } else if spawnChoice == 2 {
+                    spawnX = 144
+                    spawnY = 144
+                } else if spawnChoice == 3 {
+                    spawnX = -72
+                    spawnY = 144
+                } else if spawnChoice == 4 {
+                    spawnX = 72
+                    spawnY = 144
+                } else if spawnChoice == 5 {
+                    spawnX = -120
+                    spawnY = 144
+                } else if spawnChoice == 6 {
+                    spawnX = 120
+                    spawnY = 144
+                } else if spawnChoice == 7 {
+                    spawnX = -24
+                    spawnY = 144
+                } else if spawnChoice == 8 {
+                    spawnX = 24
+                    spawnY = 144
+                } else if spawnChoice == 9 {
+                    spawnX = -96
+                    spawnY = 144
+                } else if spawnChoice == 10 {
+                    spawnX = 96
+                    spawnY = 144
+                } else if spawnChoice == 11 {
+                    spawnX = -144
+                    spawnY = 72
+                } else if spawnChoice == 12 {
+                    spawnX = 0
+                    spawnY = 72
+                } else if spawnChoice == 13 {
+                    spawnX = -24
+                    spawnY = 72
+                } else if spawnChoice == 14 {
+                    spawnX = 24
+                    spawnY = 72
+                } else if spawnChoice == 15 {
+                    spawnX = -96
+                    spawnY = 72
+                } else if spawnChoice == 16 {
+                    spawnX = 96
+                    spawnY = 72
+                } else if spawnChoice == 17 {
+                    spawnX = -144
+                    spawnY = 120
+                } else if spawnChoice == 18 {
+                    spawnX = 0
+                    spawnY = 120
+                } else if spawnChoice == 19 {
+                    spawnX = 144
+                    spawnY = 120
+                } else if spawnChoice == 20 {
+                    spawnX = -24
+                    spawnY = 120
+                } else if spawnChoice == 21 {
+                    spawnX = 24
+                    spawnY = 120
+                } else if spawnChoice == 22 {
+                    spawnX = -144
+                    spawnY = 48
+                } else if spawnChoice == 23 {
+                    spawnX = -96
+                    spawnY = 48
+                }
+            } else if stageIndex == 14 {
+                spawnChoice = int(rand(0, 23))
+                if spawnChoice == 0 {
+                    spawnX = -144
+                    spawnY = 144
+                } else if spawnChoice == 1 {
+                    spawnX = 0
+                    spawnY = 144
+                } else if spawnChoice == 2 {
+                    spawnX = 144
+                    spawnY = 144
+                } else if spawnChoice == 3 {
+                    spawnX = -72
+                    spawnY = 144
+                } else if spawnChoice == 4 {
+                    spawnX = 72
+                    spawnY = 144
+                } else if spawnChoice == 5 {
+                    spawnX = -120
+                    spawnY = 144
+                } else if spawnChoice == 6 {
+                    spawnX = 120
+                    spawnY = 144
+                } else if spawnChoice == 7 {
+                    spawnX = -24
+                    spawnY = 144
+                } else if spawnChoice == 8 {
+                    spawnX = 24
+                    spawnY = 144
+                } else if spawnChoice == 9 {
+                    spawnX = -96
+                    spawnY = 144
+                } else if spawnChoice == 10 {
+                    spawnX = 96
+                    spawnY = 144
+                } else if spawnChoice == 11 {
+                    spawnX = -48
+                    spawnY = 144
+                } else if spawnChoice == 12 {
+                    spawnX = 48
+                    spawnY = 144
+                } else if spawnChoice == 13 {
+                    spawnX = -144
+                    spawnY = 72
+                } else if spawnChoice == 14 {
+                    spawnX = 144
+                    spawnY = 72
+                } else if spawnChoice == 15 {
+                    spawnX = -120
+                    spawnY = 72
+                } else if spawnChoice == 16 {
+                    spawnX = 120
+                    spawnY = 72
+                } else if spawnChoice == 17 {
+                    spawnX = -96
+                    spawnY = 72
+                } else if spawnChoice == 18 {
+                    spawnX = 96
+                    spawnY = 72
+                } else if spawnChoice == 19 {
+                    spawnX = -72
+                    spawnY = 120
+                } else if spawnChoice == 20 {
+                    spawnX = 72
+                    spawnY = 120
+                } else if spawnChoice == 21 {
+                    spawnX = -96
+                    spawnY = 120
+                } else if spawnChoice == 22 {
+                    spawnX = 96
+                    spawnY = 120
+                } else if spawnChoice == 23 {
+                    spawnX = -144
+                    spawnY = 48
+                }
+            } else if stageIndex == 15 {
+                spawnChoice = int(rand(0, 23))
+                if spawnChoice == 0 {
+                    spawnX = -144
+                    spawnY = 144
+                } else if spawnChoice == 1 {
+                    spawnX = 0
+                    spawnY = 144
+                } else if spawnChoice == 2 {
+                    spawnX = 144
+                    spawnY = 144
+                } else if spawnChoice == 3 {
+                    spawnX = -72
+                    spawnY = 144
+                } else if spawnChoice == 4 {
+                    spawnX = 72
+                    spawnY = 144
+                } else if spawnChoice == 5 {
+                    spawnX = -120
+                    spawnY = 144
+                } else if spawnChoice == 6 {
+                    spawnX = 120
+                    spawnY = 144
+                } else if spawnChoice == 7 {
+                    spawnX = 24
+                    spawnY = 144
+                } else if spawnChoice == 8 {
+                    spawnX = -96
+                    spawnY = 144
+                } else if spawnChoice == 9 {
+                    spawnX = 96
+                    spawnY = 144
+                } else if spawnChoice == 10 {
+                    spawnX = -144
+                    spawnY = 120
+                } else if spawnChoice == 11 {
+                    spawnX = 0
+                    spawnY = 120
+                } else if spawnChoice == 12 {
+                    spawnX = 144
+                    spawnY = 120
+                } else if spawnChoice == 13 {
+                    spawnX = 72
+                    spawnY = 120
+                } else if spawnChoice == 14 {
+                    spawnX = 120
+                    spawnY = 120
+                } else if spawnChoice == 15 {
+                    spawnX = -24
+                    spawnY = 120
+                } else if spawnChoice == 16 {
+                    spawnX = 24
+                    spawnY = 120
+                } else if spawnChoice == 17 {
+                    spawnX = 96
+                    spawnY = 120
+                } else if spawnChoice == 18 {
+                    spawnX = 144
+                    spawnY = 48
+                } else if spawnChoice == 19 {
+                    spawnX = 144
+                    spawnY = 96
+                } else if spawnChoice == 20 {
+                    spawnX = 120
+                    spawnY = 96
+                } else if spawnChoice == 21 {
+                    spawnX = 96
+                    spawnY = 96
+                } else if spawnChoice == 22 {
+                    spawnX = -144
+                    spawnY = 24
+                } else if spawnChoice == 23 {
+                    spawnX = 144
+                    spawnY = 24
+                }
+            } else if stageIndex == 16 {
+                spawnChoice = int(rand(0, 23))
+                if spawnChoice == 0 {
+                    spawnX = -144
+                    spawnY = 144
+                } else if spawnChoice == 1 {
+                    spawnX = 0
+                    spawnY = 144
+                } else if spawnChoice == 2 {
+                    spawnX = 144
+                    spawnY = 144
+                } else if spawnChoice == 3 {
+                    spawnX = -72
+                    spawnY = 144
+                } else if spawnChoice == 4 {
+                    spawnX = 72
+                    spawnY = 144
+                } else if spawnChoice == 5 {
+                    spawnX = -120
+                    spawnY = 144
+                } else if spawnChoice == 6 {
+                    spawnX = 120
+                    spawnY = 144
+                } else if spawnChoice == 7 {
+                    spawnX = -24
+                    spawnY = 144
+                } else if spawnChoice == 8 {
+                    spawnX = 24
+                    spawnY = 144
+                } else if spawnChoice == 9 {
+                    spawnX = -96
+                    spawnY = 144
+                } else if spawnChoice == 10 {
+                    spawnX = 96
+                    spawnY = 144
+                } else if spawnChoice == 11 {
+                    spawnX = -48
+                    spawnY = 144
+                } else if spawnChoice == 12 {
+                    spawnX = 48
+                    spawnY = 144
+                } else if spawnChoice == 13 {
+                    spawnX = -144
+                    spawnY = 72
+                } else if spawnChoice == 14 {
+                    spawnX = 144
+                    spawnY = 72
+                } else if spawnChoice == 15 {
+                    spawnX = -72
+                    spawnY = 72
+                } else if spawnChoice == 16 {
+                    spawnX = 72
+                    spawnY = 72
+                } else if spawnChoice == 17 {
+                    spawnX = 120
+                    spawnY = 72
+                } else if spawnChoice == 18 {
+                    spawnX = -24
+                    spawnY = 72
+                } else if spawnChoice == 19 {
+                    spawnX = -96
+                    spawnY = 72
+                } else if spawnChoice == 20 {
+                    spawnX = 96
+                    spawnY = 72
+                } else if spawnChoice == 21 {
+                    spawnX = -48
+                    spawnY = 72
+                } else if spawnChoice == 22 {
+                    spawnX = 48
+                    spawnY = 72
+                } else if spawnChoice == 23 {
+                    spawnX = -144
+                    spawnY = 120
+                }
+            } else if stageIndex == 17 {
+                spawnChoice = int(rand(0, 23))
+                if spawnChoice == 0 {
+                    spawnX = -144
+                    spawnY = 144
+                } else if spawnChoice == 1 {
+                    spawnX = 0
+                    spawnY = 144
+                } else if spawnChoice == 2 {
+                    spawnX = 144
+                    spawnY = 144
+                } else if spawnChoice == 3 {
+                    spawnX = -72
+                    spawnY = 144
+                } else if spawnChoice == 4 {
+                    spawnX = 72
+                    spawnY = 144
+                } else if spawnChoice == 5 {
+                    spawnX = -120
+                    spawnY = 144
+                } else if spawnChoice == 6 {
+                    spawnX = 120
+                    spawnY = 144
+                } else if spawnChoice == 7 {
+                    spawnX = -24
+                    spawnY = 144
+                } else if spawnChoice == 8 {
+                    spawnX = 24
+                    spawnY = 144
+                } else if spawnChoice == 9 {
+                    spawnX = -96
+                    spawnY = 144
+                } else if spawnChoice == 10 {
+                    spawnX = 48
+                    spawnY = 144
+                } else if spawnChoice == 11 {
+                    spawnX = 0
+                    spawnY = 72
+                } else if spawnChoice == 12 {
+                    spawnX = 144
+                    spawnY = 72
+                } else if spawnChoice == 13 {
+                    spawnX = -24
+                    spawnY = 72
+                } else if spawnChoice == 14 {
+                    spawnX = -144
+                    spawnY = 120
+                } else if spawnChoice == 15 {
+                    spawnX = 0
+                    spawnY = 120
+                } else if spawnChoice == 16 {
+                    spawnX = 144
+                    spawnY = 120
+                } else if spawnChoice == 17 {
+                    spawnX = -24
+                    spawnY = 120
+                } else if spawnChoice == 18 {
+                    spawnX = -96
+                    spawnY = 120
+                } else if spawnChoice == 19 {
+                    spawnX = 144
+                    spawnY = 48
+                } else if spawnChoice == 20 {
+                    spawnX = 120
+                    spawnY = 48
+                } else if spawnChoice == 21 {
+                    spawnX = 96
+                    spawnY = 48
+                } else if spawnChoice == 22 {
+                    spawnX = -144
+                    spawnY = 96
+                } else if spawnChoice == 23 {
+                    spawnX = 144
+                    spawnY = 96
+                }
+            } else if stageIndex == 18 {
+                spawnChoice = int(rand(0, 23))
+                if spawnChoice == 0 {
+                    spawnX = -144
+                    spawnY = 144
+                } else if spawnChoice == 1 {
+                    spawnX = 0
+                    spawnY = 144
+                } else if spawnChoice == 2 {
+                    spawnX = 144
+                    spawnY = 144
+                } else if spawnChoice == 3 {
+                    spawnX = -72
+                    spawnY = 144
+                } else if spawnChoice == 4 {
+                    spawnX = -120
+                    spawnY = 144
+                } else if spawnChoice == 5 {
+                    spawnX = -24
+                    spawnY = 144
+                } else if spawnChoice == 6 {
+                    spawnX = 24
+                    spawnY = 144
+                } else if spawnChoice == 7 {
+                    spawnX = -96
+                    spawnY = 144
+                } else if spawnChoice == 8 {
+                    spawnX = -48
+                    spawnY = 144
+                } else if spawnChoice == 9 {
+                    spawnX = -144
+                    spawnY = 72
+                } else if spawnChoice == 10 {
+                    spawnX = 144
+                    spawnY = 72
+                } else if spawnChoice == 11 {
+                    spawnX = -24
+                    spawnY = 72
+                } else if spawnChoice == 12 {
+                    spawnX = 24
+                    spawnY = 72
+                } else if spawnChoice == 13 {
+                    spawnX = -48
+                    spawnY = 72
+                } else if spawnChoice == 14 {
+                    spawnX = -144
+                    spawnY = 120
+                } else if spawnChoice == 15 {
+                    spawnX = 0
+                    spawnY = 120
+                } else if spawnChoice == 16 {
+                    spawnX = 144
+                    spawnY = 120
+                } else if spawnChoice == 17 {
+                    spawnX = -72
+                    spawnY = 120
+                } else if spawnChoice == 18 {
+                    spawnX = 72
+                    spawnY = 120
+                } else if spawnChoice == 19 {
+                    spawnX = -24
+                    spawnY = 120
+                } else if spawnChoice == 20 {
+                    spawnX = 24
+                    spawnY = 120
+                } else if spawnChoice == 21 {
+                    spawnX = -96
+                    spawnY = 120
+                } else if spawnChoice == 22 {
+                    spawnX = 96
+                    spawnY = 120
+                } else if spawnChoice == 23 {
+                    spawnX = -48
+                    spawnY = 120
+                }
+            } else if stageIndex == 19 {
+                spawnChoice = int(rand(0, 23))
+                if spawnChoice == 0 {
+                    spawnX = -144
+                    spawnY = 144
+                } else if spawnChoice == 1 {
+                    spawnX = 0
+                    spawnY = 144
+                } else if spawnChoice == 2 {
+                    spawnX = 144
+                    spawnY = 144
+                } else if spawnChoice == 3 {
+                    spawnX = -96
+                    spawnY = 144
+                } else if spawnChoice == 4 {
+                    spawnX = 96
+                    spawnY = 144
+                } else if spawnChoice == 5 {
+                    spawnX = -48
+                    spawnY = 144
+                } else if spawnChoice == 6 {
+                    spawnX = 48
+                    spawnY = 144
+                } else if spawnChoice == 7 {
+                    spawnX = 0
+                    spawnY = 72
+                } else if spawnChoice == 8 {
+                    spawnX = -72
+                    spawnY = 72
+                } else if spawnChoice == 9 {
+                    spawnX = 72
+                    spawnY = 72
+                } else if spawnChoice == 10 {
+                    spawnX = -120
+                    spawnY = 72
+                } else if spawnChoice == 11 {
+                    spawnX = 120
+                    spawnY = 72
+                } else if spawnChoice == 12 {
+                    spawnX = -24
+                    spawnY = 72
+                } else if spawnChoice == 13 {
+                    spawnX = 24
+                    spawnY = 72
+                } else if spawnChoice == 14 {
+                    spawnX = -144
+                    spawnY = 120
+                } else if spawnChoice == 15 {
+                    spawnX = 0
+                    spawnY = 120
+                } else if spawnChoice == 16 {
+                    spawnX = 144
+                    spawnY = 120
+                } else if spawnChoice == 17 {
+                    spawnX = -96
+                    spawnY = 120
+                } else if spawnChoice == 18 {
+                    spawnX = 96
+                    spawnY = 120
+                } else if spawnChoice == 19 {
+                    spawnX = -48
+                    spawnY = 120
+                } else if spawnChoice == 20 {
+                    spawnX = 48
+                    spawnY = 120
+                } else if spawnChoice == 21 {
+                    spawnX = -120
+                    spawnY = 48
+                } else if spawnChoice == 22 {
+                    spawnX = 120
+                    spawnY = 48
+                } else if spawnChoice == 23 {
+                    spawnX = -24
+                    spawnY = 48
+                }
+            } else if stageIndex == 20 {
+                spawnChoice = int(rand(0, 23))
+                if spawnChoice == 0 {
+                    spawnX = -144
+                    spawnY = 144
+                } else if spawnChoice == 1 {
+                    spawnX = 0
+                    spawnY = 144
+                } else if spawnChoice == 2 {
+                    spawnX = 144
+                    spawnY = 144
+                } else if spawnChoice == 3 {
+                    spawnX = 72
+                    spawnY = 144
+                } else if spawnChoice == 4 {
+                    spawnX = -120
+                    spawnY = 144
+                } else if spawnChoice == 5 {
+                    spawnX = 120
+                    spawnY = 144
+                } else if spawnChoice == 6 {
+                    spawnX = 24
+                    spawnY = 144
+                } else if spawnChoice == 7 {
+                    spawnX = -96
+                    spawnY = 144
+                } else if spawnChoice == 8 {
+                    spawnX = -48
+                    spawnY = 144
+                } else if spawnChoice == 9 {
+                    spawnX = 0
+                    spawnY = 72
+                } else if spawnChoice == 10 {
+                    spawnX = 144
+                    spawnY = 72
+                } else if spawnChoice == 11 {
+                    spawnX = 72
+                    spawnY = 72
+                } else if spawnChoice == 12 {
+                    spawnX = -120
+                    spawnY = 72
+                } else if spawnChoice == 13 {
+                    spawnX = 120
+                    spawnY = 72
+                } else if spawnChoice == 14 {
+                    spawnX = -48
+                    spawnY = 72
+                } else if spawnChoice == 15 {
+                    spawnX = -144
+                    spawnY = 120
+                } else if spawnChoice == 16 {
+                    spawnX = 0
+                    spawnY = 120
+                } else if spawnChoice == 17 {
+                    spawnX = 144
+                    spawnY = 120
+                } else if spawnChoice == 18 {
+                    spawnX = -72
+                    spawnY = 120
+                } else if spawnChoice == 19 {
+                    spawnX = 72
+                    spawnY = 120
+                } else if spawnChoice == 20 {
+                    spawnX = -120
+                    spawnY = 120
+                } else if spawnChoice == 21 {
+                    spawnX = 120
+                    spawnY = 120
+                } else if spawnChoice == 22 {
+                    spawnX = -24
+                    spawnY = 120
+                } else if spawnChoice == 23 {
+                    spawnX = 24
+                    spawnY = 120
+                }
+            } else if stageIndex == 21 {
+                spawnChoice = int(rand(0, 23))
+                if spawnChoice == 0 {
+                    spawnX = -144
+                    spawnY = 144
+                } else if spawnChoice == 1 {
+                    spawnX = 0
+                    spawnY = 144
+                } else if spawnChoice == 2 {
+                    spawnX = 144
+                    spawnY = 144
+                } else if spawnChoice == 3 {
+                    spawnX = 72
+                    spawnY = 144
+                } else if spawnChoice == 4 {
+                    spawnX = -120
+                    spawnY = 144
+                } else if spawnChoice == 5 {
+                    spawnX = 120
+                    spawnY = 144
+                } else if spawnChoice == 6 {
+                    spawnX = 24
+                    spawnY = 144
+                } else if spawnChoice == 7 {
+                    spawnX = -96
+                    spawnY = 144
+                } else if spawnChoice == 8 {
+                    spawnX = 96
+                    spawnY = 144
+                } else if spawnChoice == 9 {
+                    spawnX = 0
+                    spawnY = 72
+                } else if spawnChoice == 10 {
+                    spawnX = 144
+                    spawnY = 72
+                } else if spawnChoice == 11 {
+                    spawnX = -72
+                    spawnY = 72
+                } else if spawnChoice == 12 {
+                    spawnX = -24
+                    spawnY = 72
+                } else if spawnChoice == 13 {
+                    spawnX = 24
+                    spawnY = 72
+                } else if spawnChoice == 14 {
+                    spawnX = -96
+                    spawnY = 72
+                } else if spawnChoice == 15 {
+                    spawnX = -48
+                    spawnY = 72
+                } else if spawnChoice == 16 {
+                    spawnX = -144
+                    spawnY = 120
+                } else if spawnChoice == 17 {
+                    spawnX = 144
+                    spawnY = 120
+                } else if spawnChoice == 18 {
+                    spawnX = 120
+                    spawnY = 120
+                } else if spawnChoice == 19 {
+                    spawnX = 96
+                    spawnY = 120
+                } else if spawnChoice == 20 {
+                    spawnX = 0
+                    spawnY = 48
+                } else if spawnChoice == 21 {
+                    spawnX = 144
+                    spawnY = 48
+                } else if spawnChoice == 22 {
+                    spawnX = -72
+                    spawnY = 48
+                } else if spawnChoice == 23 {
+                    spawnX = -120
+                    spawnY = 48
+                }
+            } else if stageIndex == 22 {
+                spawnChoice = int(rand(0, 23))
+                if spawnChoice == 0 {
+                    spawnX = -144
+                    spawnY = 144
+                } else if spawnChoice == 1 {
+                    spawnX = 0
+                    spawnY = 144
+                } else if spawnChoice == 2 {
+                    spawnX = 144
+                    spawnY = 144
+                } else if spawnChoice == 3 {
+                    spawnX = -72
+                    spawnY = 144
+                } else if spawnChoice == 4 {
+                    spawnX = 72
+                    spawnY = 144
+                } else if spawnChoice == 5 {
+                    spawnX = -120
+                    spawnY = 144
+                } else if spawnChoice == 6 {
+                    spawnX = 120
+                    spawnY = 144
+                } else if spawnChoice == 7 {
+                    spawnX = 24
+                    spawnY = 144
+                } else if spawnChoice == 8 {
+                    spawnX = -96
+                    spawnY = 144
+                } else if spawnChoice == 9 {
+                    spawnX = 96
+                    spawnY = 144
+                } else if spawnChoice == 10 {
+                    spawnX = -48
+                    spawnY = 144
+                } else if spawnChoice == 11 {
+                    spawnX = 48
+                    spawnY = 144
+                } else if spawnChoice == 12 {
+                    spawnX = -144
+                    spawnY = 72
+                } else if spawnChoice == 13 {
+                    spawnX = 0
+                    spawnY = 72
+                } else if spawnChoice == 14 {
+                    spawnX = 144
+                    spawnY = 72
+                } else if spawnChoice == 15 {
+                    spawnX = 120
+                    spawnY = 72
+                } else if spawnChoice == 16 {
+                    spawnX = -24
+                    spawnY = 72
+                } else if spawnChoice == 17 {
+                    spawnX = -48
+                    spawnY = 72
+                } else if spawnChoice == 18 {
+                    spawnX = -144
+                    spawnY = 120
+                } else if spawnChoice == 19 {
+                    spawnX = 144
+                    spawnY = 120
+                } else if spawnChoice == 20 {
+                    spawnX = -72
+                    spawnY = 120
+                } else if spawnChoice == 21 {
+                    spawnX = 72
+                    spawnY = 120
+                } else if spawnChoice == 22 {
+                    spawnX = -120
+                    spawnY = 120
+                } else if spawnChoice == 23 {
+                    spawnX = 120
+                    spawnY = 120
+                }
+            } else if stageIndex == 23 {
+                spawnChoice = int(rand(0, 23))
+                if spawnChoice == 0 {
+                    spawnX = -144
+                    spawnY = 144
+                } else if spawnChoice == 1 {
+                    spawnX = 0
+                    spawnY = 144
+                } else if spawnChoice == 2 {
+                    spawnX = 144
+                    spawnY = 144
+                } else if spawnChoice == 3 {
+                    spawnX = -72
+                    spawnY = 144
+                } else if spawnChoice == 4 {
+                    spawnX = 72
+                    spawnY = 144
+                } else if spawnChoice == 5 {
+                    spawnX = -120
+                    spawnY = 144
+                } else if spawnChoice == 6 {
+                    spawnX = 120
+                    spawnY = 144
+                } else if spawnChoice == 7 {
+                    spawnX = -24
+                    spawnY = 144
+                } else if spawnChoice == 8 {
+                    spawnX = 24
+                    spawnY = 144
+                } else if spawnChoice == 9 {
+                    spawnX = -96
+                    spawnY = 144
+                } else if spawnChoice == 10 {
+                    spawnX = 96
+                    spawnY = 144
+                } else if spawnChoice == 11 {
+                    spawnX = -48
+                    spawnY = 144
+                } else if spawnChoice == 12 {
+                    spawnX = 48
+                    spawnY = 144
+                } else if spawnChoice == 13 {
+                    spawnX = -144
+                    spawnY = 72
+                } else if spawnChoice == 14 {
+                    spawnX = 144
+                    spawnY = 72
+                } else if spawnChoice == 15 {
+                    spawnX = -144
+                    spawnY = 120
+                } else if spawnChoice == 16 {
+                    spawnX = 144
+                    spawnY = 120
+                } else if spawnChoice == 17 {
+                    spawnX = -72
+                    spawnY = 120
+                } else if spawnChoice == 18 {
+                    spawnX = 72
+                    spawnY = 120
+                } else if spawnChoice == 19 {
+                    spawnX = -120
+                    spawnY = 120
+                } else if spawnChoice == 20 {
+                    spawnX = 120
+                    spawnY = 120
+                } else if spawnChoice == 21 {
+                    spawnX = 24
+                    spawnY = 120
+                } else if spawnChoice == 22 {
+                    spawnX = -96
+                    spawnY = 120
+                } else if spawnChoice == 23 {
+                    spawnX = 96
+                    spawnY = 120
+                }
+            } else if stageIndex == 24 {
+                spawnChoice = int(rand(0, 23))
+                if spawnChoice == 0 {
+                    spawnX = -144
+                    spawnY = 144
+                } else if spawnChoice == 1 {
+                    spawnX = 0
+                    spawnY = 144
+                } else if spawnChoice == 2 {
+                    spawnX = 144
+                    spawnY = 144
+                } else if spawnChoice == 3 {
+                    spawnX = -72
+                    spawnY = 144
+                } else if spawnChoice == 4 {
+                    spawnX = 72
+                    spawnY = 144
+                } else if spawnChoice == 5 {
+                    spawnX = -120
+                    spawnY = 144
+                } else if spawnChoice == 6 {
+                    spawnX = 120
+                    spawnY = 144
+                } else if spawnChoice == 7 {
+                    spawnX = 24
+                    spawnY = 144
+                } else if spawnChoice == 8 {
+                    spawnX = 48
+                    spawnY = 144
+                } else if spawnChoice == 9 {
+                    spawnX = 144
+                    spawnY = 72
+                } else if spawnChoice == 10 {
+                    spawnX = 72
+                    spawnY = 72
+                } else if spawnChoice == 11 {
+                    spawnX = -144
+                    spawnY = 120
+                } else if spawnChoice == 12 {
+                    spawnX = 0
+                    spawnY = 120
+                } else if spawnChoice == 13 {
+                    spawnX = 144
+                    spawnY = 120
+                } else if spawnChoice == 14 {
+                    spawnX = -72
+                    spawnY = 120
+                } else if spawnChoice == 15 {
+                    spawnX = -120
+                    spawnY = 120
+                } else if spawnChoice == 16 {
+                    spawnX = 120
+                    spawnY = 120
+                } else if spawnChoice == 17 {
+                    spawnX = -144
+                    spawnY = 48
+                } else if spawnChoice == 18 {
+                    spawnX = -120
+                    spawnY = 48
+                } else if spawnChoice == 19 {
+                    spawnX = 48
+                    spawnY = 48
+                } else if spawnChoice == 20 {
+                    spawnX = -144
+                    spawnY = 96
+                } else if spawnChoice == 21 {
+                    spawnX = -72
+                    spawnY = 96
+                } else if spawnChoice == 22 {
+                    spawnX = 72
+                    spawnY = 96
+                } else if spawnChoice == 23 {
+                    spawnX = 96
+                    spawnY = 96
+                }
+            } else if stageIndex == 25 {
+                spawnChoice = int(rand(0, 23))
+                if spawnChoice == 0 {
+                    spawnX = -144
+                    spawnY = 144
+                } else if spawnChoice == 1 {
+                    spawnX = 0
+                    spawnY = 144
+                } else if spawnChoice == 2 {
+                    spawnX = 144
+                    spawnY = 144
+                } else if spawnChoice == 3 {
+                    spawnX = -120
+                    spawnY = 144
+                } else if spawnChoice == 4 {
+                    spawnX = -96
+                    spawnY = 144
+                } else if spawnChoice == 5 {
+                    spawnX = 96
+                    spawnY = 144
+                } else if spawnChoice == 6 {
+                    spawnX = -48
+                    spawnY = 144
+                } else if spawnChoice == 7 {
+                    spawnX = 48
+                    spawnY = 144
+                } else if spawnChoice == 8 {
+                    spawnX = -144
+                    spawnY = 72
+                } else if spawnChoice == 9 {
+                    spawnX = 0
+                    spawnY = 72
+                } else if spawnChoice == 10 {
+                    spawnX = -72
+                    spawnY = 72
+                } else if spawnChoice == 11 {
+                    spawnX = 72
+                    spawnY = 72
+                } else if spawnChoice == 12 {
+                    spawnX = 120
+                    spawnY = 72
+                } else if spawnChoice == 13 {
+                    spawnX = -96
+                    spawnY = 72
+                } else if spawnChoice == 14 {
+                    spawnX = 96
+                    spawnY = 72
+                } else if spawnChoice == 15 {
+                    spawnX = -48
+                    spawnY = 72
+                } else if spawnChoice == 16 {
+                    spawnX = -144
+                    spawnY = 120
+                } else if spawnChoice == 17 {
+                    spawnX = 0
+                    spawnY = 120
+                } else if spawnChoice == 18 {
+                    spawnX = 144
+                    spawnY = 120
+                } else if spawnChoice == 19 {
+                    spawnX = 120
+                    spawnY = 120
+                } else if spawnChoice == 20 {
+                    spawnX = -24
+                    spawnY = 120
+                } else if spawnChoice == 21 {
+                    spawnX = 24
+                    spawnY = 120
+                } else if spawnChoice == 22 {
+                    spawnX = -96
+                    spawnY = 120
+                } else if spawnChoice == 23 {
+                    spawnX = 96
+                    spawnY = 120
+                }
+            } else if stageIndex == 26 {
+                spawnChoice = int(rand(0, 23))
+                if spawnChoice == 0 {
+                    spawnX = -144
+                    spawnY = 144
+                } else if spawnChoice == 1 {
+                    spawnX = 0
+                    spawnY = 144
+                } else if spawnChoice == 2 {
+                    spawnX = 144
+                    spawnY = 144
+                } else if spawnChoice == 3 {
+                    spawnX = 72
+                    spawnY = 144
+                } else if spawnChoice == 4 {
+                    spawnX = -120
+                    spawnY = 144
+                } else if spawnChoice == 5 {
+                    spawnX = 120
+                    spawnY = 144
+                } else if spawnChoice == 6 {
+                    spawnX = -24
+                    spawnY = 144
+                } else if spawnChoice == 7 {
+                    spawnX = 24
+                    spawnY = 144
+                } else if spawnChoice == 8 {
+                    spawnX = 96
+                    spawnY = 144
+                } else if spawnChoice == 9 {
+                    spawnX = -48
+                    spawnY = 144
+                } else if spawnChoice == 10 {
+                    spawnX = 48
+                    spawnY = 144
+                } else if spawnChoice == 11 {
+                    spawnX = 0
+                    spawnY = 72
+                } else if spawnChoice == 12 {
+                    spawnX = 144
+                    spawnY = 72
+                } else if spawnChoice == 13 {
+                    spawnX = 120
+                    spawnY = 72
+                } else if spawnChoice == 14 {
+                    spawnX = 24
+                    spawnY = 72
+                } else if spawnChoice == 15 {
+                    spawnX = -96
+                    spawnY = 72
+                } else if spawnChoice == 16 {
+                    spawnX = 144
+                    spawnY = 120
+                } else if spawnChoice == 17 {
+                    spawnX = 72
+                    spawnY = 120
+                } else if spawnChoice == 18 {
+                    spawnX = -120
+                    spawnY = 120
+                } else if spawnChoice == 19 {
+                    spawnX = 120
+                    spawnY = 120
+                } else if spawnChoice == 20 {
+                    spawnX = -24
+                    spawnY = 120
+                } else if spawnChoice == 21 {
+                    spawnX = 24
+                    spawnY = 120
+                } else if spawnChoice == 22 {
+                    spawnX = -96
+                    spawnY = 120
+                } else if spawnChoice == 23 {
+                    spawnX = 96
+                    spawnY = 120
+                }
+            } else if stageIndex == 27 {
+                spawnChoice = int(rand(0, 23))
+                if spawnChoice == 0 {
+                    spawnX = -144
+                    spawnY = 144
+                } else if spawnChoice == 1 {
+                    spawnX = 0
+                    spawnY = 144
+                } else if spawnChoice == 2 {
+                    spawnX = 144
+                    spawnY = 144
+                } else if spawnChoice == 3 {
+                    spawnX = -72
+                    spawnY = 144
+                } else if spawnChoice == 4 {
+                    spawnX = 72
+                    spawnY = 144
+                } else if spawnChoice == 5 {
+                    spawnX = -120
+                    spawnY = 144
+                } else if spawnChoice == 6 {
+                    spawnX = 120
+                    spawnY = 144
+                } else if spawnChoice == 7 {
+                    spawnX = -24
+                    spawnY = 144
+                } else if spawnChoice == 8 {
+                    spawnX = 24
+                    spawnY = 144
+                } else if spawnChoice == 9 {
+                    spawnX = -96
+                    spawnY = 144
+                } else if spawnChoice == 10 {
+                    spawnX = 96
+                    spawnY = 144
+                } else if spawnChoice == 11 {
+                    spawnX = 48
+                    spawnY = 144
+                } else if spawnChoice == 12 {
+                    spawnX = -144
+                    spawnY = 72
+                } else if spawnChoice == 13 {
+                    spawnX = 144
+                    spawnY = 72
+                } else if spawnChoice == 14 {
+                    spawnX = -72
+                    spawnY = 72
+                } else if spawnChoice == 15 {
+                    spawnX = 72
+                    spawnY = 72
+                } else if spawnChoice == 16 {
+                    spawnX = 120
+                    spawnY = 72
+                } else if spawnChoice == 17 {
+                    spawnX = 24
+                    spawnY = 72
+                } else if spawnChoice == 18 {
+                    spawnX = -96
+                    spawnY = 72
+                } else if spawnChoice == 19 {
+                    spawnX = 0
+                    spawnY = 120
+                } else if spawnChoice == 20 {
+                    spawnX = 144
+                    spawnY = 120
+                } else if spawnChoice == 21 {
+                    spawnX = -72
+                    spawnY = 120
+                } else if spawnChoice == 22 {
+                    spawnX = 72
+                    spawnY = 120
+                } else if spawnChoice == 23 {
+                    spawnX = 120
+                    spawnY = 120
+                }
+            } else if stageIndex == 28 {
+                spawnChoice = int(rand(0, 23))
+                if spawnChoice == 0 {
+                    spawnX = -144
+                    spawnY = 144
+                } else if spawnChoice == 1 {
+                    spawnX = 0
+                    spawnY = 144
+                } else if spawnChoice == 2 {
+                    spawnX = 144
+                    spawnY = 144
+                } else if spawnChoice == 3 {
+                    spawnX = -72
+                    spawnY = 144
+                } else if spawnChoice == 4 {
+                    spawnX = 72
+                    spawnY = 144
+                } else if spawnChoice == 5 {
+                    spawnX = -120
+                    spawnY = 144
+                } else if spawnChoice == 6 {
+                    spawnX = -24
+                    spawnY = 144
+                } else if spawnChoice == 7 {
+                    spawnX = 24
+                    spawnY = 144
+                } else if spawnChoice == 8 {
+                    spawnX = -96
+                    spawnY = 144
+                } else if spawnChoice == 9 {
+                    spawnX = -48
+                    spawnY = 144
+                } else if spawnChoice == 10 {
+                    spawnX = 48
+                    spawnY = 144
+                } else if spawnChoice == 11 {
+                    spawnX = -144
+                    spawnY = 72
+                } else if spawnChoice == 12 {
+                    spawnX = 144
+                    spawnY = 72
+                } else if spawnChoice == 13 {
+                    spawnX = -72
+                    spawnY = 72
+                } else if spawnChoice == 14 {
+                    spawnX = -120
+                    spawnY = 72
+                } else if spawnChoice == 15 {
+                    spawnX = 120
+                    spawnY = 72
+                } else if spawnChoice == 16 {
+                    spawnX = -96
+                    spawnY = 72
+                } else if spawnChoice == 17 {
+                    spawnX = -144
+                    spawnY = 120
+                } else if spawnChoice == 18 {
+                    spawnX = 144
+                    spawnY = 120
+                } else if spawnChoice == 19 {
+                    spawnX = -72
+                    spawnY = 120
+                } else if spawnChoice == 20 {
+                    spawnX = 72
+                    spawnY = 120
+                } else if spawnChoice == 21 {
+                    spawnX = -120
+                    spawnY = 120
+                } else if spawnChoice == 22 {
+                    spawnX = 120
+                    spawnY = 120
+                } else if spawnChoice == 23 {
+                    spawnX = -24
+                    spawnY = 120
+                }
+            } else if stageIndex == 29 {
+                spawnChoice = int(rand(0, 23))
+                if spawnChoice == 0 {
+                    spawnX = -144
+                    spawnY = 144
+                } else if spawnChoice == 1 {
+                    spawnX = 0
+                    spawnY = 144
+                } else if spawnChoice == 2 {
+                    spawnX = 144
+                    spawnY = 144
+                } else if spawnChoice == 3 {
+                    spawnX = -72
+                    spawnY = 144
+                } else if spawnChoice == 4 {
+                    spawnX = 72
+                    spawnY = 144
+                } else if spawnChoice == 5 {
+                    spawnX = -120
+                    spawnY = 144
+                } else if spawnChoice == 6 {
+                    spawnX = 120
+                    spawnY = 144
+                } else if spawnChoice == 7 {
+                    spawnX = -24
+                    spawnY = 144
+                } else if spawnChoice == 8 {
+                    spawnX = 24
+                    spawnY = 144
+                } else if spawnChoice == 9 {
+                    spawnX = -96
+                    spawnY = 144
+                } else if spawnChoice == 10 {
+                    spawnX = -48
+                    spawnY = 144
+                } else if spawnChoice == 11 {
+                    spawnX = 48
+                    spawnY = 144
+                } else if spawnChoice == 12 {
+                    spawnX = -144
+                    spawnY = 72
+                } else if spawnChoice == 13 {
+                    spawnX = 144
+                    spawnY = 72
+                } else if spawnChoice == 14 {
+                    spawnX = -72
+                    spawnY = 72
+                } else if spawnChoice == 15 {
+                    spawnX = -120
+                    spawnY = 72
+                } else if spawnChoice == 16 {
+                    spawnX = 120
+                    spawnY = 72
+                } else if spawnChoice == 17 {
+                    spawnX = -96
+                    spawnY = 72
+                } else if spawnChoice == 18 {
+                    spawnX = -48
+                    spawnY = 72
+                } else if spawnChoice == 19 {
+                    spawnX = -144
+                    spawnY = 120
+                } else if spawnChoice == 20 {
+                    spawnX = 0
+                    spawnY = 120
+                } else if spawnChoice == 21 {
+                    spawnX = 144
+                    spawnY = 120
+                } else if spawnChoice == 22 {
+                    spawnX = 72
+                    spawnY = 120
+                } else if spawnChoice == 23 {
+                    spawnX = 120
+                    spawnY = 120
+                }
+            } else if stageIndex == 30 {
+                spawnChoice = int(rand(0, 23))
+                if spawnChoice == 0 {
+                    spawnX = -144
+                    spawnY = 144
+                } else if spawnChoice == 1 {
+                    spawnX = 0
+                    spawnY = 144
+                } else if spawnChoice == 2 {
+                    spawnX = 144
+                    spawnY = 144
+                } else if spawnChoice == 3 {
+                    spawnX = -72
+                    spawnY = 144
+                } else if spawnChoice == 4 {
+                    spawnX = 72
+                    spawnY = 144
+                } else if spawnChoice == 5 {
+                    spawnX = -120
+                    spawnY = 144
+                } else if spawnChoice == 6 {
+                    spawnX = 120
+                    spawnY = 144
+                } else if spawnChoice == 7 {
+                    spawnX = -24
+                    spawnY = 144
+                } else if spawnChoice == 8 {
+                    spawnX = 24
+                    spawnY = 144
+                } else if spawnChoice == 9 {
+                    spawnX = -96
+                    spawnY = 144
+                } else if spawnChoice == 10 {
+                    spawnX = 96
+                    spawnY = 144
+                } else if spawnChoice == 11 {
+                    spawnX = -48
+                    spawnY = 144
+                } else if spawnChoice == 12 {
+                    spawnX = 48
+                    spawnY = 144
+                } else if spawnChoice == 13 {
+                    spawnX = -144
+                    spawnY = 120
+                } else if spawnChoice == 14 {
+                    spawnX = 144
+                    spawnY = 120
+                } else if spawnChoice == 15 {
+                    spawnX = -72
+                    spawnY = 120
+                } else if spawnChoice == 16 {
+                    spawnX = 72
+                    spawnY = 120
+                } else if spawnChoice == 17 {
+                    spawnX = -120
+                    spawnY = 120
+                } else if spawnChoice == 18 {
+                    spawnX = 120
+                    spawnY = 120
+                } else if spawnChoice == 19 {
+                    spawnX = 24
+                    spawnY = 120
+                } else if spawnChoice == 20 {
+                    spawnX = -96
+                    spawnY = 120
+                } else if spawnChoice == 21 {
+                    spawnX = -48
+                    spawnY = 120
+                } else if spawnChoice == 22 {
+                    spawnX = 48
+                    spawnY = 120
+                } else if spawnChoice == 23 {
+                    spawnX = -144
+                    spawnY = 96
+                }
+            } else if stageIndex == 31 {
+                spawnChoice = int(rand(0, 23))
+                if spawnChoice == 0 {
+                    spawnX = -144
+                    spawnY = 144
+                } else if spawnChoice == 1 {
+                    spawnX = 0
+                    spawnY = 144
+                } else if spawnChoice == 2 {
+                    spawnX = 144
+                    spawnY = 144
+                } else if spawnChoice == 3 {
+                    spawnX = 72
+                    spawnY = 144
+                } else if spawnChoice == 4 {
+                    spawnX = -120
+                    spawnY = 144
+                } else if spawnChoice == 5 {
+                    spawnX = 120
+                    spawnY = 144
+                } else if spawnChoice == 6 {
+                    spawnX = -24
+                    spawnY = 144
+                } else if spawnChoice == 7 {
+                    spawnX = 24
+                    spawnY = 144
+                } else if spawnChoice == 8 {
+                    spawnX = -96
+                    spawnY = 144
+                } else if spawnChoice == 9 {
+                    spawnX = 96
+                    spawnY = 144
+                } else if spawnChoice == 10 {
+                    spawnX = -48
+                    spawnY = 144
+                } else if spawnChoice == 11 {
+                    spawnX = -24
+                    spawnY = 72
+                } else if spawnChoice == 12 {
+                    spawnX = 24
+                    spawnY = 72
+                } else if spawnChoice == 13 {
+                    spawnX = 48
+                    spawnY = 72
+                } else if spawnChoice == 14 {
+                    spawnX = 72
+                    spawnY = 120
+                } else if spawnChoice == 15 {
+                    spawnX = -96
+                    spawnY = 120
+                } else if spawnChoice == 16 {
+                    spawnX = -48
+                    spawnY = 120
+                } else if spawnChoice == 17 {
+                    spawnX = -24
+                    spawnY = 48
+                } else if spawnChoice == 18 {
+                    spawnX = 24
+                    spawnY = 48
+                } else if spawnChoice == 19 {
+                    spawnX = -96
+                    spawnY = 48
+                } else if spawnChoice == 20 {
+                    spawnX = -48
+                    spawnY = 48
+                } else if spawnChoice == 21 {
+                    spawnX = 0
+                    spawnY = 96
+                } else if spawnChoice == 22 {
+                    spawnX = -72
+                    spawnY = 96
+                } else if spawnChoice == 23 {
+                    spawnX = 72
+                    spawnY = 96
+                }
+            } else if stageIndex == 32 {
+                spawnChoice = int(rand(0, 9))
+                if spawnChoice == 0 {
+                    spawnX = 0
+                    spawnY = 144
+                } else if spawnChoice == 1 {
+                    spawnX = -96
+                    spawnY = 72
+                } else if spawnChoice == 2 {
+                    spawnX = 96
+                    spawnY = 72
+                } else if spawnChoice == 3 {
+                    spawnX = -48
+                    spawnY = 72
+                } else if spawnChoice == 4 {
+                    spawnX = 48
+                    spawnY = 72
+                } else if spawnChoice == 5 {
+                    spawnX = 0
+                    spawnY = 48
+                } else if spawnChoice == 6 {
+                    spawnX = -24
+                    spawnY = 48
+                } else if spawnChoice == 7 {
+                    spawnX = 24
+                    spawnY = 48
+                } else if spawnChoice == 8 {
+                    spawnX = -48
+                    spawnY = 48
+                } else if spawnChoice == 9 {
+                    spawnX = 48
+                    spawnY = 48
+                }
+            } else if stageIndex == 33 {
+                spawnChoice = int(rand(0, 23))
+                if spawnChoice == 0 {
+                    spawnX = -144
+                    spawnY = 144
+                } else if spawnChoice == 1 {
+                    spawnX = 0
+                    spawnY = 144
+                } else if spawnChoice == 2 {
+                    spawnX = 144
+                    spawnY = 144
+                } else if spawnChoice == 3 {
+                    spawnX = -72
+                    spawnY = 144
+                } else if spawnChoice == 4 {
+                    spawnX = -120
+                    spawnY = 144
+                } else if spawnChoice == 5 {
+                    spawnX = 120
+                    spawnY = 144
+                } else if spawnChoice == 6 {
+                    spawnX = -24
+                    spawnY = 144
+                } else if spawnChoice == 7 {
+                    spawnX = 24
+                    spawnY = 144
+                } else if spawnChoice == 8 {
+                    spawnX = -96
+                    spawnY = 144
+                } else if spawnChoice == 9 {
+                    spawnX = 96
+                    spawnY = 144
+                } else if spawnChoice == 10 {
+                    spawnX = 48
+                    spawnY = 144
+                } else if spawnChoice == 11 {
+                    spawnX = -144
+                    spawnY = 72
+                } else if spawnChoice == 12 {
+                    spawnX = 144
+                    spawnY = 72
+                } else if spawnChoice == 13 {
+                    spawnX = -120
+                    spawnY = 72
+                } else if spawnChoice == 14 {
+                    spawnX = -96
+                    spawnY = 72
+                } else if spawnChoice == 15 {
+                    spawnX = 96
+                    spawnY = 72
+                } else if spawnChoice == 16 {
+                    spawnX = -48
+                    spawnY = 72
+                } else if spawnChoice == 17 {
+                    spawnX = -144
+                    spawnY = 120
+                } else if spawnChoice == 18 {
+                    spawnX = 0
+                    spawnY = 120
+                } else if spawnChoice == 19 {
+                    spawnX = 144
+                    spawnY = 120
+                } else if spawnChoice == 20 {
+                    spawnX = -72
+                    spawnY = 120
+                } else if spawnChoice == 21 {
+                    spawnX = 120
+                    spawnY = 120
+                } else if spawnChoice == 22 {
+                    spawnX = 24
+                    spawnY = 120
+                } else if spawnChoice == 23 {
+                    spawnX = -96
+                    spawnY = 120
+                }
+            } else if stageIndex == 34 {
+                spawnChoice = int(rand(0, 23))
+                if spawnChoice == 0 {
+                    spawnX = -144
+                    spawnY = 144
+                } else if spawnChoice == 1 {
+                    spawnX = 0
+                    spawnY = 144
+                } else if spawnChoice == 2 {
+                    spawnX = 144
+                    spawnY = 144
+                } else if spawnChoice == 3 {
+                    spawnX = -72
+                    spawnY = 144
+                } else if spawnChoice == 4 {
+                    spawnX = 72
+                    spawnY = 144
+                } else if spawnChoice == 5 {
+                    spawnX = -120
+                    spawnY = 144
+                } else if spawnChoice == 6 {
+                    spawnX = 120
+                    spawnY = 144
+                } else if spawnChoice == 7 {
+                    spawnX = 24
+                    spawnY = 144
+                } else if spawnChoice == 8 {
+                    spawnX = -96
+                    spawnY = 144
+                } else if spawnChoice == 9 {
+                    spawnX = 96
+                    spawnY = 144
+                } else if spawnChoice == 10 {
+                    spawnX = 48
+                    spawnY = 144
+                } else if spawnChoice == 11 {
+                    spawnX = 0
+                    spawnY = 72
+                } else if spawnChoice == 12 {
+                    spawnX = 144
+                    spawnY = 72
+                } else if spawnChoice == 13 {
+                    spawnX = 120
+                    spawnY = 72
+                } else if spawnChoice == 14 {
+                    spawnX = -24
+                    spawnY = 72
+                } else if spawnChoice == 15 {
+                    spawnX = -96
+                    spawnY = 72
+                } else if spawnChoice == 16 {
+                    spawnX = 0
+                    spawnY = 120
+                } else if spawnChoice == 17 {
+                    spawnX = 144
+                    spawnY = 120
+                } else if spawnChoice == 18 {
+                    spawnX = 120
+                    spawnY = 120
+                } else if spawnChoice == 19 {
+                    spawnX = 24
+                    spawnY = 120
+                } else if spawnChoice == 20 {
+                    spawnX = 96
+                    spawnY = 120
+                } else if spawnChoice == 21 {
+                    spawnX = -48
+                    spawnY = 120
+                } else if spawnChoice == 22 {
+                    spawnX = -144
+                    spawnY = 48
+                } else if spawnChoice == 23 {
+                    spawnX = 0
+                    spawnY = 48
+                }
+            } else if stageIndex == 35 {
+                spawnChoice = int(rand(0, 23))
+                if spawnChoice == 0 {
+                    spawnX = -144
+                    spawnY = 144
+                } else if spawnChoice == 1 {
+                    spawnX = 0
+                    spawnY = 144
+                } else if spawnChoice == 2 {
+                    spawnX = 144
+                    spawnY = 144
+                } else if spawnChoice == 3 {
+                    spawnX = -72
+                    spawnY = 144
+                } else if spawnChoice == 4 {
+                    spawnX = 72
+                    spawnY = 144
+                } else if spawnChoice == 5 {
+                    spawnX = -120
+                    spawnY = 144
+                } else if spawnChoice == 6 {
+                    spawnX = 120
+                    spawnY = 144
+                } else if spawnChoice == 7 {
+                    spawnX = -24
+                    spawnY = 144
+                } else if spawnChoice == 8 {
+                    spawnX = 24
+                    spawnY = 144
+                } else if spawnChoice == 9 {
+                    spawnX = -96
+                    spawnY = 144
+                } else if spawnChoice == 10 {
+                    spawnX = 96
+                    spawnY = 144
+                } else if spawnChoice == 11 {
+                    spawnX = -48
+                    spawnY = 144
+                } else if spawnChoice == 12 {
+                    spawnX = 48
+                    spawnY = 144
+                } else if spawnChoice == 13 {
+                    spawnX = 144
+                    spawnY = 72
+                } else if spawnChoice == 14 {
+                    spawnX = -144
+                    spawnY = 120
+                } else if spawnChoice == 15 {
+                    spawnX = 144
+                    spawnY = 120
+                } else if spawnChoice == 16 {
+                    spawnX = -72
+                    spawnY = 120
+                } else if spawnChoice == 17 {
+                    spawnX = 72
+                    spawnY = 120
+                } else if spawnChoice == 18 {
+                    spawnX = -120
+                    spawnY = 120
+                } else if spawnChoice == 19 {
+                    spawnX = 120
+                    spawnY = 120
+                } else if spawnChoice == 20 {
+                    spawnX = -24
+                    spawnY = 120
+                } else if spawnChoice == 21 {
+                    spawnX = 24
+                    spawnY = 120
+                } else if spawnChoice == 22 {
+                    spawnX = -96
+                    spawnY = 120
+                } else if spawnChoice == 23 {
+                    spawnX = 96
+                    spawnY = 120
+                }
+            }
+			// GENERATED SPAWN END
 			setXYpos spawnX, spawnY
-			if spawnX >= -144 && spawnX <= 144 && spawnY >= -144 && spawnY <= 144 && !touching("Enemy") {
+			if gameReady && spawnX >= -144 && spawnX <= 144 && spawnY >= -144 && spawnY <= 144 && !touching("Enemy") && !touching("Brick") && !touching("Steel") && !touching("River") {
 				clone
 				spawned++
 				activeEnemies++
@@ -48,7 +2623,7 @@ onCloned data => {
 		beforeX = xpos
 		beforeY = ypos
 		step 0.7
-		if xpos < -144 || xpos > 144 || ypos < -144 || ypos > 144 || touching("Brick") || touching("Steel") || touching("Eagle") {
+		if xpos < -144 || xpos > 144 || ypos < -144 || ypos > 144 || touching("Brick") || touching("Steel") || touching("River") || touching("Eagle") {
 			setXYpos beforeX, beforeY
 			if ticks % 8 == 0 {
 				turnChoice = int(rand(0, 4))

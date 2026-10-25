@@ -30,6 +30,9 @@ onStart => {
 	setXYpos -48, -144
 	setHeading Up
 	setCostume "up"
+	for !gameReady {
+		wait 0.02
+	}
 	show
 	for running {
 		beforeX = xpos
@@ -51,7 +54,7 @@ onStart => {
 			setCostume "down"
 			changeYpos -2
 		}
-		if xpos < -144 || xpos > 144 || ypos < -144 || ypos > 144 || touching("Brick") || touching("Steel") || touching("Eagle") {
+		if xpos < -144 || xpos > 144 || ypos < -144 || ypos > 144 || touching("Brick") || touching("Steel") || touching("River") || touching("Eagle") {
 			setXYpos beforeX, beforeY
 		}
 		wait 0.02
@@ -59,7 +62,7 @@ onStart => {
 }
 
 onKey KeySpace, => {
-	if !running || timer-lastShot < 0.22 {
+	if !gameReady || !running || timer-lastShot < 0.22 {
 		return
 	}
 	lastShot = timer

@@ -1,6 +1,6 @@
 {
   "type": "game",
   "displayName": "Classic Tank Q",
-  "description": "经典第一关地图与Q版装甲坦克",
+  "description": "35张经典地图与Q版装甲坦克，每次开局随机选择关卡",
   "instructions": "Move with WASD or arrow keys. Press Space to fire. Protect the base and destroy 20 enemies."
 }

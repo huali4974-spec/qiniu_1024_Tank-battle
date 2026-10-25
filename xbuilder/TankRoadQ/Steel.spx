@@ -1,39 +1,4653 @@
 var choice = 0
 
-onStart => {
+onMsg "loadStage", => {
   hide
-  setCostume "f"
-  choice = int(rand(0, 4))
-  if choice == 0 {
-    setXYpos -96, 96
-  } else if choice == 1 {
-    setXYpos -48, 96
-  } else if choice == 2 {
-    setXYpos 48, 96
-  } else if choice == 3 {
+  if stageIndex == 1 {
+    setCostume "f"
+    setXYpos 0, 72
+    clone
+    setCostume "3"
+    setXYpos -144, -24
+    clone
+    setCostume "3"
+    setXYpos 144, -24
+    clone
+    choice = int(rand(0, 13))
+    if choice == 0 {
+      setXYpos -96, 96
+    } else if choice == 1 {
+      setXYpos -48, 96
+    } else if choice == 2 {
+      setXYpos 0, 96
+    } else if choice == 3 {
+      setXYpos 48, 96
+    } else if choice == 4 {
+      setXYpos 96, 96
+    } else if choice == 5 {
+      setXYpos -96, 72
+    } else if choice == 6 {
+      setXYpos -48, 72
+    } else if choice == 7 {
+      setXYpos 48, 72
+    } else if choice == 8 {
+      setXYpos 96, 72
+    } else if choice == 9 {
+      setXYpos -96, 48
+    } else if choice == 10 {
+      setXYpos -48, 48
+    } else if choice == 11 {
+      setXYpos 0, 48
+    } else if choice == 12 {
+      setXYpos 48, 48
+    } else if choice == 13 {
+      setXYpos 96, 48
+    }
+    setCostume "f"
+    clone
+    choice = int(rand(0, 13))
+    if choice == 0 {
+      setXYpos -96, 24
+    } else if choice == 1 {
+      setXYpos -48, 24
+    } else if choice == 2 {
+      setXYpos 0, 24
+    } else if choice == 3 {
+      setXYpos 48, 24
+    } else if choice == 4 {
+      setXYpos 96, 24
+    } else if choice == 5 {
+      setXYpos -120, 0
+    } else if choice == 6 {
+      setXYpos -48, 0
+    } else if choice == 7 {
+      setXYpos 0, 0
+    } else if choice == 8 {
+      setXYpos 48, 0
+    } else if choice == 9 {
+      setXYpos 120, 0
+    } else if choice == 10 {
+      setXYpos -120, -24
+    } else if choice == 11 {
+      setXYpos -48, -24
+    } else if choice == 12 {
+      setXYpos 0, -24
+    } else if choice == 13 {
+      setXYpos 48, -24
+    }
+    setCostume "f"
+    clone
+    choice = int(rand(0, 14))
+    if choice == 0 {
+      setXYpos 120, -24
+    } else if choice == 1 {
+      setXYpos -96, -48
+    } else if choice == 2 {
+      setXYpos -48, -48
+    } else if choice == 3 {
+      setXYpos 48, -48
+    } else if choice == 4 {
+      setXYpos 96, -48
+    } else if choice == 5 {
+      setXYpos -96, -72
+    } else if choice == 6 {
+      setXYpos -48, -72
+    } else if choice == 7 {
+      setXYpos 0, -72
+    } else if choice == 8 {
+      setXYpos 48, -72
+    } else if choice == 9 {
+      setXYpos 96, -72
+    } else if choice == 10 {
+      setXYpos -96, -96
+    } else if choice == 11 {
+      setXYpos -48, -96
+    } else if choice == 12 {
+      setXYpos 0, -96
+    } else if choice == 13 {
+      setXYpos 48, -96
+    } else if choice == 14 {
+      setXYpos 96, -96
+    }
+    setCostume "f"
+    clone
+  } else if stageIndex == 2 {
+    setCostume "f"
+    setXYpos -72, 144
+    clone
+    setCostume "f"
+    setXYpos 24, 144
+    clone
+    setCostume "f"
+    setXYpos -72, 120
+    clone
+    setCostume "f"
     setXYpos 96, 96
-  }
-  clone
-  choice = int(rand(0, 3))
-  if choice == 0 {
-    setXYpos -48, 24
-  } else if choice == 1 {
-    setXYpos 0, 24
-  } else if choice == 2 {
+    clone
+    setCostume "f"
+    setXYpos 72, 72
+    clone
+    setCostume "f"
+    setXYpos 0, 48
+    clone
+    setCostume "f"
+    setXYpos 144, 48
+    clone
+    setCostume "f"
     setXYpos 48, 24
-  }
-  clone
-  choice = int(rand(0, 4))
-  if choice == 0 {
-    setXYpos -96, -72
-  } else if choice == 1 {
-    setXYpos -48, -72
-  } else if choice == 2 {
-    setXYpos 48, -72
-  } else if choice == 3 {
+    clone
+    setCostume "f"
+    setXYpos 24, 0
+    clone
+    setCostume "f"
+    setXYpos -72, -24
+    clone
+    setCostume "f"
+    setXYpos -144, -48
+    clone
+    setCostume "f"
+    setXYpos -72, -48
+    clone
+    setCostume "f"
     setXYpos 96, -72
+    clone
+    choice = int(rand(0, 15))
+    if choice == 0 {
+      setXYpos -96, 96
+    } else if choice == 1 {
+      setXYpos -72, 96
+    } else if choice == 2 {
+      setXYpos -48, 96
+    } else if choice == 3 {
+      setXYpos -24, 96
+    } else if choice == 4 {
+      setXYpos 48, 96
+    } else if choice == 5 {
+      setXYpos -120, 72
+    } else if choice == 6 {
+      setXYpos -96, 72
+    } else if choice == 7 {
+      setXYpos -48, 72
+    } else if choice == 8 {
+      setXYpos -24, 72
+    } else if choice == 9 {
+      setXYpos 0, 72
+    } else if choice == 10 {
+      setXYpos 24, 72
+    } else if choice == 11 {
+      setXYpos 48, 72
+    } else if choice == 12 {
+      setXYpos 96, 72
+    } else if choice == 13 {
+      setXYpos 120, 72
+    } else if choice == 14 {
+      setXYpos -120, 48
+    } else if choice == 15 {
+      setXYpos -96, 48
+    }
+    setCostume "f"
+    clone
+    choice = int(rand(0, 15))
+    if choice == 0 {
+      setXYpos -48, 48
+    } else if choice == 1 {
+      setXYpos -24, 48
+    } else if choice == 2 {
+      setXYpos 24, 48
+    } else if choice == 3 {
+      setXYpos 48, 48
+    } else if choice == 4 {
+      setXYpos -96, 24
+    } else if choice == 5 {
+      setXYpos -72, 24
+    } else if choice == 6 {
+      setXYpos -48, 24
+    } else if choice == 7 {
+      setXYpos 0, 24
+    } else if choice == 8 {
+      setXYpos 24, 24
+    } else if choice == 9 {
+      setXYpos 72, 24
+    } else if choice == 10 {
+      setXYpos 120, 24
+    } else if choice == 11 {
+      setXYpos 48, 0
+    } else if choice == 12 {
+      setXYpos 72, 0
+    } else if choice == 13 {
+      setXYpos -120, -24
+    } else if choice == 14 {
+      setXYpos -96, -24
+    } else if choice == 15 {
+      setXYpos 0, -24
+    }
+    setCostume "f"
+    clone
+    choice = int(rand(0, 16))
+    if choice == 0 {
+      setXYpos 48, -24
+    } else if choice == 1 {
+      setXYpos 96, -24
+    } else if choice == 2 {
+      setXYpos -96, -48
+    } else if choice == 3 {
+      setXYpos -48, -48
+    } else if choice == 4 {
+      setXYpos 0, -48
+    } else if choice == 5 {
+      setXYpos 48, -48
+    } else if choice == 6 {
+      setXYpos 72, -48
+    } else if choice == 7 {
+      setXYpos 96, -48
+    } else if choice == 8 {
+      setXYpos -96, -72
+    } else if choice == 9 {
+      setXYpos -48, -72
+    } else if choice == 10 {
+      setXYpos 48, -72
+    } else if choice == 11 {
+      setXYpos -96, -96
+    } else if choice == 12 {
+      setXYpos -48, -96
+    } else if choice == 13 {
+      setXYpos 48, -96
+    } else if choice == 14 {
+      setXYpos 72, -96
+    } else if choice == 15 {
+      setXYpos 96, -96
+    } else if choice == 16 {
+      setXYpos 120, -96
+    }
+    setCostume "f"
+    clone
+  } else if stageIndex == 3 {
+    setCostume "c"
+    setXYpos 96, 120
+    clone
+    setCostume "c"
+    setXYpos 120, 120
+    clone
+    setCostume "c"
+    setXYpos 144, 120
+    clone
+    setCostume "f"
+    setXYpos 0, 0
+    clone
+    setCostume "f"
+    setXYpos 24, 0
+    clone
+    setCostume "f"
+    setXYpos 48, 0
+    clone
+    setCostume "5"
+    setXYpos -72, -96
+    clone
+    setCostume "5"
+    setXYpos -72, -120
+    clone
+    setCostume "f"
+    setXYpos -144, -144
+    clone
+    choice = int(rand(0, 13))
+    if choice == 0 {
+      setXYpos -48, 96
+    } else if choice == 1 {
+      setXYpos -24, 96
+    } else if choice == 2 {
+      setXYpos 0, 96
+    } else if choice == 3 {
+      setXYpos 24, 96
+    } else if choice == 4 {
+      setXYpos 48, 96
+    } else if choice == 5 {
+      setXYpos 72, 96
+    } else if choice == 6 {
+      setXYpos 96, 96
+    } else if choice == 7 {
+      setXYpos 120, 96
+    } else if choice == 8 {
+      setXYpos -48, 72
+    } else if choice == 9 {
+      setXYpos -24, 72
+    } else if choice == 10 {
+      setXYpos 0, 72
+    } else if choice == 11 {
+      setXYpos 48, 72
+    } else if choice == 12 {
+      setXYpos 48, 48
+    } else if choice == 13 {
+      setXYpos 96, 48
+    }
+    setCostume "f"
+    clone
+    choice = int(rand(0, 13))
+    if choice == 0 {
+      setXYpos -48, 24
+    } else if choice == 1 {
+      setXYpos -24, 24
+    } else if choice == 2 {
+      setXYpos 24, 24
+    } else if choice == 3 {
+      setXYpos 48, 24
+    } else if choice == 4 {
+      setXYpos 72, 24
+    } else if choice == 5 {
+      setXYpos 96, 24
+    } else if choice == 6 {
+      setXYpos -96, 0
+    } else if choice == 7 {
+      setXYpos -72, 0
+    } else if choice == 8 {
+      setXYpos -48, 0
+    } else if choice == 9 {
+      setXYpos -24, 0
+    } else if choice == 10 {
+      setXYpos 72, 0
+    } else if choice == 11 {
+      setXYpos 96, 0
+    } else if choice == 12 {
+      setXYpos -96, -24
+    } else if choice == 13 {
+      setXYpos -48, -24
+    }
+    setCostume "f"
+    clone
+    choice = int(rand(0, 13))
+    if choice == 0 {
+      setXYpos -24, -24
+    } else if choice == 1 {
+      setXYpos 0, -24
+    } else if choice == 2 {
+      setXYpos 24, -24
+    } else if choice == 3 {
+      setXYpos 48, -24
+    } else if choice == 4 {
+      setXYpos -120, -72
+    } else if choice == 5 {
+      setXYpos -96, -72
+    } else if choice == 6 {
+      setXYpos -72, -72
+    } else if choice == 7 {
+      setXYpos -48, -72
+    } else if choice == 8 {
+      setXYpos 0, -72
+    } else if choice == 9 {
+      setXYpos -120, -96
+    } else if choice == 10 {
+      setXYpos -96, -96
+    } else if choice == 11 {
+      setXYpos -48, -96
+    } else if choice == 12 {
+      setXYpos -24, -96
+    } else if choice == 13 {
+      setXYpos 0, -96
+    }
+    setCostume "f"
+    clone
+  } else if stageIndex == 4 {
+    setCostume "3"
+    setXYpos 144, 96
+    clone
+    setCostume "3"
+    setXYpos -144, 72
+    clone
+    setCostume "5"
+    setXYpos -48, 24
+    clone
+    setCostume "5"
+    setXYpos 0, 24
+    clone
+    setCostume "f"
+    setXYpos -144, -144
+    clone
+    setCostume "f"
+    setXYpos 144, -144
+    clone
+    choice = int(rand(0, 8))
+    if choice == 0 {
+      setXYpos -120, 96
+    } else if choice == 1 {
+      setXYpos -96, 96
+    } else if choice == 2 {
+      setXYpos 120, 96
+    } else if choice == 3 {
+      setXYpos -120, 72
+    } else if choice == 4 {
+      setXYpos -96, 72
+    } else if choice == 5 {
+      setXYpos -120, 48
+    } else if choice == 6 {
+      setXYpos -48, 48
+    } else if choice == 7 {
+      setXYpos -24, 48
+    } else if choice == 8 {
+      setXYpos 0, 48
+    }
+    setCostume "f"
+    clone
+    choice = int(rand(0, 8))
+    if choice == 0 {
+      setXYpos 96, 48
+    } else if choice == 1 {
+      setXYpos -120, 24
+    } else if choice == 2 {
+      setXYpos -72, 24
+    } else if choice == 3 {
+      setXYpos -24, 24
+    } else if choice == 4 {
+      setXYpos 24, 24
+    } else if choice == 5 {
+      setXYpos 96, 24
+    } else if choice == 6 {
+      setXYpos 120, 24
+    } else if choice == 7 {
+      setXYpos -120, 0
+    } else if choice == 8 {
+      setXYpos -72, 0
+    }
+    setCostume "f"
+    clone
+    choice = int(rand(0, 8))
+    if choice == 0 {
+      setXYpos 0, 0
+    } else if choice == 1 {
+      setXYpos 24, 0
+    } else if choice == 2 {
+      setXYpos 96, 0
+    } else if choice == 3 {
+      setXYpos -120, -24
+    } else if choice == 4 {
+      setXYpos 96, -24
+    } else if choice == 5 {
+      setXYpos 120, -24
+    } else if choice == 6 {
+      setXYpos 120, -48
+    } else if choice == 7 {
+      setXYpos 120, -72
+    } else if choice == 8 {
+      setXYpos 120, -96
+    }
+    setCostume "f"
+    clone
+  } else if stageIndex == 5 {
+    setCostume "c"
+    setXYpos -144, 120
+    clone
+    setCostume "3"
+    setXYpos 48, 120
+    clone
+    setCostume "3"
+    setXYpos 72, 120
+    clone
+    setCostume "f"
+    setXYpos 96, 120
+    clone
+    setCostume "f"
+    setXYpos -144, 96
+    clone
+    setCostume "a"
+    setXYpos 96, -24
+    clone
+    setCostume "5"
+    setXYpos 120, -24
+    clone
+    setCostume "f"
+    setXYpos 0, -48
+    clone
+    setCostume "a"
+    setXYpos 96, -48
+    clone
+    setCostume "a"
+    setXYpos 96, -72
+    clone
+    choice = int(rand(0, 18))
+    if choice == 0 {
+      setXYpos -120, 96
+    } else if choice == 1 {
+      setXYpos -72, 96
+    } else if choice == 2 {
+      setXYpos -48, 96
+    } else if choice == 3 {
+      setXYpos -24, 96
+    } else if choice == 4 {
+      setXYpos 24, 96
+    } else if choice == 5 {
+      setXYpos 48, 96
+    } else if choice == 6 {
+      setXYpos 72, 96
+    } else if choice == 7 {
+      setXYpos 96, 96
+    } else if choice == 8 {
+      setXYpos 120, 96
+    } else if choice == 9 {
+      setXYpos -120, 72
+    } else if choice == 10 {
+      setXYpos -24, 72
+    } else if choice == 11 {
+      setXYpos 48, 72
+    } else if choice == 12 {
+      setXYpos 120, 72
+    } else if choice == 13 {
+      setXYpos -120, 48
+    } else if choice == 14 {
+      setXYpos -96, 48
+    } else if choice == 15 {
+      setXYpos -72, 48
+    } else if choice == 16 {
+      setXYpos -24, 48
+    } else if choice == 17 {
+      setXYpos 0, 48
+    } else if choice == 18 {
+      setXYpos 24, 48
+    }
+    setCostume "f"
+    clone
+    choice = int(rand(0, 18))
+    if choice == 0 {
+      setXYpos 48, 48
+    } else if choice == 1 {
+      setXYpos 96, 48
+    } else if choice == 2 {
+      setXYpos 120, 48
+    } else if choice == 3 {
+      setXYpos -120, 24
+    } else if choice == 4 {
+      setXYpos -72, 24
+    } else if choice == 5 {
+      setXYpos 0, 24
+    } else if choice == 6 {
+      setXYpos 96, 24
+    } else if choice == 7 {
+      setXYpos -96, 0
+    } else if choice == 8 {
+      setXYpos -72, 0
+    } else if choice == 9 {
+      setXYpos 0, 0
+    } else if choice == 10 {
+      setXYpos 72, 0
+    } else if choice == 11 {
+      setXYpos 96, 0
+    } else if choice == 12 {
+      setXYpos 120, 0
+    } else if choice == 13 {
+      setXYpos -120, -24
+    } else if choice == 14 {
+      setXYpos -96, -24
+    } else if choice == 15 {
+      setXYpos -72, -24
+    } else if choice == 16 {
+      setXYpos -24, -24
+    } else if choice == 17 {
+      setXYpos 0, -24
+    } else if choice == 18 {
+      setXYpos 24, -24
+    }
+    setCostume "f"
+    clone
+    choice = int(rand(0, 18))
+    if choice == 0 {
+      setXYpos 48, -24
+    } else if choice == 1 {
+      setXYpos 72, -24
+    } else if choice == 2 {
+      setXYpos -72, -48
+    } else if choice == 3 {
+      setXYpos -24, -48
+    } else if choice == 4 {
+      setXYpos 24, -48
+    } else if choice == 5 {
+      setXYpos 72, -48
+    } else if choice == 6 {
+      setXYpos 120, -48
+    } else if choice == 7 {
+      setXYpos -120, -72
+    } else if choice == 8 {
+      setXYpos -96, -72
+    } else if choice == 9 {
+      setXYpos -24, -72
+    } else if choice == 10 {
+      setXYpos 0, -72
+    } else if choice == 11 {
+      setXYpos 24, -72
+    } else if choice == 12 {
+      setXYpos 48, -72
+    } else if choice == 13 {
+      setXYpos 72, -72
+    } else if choice == 14 {
+      setXYpos -120, -96
+    } else if choice == 15 {
+      setXYpos -96, -96
+    } else if choice == 16 {
+      setXYpos -72, -96
+    } else if choice == 17 {
+      setXYpos 96, -96
+    } else if choice == 18 {
+      setXYpos 120, -96
+    }
+    setCostume "f"
+    clone
+  } else if stageIndex == 6 {
+    setCostume "a"
+    setXYpos -96, 120
+    clone
+    setCostume "a"
+    setXYpos -96, 96
+    clone
+    setCostume "f"
+    setXYpos 0, 72
+    clone
+    setCostume "3"
+    setXYpos -48, 48
+    clone
+    setCostume "5"
+    setXYpos 72, 48
+    clone
+    setCostume "f"
+    setXYpos -144, -24
+    clone
+    setCostume "f"
+    setXYpos 144, -24
+    clone
+    setCostume "3"
+    setXYpos -144, -48
+    clone
+    setCostume "3"
+    setXYpos -120, -48
+    clone
+    setCostume "3"
+    setXYpos -96, -48
+    clone
+    setCostume "3"
+    setXYpos 96, -48
+    clone
+    setCostume "3"
+    setXYpos 120, -48
+    clone
+    setCostume "3"
+    setXYpos 144, -48
+    clone
+    choice = int(rand(0, 12))
+    if choice == 0 {
+      setXYpos -72, 96
+    } else if choice == 1 {
+      setXYpos -24, 96
+    } else if choice == 2 {
+      setXYpos 24, 96
+    } else if choice == 3 {
+      setXYpos -96, 72
+    } else if choice == 4 {
+      setXYpos -72, 72
+    } else if choice == 5 {
+      setXYpos -24, 72
+    } else if choice == 6 {
+      setXYpos 24, 72
+    } else if choice == 7 {
+      setXYpos 96, 72
+    } else if choice == 8 {
+      setXYpos -120, 48
+    } else if choice == 9 {
+      setXYpos -96, 48
+    } else if choice == 10 {
+      setXYpos -24, 48
+    } else if choice == 11 {
+      setXYpos 24, 48
+    } else if choice == 12 {
+      setXYpos 96, 48
+    }
+    setCostume "f"
+    clone
+    choice = int(rand(0, 13))
+    if choice == 0 {
+      setXYpos -72, 24
+    } else if choice == 1 {
+      setXYpos -48, 24
+    } else if choice == 2 {
+      setXYpos 48, 24
+    } else if choice == 3 {
+      setXYpos 72, 24
+    } else if choice == 4 {
+      setXYpos -120, 0
+    } else if choice == 5 {
+      setXYpos -96, 0
+    } else if choice == 6 {
+      setXYpos -72, 0
+    } else if choice == 7 {
+      setXYpos 72, 0
+    } else if choice == 8 {
+      setXYpos 96, 0
+    } else if choice == 9 {
+      setXYpos 120, 0
+    } else if choice == 10 {
+      setXYpos -72, -24
+    } else if choice == 11 {
+      setXYpos -72, -48
+    } else if choice == 12 {
+      setXYpos -24, -48
+    } else if choice == 13 {
+      setXYpos 24, -48
+    }
+    setCostume "f"
+    clone
+    choice = int(rand(0, 13))
+    if choice == 0 {
+      setXYpos 72, -48
+    } else if choice == 1 {
+      setXYpos -96, -72
+    } else if choice == 2 {
+      setXYpos -72, -72
+    } else if choice == 3 {
+      setXYpos -24, -72
+    } else if choice == 4 {
+      setXYpos 0, -72
+    } else if choice == 5 {
+      setXYpos 24, -72
+    } else if choice == 6 {
+      setXYpos 72, -72
+    } else if choice == 7 {
+      setXYpos 96, -72
+    } else if choice == 8 {
+      setXYpos 120, -72
+    } else if choice == 9 {
+      setXYpos -72, -96
+    } else if choice == 10 {
+      setXYpos -48, -96
+    } else if choice == 11 {
+      setXYpos 0, -96
+    } else if choice == 12 {
+      setXYpos 48, -96
+    } else if choice == 13 {
+      setXYpos 72, -96
+    }
+    setCostume "f"
+    clone
+  } else if stageIndex == 7 {
+    setCostume "3"
+    setXYpos 24, 144
+    clone
+    setCostume "3"
+    setXYpos 48, 144
+    clone
+    setCostume "f"
+    setXYpos -96, 120
+    clone
+    setCostume "3"
+    setXYpos -72, 120
+    clone
+    setCostume "3"
+    setXYpos -48, 120
+    clone
+    setCostume "3"
+    setXYpos -24, 120
+    clone
+    setCostume "f"
+    setXYpos 96, 120
+    clone
+    setCostume "f"
+    setXYpos -96, 96
+    clone
+    setCostume "3"
+    setXYpos 48, 96
+    clone
+    setCostume "f"
+    setXYpos 72, 96
+    clone
+    setCostume "f"
+    setXYpos 96, 96
+    clone
+    setCostume "f"
+    setXYpos -120, 72
+    clone
+    setCostume "f"
+    setXYpos 0, 72
+    clone
+    setCostume "f"
+    setXYpos 96, 72
+    clone
+    setCostume "f"
+    setXYpos -24, 48
+    clone
+    setCostume "f"
+    setXYpos 0, 48
+    clone
+    setCostume "3"
+    setXYpos 96, 48
+    clone
+    setCostume "f"
+    setXYpos 120, 48
+    clone
+    setCostume "f"
+    setXYpos -120, 24
+    clone
+    setCostume "f"
+    setXYpos -48, 24
+    clone
+    setCostume "f"
+    setXYpos -24, 24
+    clone
+    setCostume "f"
+    setXYpos 0, 24
+    clone
+    setCostume "f"
+    setXYpos 48, 24
+    clone
+    setCostume "a"
+    setXYpos -120, 0
+    clone
+    setCostume "f"
+    setXYpos -72, 0
+    clone
+    setCostume "f"
+    setXYpos -48, 0
+    clone
+    setCostume "f"
+    setXYpos 48, 0
+    clone
+    setCostume "f"
+    setXYpos 72, 0
+    clone
+    setCostume "5"
+    setXYpos -144, -24
+    clone
+    setCostume "f"
+    setXYpos -48, -24
+    clone
+    setCostume "f"
+    setXYpos 0, -24
+    clone
+    setCostume "f"
+    setXYpos 24, -24
+    clone
+    setCostume "f"
+    setXYpos 48, -24
+    clone
+    setCostume "a"
+    setXYpos 120, -24
+    clone
+    setCostume "a"
+    setXYpos -120, -48
+    clone
+    setCostume "f"
+    setXYpos -96, -48
+    clone
+    setCostume "f"
+    setXYpos 0, -48
+    clone
+    setCostume "f"
+    setXYpos 24, -48
+    clone
+    setCostume "f"
+    setXYpos 120, -48
+    clone
+    setCostume "f"
+    setXYpos -120, -72
+    clone
+    setCostume "f"
+    setXYpos 0, -72
+    clone
+    setCostume "f"
+    setXYpos 96, -72
+    clone
+    setCostume "f"
+    setXYpos 120, -72
+    clone
+    setCostume "3"
+    setXYpos -120, -96
+    clone
+    setCostume "3"
+    setXYpos -96, -96
+    clone
+    setCostume "f"
+    setXYpos -72, -96
+    clone
+    setCostume "f"
+    setXYpos 72, -96
+    clone
+    setCostume "3"
+    setXYpos 72, -120
+    clone
+    setCostume "c"
+    setXYpos 120, -120
+    clone
+    setCostume "f"
+    setXYpos 144, -120
+    clone
+    setCostume "c"
+    setXYpos -144, -144
+    clone
+    setCostume "c"
+    setXYpos -120, -144
+    clone
+    choice = int(rand(0, 16))
+    if choice == 0 {
+      setXYpos -120, 96
+    } else if choice == 1 {
+      setXYpos -72, 96
+    } else if choice == 2 {
+      setXYpos -48, 96
+    } else if choice == 3 {
+      setXYpos -24, 96
+    } else if choice == 4 {
+      setXYpos 24, 96
+    } else if choice == 5 {
+      setXYpos 120, 96
+    } else if choice == 6 {
+      setXYpos -96, 72
+    } else if choice == 7 {
+      setXYpos -72, 72
+    } else if choice == 8 {
+      setXYpos -48, 72
+    } else if choice == 9 {
+      setXYpos 24, 72
+    } else if choice == 10 {
+      setXYpos 48, 72
+    } else if choice == 11 {
+      setXYpos 72, 72
+    } else if choice == 12 {
+      setXYpos 120, 72
+    } else if choice == 13 {
+      setXYpos -120, 48
+    } else if choice == 14 {
+      setXYpos -96, 48
+    } else if choice == 15 {
+      setXYpos -72, 48
+    } else if choice == 16 {
+      setXYpos 24, 48
+    }
+    setCostume "f"
+    clone
+    choice = int(rand(0, 17))
+    if choice == 0 {
+      setXYpos 48, 48
+    } else if choice == 1 {
+      setXYpos 72, 48
+    } else if choice == 2 {
+      setXYpos -96, 24
+    } else if choice == 3 {
+      setXYpos 24, 24
+    } else if choice == 4 {
+      setXYpos 72, 24
+    } else if choice == 5 {
+      setXYpos 96, 24
+    } else if choice == 6 {
+      setXYpos 120, 24
+    } else if choice == 7 {
+      setXYpos -96, 0
+    } else if choice == 8 {
+      setXYpos -24, 0
+    } else if choice == 9 {
+      setXYpos 0, 0
+    } else if choice == 10 {
+      setXYpos 24, 0
+    } else if choice == 11 {
+      setXYpos 96, 0
+    } else if choice == 12 {
+      setXYpos 120, 0
+    } else if choice == 13 {
+      setXYpos -120, -24
+    } else if choice == 14 {
+      setXYpos -96, -24
+    } else if choice == 15 {
+      setXYpos -72, -24
+    } else if choice == 16 {
+      setXYpos -24, -24
+    } else if choice == 17 {
+      setXYpos 72, -24
+    }
+    setCostume "f"
+    clone
+    choice = int(rand(0, 17))
+    if choice == 0 {
+      setXYpos 96, -24
+    } else if choice == 1 {
+      setXYpos -72, -48
+    } else if choice == 2 {
+      setXYpos -48, -48
+    } else if choice == 3 {
+      setXYpos -24, -48
+    } else if choice == 4 {
+      setXYpos 72, -48
+    } else if choice == 5 {
+      setXYpos 96, -48
+    } else if choice == 6 {
+      setXYpos -96, -72
+    } else if choice == 7 {
+      setXYpos -72, -72
+    } else if choice == 8 {
+      setXYpos -48, -72
+    } else if choice == 9 {
+      setXYpos -24, -72
+    } else if choice == 10 {
+      setXYpos 48, -72
+    } else if choice == 11 {
+      setXYpos 72, -72
+    } else if choice == 12 {
+      setXYpos -48, -96
+    } else if choice == 13 {
+      setXYpos -24, -96
+    } else if choice == 14 {
+      setXYpos 24, -96
+    } else if choice == 15 {
+      setXYpos 48, -96
+    } else if choice == 16 {
+      setXYpos 96, -96
+    } else if choice == 17 {
+      setXYpos 120, -96
+    }
+    setCostume "f"
+    clone
+  } else if stageIndex == 8 {
+    setCostume "c"
+    setXYpos 24, 120
+    clone
+    setCostume "3"
+    setXYpos 120, 24
+    clone
+    setCostume "3"
+    setXYpos 144, 24
+    clone
+    setCostume "c"
+    setXYpos 96, 0
+    clone
+    setCostume "c"
+    setXYpos 120, 0
+    clone
+    setCostume "f"
+    setXYpos -72, -24
+    clone
+    setCostume "c"
+    setXYpos -24, -24
+    clone
+    setCostume "c"
+    setXYpos 72, -96
+    clone
+    setCostume "c"
+    setXYpos -120, -120
+    clone
+    choice = int(rand(0, 11))
+    if choice == 0 {
+      setXYpos -72, 96
+    } else if choice == 1 {
+      setXYpos -48, 96
+    } else if choice == 2 {
+      setXYpos 0, 96
+    } else if choice == 3 {
+      setXYpos 48, 96
+    } else if choice == 4 {
+      setXYpos 96, 96
+    } else if choice == 5 {
+      setXYpos 120, 72
+    } else if choice == 6 {
+      setXYpos -96, 48
+    } else if choice == 7 {
+      setXYpos -72, 48
+    } else if choice == 8 {
+      setXYpos -48, 48
+    } else if choice == 9 {
+      setXYpos -24, 48
+    } else if choice == 10 {
+      setXYpos 48, 48
+    } else if choice == 11 {
+      setXYpos 72, 48
+    }
+    setCostume "f"
+    clone
+    choice = int(rand(0, 11))
+    if choice == 0 {
+      setXYpos 96, 48
+    } else if choice == 1 {
+      setXYpos 120, 48
+    } else if choice == 2 {
+      setXYpos -120, 24
+    } else if choice == 3 {
+      setXYpos -72, 24
+    } else if choice == 4 {
+      setXYpos -48, 24
+    } else if choice == 5 {
+      setXYpos -96, 0
+    } else if choice == 6 {
+      setXYpos -48, 0
+    } else if choice == 7 {
+      setXYpos -120, -24
+    } else if choice == 8 {
+      setXYpos -96, -24
+    } else if choice == 9 {
+      setXYpos -48, -24
+    } else if choice == 10 {
+      setXYpos 0, -24
+    } else if choice == 11 {
+      setXYpos 120, -24
+    }
+    setCostume "f"
+    clone
+    choice = int(rand(0, 12))
+    if choice == 0 {
+      setXYpos -96, -48
+    } else if choice == 1 {
+      setXYpos 48, -48
+    } else if choice == 2 {
+      setXYpos -96, -72
+    } else if choice == 3 {
+      setXYpos -48, -72
+    } else if choice == 4 {
+      setXYpos -24, -72
+    } else if choice == 5 {
+      setXYpos 48, -72
+    } else if choice == 6 {
+      setXYpos 72, -72
+    } else if choice == 7 {
+      setXYpos 96, -72
+    } else if choice == 8 {
+      setXYpos 120, -72
+    } else if choice == 9 {
+      setXYpos -72, -96
+    } else if choice == 10 {
+      setXYpos -24, -96
+    } else if choice == 11 {
+      setXYpos 0, -96
+    } else if choice == 12 {
+      setXYpos 48, -96
+    }
+    setCostume "f"
+    clone
+  } else if stageIndex == 9 {
+    setCostume "c"
+    setXYpos 72, 144
+    clone
+    setCostume "c"
+    setXYpos 0, 120
+    clone
+    setCostume "a"
+    setXYpos 48, 120
+    clone
+    setCostume "f"
+    setXYpos 72, 120
+    clone
+    setCostume "5"
+    setXYpos 96, 120
+    clone
+    setCostume "c"
+    setXYpos -72, 96
+    clone
+    setCostume "a"
+    setXYpos -24, 96
+    clone
+    setCostume "f"
+    setXYpos 0, 96
+    clone
+    setCostume "5"
+    setXYpos 24, 96
+    clone
+    setCostume "3"
+    setXYpos 72, 96
+    clone
+    setCostume "a"
+    setXYpos -96, 72
+    clone
+    setCostume "f"
+    setXYpos -72, 72
+    clone
+    setCostume "5"
+    setXYpos -48, 72
+    clone
+    setCostume "3"
+    setXYpos 0, 72
+    clone
+    setCostume "3"
+    setXYpos -72, 48
+    clone
+    setCostume "c"
+    setXYpos -48, 24
+    clone
+    setCostume "c"
+    setXYpos 48, 24
+    clone
+    setCostume "f"
+    setXYpos -144, 0
+    clone
+    setCostume "a"
+    setXYpos -72, 0
+    clone
+    setCostume "f"
+    setXYpos -48, 0
+    clone
+    setCostume "5"
+    setXYpos -24, 0
+    clone
+    setCostume "a"
+    setXYpos 24, 0
+    clone
+    setCostume "f"
+    setXYpos 48, 0
+    clone
+    setCostume "5"
+    setXYpos 72, 0
+    clone
+    setCostume "f"
+    setXYpos 144, 0
+    clone
+    setCostume "3"
+    setXYpos -48, -24
+    clone
+    setCostume "3"
+    setXYpos 48, -24
+    clone
+    setCostume "c"
+    setXYpos -48, -48
+    clone
+    setCostume "c"
+    setXYpos 48, -48
+    clone
+    setCostume "a"
+    setXYpos -72, -72
+    clone
+    setCostume "f"
+    setXYpos -48, -72
+    clone
+    setCostume "5"
+    setXYpos -24, -72
+    clone
+    setCostume "a"
+    setXYpos 24, -72
+    clone
+    setCostume "f"
+    setXYpos 48, -72
+    clone
+    setCostume "5"
+    setXYpos 72, -72
+    clone
+    setCostume "3"
+    setXYpos -48, -96
+    clone
+    setCostume "3"
+    setXYpos 48, -96
+    clone
+    choice = int(rand(0, 16))
+    if choice == 0 {
+      setXYpos -120, 96
+    } else if choice == 1 {
+      setXYpos -96, 96
+    } else if choice == 2 {
+      setXYpos 48, 96
+    } else if choice == 3 {
+      setXYpos 120, 96
+    } else if choice == 4 {
+      setXYpos -120, 72
+    } else if choice == 5 {
+      setXYpos -24, 72
+    } else if choice == 6 {
+      setXYpos 48, 72
+    } else if choice == 7 {
+      setXYpos 72, 72
+    } else if choice == 8 {
+      setXYpos 96, 72
+    } else if choice == 9 {
+      setXYpos 120, 72
+    } else if choice == 10 {
+      setXYpos -120, 48
+    } else if choice == 11 {
+      setXYpos -96, 48
+    } else if choice == 12 {
+      setXYpos -24, 48
+    } else if choice == 13 {
+      setXYpos 0, 48
+    } else if choice == 14 {
+      setXYpos 24, 48
+    } else if choice == 15 {
+      setXYpos 48, 48
+    } else if choice == 16 {
+      setXYpos 72, 48
+    }
+    setCostume "f"
+    clone
+    choice = int(rand(0, 16))
+    if choice == 0 {
+      setXYpos 96, 48
+    } else if choice == 1 {
+      setXYpos 120, 48
+    } else if choice == 2 {
+      setXYpos -120, 24
+    } else if choice == 3 {
+      setXYpos -96, 24
+    } else if choice == 4 {
+      setXYpos 0, 24
+    } else if choice == 5 {
+      setXYpos 96, 24
+    } else if choice == 6 {
+      setXYpos 120, 24
+    } else if choice == 7 {
+      setXYpos -96, 0
+    } else if choice == 8 {
+      setXYpos 0, 0
+    } else if choice == 9 {
+      setXYpos 96, 0
+    } else if choice == 10 {
+      setXYpos -120, -24
+    } else if choice == 11 {
+      setXYpos -96, -24
+    } else if choice == 12 {
+      setXYpos 0, -24
+    } else if choice == 13 {
+      setXYpos 96, -24
+    } else if choice == 14 {
+      setXYpos 120, -24
+    } else if choice == 15 {
+      setXYpos -120, -48
+    } else if choice == 16 {
+      setXYpos -96, -48
+    }
+    setCostume "f"
+    clone
+    choice = int(rand(0, 16))
+    if choice == 0 {
+      setXYpos -72, -48
+    } else if choice == 1 {
+      setXYpos -24, -48
+    } else if choice == 2 {
+      setXYpos 0, -48
+    } else if choice == 3 {
+      setXYpos 24, -48
+    } else if choice == 4 {
+      setXYpos 72, -48
+    } else if choice == 5 {
+      setXYpos 96, -48
+    } else if choice == 6 {
+      setXYpos 120, -48
+    } else if choice == 7 {
+      setXYpos -120, -72
+    } else if choice == 8 {
+      setXYpos -96, -72
+    } else if choice == 9 {
+      setXYpos 0, -72
+    } else if choice == 10 {
+      setXYpos 96, -72
+    } else if choice == 11 {
+      setXYpos 120, -72
+    } else if choice == 12 {
+      setXYpos -120, -96
+    } else if choice == 13 {
+      setXYpos -96, -96
+    } else if choice == 14 {
+      setXYpos 0, -96
+    } else if choice == 15 {
+      setXYpos 96, -96
+    } else if choice == 16 {
+      setXYpos 120, -96
+    }
+    setCostume "f"
+    clone
+  } else if stageIndex == 10 {
+    setCostume "f"
+    setXYpos 0, 48
+    clone
+    setCostume "f"
+    setXYpos 24, 48
+    clone
+    setCostume "f"
+    setXYpos -48, 0
+    clone
+    setCostume "f"
+    setXYpos -24, 0
+    clone
+    setCostume "f"
+    setXYpos 24, 0
+    clone
+    setCostume "f"
+    setXYpos 48, 0
+    clone
+    setCostume "f"
+    setXYpos -48, -24
+    clone
+    setCostume "f"
+    setXYpos 48, -24
+    clone
+    setCostume "f"
+    setXYpos -24, -72
+    clone
+    setCostume "f"
+    setXYpos 0, -72
+    clone
+    choice = int(rand(0, 5))
+    if choice == 0 {
+      setXYpos -96, 96
+    } else if choice == 1 {
+      setXYpos -72, 96
+    } else if choice == 2 {
+      setXYpos -24, 96
+    } else if choice == 3 {
+      setXYpos 48, 96
+    } else if choice == 4 {
+      setXYpos 96, 96
+    } else if choice == 5 {
+      setXYpos 120, 96
+    }
+    setCostume "f"
+    clone
+    choice = int(rand(0, 6))
+    if choice == 0 {
+      setXYpos -120, 72
+    } else if choice == 1 {
+      setXYpos -96, 72
+    } else if choice == 2 {
+      setXYpos -72, 72
+    } else if choice == 3 {
+      setXYpos 96, 72
+    } else if choice == 4 {
+      setXYpos 120, 72
+    } else if choice == 5 {
+      setXYpos -120, 48
+    } else if choice == 6 {
+      setXYpos -96, 48
+    }
+    setCostume "f"
+    clone
+    choice = int(rand(0, 6))
+    if choice == 0 {
+      setXYpos -72, 48
+    } else if choice == 1 {
+      setXYpos 96, 48
+    } else if choice == 2 {
+      setXYpos 120, 48
+    } else if choice == 3 {
+      setXYpos -120, -24
+    } else if choice == 4 {
+      setXYpos -24, -24
+    } else if choice == 5 {
+      setXYpos 24, -24
+    } else if choice == 6 {
+      setXYpos -120, -48
+    }
+    setCostume "f"
+    clone
+  } else if stageIndex == 11 {
+    setCostume "f"
+    setXYpos -24, 144
+    clone
+    setCostume "f"
+    setXYpos 24, 72
+    clone
+    setCostume "f"
+    setXYpos 0, 48
+    clone
+    setCostume "f"
+    setXYpos 144, 48
+    clone
+    setCostume "f"
+    setXYpos -48, 24
+    clone
+    setCostume "f"
+    setXYpos -24, 0
+    clone
+    setCostume "f"
+    setXYpos -72, -24
+    clone
+    setCostume "f"
+    setXYpos -144, -48
+    clone
+    setCostume "f"
+    setXYpos 24, -48
+    clone
+    setCostume "3"
+    setXYpos 48, -96
+    clone
+    choice = int(rand(0, 9))
+    if choice == 0 {
+      setXYpos -120, 96
+    } else if choice == 1 {
+      setXYpos -96, 96
+    } else if choice == 2 {
+      setXYpos -48, 96
+    } else if choice == 3 {
+      setXYpos 0, 96
+    } else if choice == 4 {
+      setXYpos 72, 96
+    } else if choice == 5 {
+      setXYpos -96, 72
+    } else if choice == 6 {
+      setXYpos -72, 72
+    } else if choice == 7 {
+      setXYpos -48, 72
+    } else if choice == 8 {
+      setXYpos -24, 72
+    } else if choice == 9 {
+      setXYpos 0, 72
+    }
+    setCostume "f"
+    clone
+    choice = int(rand(0, 9))
+    if choice == 0 {
+      setXYpos 48, 72
+    } else if choice == 1 {
+      setXYpos -96, 48
+    } else if choice == 2 {
+      setXYpos -24, 24
+    } else if choice == 3 {
+      setXYpos 0, 24
+    } else if choice == 4 {
+      setXYpos 48, 24
+    } else if choice == 5 {
+      setXYpos 120, 24
+    } else if choice == 6 {
+      setXYpos -48, 0
+    } else if choice == 7 {
+      setXYpos 120, 0
+    } else if choice == 8 {
+      setXYpos -120, -24
+    } else if choice == 9 {
+      setXYpos -96, -24
+    }
+    setCostume "f"
+    clone
+    choice = int(rand(0, 10))
+    if choice == 0 {
+      setXYpos -48, -24
+    } else if choice == 1 {
+      setXYpos -24, -24
+    } else if choice == 2 {
+      setXYpos -96, -48
+    } else if choice == 3 {
+      setXYpos 24, -72
+    } else if choice == 4 {
+      setXYpos 48, -72
+    } else if choice == 5 {
+      setXYpos 72, -72
+    } else if choice == 6 {
+      setXYpos 96, -72
+    } else if choice == 7 {
+      setXYpos -48, -96
+    } else if choice == 8 {
+      setXYpos -24, -96
+    } else if choice == 9 {
+      setXYpos 0, -96
+    } else if choice == 10 {
+      setXYpos 24, -96
+    }
+    setCostume "f"
+    clone
+  } else if stageIndex == 12 {
+    setCostume "3"
+    setXYpos 144, 72
+    clone
+    setCostume "c"
+    setXYpos -96, 48
+    clone
+    setCostume "c"
+    setXYpos -72, 48
+    clone
+    setCostume "c"
+    setXYpos -48, 48
+    clone
+    setCostume "f"
+    setXYpos 72, 48
+    clone
+    setCostume "5"
+    setXYpos 96, 48
+    clone
+    setCostume "f"
+    setXYpos -48, 0
+    clone
+    setCostume "3"
+    setXYpos 96, 0
+    clone
+    setCostume "3"
+    setXYpos 0, -48
+    clone
+    setCostume "3"
+    setXYpos 24, -48
+    clone
+    setCostume "3"
+    setXYpos -48, -96
+    clone
+    setCostume "3"
+    setXYpos -24, -96
+    clone
+    choice = int(rand(0, 14))
+    if choice == 0 {
+      setXYpos -120, 96
+    } else if choice == 1 {
+      setXYpos -96, 96
+    } else if choice == 2 {
+      setXYpos -72, 96
+    } else if choice == 3 {
+      setXYpos -24, 96
+    } else if choice == 4 {
+      setXYpos 24, 96
+    } else if choice == 5 {
+      setXYpos 48, 96
+    } else if choice == 6 {
+      setXYpos 72, 96
+    } else if choice == 7 {
+      setXYpos 96, 96
+    } else if choice == 8 {
+      setXYpos 0, 72
+    } else if choice == 9 {
+      setXYpos 72, 72
+    } else if choice == 10 {
+      setXYpos 96, 72
+    } else if choice == 11 {
+      setXYpos -120, 48
+    } else if choice == 12 {
+      setXYpos 0, 48
+    } else if choice == 13 {
+      setXYpos 48, 48
+    } else if choice == 14 {
+      setXYpos -120, 24
+    }
+    setCostume "f"
+    clone
+    choice = int(rand(0, 15))
+    if choice == 0 {
+      setXYpos 48, 24
+    } else if choice == 1 {
+      setXYpos -120, 0
+    } else if choice == 2 {
+      setXYpos -96, 0
+    } else if choice == 3 {
+      setXYpos -72, 0
+    } else if choice == 4 {
+      setXYpos 0, 0
+    } else if choice == 5 {
+      setXYpos 24, 0
+    } else if choice == 6 {
+      setXYpos 48, 0
+    } else if choice == 7 {
+      setXYpos 120, 0
+    } else if choice == 8 {
+      setXYpos -72, -24
+    } else if choice == 9 {
+      setXYpos 48, -24
+    } else if choice == 10 {
+      setXYpos 96, -24
+    } else if choice == 11 {
+      setXYpos 120, -24
+    } else if choice == 12 {
+      setXYpos -120, -48
+    } else if choice == 13 {
+      setXYpos -96, -48
+    } else if choice == 14 {
+      setXYpos -72, -48
+    } else if choice == 15 {
+      setXYpos -48, -48
+    }
+    setCostume "f"
+    clone
+    choice = int(rand(0, 15))
+    if choice == 0 {
+      setXYpos 48, -48
+    } else if choice == 1 {
+      setXYpos -72, -72
+    } else if choice == 2 {
+      setXYpos -48, -72
+    } else if choice == 3 {
+      setXYpos -24, -72
+    } else if choice == 4 {
+      setXYpos 0, -72
+    } else if choice == 5 {
+      setXYpos 24, -72
+    } else if choice == 6 {
+      setXYpos 48, -72
+    } else if choice == 7 {
+      setXYpos 72, -72
+    } else if choice == 8 {
+      setXYpos 96, -72
+    } else if choice == 9 {
+      setXYpos 120, -72
+    } else if choice == 10 {
+      setXYpos -120, -96
+    } else if choice == 11 {
+      setXYpos -72, -96
+    } else if choice == 12 {
+      setXYpos 0, -96
+    } else if choice == 13 {
+      setXYpos 24, -96
+    } else if choice == 14 {
+      setXYpos 48, -96
+    } else if choice == 15 {
+      setXYpos 120, -96
+    }
+    setCostume "f"
+    clone
+  } else if stageIndex == 13 {
+    setCostume "f"
+    setXYpos 120, 96
+    clone
+    setCostume "f"
+    setXYpos -120, 72
+    clone
+    setCostume "c"
+    setXYpos -24, 48
+    clone
+    setCostume "f"
+    setXYpos 0, 48
+    clone
+    setCostume "c"
+    setXYpos 24, 48
+    clone
+    setCostume "f"
+    setXYpos 120, 48
+    clone
+    setCostume "3"
+    setXYpos 120, 24
+    clone
+    setCostume "c"
+    setXYpos -120, 0
+    clone
+    setCostume "f"
+    setXYpos -120, -24
+    clone
+    setCostume "3"
+    setXYpos -24, -24
+    clone
+    setCostume "f"
+    setXYpos 0, -24
+    clone
+    setCostume "3"
+    setXYpos 24, -24
+    clone
+    setCostume "f"
+    setXYpos 120, -48
+    clone
+    setCostume "f"
+    setXYpos -120, -72
+    clone
+    setCostume "f"
+    setXYpos 120, -96
+    clone
+    setCostume "f"
+    setXYpos 144, -96
+    clone
+    choice = int(rand(0, 12))
+    if choice == 0 {
+      setXYpos -96, 96
+    } else if choice == 1 {
+      setXYpos -72, 96
+    } else if choice == 2 {
+      setXYpos -48, 96
+    } else if choice == 3 {
+      setXYpos -24, 96
+    } else if choice == 4 {
+      setXYpos 24, 96
+    } else if choice == 5 {
+      setXYpos 48, 96
+    } else if choice == 6 {
+      setXYpos 72, 96
+    } else if choice == 7 {
+      setXYpos 96, 96
+    } else if choice == 8 {
+      setXYpos -96, 72
+    } else if choice == 9 {
+      setXYpos -24, 72
+    } else if choice == 10 {
+      setXYpos 0, 72
+    } else if choice == 11 {
+      setXYpos 24, 72
+    } else if choice == 12 {
+      setXYpos 96, 72
+    }
+    setCostume "f"
+    clone
+    choice = int(rand(0, 13))
+    if choice == 0 {
+      setXYpos -96, 48
+    } else if choice == 1 {
+      setXYpos 96, 48
+    } else if choice == 2 {
+      setXYpos -96, 24
+    } else if choice == 3 {
+      setXYpos -72, 24
+    } else if choice == 4 {
+      setXYpos 72, 24
+    } else if choice == 5 {
+      setXYpos 96, 24
+    } else if choice == 6 {
+      setXYpos -96, 0
+    } else if choice == 7 {
+      setXYpos -72, 0
+    } else if choice == 8 {
+      setXYpos 72, 0
+    } else if choice == 9 {
+      setXYpos 96, 0
+    } else if choice == 10 {
+      setXYpos -96, -24
+    } else if choice == 11 {
+      setXYpos 96, -24
+    } else if choice == 12 {
+      setXYpos -96, -48
+    } else if choice == 13 {
+      setXYpos -24, -48
+    }
+    setCostume "f"
+    clone
+    choice = int(rand(0, 13))
+    if choice == 0 {
+      setXYpos 0, -48
+    } else if choice == 1 {
+      setXYpos 24, -48
+    } else if choice == 2 {
+      setXYpos 96, -48
+    } else if choice == 3 {
+      setXYpos -96, -72
+    } else if choice == 4 {
+      setXYpos -72, -72
+    } else if choice == 5 {
+      setXYpos -48, -72
+    } else if choice == 6 {
+      setXYpos -24, -72
+    } else if choice == 7 {
+      setXYpos 24, -72
+    } else if choice == 8 {
+      setXYpos 48, -72
+    } else if choice == 9 {
+      setXYpos 72, -72
+    } else if choice == 10 {
+      setXYpos 96, -72
+    } else if choice == 11 {
+      setXYpos -24, -96
+    } else if choice == 12 {
+      setXYpos 0, -96
+    } else if choice == 13 {
+      setXYpos 24, -96
+    }
+    setCostume "f"
+    clone
+  } else if stageIndex == 14 {
+    setCostume "a"
+    setXYpos -144, -96
+    clone
+    setCostume "a"
+    setXYpos -120, -96
+    clone
+    setCostume "a"
+    setXYpos -96, -96
+    clone
+    setCostume "5"
+    setXYpos 96, -96
+    clone
+    setCostume "5"
+    setXYpos 120, -96
+    clone
+    setCostume "5"
+    setXYpos 144, -96
+    clone
+    setCostume "5"
+    setXYpos -144, -144
+    clone
+    setCostume "5"
+    setXYpos -120, -144
+    clone
+    setCostume "5"
+    setXYpos -96, -144
+    clone
+    setCostume "a"
+    setXYpos -72, -144
+    clone
+    setCostume "5"
+    setXYpos 72, -144
+    clone
+    setCostume "a"
+    setXYpos 96, -144
+    clone
+    setCostume "a"
+    setXYpos 120, -144
+    clone
+    setCostume "a"
+    setXYpos 144, -144
+    clone
+    choice = int(rand(0, 12))
+    if choice == 0 {
+      setXYpos -120, 96
+    } else if choice == 1 {
+      setXYpos -96, 96
+    } else if choice == 2 {
+      setXYpos 96, 96
+    } else if choice == 3 {
+      setXYpos 120, 96
+    } else if choice == 4 {
+      setXYpos -120, 72
+    } else if choice == 5 {
+      setXYpos -96, 72
+    } else if choice == 6 {
+      setXYpos 96, 72
+    } else if choice == 7 {
+      setXYpos 120, 72
+    } else if choice == 8 {
+      setXYpos -120, 48
+    } else if choice == 9 {
+      setXYpos -96, 48
+    } else if choice == 10 {
+      setXYpos 96, 48
+    } else if choice == 11 {
+      setXYpos 120, 48
+    } else if choice == 12 {
+      setXYpos -120, 24
+    }
+    setCostume "f"
+    clone
+    choice = int(rand(0, 13))
+    if choice == 0 {
+      setXYpos -96, 24
+    } else if choice == 1 {
+      setXYpos 96, 24
+    } else if choice == 2 {
+      setXYpos 120, 24
+    } else if choice == 3 {
+      setXYpos -96, 0
+    } else if choice == 4 {
+      setXYpos -72, 0
+    } else if choice == 5 {
+      setXYpos 72, 0
+    } else if choice == 6 {
+      setXYpos 96, 0
+    } else if choice == 7 {
+      setXYpos -72, -24
+    } else if choice == 8 {
+      setXYpos 72, -24
+    } else if choice == 9 {
+      setXYpos -120, -48
+    } else if choice == 10 {
+      setXYpos -96, -48
+    } else if choice == 11 {
+      setXYpos -72, -48
+    } else if choice == 12 {
+      setXYpos 72, -48
+    } else if choice == 13 {
+      setXYpos 96, -48
+    }
+    setCostume "f"
+    clone
+    choice = int(rand(0, 13))
+    if choice == 0 {
+      setXYpos 120, -48
+    } else if choice == 1 {
+      setXYpos -120, -72
+    } else if choice == 2 {
+      setXYpos -96, -72
+    } else if choice == 3 {
+      setXYpos -72, -72
+    } else if choice == 4 {
+      setXYpos 72, -72
+    } else if choice == 5 {
+      setXYpos 96, -72
+    } else if choice == 6 {
+      setXYpos 120, -72
+    } else if choice == 7 {
+      setXYpos -72, -96
+    } else if choice == 8 {
+      setXYpos -48, -96
+    } else if choice == 9 {
+      setXYpos -24, -96
+    } else if choice == 10 {
+      setXYpos 0, -96
+    } else if choice == 11 {
+      setXYpos 24, -96
+    } else if choice == 12 {
+      setXYpos 48, -96
+    } else if choice == 13 {
+      setXYpos 72, -96
+    }
+    setCostume "f"
+    clone
+  } else if stageIndex == 15 {
+    setCostume "3"
+    setXYpos -120, 72
+    clone
+    setCostume "f"
+    setXYpos 144, 72
+    clone
+    setCostume "3"
+    setXYpos 0, 48
+    clone
+    setCostume "5"
+    setXYpos 96, 48
+    clone
+    setCostume "c"
+    setXYpos -48, 24
+    clone
+    setCostume "a"
+    setXYpos -144, -24
+    clone
+    setCostume "3"
+    setXYpos -120, -24
+    clone
+    setCostume "c"
+    setXYpos -24, -48
+    clone
+    choice = int(rand(0, 4))
+    if choice == 0 {
+      setXYpos 96, 96
+    } else if choice == 1 {
+      setXYpos 120, 96
+    } else if choice == 2 {
+      setXYpos 96, 24
+    } else if choice == 3 {
+      setXYpos -48, -24
+    } else if choice == 4 {
+      setXYpos -24, -24
+    }
+    setCostume "f"
+    clone
+    choice = int(rand(0, 4))
+    if choice == 0 {
+      setXYpos 0, -24
+    } else if choice == 1 {
+      setXYpos 72, -24
+    } else if choice == 2 {
+      setXYpos 96, -24
+    } else if choice == 3 {
+      setXYpos 120, -24
+    } else if choice == 4 {
+      setXYpos -96, -48
+    }
+    setCostume "f"
+    clone
+    choice = int(rand(0, 4))
+    if choice == 0 {
+      setXYpos -48, -48
+    } else if choice == 1 {
+      setXYpos -96, -72
+    } else if choice == 2 {
+      setXYpos -72, -72
+    } else if choice == 3 {
+      setXYpos 96, -72
+    } else if choice == 4 {
+      setXYpos 120, -72
+    }
+    setCostume "f"
+    clone
+  } else if stageIndex == 16 {
+    setCostume "f"
+    setXYpos -96, 120
+    clone
+    setCostume "f"
+    setXYpos -48, 120
+    clone
+    setCostume "c"
+    setXYpos 0, 96
+    clone
+    setCostume "c"
+    setXYpos 48, 48
+    clone
+    setCostume "c"
+    setXYpos 96, 0
+    clone
+    setCostume "f"
+    setXYpos 144, -72
+    clone
+    setCostume "f"
+    setXYpos -144, -120
+    clone
+    setCostume "f"
+    setXYpos -144, -144
+    clone
+    setCostume "f"
+    setXYpos -120, -144
+    clone
+    choice = int(rand(0, 18))
+    if choice == 0 {
+      setXYpos -120, 96
+    } else if choice == 1 {
+      setXYpos -96, 96
+    } else if choice == 2 {
+      setXYpos -48, 96
+    } else if choice == 3 {
+      setXYpos 24, 96
+    } else if choice == 4 {
+      setXYpos 48, 96
+    } else if choice == 5 {
+      setXYpos 72, 96
+    } else if choice == 6 {
+      setXYpos 96, 96
+    } else if choice == 7 {
+      setXYpos 120, 96
+    } else if choice == 8 {
+      setXYpos -96, 72
+    } else if choice == 9 {
+      setXYpos -72, 72
+    } else if choice == 10 {
+      setXYpos -48, 72
+    } else if choice == 11 {
+      setXYpos -24, 72
+    } else if choice == 12 {
+      setXYpos 48, 72
+    } else if choice == 13 {
+      setXYpos 72, 72
+    } else if choice == 14 {
+      setXYpos 96, 72
+    } else if choice == 15 {
+      setXYpos 120, 72
+    } else if choice == 16 {
+      setXYpos -72, 48
+    } else if choice == 17 {
+      setXYpos -48, 48
+    } else if choice == 18 {
+      setXYpos 0, 48
+    }
+    setCostume "f"
+    clone
+    choice = int(rand(0, 18))
+    if choice == 0 {
+      setXYpos 72, 48
+    } else if choice == 1 {
+      setXYpos 96, 48
+    } else if choice == 2 {
+      setXYpos 120, 48
+    } else if choice == 3 {
+      setXYpos -96, 24
+    } else if choice == 4 {
+      setXYpos -48, 24
+    } else if choice == 5 {
+      setXYpos 0, 24
+    } else if choice == 6 {
+      setXYpos 24, 24
+    } else if choice == 7 {
+      setXYpos 96, 24
+    } else if choice == 8 {
+      setXYpos 120, 24
+    } else if choice == 9 {
+      setXYpos -96, 0
+    } else if choice == 10 {
+      setXYpos -72, 0
+    } else if choice == 11 {
+      setXYpos -24, 0
+    } else if choice == 12 {
+      setXYpos 0, 0
+    } else if choice == 13 {
+      setXYpos 24, 0
+    } else if choice == 14 {
+      setXYpos 120, 0
+    } else if choice == 15 {
+      setXYpos -120, -24
+    } else if choice == 16 {
+      setXYpos -72, -24
+    } else if choice == 17 {
+      setXYpos -48, -24
+    } else if choice == 18 {
+      setXYpos -24, -24
+    }
+    setCostume "f"
+    clone
+    choice = int(rand(0, 18))
+    if choice == 0 {
+      setXYpos 0, -24
+    } else if choice == 1 {
+      setXYpos -120, -48
+    } else if choice == 2 {
+      setXYpos -96, -48
+    } else if choice == 3 {
+      setXYpos -48, -48
+    } else if choice == 4 {
+      setXYpos -24, -48
+    } else if choice == 5 {
+      setXYpos 24, -48
+    } else if choice == 6 {
+      setXYpos -120, -72
+    } else if choice == 7 {
+      setXYpos -96, -72
+    } else if choice == 8 {
+      setXYpos -72, -72
+    } else if choice == 9 {
+      setXYpos -48, -72
+    } else if choice == 10 {
+      setXYpos -24, -72
+    } else if choice == 11 {
+      setXYpos 24, -72
+    } else if choice == 12 {
+      setXYpos 48, -72
+    } else if choice == 13 {
+      setXYpos -96, -96
+    } else if choice == 14 {
+      setXYpos -72, -96
+    } else if choice == 15 {
+      setXYpos -48, -96
+    } else if choice == 16 {
+      setXYpos -24, -96
+    } else if choice == 17 {
+      setXYpos 0, -96
+    } else if choice == 18 {
+      setXYpos 48, -96
+    }
+    setCostume "f"
+    clone
+  } else if stageIndex == 17 {
+    setCostume "f"
+    setXYpos 0, 96
+    clone
+    setCostume "5"
+    setXYpos -72, 72
+    clone
+    setCostume "a"
+    setXYpos -96, 24
+    clone
+    setCostume "3"
+    setXYpos 120, 24
+    clone
+    setCostume "3"
+    setXYpos 144, 24
+    clone
+    setCostume "5"
+    setXYpos 72, -24
+    clone
+    setCostume "3"
+    setXYpos -24, -96
+    clone
+    setCostume "3"
+    setXYpos 24, -96
+    clone
+    setCostume "5"
+    setXYpos -96, -144
+    clone
+    choice = int(rand(0, 6))
+    if choice == 0 {
+      setXYpos -96, 96
+    } else if choice == 1 {
+      setXYpos -72, 96
+    } else if choice == 2 {
+      setXYpos -24, 96
+    } else if choice == 3 {
+      setXYpos -24, 72
+    } else if choice == 4 {
+      setXYpos 0, 72
+    } else if choice == 5 {
+      setXYpos 96, 48
+    } else if choice == 6 {
+      setXYpos 120, 48
+    }
+    setCostume "f"
+    clone
+    choice = int(rand(0, 7))
+    if choice == 0 {
+      setXYpos -120, 24
+    } else if choice == 1 {
+      setXYpos 96, 24
+    } else if choice == 2 {
+      setXYpos -120, -24
+    } else if choice == 3 {
+      setXYpos -96, -24
+    } else if choice == 4 {
+      setXYpos 96, -24
+    } else if choice == 5 {
+      setXYpos 120, -24
+    } else if choice == 6 {
+      setXYpos -48, -48
+    } else if choice == 7 {
+      setXYpos 96, -48
+    }
+    setCostume "f"
+    clone
+    choice = int(rand(0, 7))
+    if choice == 0 {
+      setXYpos -24, -72
+    } else if choice == 1 {
+      setXYpos 0, -72
+    } else if choice == 2 {
+      setXYpos 24, -72
+    } else if choice == 3 {
+      setXYpos 48, -72
+    } else if choice == 4 {
+      setXYpos 96, -72
+    } else if choice == 5 {
+      setXYpos 0, -96
+    } else if choice == 6 {
+      setXYpos 48, -96
+    } else if choice == 7 {
+      setXYpos 72, -96
+    }
+    setCostume "f"
+    clone
+  } else if stageIndex == 18 {
+    setCostume "f"
+    setXYpos 48, 144
+    clone
+    setCostume "f"
+    setXYpos 72, 144
+    clone
+    setCostume "f"
+    setXYpos 96, 144
+    clone
+    setCostume "f"
+    setXYpos 48, 120
+    clone
+    setCostume "f"
+    setXYpos 120, 120
+    clone
+    setCostume "f"
+    setXYpos 120, 96
+    clone
+    setCostume "f"
+    setXYpos 96, 72
+    clone
+    setCostume "f"
+    setXYpos 120, 72
+    clone
+    setCostume "f"
+    setXYpos -24, 48
+    clone
+    setCostume "f"
+    setXYpos -48, 24
+    clone
+    setCostume "f"
+    setXYpos 24, 24
+    clone
+    setCostume "f"
+    setXYpos -48, 0
+    clone
+    setCostume "f"
+    setXYpos 24, 0
+    clone
+    setCostume "f"
+    setXYpos 0, -24
+    clone
+    setCostume "f"
+    setXYpos -144, -48
+    clone
+    setCostume "f"
+    setXYpos -120, -48
+    clone
+    setCostume "f"
+    setXYpos -96, -48
+    clone
+    setCostume "f"
+    setXYpos -144, -72
+    clone
+    setCostume "f"
+    setXYpos 72, -72
+    clone
+    setCostume "f"
+    setXYpos 96, -72
+    clone
+    setCostume "f"
+    setXYpos -144, -96
+    clone
+    setCostume "f"
+    setXYpos -72, -96
+    clone
+    setCostume "f"
+    setXYpos 72, -96
+    clone
+    setCostume "f"
+    setXYpos -120, -120
+    clone
+    setCostume "f"
+    setXYpos -96, -120
+    clone
+    setCostume "f"
+    setXYpos -72, -120
+    clone
+    setCostume "f"
+    setXYpos 120, -120
+    clone
+    setCostume "f"
+    setXYpos 144, -120
+    clone
+    setCostume "f"
+    setXYpos 120, -144
+    clone
+    setCostume "f"
+    setXYpos 144, -144
+    clone
+    choice = int(rand(0, 14))
+    if choice == 0 {
+      setXYpos -72, 96
+    } else if choice == 1 {
+      setXYpos -48, 96
+    } else if choice == 2 {
+      setXYpos -24, 96
+    } else if choice == 3 {
+      setXYpos 96, 96
+    } else if choice == 4 {
+      setXYpos -48, 72
+    } else if choice == 5 {
+      setXYpos -24, 72
+    } else if choice == 6 {
+      setXYpos 24, 72
+    } else if choice == 7 {
+      setXYpos -120, 48
+    } else if choice == 8 {
+      setXYpos -72, 48
+    } else if choice == 9 {
+      setXYpos 48, 48
+    } else if choice == 10 {
+      setXYpos 96, 48
+    } else if choice == 11 {
+      setXYpos 120, 48
+    } else if choice == 12 {
+      setXYpos -120, 24
+    } else if choice == 13 {
+      setXYpos -96, 24
+    } else if choice == 14 {
+      setXYpos -72, 24
+    }
+    setCostume "f"
+    clone
+    choice = int(rand(0, 14))
+    if choice == 0 {
+      setXYpos -24, 24
+    } else if choice == 1 {
+      setXYpos 96, 24
+    } else if choice == 2 {
+      setXYpos 120, 24
+    } else if choice == 3 {
+      setXYpos -120, 0
+    } else if choice == 4 {
+      setXYpos 0, 0
+    } else if choice == 5 {
+      setXYpos 48, 0
+    } else if choice == 6 {
+      setXYpos 72, 0
+    } else if choice == 7 {
+      setXYpos 96, 0
+    } else if choice == 8 {
+      setXYpos 120, 0
+    } else if choice == 9 {
+      setXYpos -120, -24
+    } else if choice == 10 {
+      setXYpos -72, -24
+    } else if choice == 11 {
+      setXYpos 48, -24
+    } else if choice == 12 {
+      setXYpos 72, -24
+    } else if choice == 13 {
+      setXYpos 96, -24
+    } else if choice == 14 {
+      setXYpos 120, -24
+    }
+    setCostume "f"
+    clone
+    choice = int(rand(0, 15))
+    if choice == 0 {
+      setXYpos -48, -48
+    } else if choice == 1 {
+      setXYpos 0, -48
+    } else if choice == 2 {
+      setXYpos 24, -48
+    } else if choice == 3 {
+      setXYpos 96, -48
+    } else if choice == 4 {
+      setXYpos 120, -48
+    } else if choice == 5 {
+      setXYpos -120, -72
+    } else if choice == 6 {
+      setXYpos 0, -72
+    } else if choice == 7 {
+      setXYpos 24, -72
+    } else if choice == 8 {
+      setXYpos 120, -72
+    } else if choice == 9 {
+      setXYpos -120, -96
+    } else if choice == 10 {
+      setXYpos -96, -96
+    } else if choice == 11 {
+      setXYpos -48, -96
+    } else if choice == 12 {
+      setXYpos -24, -96
+    } else if choice == 13 {
+      setXYpos 0, -96
+    } else if choice == 14 {
+      setXYpos 24, -96
+    } else if choice == 15 {
+      setXYpos 48, -96
+    }
+    setCostume "f"
+    clone
+  } else if stageIndex == 19 {
+    setCostume "3"
+    setXYpos -120, 96
+    clone
+    setCostume "3"
+    setXYpos -72, 96
+    clone
+    setCostume "3"
+    setXYpos -24, 96
+    clone
+    setCostume "3"
+    setXYpos 24, 96
+    clone
+    setCostume "3"
+    setXYpos 72, 96
+    clone
+    setCostume "3"
+    setXYpos 120, 96
+    clone
+    setCostume "3"
+    setXYpos -144, 24
+    clone
+    setCostume "3"
+    setXYpos -96, 24
+    clone
+    setCostume "f"
+    setXYpos -48, 24
+    clone
+    setCostume "3"
+    setXYpos 0, 24
+    clone
+    setCostume "f"
+    setXYpos 48, 24
+    clone
+    setCostume "3"
+    setXYpos 96, 24
+    clone
+    setCostume "3"
+    setXYpos 144, 24
+    clone
+    choice = int(rand(0, 11))
+    if choice == 0 {
+      setXYpos -96, 96
+    } else if choice == 1 {
+      setXYpos -48, 96
+    } else if choice == 2 {
+      setXYpos 0, 96
+    } else if choice == 3 {
+      setXYpos 48, 96
+    } else if choice == 4 {
+      setXYpos 96, 96
+    } else if choice == 5 {
+      setXYpos -120, 72
+    } else if choice == 6 {
+      setXYpos -72, 72
+    } else if choice == 7 {
+      setXYpos -24, 72
+    } else if choice == 8 {
+      setXYpos 0, 72
+    } else if choice == 9 {
+      setXYpos 24, 72
+    } else if choice == 10 {
+      setXYpos 72, 72
+    } else if choice == 11 {
+      setXYpos 120, 72
+    }
+    setCostume "f"
+    clone
+    choice = int(rand(0, 12))
+    if choice == 0 {
+      setXYpos -120, 48
+    } else if choice == 1 {
+      setXYpos -24, 48
+    } else if choice == 2 {
+      setXYpos 24, 48
+    } else if choice == 3 {
+      setXYpos 120, 48
+    } else if choice == 4 {
+      setXYpos -120, 24
+    } else if choice == 5 {
+      setXYpos -72, 24
+    } else if choice == 6 {
+      setXYpos -24, 24
+    } else if choice == 7 {
+      setXYpos 24, 24
+    } else if choice == 8 {
+      setXYpos 72, 24
+    } else if choice == 9 {
+      setXYpos 120, 24
+    } else if choice == 10 {
+      setXYpos -96, 0
+    } else if choice == 11 {
+      setXYpos -72, 0
+    } else if choice == 12 {
+      setXYpos -24, 0
+    }
+    setCostume "f"
+    clone
+    choice = int(rand(0, 12))
+    if choice == 0 {
+      setXYpos 24, 0
+    } else if choice == 1 {
+      setXYpos 72, 0
+    } else if choice == 2 {
+      setXYpos 96, 0
+    } else if choice == 3 {
+      setXYpos -120, -72
+    } else if choice == 4 {
+      setXYpos -72, -72
+    } else if choice == 5 {
+      setXYpos 72, -72
+    } else if choice == 6 {
+      setXYpos 120, -72
+    } else if choice == 7 {
+      setXYpos -96, -96
+    } else if choice == 8 {
+      setXYpos -48, -96
+    } else if choice == 9 {
+      setXYpos -24, -96
+    } else if choice == 10 {
+      setXYpos 24, -96
+    } else if choice == 11 {
+      setXYpos 48, -96
+    } else if choice == 12 {
+      setXYpos 96, -96
+    }
+    setCostume "f"
+    clone
+  } else if stageIndex == 20 {
+    setCostume "f"
+    setXYpos 96, 120
+    clone
+    setCostume "f"
+    setXYpos 0, 96
+    clone
+    setCostume "3"
+    setXYpos -144, 72
+    clone
+    setCostume "f"
+    setXYpos -24, 72
+    clone
+    setCostume "3"
+    setXYpos 120, 0
+    clone
+    setCostume "3"
+    setXYpos 144, 0
+    clone
+    setCostume "f"
+    setXYpos -24, -24
+    clone
+    setCostume "c"
+    setXYpos -120, -72
+    clone
+    setCostume "c"
+    setXYpos -72, -96
+    clone
+    choice = int(rand(0, 14))
+    if choice == 0 {
+      setXYpos -120, 96
+    } else if choice == 1 {
+      setXYpos -96, 96
+    } else if choice == 2 {
+      setXYpos -48, 96
+    } else if choice == 3 {
+      setXYpos 24, 96
+    } else if choice == 4 {
+      setXYpos 72, 96
+    } else if choice == 5 {
+      setXYpos 120, 96
+    } else if choice == 6 {
+      setXYpos -120, 72
+    } else if choice == 7 {
+      setXYpos -48, 72
+    } else if choice == 8 {
+      setXYpos 0, 72
+    } else if choice == 9 {
+      setXYpos 72, 72
+    } else if choice == 10 {
+      setXYpos 120, 72
+    } else if choice == 11 {
+      setXYpos -120, 48
+    } else if choice == 12 {
+      setXYpos -48, 48
+    } else if choice == 13 {
+      setXYpos -24, 48
+    } else if choice == 14 {
+      setXYpos 0, 48
+    }
+    setCostume "f"
+    clone
+    choice = int(rand(0, 14))
+    if choice == 0 {
+      setXYpos 48, 48
+    } else if choice == 1 {
+      setXYpos 72, 48
+    } else if choice == 2 {
+      setXYpos 96, 48
+    } else if choice == 3 {
+      setXYpos 120, 48
+    } else if choice == 4 {
+      setXYpos -120, 24
+    } else if choice == 5 {
+      setXYpos -24, 24
+    } else if choice == 6 {
+      setXYpos 96, 24
+    } else if choice == 7 {
+      setXYpos 120, 24
+    } else if choice == 8 {
+      setXYpos -120, 0
+    } else if choice == 9 {
+      setXYpos -96, 0
+    } else if choice == 10 {
+      setXYpos -48, 0
+    } else if choice == 11 {
+      setXYpos -24, 0
+    } else if choice == 12 {
+      setXYpos 0, 0
+    } else if choice == 13 {
+      setXYpos 48, 0
+    } else if choice == 14 {
+      setXYpos 96, 0
+    }
+    setCostume "f"
+    clone
+    choice = int(rand(0, 15))
+    if choice == 0 {
+      setXYpos -48, -24
+    } else if choice == 1 {
+      setXYpos 96, -24
+    } else if choice == 2 {
+      setXYpos -120, -48
+    } else if choice == 3 {
+      setXYpos -72, -48
+    } else if choice == 4 {
+      setXYpos -48, -48
+    } else if choice == 5 {
+      setXYpos 96, -48
+    } else if choice == 6 {
+      setXYpos -96, -72
+    } else if choice == 7 {
+      setXYpos -72, -72
+    } else if choice == 8 {
+      setXYpos -48, -72
+    } else if choice == 9 {
+      setXYpos 0, -72
+    } else if choice == 10 {
+      setXYpos 48, -72
+    } else if choice == 11 {
+      setXYpos 96, -72
+    } else if choice == 12 {
+      setXYpos -96, -96
+    } else if choice == 13 {
+      setXYpos -48, -96
+    } else if choice == 14 {
+      setXYpos 48, -96
+    } else if choice == 15 {
+      setXYpos 72, -96
+    }
+    setCostume "f"
+    clone
+  } else if stageIndex == 21 {
+    setCostume "f"
+    setXYpos -96, 48
+    clone
+    setCostume "f"
+    setXYpos -24, 48
+    clone
+    setCostume "f"
+    setXYpos -96, 24
+    clone
+    setCostume "f"
+    setXYpos -24, 24
+    clone
+    setCostume "f"
+    setXYpos 144, -72
+    clone
+    setCostume "f"
+    setXYpos -144, -96
+    clone
+    setCostume "f"
+    setXYpos -72, -96
+    clone
+    setCostume "f"
+    setXYpos 144, -96
+    clone
+    setCostume "f"
+    setXYpos -120, -120
+    clone
+    setCostume "f"
+    setXYpos -48, -120
+    clone
+    setCostume "f"
+    setXYpos 96, -120
+    clone
+    setCostume "f"
+    setXYpos 120, -120
+    clone
+    setCostume "f"
+    setXYpos 144, -120
+    clone
+    choice = int(rand(0, 8))
+    if choice == 0 {
+      setXYpos 120, 96
+    } else if choice == 1 {
+      setXYpos -96, 72
+    } else if choice == 2 {
+      setXYpos -72, 72
+    } else if choice == 3 {
+      setXYpos -48, 72
+    } else if choice == 4 {
+      setXYpos -24, 72
+    } else if choice == 5 {
+      setXYpos 0, 72
+    } else if choice == 6 {
+      setXYpos 24, 72
+    } else if choice == 7 {
+      setXYpos -120, 48
+    } else if choice == 8 {
+      setXYpos -72, 48
+    }
+    setCostume "f"
+    clone
+    choice = int(rand(0, 8))
+    if choice == 0 {
+      setXYpos -48, 48
+    } else if choice == 1 {
+      setXYpos 0, 48
+    } else if choice == 2 {
+      setXYpos 24, 48
+    } else if choice == 3 {
+      setXYpos 48, 48
+    } else if choice == 4 {
+      setXYpos -120, 24
+    } else if choice == 5 {
+      setXYpos -72, 24
+    } else if choice == 6 {
+      setXYpos -48, 24
+    } else if choice == 7 {
+      setXYpos 0, 24
+    } else if choice == 8 {
+      setXYpos 24, 24
+    }
+    setCostume "f"
+    clone
+    choice = int(rand(0, 9))
+    if choice == 0 {
+      setXYpos 48, 24
+    } else if choice == 1 {
+      setXYpos -120, 0
+    } else if choice == 2 {
+      setXYpos -96, 0
+    } else if choice == 3 {
+      setXYpos -48, 0
+    } else if choice == 4 {
+      setXYpos -24, 0
+    } else if choice == 5 {
+      setXYpos 0, 0
+    } else if choice == 6 {
+      setXYpos 24, 0
+    } else if choice == 7 {
+      setXYpos 120, -72
+    } else if choice == 8 {
+      setXYpos -120, -96
+    } else if choice == 9 {
+      setXYpos 120, -96
+    }
+    setCostume "f"
+    clone
+  } else if stageIndex == 22 {
+    setCostume "f"
+    setXYpos -24, 120
+    clone
+    setCostume "f"
+    setXYpos 144, 24
+    clone
+    setCostume "f"
+    setXYpos 0, 0
+    clone
+    setCostume "f"
+    setXYpos -144, -24
+    clone
+    setCostume "f"
+    setXYpos 96, -24
+    clone
+    setCostume "f"
+    setXYpos 120, -120
+    clone
+    setCostume "f"
+    setXYpos -120, -144
+    clone
+    choice = int(rand(0, 17))
+    if choice == 0 {
+      setXYpos -120, 96
+    } else if choice == 1 {
+      setXYpos -72, 96
+    } else if choice == 2 {
+      setXYpos -48, 96
+    } else if choice == 3 {
+      setXYpos 0, 96
+    } else if choice == 4 {
+      setXYpos 24, 96
+    } else if choice == 5 {
+      setXYpos 96, 96
+    } else if choice == 6 {
+      setXYpos 120, 96
+    } else if choice == 7 {
+      setXYpos -48, 72
+    } else if choice == 8 {
+      setXYpos -24, 72
+    } else if choice == 9 {
+      setXYpos 0, 72
+    } else if choice == 10 {
+      setXYpos 120, 72
+    } else if choice == 11 {
+      setXYpos -120, 48
+    } else if choice == 12 {
+      setXYpos -24, 48
+    } else if choice == 13 {
+      setXYpos 0, 48
+    } else if choice == 14 {
+      setXYpos 24, 48
+    } else if choice == 15 {
+      setXYpos 96, 48
+    } else if choice == 16 {
+      setXYpos 120, 48
+    } else if choice == 17 {
+      setXYpos -120, 24
+    }
+    setCostume "f"
+    clone
+    choice = int(rand(0, 17))
+    if choice == 0 {
+      setXYpos -96, 24
+    } else if choice == 1 {
+      setXYpos -48, 24
+    } else if choice == 2 {
+      setXYpos -24, 24
+    } else if choice == 3 {
+      setXYpos 24, 24
+    } else if choice == 4 {
+      setXYpos 48, 24
+    } else if choice == 5 {
+      setXYpos 72, 24
+    } else if choice == 6 {
+      setXYpos 96, 24
+    } else if choice == 7 {
+      setXYpos -96, 0
+    } else if choice == 8 {
+      setXYpos -72, 0
+    } else if choice == 9 {
+      setXYpos -48, 0
+    } else if choice == 10 {
+      setXYpos 48, 0
+    } else if choice == 11 {
+      setXYpos 72, 0
+    } else if choice == 12 {
+      setXYpos 120, 0
+    } else if choice == 13 {
+      setXYpos -72, -24
+    } else if choice == 14 {
+      setXYpos -48, -24
+    } else if choice == 15 {
+      setXYpos -24, -24
+    } else if choice == 16 {
+      setXYpos 24, -24
+    } else if choice == 17 {
+      setXYpos 48, -24
+    }
+    setCostume "f"
+    clone
+    choice = int(rand(0, 17))
+    if choice == 0 {
+      setXYpos -96, -48
+    } else if choice == 1 {
+      setXYpos -72, -48
+    } else if choice == 2 {
+      setXYpos -24, -48
+    } else if choice == 3 {
+      setXYpos 0, -48
+    } else if choice == 4 {
+      setXYpos 24, -48
+    } else if choice == 5 {
+      setXYpos 72, -48
+    } else if choice == 6 {
+      setXYpos 120, -48
+    } else if choice == 7 {
+      setXYpos -120, -72
+    } else if choice == 8 {
+      setXYpos -96, -72
+    } else if choice == 9 {
+      setXYpos 0, -72
+    } else if choice == 10 {
+      setXYpos 96, -72
+    } else if choice == 11 {
+      setXYpos 120, -72
+    } else if choice == 12 {
+      setXYpos -120, -96
+    } else if choice == 13 {
+      setXYpos -96, -96
+    } else if choice == 14 {
+      setXYpos 0, -96
+    } else if choice == 15 {
+      setXYpos 24, -96
+    } else if choice == 16 {
+      setXYpos 72, -96
+    } else if choice == 17 {
+      setXYpos 96, -96
+    }
+    setCostume "f"
+    clone
+  } else if stageIndex == 23 {
+    setCostume "f"
+    setXYpos -24, 120
+    clone
+    setCostume "f"
+    setXYpos 0, 120
+    clone
+    setCostume "f"
+    setXYpos 0, 96
+    clone
+    setCostume "f"
+    setXYpos -120, 72
+    clone
+    setCostume "f"
+    setXYpos -96, 72
+    clone
+    setCostume "f"
+    setXYpos 0, 72
+    clone
+    setCostume "f"
+    setXYpos 96, 72
+    clone
+    setCostume "f"
+    setXYpos 120, 72
+    clone
+    setCostume "f"
+    setXYpos -72, 48
+    clone
+    setCostume "f"
+    setXYpos 0, 48
+    clone
+    setCostume "f"
+    setXYpos 72, 48
+    clone
+    setCostume "f"
+    setXYpos -48, 24
+    clone
+    setCostume "f"
+    setXYpos 48, 24
+    clone
+    setCostume "f"
+    setXYpos -144, 0
+    clone
+    setCostume "f"
+    setXYpos 144, 0
+    clone
+    setCostume "c"
+    setXYpos -48, -24
+    clone
+    setCostume "3"
+    setXYpos -24, -24
+    clone
+    setCostume "3"
+    setXYpos 24, -24
+    clone
+    setCostume "c"
+    setXYpos 48, -24
+    clone
+    setCostume "f"
+    setXYpos -48, -48
+    clone
+    setCostume "c"
+    setXYpos 0, -48
+    clone
+    setCostume "f"
+    setXYpos 48, -48
+    clone
+    setCostume "f"
+    setXYpos -72, -72
+    clone
+    setCostume "f"
+    setXYpos 0, -72
+    clone
+    setCostume "f"
+    setXYpos 72, -72
+    clone
+    setCostume "f"
+    setXYpos -96, -144
+    clone
+    setCostume "f"
+    setXYpos 96, -144
+    clone
+    choice = int(rand(0, 18))
+    if choice == 0 {
+      setXYpos -120, 96
+    } else if choice == 1 {
+      setXYpos -96, 96
+    } else if choice == 2 {
+      setXYpos -72, 96
+    } else if choice == 3 {
+      setXYpos -48, 96
+    } else if choice == 4 {
+      setXYpos -24, 96
+    } else if choice == 5 {
+      setXYpos 24, 96
+    } else if choice == 6 {
+      setXYpos 48, 96
+    } else if choice == 7 {
+      setXYpos 72, 96
+    } else if choice == 8 {
+      setXYpos 96, 96
+    } else if choice == 9 {
+      setXYpos 120, 96
+    } else if choice == 10 {
+      setXYpos -120, 48
+    } else if choice == 11 {
+      setXYpos -96, 48
+    } else if choice == 12 {
+      setXYpos 96, 48
+    } else if choice == 13 {
+      setXYpos 120, 48
+    } else if choice == 14 {
+      setXYpos -120, 24
+    } else if choice == 15 {
+      setXYpos -96, 24
+    } else if choice == 16 {
+      setXYpos -72, 24
+    } else if choice == 17 {
+      setXYpos 72, 24
+    } else if choice == 18 {
+      setXYpos 96, 24
+    }
+    setCostume "f"
+    clone
+    choice = int(rand(0, 19))
+    if choice == 0 {
+      setXYpos 120, 24
+    } else if choice == 1 {
+      setXYpos -96, 0
+    } else if choice == 2 {
+      setXYpos -72, 0
+    } else if choice == 3 {
+      setXYpos -48, 0
+    } else if choice == 4 {
+      setXYpos 48, 0
+    } else if choice == 5 {
+      setXYpos 72, 0
+    } else if choice == 6 {
+      setXYpos 96, 0
+    } else if choice == 7 {
+      setXYpos -120, -24
+    } else if choice == 8 {
+      setXYpos -96, -24
+    } else if choice == 9 {
+      setXYpos -72, -24
+    } else if choice == 10 {
+      setXYpos 72, -24
+    } else if choice == 11 {
+      setXYpos 96, -24
+    } else if choice == 12 {
+      setXYpos 120, -24
+    } else if choice == 13 {
+      setXYpos -120, -48
+    } else if choice == 14 {
+      setXYpos -96, -48
+    } else if choice == 15 {
+      setXYpos -72, -48
+    } else if choice == 16 {
+      setXYpos -24, -48
+    } else if choice == 17 {
+      setXYpos 24, -48
+    } else if choice == 18 {
+      setXYpos 72, -48
+    } else if choice == 19 {
+      setXYpos 96, -48
+    }
+    setCostume "f"
+    clone
+    choice = int(rand(0, 19))
+    if choice == 0 {
+      setXYpos 120, -48
+    } else if choice == 1 {
+      setXYpos -120, -72
+    } else if choice == 2 {
+      setXYpos -96, -72
+    } else if choice == 3 {
+      setXYpos -48, -72
+    } else if choice == 4 {
+      setXYpos -24, -72
+    } else if choice == 5 {
+      setXYpos 24, -72
+    } else if choice == 6 {
+      setXYpos 48, -72
+    } else if choice == 7 {
+      setXYpos 96, -72
+    } else if choice == 8 {
+      setXYpos 120, -72
+    } else if choice == 9 {
+      setXYpos -120, -96
+    } else if choice == 10 {
+      setXYpos -96, -96
+    } else if choice == 11 {
+      setXYpos -72, -96
+    } else if choice == 12 {
+      setXYpos -48, -96
+    } else if choice == 13 {
+      setXYpos -24, -96
+    } else if choice == 14 {
+      setXYpos 0, -96
+    } else if choice == 15 {
+      setXYpos 24, -96
+    } else if choice == 16 {
+      setXYpos 48, -96
+    } else if choice == 17 {
+      setXYpos 72, -96
+    } else if choice == 18 {
+      setXYpos 96, -96
+    } else if choice == 19 {
+      setXYpos 120, -96
+    }
+    setCostume "f"
+    clone
+  } else if stageIndex == 24 {
+    setCostume "f"
+    setXYpos -96, 144
+    clone
+    setCostume "3"
+    setXYpos -24, 144
+    clone
+    setCostume "f"
+    setXYpos 120, 96
+    clone
+    setCostume "f"
+    setXYpos 144, 96
+    clone
+    setCostume "3"
+    setXYpos 0, 48
+    clone
+    setCostume "3"
+    setXYpos -120, 24
+    clone
+    setCostume "f"
+    setXYpos -96, -48
+    clone
+    choice = int(rand(0, 6))
+    if choice == 0 {
+      setXYpos -72, 96
+    } else if choice == 1 {
+      setXYpos 48, 96
+    } else if choice == 2 {
+      setXYpos 72, 96
+    } else if choice == 3 {
+      setXYpos 96, 96
+    } else if choice == 4 {
+      setXYpos 72, 72
+    } else if choice == 5 {
+      setXYpos -120, 48
+    } else if choice == 6 {
+      setXYpos 48, 48
+    }
+    setCostume "f"
+    clone
+    choice = int(rand(0, 6))
+    if choice == 0 {
+      setXYpos -96, 24
+    } else if choice == 1 {
+      setXYpos 0, 24
+    } else if choice == 2 {
+      setXYpos 24, 24
+    } else if choice == 3 {
+      setXYpos 48, 24
+    } else if choice == 4 {
+      setXYpos 120, 24
+    } else if choice == 5 {
+      setXYpos -120, 0
+    } else if choice == 6 {
+      setXYpos -120, -24
+    }
+    setCostume "f"
+    clone
+    choice = int(rand(0, 6))
+    if choice == 0 {
+      setXYpos -72, -24
+    } else if choice == 1 {
+      setXYpos -120, -48
+    } else if choice == 2 {
+      setXYpos -72, -48
+    } else if choice == 3 {
+      setXYpos -120, -72
+    } else if choice == 4 {
+      setXYpos -72, -72
+    } else if choice == 5 {
+      setXYpos -120, -96
+    } else if choice == 6 {
+      setXYpos -72, -96
+    }
+    setCostume "f"
+    clone
+  } else if stageIndex == 25 {
+    setCostume "f"
+    setXYpos -72, 144
+    clone
+    setCostume "f"
+    setXYpos 120, 144
+    clone
+    setCostume "f"
+    setXYpos 72, 120
+    clone
+    setCostume "f"
+    setXYpos 0, 96
+    clone
+    setCostume "f"
+    setXYpos 72, 96
+    clone
+    setCostume "f"
+    setXYpos 120, 96
+    clone
+    setCostume "f"
+    setXYpos 144, 96
+    clone
+    setCostume "f"
+    setXYpos 24, 72
+    clone
+    setCostume "f"
+    setXYpos 144, 72
+    clone
+    setCostume "f"
+    setXYpos 96, 48
+    clone
+    setCostume "f"
+    setXYpos -96, 24
+    clone
+    setCostume "f"
+    setXYpos -144, 0
+    clone
+    setCostume "f"
+    setXYpos -96, 0
+    clone
+    setCostume "f"
+    setXYpos 24, 0
+    clone
+    setCostume "f"
+    setXYpos 96, 0
+    clone
+    setCostume "f"
+    setXYpos 96, -24
+    clone
+    setCostume "f"
+    setXYpos -120, -48
+    clone
+    setCostume "f"
+    setXYpos 0, -72
+    clone
+    setCostume "f"
+    setXYpos 24, -96
+    clone
+    setCostume "f"
+    setXYpos 72, -96
+    clone
+    setCostume "f"
+    setXYpos 96, -120
+    clone
+    choice = int(rand(0, 16))
+    if choice == 0 {
+      setXYpos -96, 96
+    } else if choice == 1 {
+      setXYpos -48, 96
+    } else if choice == 2 {
+      setXYpos -24, 96
+    } else if choice == 3 {
+      setXYpos 24, 96
+    } else if choice == 4 {
+      setXYpos 48, 96
+    } else if choice == 5 {
+      setXYpos 96, 96
+    } else if choice == 6 {
+      setXYpos -96, 72
+    } else if choice == 7 {
+      setXYpos -72, 72
+    } else if choice == 8 {
+      setXYpos -48, 72
+    } else if choice == 9 {
+      setXYpos 0, 72
+    } else if choice == 10 {
+      setXYpos 72, 72
+    } else if choice == 11 {
+      setXYpos 96, 72
+    } else if choice == 12 {
+      setXYpos 120, 72
+    } else if choice == 13 {
+      setXYpos -120, 48
+    } else if choice == 14 {
+      setXYpos -96, 48
+    } else if choice == 15 {
+      setXYpos -72, 48
+    } else if choice == 16 {
+      setXYpos 0, 48
+    }
+    setCostume "f"
+    clone
+    choice = int(rand(0, 17))
+    if choice == 0 {
+      setXYpos 72, 48
+    } else if choice == 1 {
+      setXYpos 120, 48
+    } else if choice == 2 {
+      setXYpos -120, 24
+    } else if choice == 3 {
+      setXYpos -72, 24
+    } else if choice == 4 {
+      setXYpos -24, 24
+    } else if choice == 5 {
+      setXYpos 0, 24
+    } else if choice == 6 {
+      setXYpos 72, 24
+    } else if choice == 7 {
+      setXYpos -120, 0
+    } else if choice == 8 {
+      setXYpos -72, 0
+    } else if choice == 9 {
+      setXYpos -48, 0
+    } else if choice == 10 {
+      setXYpos 0, 0
+    } else if choice == 11 {
+      setXYpos 48, 0
+    } else if choice == 12 {
+      setXYpos 72, 0
+    } else if choice == 13 {
+      setXYpos -120, -24
+    } else if choice == 14 {
+      setXYpos -48, -24
+    } else if choice == 15 {
+      setXYpos 0, -24
+    } else if choice == 16 {
+      setXYpos 24, -24
+    } else if choice == 17 {
+      setXYpos 48, -24
+    }
+    setCostume "f"
+    clone
+    choice = int(rand(0, 17))
+    if choice == 0 {
+      setXYpos 120, -24
+    } else if choice == 1 {
+      setXYpos -48, -48
+    } else if choice == 2 {
+      setXYpos 24, -48
+    } else if choice == 3 {
+      setXYpos 96, -48
+    } else if choice == 4 {
+      setXYpos 120, -48
+    } else if choice == 5 {
+      setXYpos -96, -72
+    } else if choice == 6 {
+      setXYpos -72, -72
+    } else if choice == 7 {
+      setXYpos -48, -72
+    } else if choice == 8 {
+      setXYpos 24, -72
+    } else if choice == 9 {
+      setXYpos 48, -72
+    } else if choice == 10 {
+      setXYpos 72, -72
+    } else if choice == 11 {
+      setXYpos 96, -72
+    } else if choice == 12 {
+      setXYpos -120, -96
+    } else if choice == 13 {
+      setXYpos -96, -96
+    } else if choice == 14 {
+      setXYpos -48, -96
+    } else if choice == 15 {
+      setXYpos 48, -96
+    } else if choice == 16 {
+      setXYpos 96, -96
+    } else if choice == 17 {
+      setXYpos 120, -96
+    }
+    setCostume "f"
+    clone
+  } else if stageIndex == 26 {
+    setCostume "c"
+    setXYpos -144, 120
+    clone
+    setCostume "c"
+    setXYpos -120, 96
+    clone
+    setCostume "5"
+    setXYpos 0, 96
+    clone
+    setCostume "3"
+    setXYpos -72, 72
+    clone
+    setCostume "5"
+    setXYpos 48, 72
+    clone
+    setCostume "f"
+    setXYpos -24, 48
+    clone
+    setCostume "c"
+    setXYpos 144, 48
+    clone
+    setCostume "3"
+    setXYpos -96, 24
+    clone
+    setCostume "c"
+    setXYpos -72, 24
+    clone
+    setCostume "f"
+    setXYpos 24, 24
+    clone
+    setCostume "c"
+    setXYpos 120, 24
+    clone
+    setCostume "3"
+    setXYpos -120, 0
+    clone
+    setCostume "f"
+    setXYpos -24, 0
+    clone
+    setCostume "3"
+    setXYpos 72, 0
+    clone
+    setCostume "f"
+    setXYpos 24, -24
+    clone
+    setCostume "a"
+    setXYpos -48, -48
+    clone
+    setCostume "c"
+    setXYpos 72, -48
+    clone
+    setCostume "3"
+    setXYpos 96, -48
+    clone
+    setCostume "a"
+    setXYpos 0, -72
+    clone
+    setCostume "3"
+    setXYpos 144, -96
+    clone
+    setCostume "f"
+    setXYpos -144, -120
+    clone
+    setCostume "f"
+    setXYpos -144, -144
+    clone
+    setCostume "f"
+    setXYpos -120, -144
+    clone
+    setCostume "f"
+    setXYpos 144, -144
+    clone
+    choice = int(rand(0, 15))
+    if choice == 0 {
+      setXYpos -96, 96
+    } else if choice == 1 {
+      setXYpos -72, 96
+    } else if choice == 2 {
+      setXYpos -48, 96
+    } else if choice == 3 {
+      setXYpos -24, 96
+    } else if choice == 4 {
+      setXYpos 24, 96
+    } else if choice == 5 {
+      setXYpos 72, 96
+    } else if choice == 6 {
+      setXYpos -96, 72
+    } else if choice == 7 {
+      setXYpos 0, 72
+    } else if choice == 8 {
+      setXYpos 24, 72
+    } else if choice == 9 {
+      setXYpos 120, 72
+    } else if choice == 10 {
+      setXYpos -72, 48
+    } else if choice == 11 {
+      setXYpos -48, 48
+    } else if choice == 12 {
+      setXYpos 48, 48
+    } else if choice == 13 {
+      setXYpos 72, 48
+    } else if choice == 14 {
+      setXYpos 96, 48
+    } else if choice == 15 {
+      setXYpos 120, 48
+    }
+    setCostume "f"
+    clone
+    choice = int(rand(0, 15))
+    if choice == 0 {
+      setXYpos -48, 24
+    } else if choice == 1 {
+      setXYpos 0, 24
+    } else if choice == 2 {
+      setXYpos 72, 24
+    } else if choice == 3 {
+      setXYpos 96, 24
+    } else if choice == 4 {
+      setXYpos -96, 0
+    } else if choice == 5 {
+      setXYpos -72, 0
+    } else if choice == 6 {
+      setXYpos 0, 0
+    } else if choice == 7 {
+      setXYpos 48, 0
+    } else if choice == 8 {
+      setXYpos 96, 0
+    } else if choice == 9 {
+      setXYpos -120, -24
+    } else if choice == 10 {
+      setXYpos -96, -24
+    } else if choice == 11 {
+      setXYpos -72, -24
+    } else if choice == 12 {
+      setXYpos -48, -24
+    } else if choice == 13 {
+      setXYpos 48, -24
+    } else if choice == 14 {
+      setXYpos 72, -24
+    } else if choice == 15 {
+      setXYpos -120, -48
+    }
+    setCostume "f"
+    clone
+    choice = int(rand(0, 16))
+    if choice == 0 {
+      setXYpos -24, -48
+    } else if choice == 1 {
+      setXYpos 0, -48
+    } else if choice == 2 {
+      setXYpos -72, -72
+    } else if choice == 3 {
+      setXYpos -24, -72
+    } else if choice == 4 {
+      setXYpos 24, -72
+    } else if choice == 5 {
+      setXYpos 48, -72
+    } else if choice == 6 {
+      setXYpos 72, -72
+    } else if choice == 7 {
+      setXYpos 96, -72
+    } else if choice == 8 {
+      setXYpos 120, -72
+    } else if choice == 9 {
+      setXYpos -120, -96
+    } else if choice == 10 {
+      setXYpos -96, -96
+    } else if choice == 11 {
+      setXYpos -72, -96
+    } else if choice == 12 {
+      setXYpos -48, -96
+    } else if choice == 13 {
+      setXYpos -24, -96
+    } else if choice == 14 {
+      setXYpos 24, -96
+    } else if choice == 15 {
+      setXYpos 96, -96
+    } else if choice == 16 {
+      setXYpos 120, -96
+    }
+    setCostume "f"
+    clone
+  } else if stageIndex == 27 {
+    setCostume "f"
+    setXYpos -48, 144
+    clone
+    setCostume "f"
+    setXYpos -144, 120
+    clone
+    setCostume "f"
+    setXYpos -120, 120
+    clone
+    setCostume "f"
+    setXYpos -48, 120
+    clone
+    setCostume "f"
+    setXYpos 24, 120
+    clone
+    setCostume "f"
+    setXYpos 48, 120
+    clone
+    setCostume "f"
+    setXYpos -120, 96
+    clone
+    setCostume "f"
+    setXYpos -48, 96
+    clone
+    setCostume "f"
+    setXYpos 48, 96
+    clone
+    setCostume "f"
+    setXYpos 96, 96
+    clone
+    setCostume "f"
+    setXYpos 120, 96
+    clone
+    setCostume "f"
+    setXYpos -120, 72
+    clone
+    setCostume "f"
+    setXYpos -48, 72
+    clone
+    setCostume "f"
+    setXYpos -24, 72
+    clone
+    setCostume "f"
+    setXYpos 0, 72
+    clone
+    setCostume "f"
+    setXYpos 96, 72
+    clone
+    setCostume "f"
+    setXYpos 0, 48
+    clone
+    setCostume "f"
+    setXYpos 48, 48
+    clone
+    setCostume "f"
+    setXYpos 72, 48
+    clone
+    setCostume "f"
+    setXYpos 96, 48
+    clone
+    setCostume "f"
+    setXYpos -120, 24
+    clone
+    setCostume "f"
+    setXYpos -96, 24
+    clone
+    setCostume "f"
+    setXYpos -48, 24
+    clone
+    setCostume "f"
+    setXYpos 0, 24
+    clone
+    setCostume "f"
+    setXYpos -96, 0
+    clone
+    setCostume "f"
+    setXYpos -48, 0
+    clone
+    setCostume "f"
+    setXYpos 120, 0
+    clone
+    setCostume "f"
+    setXYpos 144, 0
+    clone
+    setCostume "f"
+    setXYpos -96, -24
+    clone
+    setCostume "f"
+    setXYpos 48, -24
+    clone
+    setCostume "f"
+    setXYpos 120, -24
+    clone
+    setCostume "f"
+    setXYpos -24, -48
+    clone
+    setCostume "f"
+    setXYpos 48, -48
+    clone
+    setCostume "f"
+    setXYpos 72, -48
+    clone
+    setCostume "f"
+    setXYpos 120, -48
+    clone
+    setCostume "f"
+    setXYpos -120, -72
+    clone
+    setCostume "f"
+    setXYpos -96, -72
+    clone
+    setCostume "f"
+    setXYpos -72, -72
+    clone
+    setCostume "f"
+    setXYpos 24, -72
+    clone
+    setCostume "f"
+    setXYpos 48, -72
+    clone
+    setCostume "f"
+    setXYpos 120, -72
+    clone
+    setCostume "f"
+    setXYpos -72, -120
+    clone
+    setCostume "f"
+    setXYpos -72, -144
+    clone
+    setCostume "f"
+    setXYpos 72, -144
+    clone
+    choice = int(rand(0, 14))
+    if choice == 0 {
+      setXYpos -96, 96
+    } else if choice == 1 {
+      setXYpos -72, 96
+    } else if choice == 2 {
+      setXYpos -24, 96
+    } else if choice == 3 {
+      setXYpos 0, 96
+    } else if choice == 4 {
+      setXYpos 24, 96
+    } else if choice == 5 {
+      setXYpos 72, 96
+    } else if choice == 6 {
+      setXYpos -96, 72
+    } else if choice == 7 {
+      setXYpos -72, 72
+    } else if choice == 8 {
+      setXYpos 24, 72
+    } else if choice == 9 {
+      setXYpos 72, 72
+    } else if choice == 10 {
+      setXYpos 120, 72
+    } else if choice == 11 {
+      setXYpos -96, 48
+    } else if choice == 12 {
+      setXYpos -72, 48
+    } else if choice == 13 {
+      setXYpos -48, 48
+    } else if choice == 14 {
+      setXYpos -24, 48
+    }
+    setCostume "f"
+    clone
+    choice = int(rand(0, 14))
+    if choice == 0 {
+      setXYpos 24, 48
+    } else if choice == 1 {
+      setXYpos 120, 48
+    } else if choice == 2 {
+      setXYpos -72, 24
+    } else if choice == 3 {
+      setXYpos 72, 24
+    } else if choice == 4 {
+      setXYpos 96, 24
+    } else if choice == 5 {
+      setXYpos 120, 24
+    } else if choice == 6 {
+      setXYpos -120, 0
+    } else if choice == 7 {
+      setXYpos 0, 0
+    } else if choice == 8 {
+      setXYpos 24, 0
+    } else if choice == 9 {
+      setXYpos 72, 0
+    } else if choice == 10 {
+      setXYpos 96, 0
+    } else if choice == 11 {
+      setXYpos -120, -24
+    } else if choice == 12 {
+      setXYpos -72, -24
+    } else if choice == 13 {
+      setXYpos -48, -24
+    } else if choice == 14 {
+      setXYpos 0, -24
+    }
+    setCostume "f"
+    clone
+    choice = int(rand(0, 15))
+    if choice == 0 {
+      setXYpos 24, -24
+    } else if choice == 1 {
+      setXYpos 72, -24
+    } else if choice == 2 {
+      setXYpos 96, -24
+    } else if choice == 3 {
+      setXYpos -120, -48
+    } else if choice == 4 {
+      setXYpos -72, -48
+    } else if choice == 5 {
+      setXYpos -48, -48
+    } else if choice == 6 {
+      setXYpos 0, -48
+    } else if choice == 7 {
+      setXYpos 24, -48
+    } else if choice == 8 {
+      setXYpos 72, -72
+    } else if choice == 9 {
+      setXYpos -120, -96
+    } else if choice == 10 {
+      setXYpos -96, -96
+    } else if choice == 11 {
+      setXYpos -48, -96
+    } else if choice == 12 {
+      setXYpos -24, -96
+    } else if choice == 13 {
+      setXYpos 0, -96
+    } else if choice == 14 {
+      setXYpos 24, -96
+    } else if choice == 15 {
+      setXYpos 96, -96
+    }
+    setCostume "f"
+    clone
+  } else if stageIndex == 28 {
+    setCostume "a"
+    setXYpos 96, 144
+    clone
+    setCostume "5"
+    setXYpos 120, 144
+    clone
+    setCostume "c"
+    setXYpos 0, 120
+    clone
+    setCostume "f"
+    setXYpos 96, 120
+    clone
+    setCostume "c"
+    setXYpos -48, 72
+    clone
+    setCostume "c"
+    setXYpos 48, 72
+    clone
+    setCostume "c"
+    setXYpos -96, 24
+    clone
+    setCostume "c"
+    setXYpos -144, -24
+    clone
+    setCostume "c"
+    setXYpos 144, -24
+    clone
+    choice = int(rand(0, 4))
+    if choice == 0 {
+      setXYpos -120, 96
+    } else if choice == 1 {
+      setXYpos -96, 96
+    } else if choice == 2 {
+      setXYpos -72, 96
+    } else if choice == 3 {
+      setXYpos -48, 96
+    } else if choice == 4 {
+      setXYpos 48, 96
+    }
+    setCostume "f"
+    clone
+    choice = int(rand(0, 4))
+    if choice == 0 {
+      setXYpos 120, 96
+    } else if choice == 1 {
+      setXYpos -120, 72
+    } else if choice == 2 {
+      setXYpos -96, 72
+    } else if choice == 3 {
+      setXYpos -72, 72
+    } else if choice == 4 {
+      setXYpos 120, 72
+    }
+    setCostume "f"
+    clone
+    choice = int(rand(0, 4))
+    if choice == 0 {
+      setXYpos -120, 48
+    } else if choice == 1 {
+      setXYpos -96, 48
+    } else if choice == 2 {
+      setXYpos 120, 48
+    } else if choice == 3 {
+      setXYpos -120, 24
+    } else if choice == 4 {
+      setXYpos 120, 24
+    }
+    setCostume "f"
+    clone
+  } else if stageIndex == 29 {
+    setCostume "f"
+    setXYpos -24, 120
+    clone
+    setCostume "f"
+    setXYpos 120, 96
+    clone
+    setCostume "f"
+    setXYpos -120, 48
+    clone
+    setCostume "f"
+    setXYpos 0, 24
+    clone
+    setCostume "f"
+    setXYpos 72, 0
+    clone
+    setCostume "f"
+    setXYpos 144, 0
+    clone
+    setCostume "f"
+    setXYpos -144, -48
+    clone
+    setCostume "f"
+    setXYpos -72, -96
+    clone
+    setCostume "f"
+    setXYpos 96, -144
+    clone
+    choice = int(rand(0, 14))
+    if choice == 0 {
+      setXYpos -120, 96
+    } else if choice == 1 {
+      setXYpos 96, 96
+    } else if choice == 2 {
+      setXYpos -120, 72
+    } else if choice == 3 {
+      setXYpos -96, 72
+    } else if choice == 4 {
+      setXYpos -72, 72
+    } else if choice == 5 {
+      setXYpos -48, 72
+    } else if choice == 6 {
+      setXYpos 120, 72
+    } else if choice == 7 {
+      setXYpos -96, 48
+    } else if choice == 8 {
+      setXYpos -72, 48
+    } else if choice == 9 {
+      setXYpos 0, 48
+    } else if choice == 10 {
+      setXYpos 48, 48
+    } else if choice == 11 {
+      setXYpos 72, 48
+    } else if choice == 12 {
+      setXYpos 96, 48
+    } else if choice == 13 {
+      setXYpos 120, 48
+    } else if choice == 14 {
+      setXYpos -72, 24
+    }
+    setCostume "f"
+    clone
+    choice = int(rand(0, 14))
+    if choice == 0 {
+      setXYpos 24, 24
+    } else if choice == 1 {
+      setXYpos 48, 24
+    } else if choice == 2 {
+      setXYpos 72, 24
+    } else if choice == 3 {
+      setXYpos 96, 24
+    } else if choice == 4 {
+      setXYpos -72, 0
+    } else if choice == 5 {
+      setXYpos -48, 0
+    } else if choice == 6 {
+      setXYpos -24, 0
+    } else if choice == 7 {
+      setXYpos 0, 0
+    } else if choice == 8 {
+      setXYpos 24, 0
+    } else if choice == 9 {
+      setXYpos 48, 0
+    } else if choice == 10 {
+      setXYpos 96, 0
+    } else if choice == 11 {
+      setXYpos 120, 0
+    } else if choice == 12 {
+      setXYpos -48, -24
+    } else if choice == 13 {
+      setXYpos 0, -24
+    } else if choice == 14 {
+      setXYpos 24, -24
+    }
+    setCostume "f"
+    clone
+    choice = int(rand(0, 14))
+    if choice == 0 {
+      setXYpos 48, -24
+    } else if choice == 1 {
+      setXYpos 72, -24
+    } else if choice == 2 {
+      setXYpos 96, -24
+    } else if choice == 3 {
+      setXYpos 120, -24
+    } else if choice == 4 {
+      setXYpos -120, -48
+    } else if choice == 5 {
+      setXYpos 96, -48
+    } else if choice == 6 {
+      setXYpos -120, -72
+    } else if choice == 7 {
+      setXYpos -96, -72
+    } else if choice == 8 {
+      setXYpos -72, -72
+    } else if choice == 9 {
+      setXYpos -24, -72
+    } else if choice == 10 {
+      setXYpos -120, -96
+    } else if choice == 11 {
+      setXYpos -96, -96
+    } else if choice == 12 {
+      setXYpos -24, -96
+    } else if choice == 13 {
+      setXYpos 0, -96
+    } else if choice == 14 {
+      setXYpos 24, -96
+    }
+    setCostume "f"
+    clone
+  } else if stageIndex == 30 {
+    setCostume "c"
+    setXYpos 96, 120
+    clone
+    setCostume "c"
+    setXYpos -120, 96
+    clone
+    setCostume "c"
+    setXYpos -96, 96
+    clone
+    setCostume "c"
+    setXYpos 24, 96
+    clone
+    setCostume "f"
+    setXYpos -144, 24
+    clone
+    setCostume "f"
+    setXYpos 144, 0
+    clone
+    setCostume "f"
+    setXYpos 0, -24
+    clone
+    setCostume "3"
+    setXYpos 144, -72
+    clone
+    setCostume "3"
+    setXYpos -144, -96
+    clone
+    setCostume "3"
+    setXYpos 120, -96
+    clone
+    setCostume "3"
+    setXYpos -120, -120
+    clone
+    choice = int(rand(0, 3))
+    if choice == 0 {
+      setXYpos -72, 96
+    } else if choice == 1 {
+      setXYpos 48, 96
+    } else if choice == 2 {
+      setXYpos -24, -96
+    } else if choice == 3 {
+      setXYpos 0, -96
+    }
+    setCostume "f"
+    clone
+  } else if stageIndex == 31 {
+    setCostume "f"
+    setXYpos 0, 72
+    clone
+    choice = int(rand(0, 12))
+    if choice == 0 {
+      setXYpos -72, 96
+    } else if choice == 1 {
+      setXYpos -48, 96
+    } else if choice == 2 {
+      setXYpos 0, 96
+    } else if choice == 3 {
+      setXYpos 24, 96
+    } else if choice == 4 {
+      setXYpos 72, 96
+    } else if choice == 5 {
+      setXYpos -24, 72
+    } else if choice == 6 {
+      setXYpos 24, 72
+    } else if choice == 7 {
+      setXYpos 48, 72
+    } else if choice == 8 {
+      setXYpos -96, 48
+    } else if choice == 9 {
+      setXYpos -48, 48
+    } else if choice == 10 {
+      setXYpos -24, 48
+    } else if choice == 11 {
+      setXYpos 24, 48
+    } else if choice == 12 {
+      setXYpos -96, 24
+    }
+    setCostume "f"
+    clone
+    choice = int(rand(0, 12))
+    if choice == 0 {
+      setXYpos -48, 24
+    } else if choice == 1 {
+      setXYpos 24, 24
+    } else if choice == 2 {
+      setXYpos 48, 24
+    } else if choice == 3 {
+      setXYpos 96, 24
+    } else if choice == 4 {
+      setXYpos 120, 24
+    } else if choice == 5 {
+      setXYpos -120, 0
+    } else if choice == 6 {
+      setXYpos -24, 0
+    } else if choice == 7 {
+      setXYpos 48, 0
+    } else if choice == 8 {
+      setXYpos 96, 0
+    } else if choice == 9 {
+      setXYpos 120, 0
+    } else if choice == 10 {
+      setXYpos 48, -24
+    } else if choice == 11 {
+      setXYpos 120, -24
+    } else if choice == 12 {
+      setXYpos -120, -48
+    }
+    setCostume "f"
+    clone
+    choice = int(rand(0, 13))
+    if choice == 0 {
+      setXYpos -96, -48
+    } else if choice == 1 {
+      setXYpos -48, -48
+    } else if choice == 2 {
+      setXYpos -24, -48
+    } else if choice == 3 {
+      setXYpos 24, -48
+    } else if choice == 4 {
+      setXYpos 120, -48
+    } else if choice == 5 {
+      setXYpos -96, -72
+    } else if choice == 6 {
+      setXYpos -24, -72
+    } else if choice == 7 {
+      setXYpos 120, -72
+    } else if choice == 8 {
+      setXYpos -120, -96
+    } else if choice == 9 {
+      setXYpos -72, -96
+    } else if choice == 10 {
+      setXYpos 0, -96
+    } else if choice == 11 {
+      setXYpos 24, -96
+    } else if choice == 12 {
+      setXYpos 96, -96
+    } else if choice == 13 {
+      setXYpos 120, -96
+    }
+    setCostume "f"
+    clone
+  } else if stageIndex == 32 {
+    setCostume "f"
+    setXYpos 0, 24
+    clone
+    setCostume "f"
+    setXYpos -144, 0
+    clone
+    setCostume "3"
+    setXYpos -24, 0
+    clone
+    setCostume "3"
+    setXYpos 24, 0
+    clone
+    setCostume "f"
+    setXYpos 144, 0
+    clone
+    setCostume "3"
+    setXYpos -24, -96
+    clone
+    setCostume "3"
+    setXYpos 0, -96
+    clone
+    setCostume "3"
+    setXYpos 24, -96
+    clone
+    choice = int(rand(0, 7))
+    if choice == 0 {
+      setXYpos -96, 72
+    } else if choice == 1 {
+      setXYpos -48, 72
+    } else if choice == 2 {
+      setXYpos 48, 72
+    } else if choice == 3 {
+      setXYpos 96, 72
+    } else if choice == 4 {
+      setXYpos -48, 48
+    } else if choice == 5 {
+      setXYpos -24, 48
+    } else if choice == 6 {
+      setXYpos 0, 48
+    } else if choice == 7 {
+      setXYpos 24, 48
+    }
+    setCostume "f"
+    clone
+    choice = int(rand(0, 7))
+    if choice == 0 {
+      setXYpos 48, 48
+    } else if choice == 1 {
+      setXYpos -48, 0
+    } else if choice == 2 {
+      setXYpos 0, 0
+    } else if choice == 3 {
+      setXYpos 48, 0
+    } else if choice == 4 {
+      setXYpos -48, -24
+    } else if choice == 5 {
+      setXYpos 0, -24
+    } else if choice == 6 {
+      setXYpos 48, -24
+    } else if choice == 7 {
+      setXYpos -48, -48
+    }
+    setCostume "f"
+    clone
+    choice = int(rand(0, 7))
+    if choice == 0 {
+      setXYpos 0, -48
+    } else if choice == 1 {
+      setXYpos 48, -48
+    } else if choice == 2 {
+      setXYpos -48, -72
+    } else if choice == 3 {
+      setXYpos -24, -72
+    } else if choice == 4 {
+      setXYpos 24, -72
+    } else if choice == 5 {
+      setXYpos 48, -72
+    } else if choice == 6 {
+      setXYpos -48, -96
+    } else if choice == 7 {
+      setXYpos 48, -96
+    }
+    setCostume "f"
+    clone
+  } else if stageIndex == 33 {
+    setCostume "f"
+    setXYpos -48, 144
+    clone
+    setCostume "f"
+    setXYpos 72, 144
+    clone
+    setCostume "f"
+    setXYpos -120, 120
+    clone
+    setCostume "f"
+    setXYpos -24, 120
+    clone
+    setCostume "f"
+    setXYpos 48, 120
+    clone
+    setCostume "f"
+    setXYpos -96, 96
+    clone
+    setCostume "f"
+    setXYpos 24, 96
+    clone
+    setCostume "c"
+    setXYpos 72, 96
+    clone
+    setCostume "5"
+    setXYpos 96, 96
+    clone
+    setCostume "f"
+    setXYpos -72, 72
+    clone
+    setCostume "a"
+    setXYpos 120, 72
+    clone
+    setCostume "5"
+    setXYpos -120, 48
+    clone
+    setCostume "f"
+    setXYpos -48, 48
+    clone
+    setCostume "f"
+    setXYpos 24, 48
+    clone
+    setCostume "f"
+    setXYpos 120, 48
+    clone
+    setCostume "3"
+    setXYpos -120, 24
+    clone
+    setCostume "5"
+    setXYpos -96, 24
+    clone
+    setCostume "f"
+    setXYpos -24, 24
+    clone
+    setCostume "f"
+    setXYpos 48, 24
+    clone
+    setCostume "a"
+    setXYpos 120, 24
+    clone
+    setCostume "f"
+    setXYpos 72, 0
+    clone
+    setCostume "c"
+    setXYpos -120, -24
+    clone
+    setCostume "5"
+    setXYpos -96, -24
+    clone
+    setCostume "f"
+    setXYpos -24, -24
+    clone
+    setCostume "f"
+    setXYpos 96, -24
+    clone
+    setCostume "f"
+    setXYpos -48, -48
+    clone
+    setCostume "f"
+    setXYpos 0, -48
+    clone
+    setCostume "c"
+    setXYpos 48, -48
+    clone
+    setCostume "f"
+    setXYpos 120, -48
+    clone
+    setCostume "f"
+    setXYpos -72, -72
+    clone
+    setCostume "a"
+    setXYpos 48, -72
+    clone
+    setCostume "f"
+    setXYpos -96, -96
+    clone
+    setCostume "a"
+    setXYpos 120, -96
+    clone
+    setCostume "f"
+    setXYpos 144, -96
+    clone
+    setCostume "c"
+    setXYpos 72, -120
+    clone
+    setCostume "5"
+    setXYpos 96, -120
+    clone
+    setCostume "5"
+    setXYpos -144, -144
+    clone
+    setCostume "c"
+    setXYpos -96, -144
+    clone
+    choice = int(rand(0, 14))
+    if choice == 0 {
+      setXYpos -120, 96
+    } else if choice == 1 {
+      setXYpos -72, 96
+    } else if choice == 2 {
+      setXYpos -48, 96
+    } else if choice == 3 {
+      setXYpos -24, 96
+    } else if choice == 4 {
+      setXYpos 0, 96
+    } else if choice == 5 {
+      setXYpos 120, 96
+    } else if choice == 6 {
+      setXYpos -120, 72
+    } else if choice == 7 {
+      setXYpos -96, 72
+    } else if choice == 8 {
+      setXYpos -48, 72
+    } else if choice == 9 {
+      setXYpos 96, 72
+    } else if choice == 10 {
+      setXYpos -96, 48
+    } else if choice == 11 {
+      setXYpos -72, 48
+    } else if choice == 12 {
+      setXYpos 72, 48
+    } else if choice == 13 {
+      setXYpos 96, 48
+    } else if choice == 14 {
+      setXYpos -48, 24
+    }
+    setCostume "f"
+    clone
+    choice = int(rand(0, 15))
+    if choice == 0 {
+      setXYpos 72, 24
+    } else if choice == 1 {
+      setXYpos 96, 24
+    } else if choice == 2 {
+      setXYpos -120, 0
+    } else if choice == 3 {
+      setXYpos 24, 0
+    } else if choice == 4 {
+      setXYpos 48, 0
+    } else if choice == 5 {
+      setXYpos 96, 0
+    } else if choice == 6 {
+      setXYpos 120, 0
+    } else if choice == 7 {
+      setXYpos -48, -24
+    } else if choice == 8 {
+      setXYpos 24, -24
+    } else if choice == 9 {
+      setXYpos 48, -24
+    } else if choice == 10 {
+      setXYpos 72, -24
+    } else if choice == 11 {
+      setXYpos 120, -24
+    } else if choice == 12 {
+      setXYpos -24, -48
+    } else if choice == 13 {
+      setXYpos 24, -48
+    } else if choice == 14 {
+      setXYpos 72, -48
+    } else if choice == 15 {
+      setXYpos 96, -48
+    }
+    setCostume "f"
+    clone
+    choice = int(rand(0, 15))
+    if choice == 0 {
+      setXYpos -48, -72
+    } else if choice == 1 {
+      setXYpos -24, -72
+    } else if choice == 2 {
+      setXYpos 0, -72
+    } else if choice == 3 {
+      setXYpos 24, -72
+    } else if choice == 4 {
+      setXYpos 72, -72
+    } else if choice == 5 {
+      setXYpos 96, -72
+    } else if choice == 6 {
+      setXYpos 120, -72
+    } else if choice == 7 {
+      setXYpos -120, -96
+    } else if choice == 8 {
+      setXYpos -72, -96
+    } else if choice == 9 {
+      setXYpos -48, -96
+    } else if choice == 10 {
+      setXYpos -24, -96
+    } else if choice == 11 {
+      setXYpos 0, -96
+    } else if choice == 12 {
+      setXYpos 24, -96
+    } else if choice == 13 {
+      setXYpos 48, -96
+    } else if choice == 14 {
+      setXYpos 72, -96
+    } else if choice == 15 {
+      setXYpos 96, -96
+    }
+    setCostume "f"
+    clone
+  } else if stageIndex == 34 {
+
+    choice = int(rand(0, 9))
+    if choice == 0 {
+      setXYpos -24, 96
+    } else if choice == 1 {
+      setXYpos 0, 96
+    } else if choice == 2 {
+      setXYpos 24, 96
+    } else if choice == 3 {
+      setXYpos 120, 96
+    } else if choice == 4 {
+      setXYpos -96, 72
+    } else if choice == 5 {
+      setXYpos -24, 72
+    } else if choice == 6 {
+      setXYpos 0, 72
+    } else if choice == 7 {
+      setXYpos 120, 72
+    } else if choice == 8 {
+      setXYpos -96, 48
+    } else if choice == 9 {
+      setXYpos 0, 48
+    }
+    setCostume "f"
+    clone
+    choice = int(rand(0, 9))
+    if choice == 0 {
+      setXYpos 120, 48
+    } else if choice == 1 {
+      setXYpos -72, 24
+    } else if choice == 2 {
+      setXYpos -48, 24
+    } else if choice == 3 {
+      setXYpos 120, 24
+    } else if choice == 4 {
+      setXYpos -96, 0
+    } else if choice == 5 {
+      setXYpos -72, 0
+    } else if choice == 6 {
+      setXYpos 48, 0
+    } else if choice == 7 {
+      setXYpos 120, 0
+    } else if choice == 8 {
+      setXYpos -96, -24
+    } else if choice == 9 {
+      setXYpos -72, -24
+    }
+    setCostume "f"
+    clone
+    choice = int(rand(0, 9))
+    if choice == 0 {
+      setXYpos 48, -24
+    } else if choice == 1 {
+      setXYpos 120, -24
+    } else if choice == 2 {
+      setXYpos -48, -48
+    } else if choice == 3 {
+      setXYpos 48, -48
+    } else if choice == 4 {
+      setXYpos -96, -72
+    } else if choice == 5 {
+      setXYpos -72, -72
+    } else if choice == 6 {
+      setXYpos -120, -96
+    } else if choice == 7 {
+      setXYpos -72, -96
+    } else if choice == 8 {
+      setXYpos 72, -96
+    } else if choice == 9 {
+      setXYpos 96, -96
+    }
+    setCostume "f"
+    clone
+  } else if stageIndex == 35 {
+    setCostume "f"
+    setXYpos -48, 48
+    clone
+    setCostume "f"
+    setXYpos 0, 48
+    clone
+    choice = int(rand(0, 4))
+    if choice == 0 {
+      setXYpos -120, 96
+    } else if choice == 1 {
+      setXYpos -96, 96
+    } else if choice == 2 {
+      setXYpos 48, 96
+    } else if choice == 3 {
+      setXYpos 72, 96
+    } else if choice == 4 {
+      setXYpos 120, 96
+    }
+    setCostume "f"
+    clone
+    choice = int(rand(0, 5))
+    if choice == 0 {
+      setXYpos -72, -96
+    } else if choice == 1 {
+      setXYpos -48, -96
+    } else if choice == 2 {
+      setXYpos -24, -96
+    } else if choice == 3 {
+      setXYpos 0, -96
+    } else if choice == 4 {
+      setXYpos 24, -96
+    } else if choice == 5 {
+      setXYpos 96, -96
+    }
+    setCostume "f"
+    clone
   }
-  clone
 }
 
 onCloned data => {

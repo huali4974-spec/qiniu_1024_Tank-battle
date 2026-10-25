@@ -5,6 +5,8 @@ var (
 	spawned = 0
 	defeated = 0
 	activeEnemies = 0
+	stageIndex = 1
+	gameReady = false
 )
 
 onStart => {
@@ -14,4 +16,9 @@ onStart => {
 	spawned = 0
 	defeated = 0
 	activeEnemies = 0
+	gameReady = false
+	stageIndex = int(rand(1, 35))
+	broadcastAndWait "loadStage"
+	wait 0.02
+	gameReady = true
 }

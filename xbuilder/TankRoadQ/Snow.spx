@@ -1,0 +1,550 @@
+onMsg "loadStage", => {
+  hide
+  if stageIndex == 1 {
+
+  } else if stageIndex == 2 {
+
+  } else if stageIndex == 3 {
+
+  } else if stageIndex == 4 {
+
+  } else if stageIndex == 5 {
+
+  } else if stageIndex == 6 {
+
+  } else if stageIndex == 7 {
+
+  } else if stageIndex == 8 {
+
+  } else if stageIndex == 9 {
+
+  } else if stageIndex == 10 {
+
+  } else if stageIndex == 11 {
+
+  } else if stageIndex == 12 {
+
+  } else if stageIndex == 13 {
+
+  } else if stageIndex == 14 {
+
+  } else if stageIndex == 15 {
+
+  } else if stageIndex == 16 {
+
+  } else if stageIndex == 17 {
+    setXYpos 24, 120
+    clone
+    setXYpos 48, 120
+    clone
+    setXYpos 72, 120
+    clone
+    setXYpos 24, 96
+    clone
+    setXYpos 48, 96
+    clone
+    setXYpos 72, 96
+    clone
+    setXYpos 96, 96
+    clone
+    setXYpos 120, 96
+    clone
+    setXYpos -144, 72
+    clone
+    setXYpos -120, 72
+    clone
+    setXYpos -96, 72
+    clone
+    setXYpos 48, 72
+    clone
+    setXYpos 72, 72
+    clone
+    setXYpos 96, 72
+    clone
+    setXYpos 120, 72
+    clone
+    setXYpos -144, 48
+    clone
+    setXYpos -120, 48
+    clone
+    setXYpos -96, 48
+    clone
+    setXYpos -72, 48
+    clone
+    setXYpos -48, 48
+    clone
+    setXYpos -24, 48
+    clone
+    setXYpos -72, 24
+    clone
+    setXYpos -48, 24
+    clone
+    setXYpos -24, 24
+    clone
+    setXYpos 0, 24
+    clone
+    setXYpos -48, 0
+    clone
+    setXYpos -24, 0
+    clone
+    setXYpos 0, 0
+    clone
+    setXYpos 24, 0
+    clone
+    setXYpos 48, 0
+    clone
+    setXYpos 72, 0
+    clone
+    setXYpos 96, 0
+    clone
+    setXYpos -24, -24
+    clone
+    setXYpos 0, -24
+    clone
+    setXYpos 24, -24
+    clone
+    setXYpos 48, -24
+    clone
+    setXYpos -24, -48
+    clone
+    setXYpos 0, -48
+    clone
+    setXYpos 24, -48
+    clone
+    setXYpos -144, -72
+    clone
+    setXYpos -120, -72
+    clone
+    setXYpos -96, -72
+    clone
+    setXYpos -48, -72
+    clone
+    setXYpos -144, -96
+    clone
+    setXYpos -120, -96
+    clone
+    setXYpos -96, -96
+    clone
+    setXYpos -72, -96
+    clone
+    setXYpos -48, -96
+    clone
+    setXYpos -120, -120
+    clone
+    setXYpos -96, -120
+    clone
+    setXYpos -72, -120
+    clone
+    setXYpos -48, -120
+    clone
+  } else if stageIndex == 18 {
+
+  } else if stageIndex == 19 {
+
+  } else if stageIndex == 20 {
+
+  } else if stageIndex == 21 {
+
+  } else if stageIndex == 22 {
+
+  } else if stageIndex == 23 {
+
+  } else if stageIndex == 24 {
+    setXYpos -48, 0
+    clone
+    setXYpos -24, 0
+    clone
+    setXYpos 0, 0
+    clone
+    setXYpos 24, 0
+    clone
+    setXYpos 48, 0
+    clone
+    setXYpos 72, 0
+    clone
+    setXYpos 96, 0
+    clone
+    setXYpos 120, 0
+    clone
+    setXYpos 144, 0
+    clone
+    setXYpos -48, -24
+    clone
+    setXYpos -24, -24
+    clone
+    setXYpos 0, -24
+    clone
+    setXYpos 24, -24
+    clone
+    setXYpos 48, -24
+    clone
+    setXYpos 72, -24
+    clone
+    setXYpos 96, -24
+    clone
+    setXYpos 120, -24
+    clone
+    setXYpos 144, -24
+    clone
+    setXYpos -48, -48
+    clone
+    setXYpos -24, -48
+    clone
+    setXYpos 0, -48
+    clone
+    setXYpos 24, -48
+    clone
+    setXYpos 48, -48
+    clone
+    setXYpos 72, -48
+    clone
+    setXYpos 96, -48
+    clone
+    setXYpos 120, -48
+    clone
+    setXYpos 144, -48
+    clone
+    setXYpos -48, -72
+    clone
+    setXYpos -24, -72
+    clone
+    setXYpos 0, -72
+    clone
+    setXYpos 24, -72
+    clone
+    setXYpos 48, -72
+    clone
+    setXYpos 72, -72
+    clone
+    setXYpos 96, -72
+    clone
+    setXYpos 120, -72
+    clone
+    setXYpos 144, -72
+    clone
+    setXYpos -48, -96
+    clone
+    setXYpos -24, -96
+    clone
+    setXYpos 0, -96
+    clone
+    setXYpos 24, -96
+    clone
+    setXYpos 48, -96
+    clone
+    setXYpos 72, -96
+    clone
+    setXYpos 96, -96
+    clone
+    setXYpos 120, -96
+    clone
+    setXYpos 144, -96
+    clone
+    setXYpos 48, -120
+    clone
+    setXYpos 72, -120
+    clone
+    setXYpos 96, -120
+    clone
+    setXYpos 120, -120
+    clone
+    setXYpos 144, -120
+    clone
+    setXYpos 72, -144
+    clone
+    setXYpos 96, -144
+    clone
+    setXYpos 120, -144
+    clone
+    setXYpos 144, -144
+    clone
+  } else if stageIndex == 25 {
+
+  } else if stageIndex == 26 {
+
+  } else if stageIndex == 27 {
+
+  } else if stageIndex == 28 {
+    setXYpos 0, 48
+    clone
+    setXYpos -24, 24
+    clone
+    setXYpos 0, 24
+    clone
+    setXYpos 24, 24
+    clone
+    setXYpos -48, 0
+    clone
+    setXYpos -24, 0
+    clone
+    setXYpos 0, 0
+    clone
+    setXYpos 24, 0
+    clone
+    setXYpos 48, 0
+    clone
+    setXYpos -72, -24
+    clone
+    setXYpos -48, -24
+    clone
+    setXYpos -24, -24
+    clone
+    setXYpos 0, -24
+    clone
+    setXYpos 24, -24
+    clone
+    setXYpos 48, -24
+    clone
+    setXYpos 72, -24
+    clone
+    setXYpos -96, -48
+    clone
+    setXYpos -72, -48
+    clone
+    setXYpos -48, -48
+    clone
+    setXYpos -24, -48
+    clone
+    setXYpos 0, -48
+    clone
+    setXYpos 24, -48
+    clone
+    setXYpos 48, -48
+    clone
+    setXYpos 72, -48
+    clone
+    setXYpos 96, -48
+    clone
+    setXYpos -96, -72
+    clone
+    setXYpos -72, -72
+    clone
+    setXYpos -48, -72
+    clone
+    setXYpos -24, -72
+    clone
+    setXYpos 0, -72
+    clone
+    setXYpos 24, -72
+    clone
+    setXYpos 48, -72
+    clone
+    setXYpos 72, -72
+    clone
+    setXYpos 96, -72
+    clone
+    setXYpos -96, -96
+    clone
+    setXYpos -72, -96
+    clone
+    setXYpos -48, -96
+    clone
+    setXYpos -24, -96
+    clone
+    setXYpos 0, -96
+    clone
+    setXYpos 24, -96
+    clone
+    setXYpos 48, -96
+    clone
+    setXYpos 72, -96
+    clone
+    setXYpos 96, -96
+    clone
+    setXYpos -96, -120
+    clone
+    setXYpos -72, -120
+    clone
+    setXYpos -48, -120
+    clone
+    setXYpos 48, -120
+    clone
+    setXYpos 72, -120
+    clone
+    setXYpos 96, -120
+    clone
+    setXYpos -96, -144
+    clone
+    setXYpos -72, -144
+    clone
+    setXYpos 72, -144
+    clone
+    setXYpos 96, -144
+    clone
+  } else if stageIndex == 29 {
+
+  } else if stageIndex == 30 {
+
+  } else if stageIndex == 31 {
+
+  } else if stageIndex == 32 {
+    setXYpos -144, 144
+    clone
+    setXYpos -120, 144
+    clone
+    setXYpos -96, 144
+    clone
+    setXYpos -72, 144
+    clone
+    setXYpos -48, 144
+    clone
+    setXYpos -24, 144
+    clone
+    setXYpos 24, 144
+    clone
+    setXYpos 48, 144
+    clone
+    setXYpos 72, 144
+    clone
+    setXYpos 96, 144
+    clone
+    setXYpos 120, 144
+    clone
+    setXYpos 144, 144
+    clone
+    setXYpos -144, 120
+    clone
+    setXYpos -120, 120
+    clone
+    setXYpos -96, 120
+    clone
+    setXYpos -72, 120
+    clone
+    setXYpos -48, 120
+    clone
+    setXYpos -24, 120
+    clone
+    setXYpos 0, 120
+    clone
+    setXYpos 24, 120
+    clone
+    setXYpos 48, 120
+    clone
+    setXYpos 72, 120
+    clone
+    setXYpos 96, 120
+    clone
+    setXYpos 120, 120
+    clone
+    setXYpos 144, 120
+    clone
+    setXYpos -144, 96
+    clone
+    setXYpos -120, 96
+    clone
+    setXYpos -96, 96
+    clone
+    setXYpos -48, 96
+    clone
+    setXYpos -24, 96
+    clone
+    setXYpos 0, 96
+    clone
+    setXYpos 24, 96
+    clone
+    setXYpos 48, 96
+    clone
+    setXYpos 96, 96
+    clone
+    setXYpos 120, 96
+    clone
+    setXYpos 144, 96
+    clone
+    setXYpos -144, 72
+    clone
+    setXYpos 0, 72
+    clone
+    setXYpos 144, 72
+    clone
+    setXYpos -144, 48
+    clone
+    setXYpos 144, 48
+    clone
+    setXYpos -144, 24
+    clone
+    setXYpos -120, 24
+    clone
+    setXYpos -96, 24
+    clone
+    setXYpos 96, 24
+    clone
+    setXYpos 120, 24
+    clone
+    setXYpos 144, 24
+    clone
+    setXYpos -120, 0
+    clone
+    setXYpos -96, 0
+    clone
+    setXYpos -72, 0
+    clone
+    setXYpos 72, 0
+    clone
+    setXYpos 96, 0
+    clone
+    setXYpos 120, 0
+    clone
+    setXYpos -144, -24
+    clone
+    setXYpos -120, -24
+    clone
+    setXYpos -96, -24
+    clone
+    setXYpos -72, -24
+    clone
+    setXYpos 72, -24
+    clone
+    setXYpos 96, -24
+    clone
+    setXYpos 120, -24
+    clone
+    setXYpos 144, -24
+    clone
+    setXYpos -144, -48
+    clone
+    setXYpos -120, -48
+    clone
+    setXYpos -96, -48
+    clone
+    setXYpos -72, -48
+    clone
+    setXYpos 72, -48
+    clone
+    setXYpos 96, -48
+    clone
+    setXYpos 120, -48
+    clone
+    setXYpos 144, -48
+    clone
+    setXYpos -144, -72
+    clone
+    setXYpos -120, -72
+    clone
+    setXYpos -96, -72
+    clone
+    setXYpos 96, -72
+    clone
+    setXYpos 120, -72
+    clone
+    setXYpos 144, -72
+    clone
+    setXYpos -144, -96
+    clone
+    setXYpos -96, -96
+    clone
+    setXYpos 96, -96
+    clone
+    setXYpos 144, -96
+    clone
+  } else if stageIndex == 33 {
+
+  } else if stageIndex == 34 {
+
+  } else if stageIndex == 35 {
+
+  }
+}
+
+onCloned data => {
+  show
+}
