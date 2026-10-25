@@ -19,11 +19,20 @@ const save = (path, content) => {
 const svg = (body, size = 24) => `<svg xmlns="http://www.w3.org/2000/svg" width="${size}" height="${size}" viewBox="0 0 24 24">${body}</svg>`
 const placement = (col, row) => [24 * (col - 6), 24 * (6 - row)]
 
-const brickSvg = () => `<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12">
-  <rect x=".35" y=".35" width="11.3" height="11.3" rx="2" fill="#a45461"/>
-  <rect x=".8" y=".8" width="10.4" height="8.5" rx="1.7" fill="#efa087"/>
-  <path d="M2.2 2h6.6" stroke="#ffe7c5" stroke-opacity=".8" stroke-width="1" stroke-linecap="round"/>
-</svg>`
+// Short brick masks represent four filled or empty 2x2 quadrants in the source parser.
+const brickSvg = (mask) => {
+  const bits = parseInt(mask, 16)
+  let body = ''
+  for (let q = 0; q < 4; q++) {
+    if (!(bits & (1 << q))) continue
+    const qx = (q % 2) * 12
+    const qy = Math.floor(q / 2) * 12
+    body += `<rect x="${qx + .35}" y="${qy + .35}" width="11.3" height="11.3" rx="2" fill="#a45461"/>`
+    body += `<rect x="${qx + .8}" y="${qy + .8}" width="10.4" height="8.5" rx="1.7" fill="#efa087"/>`
+    body += `<path d="M${qx + 2.2} ${qy + 2}h6.6" stroke="#ffe7c5" stroke-opacity=".8" stroke-width="1" stroke-linecap="round"/>`
+  }
+  return svg(body)
+}
 const steelSvg = (mask) => {
   const bits = parseInt(mask, 16)
   let body = ''
@@ -41,58 +50,6 @@ const steelSvg = (mask) => {
 }
 
 for (const [type, filename, make] of [['B', 'Brick', brickSvg], ['T', 'Steel', steelSvg]]) {
-  if (type === 'B') {
-    const pieces = []
-    cells.forEach((row, rowIndex) => row.forEach((cell, colIndex) => {
-      if (!cell.startsWith('B')) return
-      const bits = parseInt(cell.slice(1), 16)
-      const [tileX, tileY] = placement(colIndex, rowIndex)
-      for (let quadrant = 0; quadrant < 4; quadrant++) {
-        if (bits & (1 << quadrant)) {
-          pieces.push({
-            x: tileX + (quadrant % 2 === 0 ? -6 : 6),
-            y: tileY + (quadrant < 2 ? 6 : -6),
-          })
-        }
-      }
-    }))
-    if (pieces.length > 250) throw new Error('Too many brick clones for XBuilder')
-    save(join(sprites, filename, 'brick.svg'), make())
-    save(join(sprites, filename, 'index.json'), JSON.stringify({
-      x: 0, y: 0, size: 1, heading: 0, visible: false, rotationStyle: 'none',
-      physicsMode: 'no', collisionShapeType: 'rect', collisionShapeParams: [11, 11],
-      costumeIndex: 0,
-      costumes: [{ name: 'brick', path: 'brick.svg', x: 6, y: 6, bitmapResolution: 1, imageWidth: 12, imageHeight: 12 }],
-    }, null, 2))
-    save(join(project, `${filename}.spx`), `onStart => {
-  hide
-${pieces.map(({ x, y }) => `  setXYpos ${x}, ${y}
-  clone`).join('\n')}
-}
-
-onCloned data => {
-  show
-}
-
-onTouchStart "PlayerShot", sprite => {
-  if !sprite.visible() {
-    return
-  }
-  sprite.hide()
-  sprite.destroy()
-  destroy
-}
-
-onTouchStart "EnemyShot", sprite => {
-  if !sprite.visible() {
-    return
-  }
-  sprite.hide()
-  sprite.destroy()
-  destroy
-}`)
-    continue
-  }
   const tiles = []
   const masks = new Set()
   cells.forEach((row, rowIndex) => row.forEach((cell, colIndex) => {
