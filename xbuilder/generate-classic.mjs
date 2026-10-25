@@ -68,7 +68,7 @@ for (const [type, filename, make] of [['B', 'Brick', brickSvg], ['T', 'Steel', s
     costumeIndex: 0, costumes,
   }
   save(join(sprites, filename, 'index.json'), JSON.stringify(index, null, 2))
-  const source = `onStart => {
+  let source = `onStart => {
   hide
 ${tiles.map(({ mask, x, y }) => `  setCostume "${mask}"
   setXYpos ${x}, ${y}
@@ -79,6 +79,32 @@ onCloned data => {
   show
 }
 ${type === 'B' ? '\nonTouchStart "PlayerShot", sprite => {\n  destroy\n}\n\nonTouchStart "EnemyShot", sprite => {\n  destroy\n}\n' : ''}`
+  if (type === 'T') {
+    const bands = [
+      [[2, 2], [4, 2], [8, 2], [10, 2]],
+      [[4, 5], [6, 5], [8, 5]],
+      [[2, 9], [4, 9], [8, 9], [10, 9]],
+    ]
+    const positions = bands.map((band) => band.map(([col, row]) => {
+      if (cells[row][col] !== 'X') throw new Error(`Stone slot ${col},${row} is not empty`)
+      return placement(col, row)
+    }))
+    source = `var choice = 0
+
+onStart => {
+  hide
+  setCostume "f"
+${positions.map((band) => `  choice = rand(0, ${band.length - 1})
+${band.map(([x, y], i) => `${i === 0 ? '  if' : ' else if'} choice == ${i} {
+    setXYpos ${x}, ${y}
+  }`).join('')}
+  clone`).join('\n')}
+}
+
+onCloned data => {
+  show
+}`
+  }
   save(join(project, `${filename}.spx`), source)
 }
 

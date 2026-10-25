@@ -1,13 +1,38 @@
+var choice = 0
+
 onStart => {
   hide
   setCostume "f"
-  setXYpos 0, 72
+  choice = rand(0, 3)
+  if choice == 0 {
+    setXYpos -96, 96
+  } else if choice == 1 {
+    setXYpos -48, 96
+  } else if choice == 2 {
+    setXYpos 48, 96
+  } else if choice == 3 {
+    setXYpos 96, 96
+  }
   clone
-  setCostume "3"
-  setXYpos -144, -24
+  choice = rand(0, 2)
+  if choice == 0 {
+    setXYpos -48, 24
+  } else if choice == 1 {
+    setXYpos 0, 24
+  } else if choice == 2 {
+    setXYpos 48, 24
+  }
   clone
-  setCostume "3"
-  setXYpos 144, -24
+  choice = rand(0, 3)
+  if choice == 0 {
+    setXYpos -96, -72
+  } else if choice == 1 {
+    setXYpos -48, -72
+  } else if choice == 2 {
+    setXYpos 48, -72
+  } else if choice == 3 {
+    setXYpos 96, -72
+  }
   clone
 }
 

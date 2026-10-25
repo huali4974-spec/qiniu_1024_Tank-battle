@@ -51,7 +51,7 @@ onStart => {
 			setCostume "down"
 			changeYpos -2
 		}
-		if xpos < -144 || xpos > 144 || ypos < -144 || ypos > 144 || touching(Brick) || touching(Steel) || touching(Eagle) {
+		if xpos < -144 || xpos > 144 || ypos < -144 || ypos > 144 || touching("Brick") || touching("Steel") || touching("Eagle") {
 			setXYpos beforeX, beforeY
 		}
 		wait 0.02
