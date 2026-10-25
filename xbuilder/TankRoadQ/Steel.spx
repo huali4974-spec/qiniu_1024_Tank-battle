@@ -3,7 +3,7 @@ var choice = 0
 onStart => {
   hide
   setCostume "f"
-  choice = rand(0, 3)
+  choice = int(rand(0, 4))
   if choice == 0 {
     setXYpos -96, 96
   } else if choice == 1 {
@@ -14,7 +14,7 @@ onStart => {
     setXYpos 96, 96
   }
   clone
-  choice = rand(0, 2)
+  choice = int(rand(0, 3))
   if choice == 0 {
     setXYpos -48, 24
   } else if choice == 1 {
@@ -23,7 +23,7 @@ onStart => {
     setXYpos 48, 24
   }
   clone
-  choice = rand(0, 3)
+  choice = int(rand(0, 4))
   if choice == 0 {
     setXYpos -96, -72
   } else if choice == 1 {

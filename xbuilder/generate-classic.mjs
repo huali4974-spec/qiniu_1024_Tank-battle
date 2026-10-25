@@ -94,7 +94,7 @@ ${type === 'B' ? '\nonTouchStart "PlayerShot", sprite => {\n  destroy\n}\n\nonTo
 onStart => {
   hide
   setCostume "f"
-${positions.map((band) => `  choice = rand(0, ${band.length - 1})
+${positions.map((band) => `  choice = int(rand(0, ${band.length}))
 ${band.map(([x, y], i) => `${i === 0 ? '  if' : ' else if'} choice == ${i} {
     setXYpos ${x}, ${y}
   }`).join('')}

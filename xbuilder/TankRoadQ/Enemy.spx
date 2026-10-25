@@ -12,9 +12,9 @@ onStart => {
 	lastLane = -1
 	for running {
 		if spawned < 20 && activeEnemies < 4 {
-			lane = rand(0, 2)
+			lane = int(rand(0, 3))
 			if lane == lastLane {
-				lane = (lane + 1 + rand(0, 1)) % 3
+				lane = (lane + 1 + int(rand(0, 2))) % 3
 			}
 			lastLane = lane
 			if lane == 0 {
@@ -44,7 +44,7 @@ onCloned data => {
 		if xpos < -144 || xpos > 144 || ypos < -144 || ypos > 144 || touching("Brick") || touching("Steel") || touching("Eagle") {
 			setXYpos beforeX, beforeY
 			if ticks % 8 == 0 {
-				turnChoice = rand(0, 3)
+				turnChoice = int(rand(0, 4))
 				if turnChoice == 0 {
 					setHeading Left
 					setCostume "left"
