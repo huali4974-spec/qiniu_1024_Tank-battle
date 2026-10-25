@@ -1,4 +1,4 @@
-import { readFileSync, writeFileSync, mkdirSync } from 'node:fs'
+import { readFileSync, writeFileSync, mkdirSync, copyFileSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
 import { dirname, join, resolve } from 'node:path'
 
@@ -65,6 +65,23 @@ const reachableCells = stages.map(({ cells }) => {
 const save = (path, content) => {
   mkdirSync(dirname(path), { recursive: true })
   writeFileSync(path, `${content.trim()}\n`)
+}
+const sounds = {
+  Fire: 'bullet_shot',
+  Impact: 'bullet_hit_1',
+  ArmorHit: 'bullet_hit_2',
+  EnemyDown: 'explosion_1',
+  PlayerDown: 'explosion_2',
+  PickupAppear: 'powerup_appear',
+  Pickup: 'powerup_pick',
+  RoundStart: 'stage_start',
+  GameOver: 'game_over',
+}
+for (const [name, source] of Object.entries(sounds)) {
+  const directory = join(assets, 'sounds', name)
+  mkdirSync(directory, { recursive: true })
+  copyFileSync(resolve(here, `../src/audio/sounds/${source}.ogg`), join(directory, `${name}.ogg`))
+  save(join(directory, 'index.json'), JSON.stringify({ path: `${name}.ogg` }, null, 2))
 }
 const svg = (body, size = 24) => `<svg xmlns="http://www.w3.org/2000/svg" width="${size}" height="${size}" viewBox="0 0 24 24">${body}</svg>`
 const placement = (col, row) => [24 * (col - 6), 24 * (6 - row)]

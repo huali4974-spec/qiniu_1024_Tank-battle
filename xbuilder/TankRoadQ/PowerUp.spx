@@ -11,6 +11,7 @@ onTouchStart "Player", sprite => {
 		return
 	}
 	hide
+	play "Pickup"
 	score += 500
 	if costumeName == "tank" {
 		lives++

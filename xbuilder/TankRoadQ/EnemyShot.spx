@@ -11,11 +11,14 @@ onCloned data => {
 	consumed = false
 	flightTicks = 0
 	show
+	setVolume 25
+	play "Fire"
 	for running {
 		step 4
 		flightTicks++
 		if touching("Steel") {
 			consumed = true
+			play "ArmorHit"
 			destroy
 		}
 		if xpos < -156 || xpos > 156 || ypos < -468 || ypos > 468 || flightTicks >= 75 {
@@ -47,6 +50,7 @@ onTouchStart "Brick", sprite => {
 		return
 	}
 	consumed = true
+	play "Impact"
 	sprite.destroy
 	destroy
 }
@@ -56,6 +60,7 @@ onTouchStart "Steel", sprite => {
 		return
 	}
 	consumed = true
+	play "ArmorHit"
 	destroy
 }
 

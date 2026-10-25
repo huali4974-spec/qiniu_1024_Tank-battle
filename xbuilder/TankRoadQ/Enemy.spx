@@ -56,6 +56,7 @@ func defeatEnemy() {
 	}
 	defeated++
 	activeEnemies--
+	play "EnemyDown"
 	Burst.setXYpos xpos, ypos
 	Burst.clone
 	if defeated == 4 || defeated == 11 || defeated == 18 || defeated == 25 {
@@ -79,6 +80,7 @@ func defeatEnemy() {
 				PowerUp.setCostume "shovel"
 			}
 		}
+		play "PickupAppear"
 		PowerUp.clone
 	}
 	destroy
@@ -5212,6 +5214,7 @@ onTouchStart "PlayerShot", sprite => {
 	}
 	enemyHP--
 	if enemyHP > 0 {
+		play "ArmorHit"
 		Burst.setXYpos xpos, ypos
 		Burst.clone
 		return

@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict'
-import { existsSync, readFileSync } from 'node:fs'
+import { existsSync, readFileSync, readdirSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
 import { dirname, join, resolve } from 'node:path'
 
@@ -152,6 +152,19 @@ assert.equal(assets.run.height, 360)
 assert.equal(assets.camera.on, 'Player')
 assert(assets.zorder.includes('PowerUp') && assets.zorder.includes('Shield'))
 assert(assets.zorder.some((entry) => entry?.val === 'roundNumber'))
+
+const soundNames = new Set(readdirSync(join(project, 'assets/sounds')))
+const playedSounds = new Set(readdirSync(project).filter((name) => name.endsWith('.spx'))
+  .flatMap((name) => [...readFileSync(join(project, name), 'utf8').matchAll(/\bplay "([^"]+)"/g)]
+    .map((match) => match[1])))
+assert.deepEqual(playedSounds, soundNames, 'Sound assets must match the sounds used by scripts')
+for (const name of soundNames) {
+  const directory = join(project, 'assets/sounds', name)
+  const { path } = JSON.parse(readFileSync(join(directory, 'index.json'), 'utf8'))
+  assert.equal(path, `${name}.ogg`)
+  const data = readFileSync(join(directory, path))
+  assert(data.length > 1000 && data.subarray(0, 4).toString() === 'OggS', `${name} is not a valid OGG asset`)
+}
 
 const enemyCostumes = JSON.parse(readFileSync(join(project, 'assets/sprites/Enemy/index.json'), 'utf8')).costumes
 const expectedEnemyCostumes = ['', 'platinum_', 'gold_'].flatMap((prefix) =>

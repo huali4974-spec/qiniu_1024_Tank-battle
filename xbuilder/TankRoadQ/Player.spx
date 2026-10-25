@@ -20,6 +20,7 @@ func takeHit() {
 		return
 	}
 	lives--
+	play "PlayerDown"
 	Burst.setXYpos xpos, ypos
 	Burst.clone
 	if lives <= 0 {

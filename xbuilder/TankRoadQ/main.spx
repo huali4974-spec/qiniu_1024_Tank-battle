@@ -954,6 +954,7 @@ onStart => {
 	stageIndex = stageBottom
 	broadcastAndWait "loadStage"
 	wait 0.02
+	play "RoundStart"
 	gameReady = true
 	for running {
 		if gameReady && spawned >= 30 && defeated >= 30 && activeEnemies <= 0 {
@@ -965,6 +966,7 @@ onStart => {
 			activeEnemies = 0
 			broadcastAndWait "resetPlayer"
 			wait 1
+			play "RoundStart"
 			gameReady = true
 		}
 		if baseFortified && timer >= baseFortifiedUntil {

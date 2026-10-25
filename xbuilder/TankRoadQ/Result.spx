@@ -22,4 +22,5 @@ onMsg "lose", => {
 	centerResult()
 	setCostume "lose"
 	show
+	play "GameOver"
 }
