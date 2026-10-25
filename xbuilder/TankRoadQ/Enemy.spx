@@ -18,7 +18,7 @@ onStart => {
 		wait 0.02
 	}
 	for running {
-		if spawned < 30 && activeEnemies < 6 {
+		if spawned < 30 && activeEnemies < 10 {
 			spawnSection = int(rand(0, 2))
 			if spawnSection == 0 {
 				spawnMap = stageTop
