@@ -78,7 +78,7 @@ ${tiles.map(({ mask, x, y }) => `  setCostume "${mask}"
 onCloned data => {
   show
 }
-${type === 'B' ? '\nonTouchStart "PlayerShot", sprite => {\n  destroy\n}\n\nonTouchStart "EnemyShot", sprite => {\n  destroy\n}\n' : ''}`
+`
   if (type === 'T') {
     const bands = [
       [[2, 2], [4, 2], [8, 2], [10, 2]],
@@ -170,6 +170,6 @@ for (const [name, colors] of Object.entries({ PlayerShot: ['#e6f8ff', '#67bce5',
     const y2 = 12 + Math.sin(a) * (i % 2 ? 10.4 : 9.3)
     fur += `<path d="M${x1.toFixed(2)} ${y1.toFixed(2)}L${x2.toFixed(2)} ${y2.toFixed(2)}" stroke="${edge}" stroke-width="1.5" stroke-linecap="round"/>`
   }
-  const art = svg(`${fur}<circle cx="12" cy="12" r="8" fill="${fill}" stroke="${edge}" stroke-width="1.5"/><ellipse cx="9" cy="9" rx="3.7" ry="2.6" fill="${light}" opacity=".9"/><circle cx="15" cy="15" r="1.3" fill="${edge}" opacity=".38"/>`)
+  const art = svg(`${fur}<circle cx="12" cy="12" r="8" fill="${fill}" stroke="${edge}" stroke-width="1.5"/><ellipse cx="9" cy="9" rx="3.7" ry="2.6" fill="${light}" opacity=".9"/><circle cx="15" cy="15" r="1.3" fill="${edge}" opacity=".38"/>`, 6)
   save(join(sprites, name, 'shot.svg'), art)
 }

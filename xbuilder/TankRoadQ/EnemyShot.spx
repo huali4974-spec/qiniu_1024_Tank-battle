@@ -1,11 +1,18 @@
+var consumed = false
+
 onStart => {
 	hide
 }
 
 onCloned data => {
+	consumed = false
 	show
 	for running {
 		step 4
+		if touching("Steel") {
+			consumed = true
+			destroy
+		}
 		if xpos < -156 || xpos > 156 || ypos < -156 || ypos > 156 {
 			destroy
 		}
@@ -15,17 +22,34 @@ onCloned data => {
 }
 
 onTouchStart "Player", sprite => {
+	if consumed {
+		return
+	}
+	consumed = true
 	destroy
 }
 
 onTouchStart "Eagle", sprite => {
+	if consumed {
+		return
+	}
+	consumed = true
 	destroy
 }
 
 onTouchStart "Brick", sprite => {
+	if consumed {
+		return
+	}
+	consumed = true
+	sprite.destroy
 	destroy
 }
 
 onTouchStart "Steel", sprite => {
+	if consumed {
+		return
+	}
+	consumed = true
 	destroy
 }
