@@ -2,38 +2,45 @@ var (
 	ticks = 0
 	beforeX = 0.0
 	beforeY = 0.0
-	lane = 0
-	lastLane = -1
+	spawnBand = 0
+	spawnX = 0.0
+	spawnY = 0.0
 	turnChoice = 0
+	hit = false
 )
 
 onStart => {
 	hide
-	lastLane = -1
 	for running {
 		if spawned < 20 && activeEnemies < 4 {
-			lane = int(rand(0, 3))
-			if lane == lastLane {
-				lane = (lane + 1 + int(rand(0, 2))) % 3
-			}
-			lastLane = lane
-			if lane == 0 {
-				setXYpos -144, 144
-			} else if lane == 1 {
-				setXYpos 0, 144
+			spawnBand = int(rand(0, 4))
+			if spawnBand == 3 {
+				spawnX = float64((int(rand(0, 3)) - 1) * 48)
+				spawnY = 0
 			} else {
-				setXYpos 144, 144
+				spawnX = float64(int(rand(0, 7)) * 48 - 144)
+				if spawnBand == 0 {
+					spawnY = 144
+				} else if spawnBand == 1 {
+					spawnY = 120
+				} else {
+					spawnY = 48
+				}
 			}
-			clone
-			spawned++
-			activeEnemies++
+			setXYpos spawnX, spawnY
+			if !touching("Enemy") {
+				clone
+				spawned++
+				activeEnemies++
+			}
 		}
-		wait 1.8
+		wait 4
 	}
 }
 
 onCloned data => {
 	ticks = 0
+	hit = false
 	setHeading Down
 	setCostume "down"
 	show
@@ -72,9 +79,10 @@ onCloned data => {
 }
 
 onTouchStart "PlayerShot", sprite => {
-	if !running {
+	if hit || !running {
 		return
 	}
+	hit = true
 	score += 100
 	defeated++
 	activeEnemies--
