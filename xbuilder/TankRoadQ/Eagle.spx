@@ -1,0 +1,18 @@
+onStart => {
+	setXYpos 0, -144
+	show
+}
+
+onTouchStart "EnemyShot", sprite => {
+	if running {
+		running = false
+		broadcast "lose"
+	}
+}
+
+onTouchStart "Enemy", sprite => {
+	if running {
+		running = false
+		broadcast "lose"
+	}
+}

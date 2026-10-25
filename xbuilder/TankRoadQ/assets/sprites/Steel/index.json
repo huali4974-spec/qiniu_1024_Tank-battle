@@ -1,0 +1,35 @@
+{
+  "x": 0,
+  "y": 0,
+  "size": 1,
+  "heading": 0,
+  "visible": false,
+  "rotationStyle": "none",
+  "physicsMode": "no",
+  "collisionShapeType": "rect",
+  "collisionShapeParams": [
+    22,
+    22
+  ],
+  "costumeIndex": 0,
+  "costumes": [
+    {
+      "name": "3",
+      "path": "3.svg",
+      "x": 12,
+      "y": 12,
+      "bitmapResolution": 1,
+      "imageWidth": 24,
+      "imageHeight": 24
+    },
+    {
+      "name": "f",
+      "path": "f.svg",
+      "x": 12,
+      "y": 12,
+      "bitmapResolution": 1,
+      "imageWidth": 24,
+      "imageHeight": 24
+    }
+  ]
+}

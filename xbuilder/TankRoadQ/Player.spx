@@ -1,6 +1,8 @@
 var (
 	lastShot = -1.0
 	invulnerable = false
+	beforeX = 0.0
+	beforeY = 0.0
 )
 
 func takeHit() {
@@ -17,43 +19,40 @@ func takeHit() {
 		return
 	}
 	invulnerable = true
-	setXYpos 0, -112
+	setXYpos -48, -144
+	setHeading Up
+	setCostume "up"
 	wait 1
 	invulnerable = false
 }
 
 onStart => {
-	setXYpos 0, -112
+	setXYpos -48, -144
 	setHeading Up
+	setCostume "up"
 	show
 	for running {
+		beforeX = xpos
+		beforeY = ypos
 		if keyPressed(KeyLeft) || keyPressed(KeyA) {
 			setHeading Left
-			changeXpos -3
-		}
-		if keyPressed(KeyRight) || keyPressed(KeyD) {
+			setCostume "left"
+			changeXpos -2
+		} else if keyPressed(KeyRight) || keyPressed(KeyD) {
 			setHeading Right
-			changeXpos 3
-		}
-		if keyPressed(KeyUp) || keyPressed(KeyW) {
+			setCostume "right"
+			changeXpos 2
+		} else if keyPressed(KeyUp) || keyPressed(KeyW) {
 			setHeading Up
-			changeYpos 3
-		}
-		if keyPressed(KeyDown) || keyPressed(KeyS) {
+			setCostume "up"
+			changeYpos 2
+		} else if keyPressed(KeyDown) || keyPressed(KeyS) {
 			setHeading Down
-			changeYpos -3
+			setCostume "down"
+			changeYpos -2
 		}
-		if xpos < -205 {
-			setXpos -205
-		}
-		if xpos > 205 {
-			setXpos 205
-		}
-		if ypos < -134 {
-			setYpos -134
-		}
-		if ypos > 134 {
-			setYpos 134
+		if xpos < -144 || xpos > 144 || ypos < -144 || ypos > 144 || touching(Brick) || touching(Steel) || touching(Eagle) {
+			setXYpos beforeX, beforeY
 		}
 		wait 0.02
 	}
@@ -64,7 +63,15 @@ onKey KeySpace, => {
 		return
 	}
 	lastShot = timer
-	PlayerShot.setXYpos xpos, ypos
+	if heading == 0 {
+		PlayerShot.setXYpos xpos, ypos+13
+	} else if heading == 90 {
+		PlayerShot.setXYpos xpos+13, ypos
+	} else if heading == 180 {
+		PlayerShot.setXYpos xpos, ypos-13
+	} else {
+		PlayerShot.setXYpos xpos-13, ypos
+	}
 	PlayerShot.setHeading heading
 	PlayerShot.clone
 }

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="360" viewBox="0 0 480 360">
+  <defs>
+    <pattern id="ground" width="24" height="24" patternUnits="userSpaceOnUse">
+      <rect width="24" height="24" fill="#dce9d9"/>
+      <path d="M0 .5H24M.5 0V24" stroke="#b6d0be" stroke-opacity=".52"/>
+      <circle cx="17" cy="17" r=".8" fill="#b5cab6"/>
+    </pattern>
+  </defs>
+  <rect width="480" height="360" fill="#eff5e8"/>
+  <rect x="78" y="18" width="324" height="324" rx="9" fill="#9ebdaa"/>
+  <rect x="84" y="24" width="312" height="312" fill="url(#ground)"/>
+  <path d="M84 24h312v312H84z" fill="none" stroke="#6e9d89" stroke-width="2"/>
+  <path d="M48 24h15M48 336h15M417 24h15M417 336h15" stroke="#8eb7a3" stroke-width="3" stroke-linecap="round"/>
+</svg>

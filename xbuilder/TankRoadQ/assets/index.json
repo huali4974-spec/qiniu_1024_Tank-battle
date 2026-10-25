@@ -1,8 +1,8 @@
 {
   "backdrops": [
     {
-      "name": "river",
-      "path": "river.svg",
+      "name": "classic arena",
+      "path": "arena.svg",
       "x": 240,
       "y": 180,
       "bitmapResolution": 1,
@@ -17,10 +17,9 @@
   "autoSetCollisionLayer": true,
   "maxFPS": 60,
   "zorder": [
-    "RoadA",
-    "RoadB",
-    "RoadC",
-    "RoadD",
+    "Brick",
+    "Steel",
+    "Eagle",
     "Player",
     "Enemy",
     "PlayerShot",
@@ -35,7 +34,7 @@
       "label": "SCORE",
       "target": "",
       "val": "score",
-      "x": -228,
+      "x": -220,
       "y": 168,
       "size": 1,
       "visible": true
@@ -48,7 +47,7 @@
       "label": "LIVES",
       "target": "",
       "val": "lives",
-      "x": 120,
+      "x": 125,
       "y": 168,
       "size": 1,
       "visible": true

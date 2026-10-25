@@ -2,10 +2,16 @@ var (
 	score = 0
 	lives = 3
 	running = true
+	spawned = 0
+	defeated = 0
+	activeEnemies = 0
 )
 
 onStart => {
 	score = 0
 	lives = 3
 	running = true
+	spawned = 0
+	defeated = 0
+	activeEnemies = 0
 }

@@ -1,24 +1,15 @@
 {
   "x": 0,
-  "y": -112,
+  "y": 0,
   "size": 1,
   "heading": 0,
   "visible": false,
-  "rotationStyle": "normal",
+  "rotationStyle": "none",
   "physicsMode": "no",
   "collisionShapeType": "rect",
-  "collisionShapeParams": [10, 18],
+  "collisionShapeParams": [8, 8],
   "costumeIndex": 0,
   "costumes": [
-    {
-      "name": "shot",
-      "path": "shot.svg",
-      "x": 8,
-      "y": 13,
-      "faceRight": 0,
-      "bitmapResolution": 1,
-      "imageWidth": 16,
-      "imageHeight": 26
-    }
+    { "name": "plush", "path": "shot.svg", "x": 8, "y": 8, "bitmapResolution": 1, "imageWidth": 16, "imageHeight": 16 }
   ]
 }

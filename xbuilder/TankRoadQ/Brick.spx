@@ -1,0 +1,231 @@
+onStart => {
+  hide
+  setCostume "f"
+  setXYpos -120, 120
+  clone
+  setCostume "f"
+  setXYpos -72, 120
+  clone
+  setCostume "f"
+  setXYpos -24, 120
+  clone
+  setCostume "f"
+  setXYpos 24, 120
+  clone
+  setCostume "f"
+  setXYpos 72, 120
+  clone
+  setCostume "f"
+  setXYpos 120, 120
+  clone
+  setCostume "f"
+  setXYpos -120, 96
+  clone
+  setCostume "f"
+  setXYpos -72, 96
+  clone
+  setCostume "f"
+  setXYpos -24, 96
+  clone
+  setCostume "f"
+  setXYpos 24, 96
+  clone
+  setCostume "f"
+  setXYpos 72, 96
+  clone
+  setCostume "f"
+  setXYpos 120, 96
+  clone
+  setCostume "f"
+  setXYpos -120, 72
+  clone
+  setCostume "f"
+  setXYpos -72, 72
+  clone
+  setCostume "f"
+  setXYpos -24, 72
+  clone
+  setCostume "f"
+  setXYpos 24, 72
+  clone
+  setCostume "f"
+  setXYpos 72, 72
+  clone
+  setCostume "f"
+  setXYpos 120, 72
+  clone
+  setCostume "f"
+  setXYpos -120, 48
+  clone
+  setCostume "f"
+  setXYpos -72, 48
+  clone
+  setCostume "3"
+  setXYpos -24, 48
+  clone
+  setCostume "3"
+  setXYpos 24, 48
+  clone
+  setCostume "f"
+  setXYpos 72, 48
+  clone
+  setCostume "f"
+  setXYpos 120, 48
+  clone
+  setCostume "3"
+  setXYpos -120, 24
+  clone
+  setCostume "3"
+  setXYpos -72, 24
+  clone
+  setCostume "c"
+  setXYpos -24, 24
+  clone
+  setCostume "c"
+  setXYpos 24, 24
+  clone
+  setCostume "3"
+  setXYpos 72, 24
+  clone
+  setCostume "3"
+  setXYpos 120, 24
+  clone
+  setCostume "c"
+  setXYpos -144, 0
+  clone
+  setCostume "c"
+  setXYpos -96, 0
+  clone
+  setCostume "c"
+  setXYpos -72, 0
+  clone
+  setCostume "3"
+  setXYpos -24, 0
+  clone
+  setCostume "3"
+  setXYpos 24, 0
+  clone
+  setCostume "c"
+  setXYpos 72, 0
+  clone
+  setCostume "c"
+  setXYpos 96, 0
+  clone
+  setCostume "c"
+  setXYpos 144, 0
+  clone
+  setCostume "3"
+  setXYpos -96, -24
+  clone
+  setCostume "3"
+  setXYpos -72, -24
+  clone
+  setCostume "c"
+  setXYpos -24, -24
+  clone
+  setCostume "c"
+  setXYpos 24, -24
+  clone
+  setCostume "3"
+  setXYpos 72, -24
+  clone
+  setCostume "3"
+  setXYpos 96, -24
+  clone
+  setCostume "c"
+  setXYpos -120, -48
+  clone
+  setCostume "c"
+  setXYpos -72, -48
+  clone
+  setCostume "f"
+  setXYpos -24, -48
+  clone
+  setCostume "f"
+  setXYpos 0, -48
+  clone
+  setCostume "f"
+  setXYpos 24, -48
+  clone
+  setCostume "c"
+  setXYpos 72, -48
+  clone
+  setCostume "c"
+  setXYpos 120, -48
+  clone
+  setCostume "f"
+  setXYpos -120, -72
+  clone
+  setCostume "f"
+  setXYpos -72, -72
+  clone
+  setCostume "f"
+  setXYpos -24, -72
+  clone
+  setCostume "f"
+  setXYpos 24, -72
+  clone
+  setCostume "f"
+  setXYpos 72, -72
+  clone
+  setCostume "f"
+  setXYpos 120, -72
+  clone
+  setCostume "f"
+  setXYpos -120, -96
+  clone
+  setCostume "f"
+  setXYpos -72, -96
+  clone
+  setCostume "3"
+  setXYpos -24, -96
+  clone
+  setCostume "3"
+  setXYpos 24, -96
+  clone
+  setCostume "f"
+  setXYpos 72, -96
+  clone
+  setCostume "f"
+  setXYpos 120, -96
+  clone
+  setCostume "f"
+  setXYpos -120, -120
+  clone
+  setCostume "f"
+  setXYpos -72, -120
+  clone
+  setCostume "8"
+  setXYpos -24, -120
+  clone
+  setCostume "c"
+  setXYpos 0, -120
+  clone
+  setCostume "4"
+  setXYpos 24, -120
+  clone
+  setCostume "f"
+  setXYpos 72, -120
+  clone
+  setCostume "f"
+  setXYpos 120, -120
+  clone
+  setCostume "a"
+  setXYpos -24, -144
+  clone
+  setCostume "5"
+  setXYpos 24, -144
+  clone
+}
+
+onCloned data => {
+  show
+}
+
+onTouchStart "PlayerShot", sprite => {
+  destroy
+}
+
+onTouchStart "EnemyShot", sprite => {
+  destroy
+}

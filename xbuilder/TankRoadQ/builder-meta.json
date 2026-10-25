@@ -1,6 +1,6 @@
 {
   "type": "game",
-  "displayName": "Tank Road Q",
-  "description": "适配XBuilder并更改画风为Q版动画",
-  "instructions": "Move with WASD or arrow keys. Press Space to fire. Destroy 10 enemies to clear the road."
+  "displayName": "Classic Tank Q",
+  "description": "经典第一关地图与Q版装甲坦克",
+  "instructions": "Move with WASD or arrow keys. Press Space to fire. Protect the base and destroy 20 enemies."
 }

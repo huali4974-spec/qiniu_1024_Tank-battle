@@ -1,0 +1,16 @@
+onStart => {
+  hide
+  setCostume "f"
+  setXYpos 0, 72
+  clone
+  setCostume "3"
+  setXYpos -144, -24
+  clone
+  setCostume "3"
+  setXYpos 144, -24
+  clone
+}
+
+onCloned data => {
+  show
+}

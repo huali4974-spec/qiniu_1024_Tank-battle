@@ -3,11 +3,10 @@ onStart => {
 }
 
 onCloned data => {
-	setHeading Down
 	show
 	for running {
-		step 5
-		if touching(Edge) {
+		step 4
+		if xpos < -156 || xpos > 156 || ypos < -156 || ypos > 156 {
 			destroy
 		}
 		wait 0.02
@@ -16,5 +15,17 @@ onCloned data => {
 }
 
 onTouchStart "Player", sprite => {
+	destroy
+}
+
+onTouchStart "Eagle", sprite => {
+	destroy
+}
+
+onTouchStart "Brick", sprite => {
+	destroy
+}
+
+onTouchStart "Steel", sprite => {
 	destroy
 }
