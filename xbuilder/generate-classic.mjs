@@ -85,7 +85,7 @@ const steelSvg = (mask) => {
 const terrainSvg = {
   River: svg(`<rect width="24" height="24" fill="#3d9fb6"/><path d="M-2 7Q4 3 10 7T26 7M-2 17Q4 13 10 17T26 17" fill="none" stroke="#a8e7e8" stroke-width="2" opacity=".85"/><circle cx="18" cy="12" r="1.3" fill="#d3f5e9"/>`),
   Snow: svg(`<rect width="24" height="24" fill="#d8ebea"/><path d="M5 6l3 3m9-4l-3 4M4 17l4-2m11 2l-4-2M12 4v3m0 10v3" stroke="#97c1c7" stroke-width="1.3" stroke-linecap="round"/><circle cx="12" cy="12" r="2.4" fill="#f4fbf8"/>`),
-  Forest: svg(`<circle cx="12" cy="14" r="11" fill="#316f50" opacity=".87"/><circle cx="7" cy="9" r="5" fill="#5ba86c"/><circle cx="16" cy="8" r="5" fill="#67b477"/><circle cx="12" cy="16" r="6" fill="#438d5b"/><path d="M6 8l2-2m8 3l2-2m-7 10l2-2" stroke="#b6dca3" stroke-width="1.2" stroke-linecap="round"/>`),
+  Forest: svg(`<rect width="24" height="24" fill="#91c3a0" opacity=".7"/><path d="M1 8q5-6 10 0t12 0M-1 18q6-5 12 0t14 0" fill="none" stroke="#5e9e7c" stroke-width="2" opacity=".5"/><path d="M7 5l2 2m8 7l-2 3M6 18l2-2" stroke="#d2e9b8" stroke-width="1.3" stroke-linecap="round" opacity=".8"/>`),
 }
 
 const terrainTypes = [

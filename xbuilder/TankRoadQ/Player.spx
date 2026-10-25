@@ -5,6 +5,16 @@ var (
 	beforeY = 0.0
 )
 
+func syncCamera() {
+	if ypos < -324 {
+		Camera.setXYpos 0, -324
+	} else if ypos > 324 {
+		Camera.setXYpos 0, 324
+	} else {
+		Camera.setXYpos 0, ypos
+	}
+}
+
 func takeHit() {
 	if invulnerable || !running {
 		return
@@ -22,6 +32,8 @@ func takeHit() {
 	setXYpos -48, -456
 	setHeading Up
 	setCostume "up"
+	syncCamera()
+	Camera.Follow Player
 	wait 1
 	invulnerable = false
 }
@@ -30,10 +42,12 @@ onStart => {
 	setXYpos -48, -456
 	setHeading Up
 	setCostume "up"
+	syncCamera()
+	Camera.Follow Player
+	show
 	for !gameReady {
 		wait 0.02
 	}
-	show
 	for running {
 		beforeX = xpos
 		beforeY = ypos
@@ -64,6 +78,7 @@ onStart => {
 		} else {
 			stageIndex = stageBottom
 		}
+		syncCamera()
 		wait 0.02
 	}
 }
