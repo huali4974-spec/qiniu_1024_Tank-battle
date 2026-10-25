@@ -13,12 +13,12 @@ onStart => {
 	hide
 	for running {
 		if spawned < 20 && activeEnemies < 4 {
-			spawnBand = int(rand(0, 4))
+			spawnBand = int(rand(0, 3))
 			if spawnBand == 3 {
-				spawnX = float64((int(rand(0, 3)) - 1) * 48)
+				spawnX = float64((int(rand(0, 2)) - 1) * 48)
 				spawnY = 0
 			} else {
-				spawnX = float64(int(rand(0, 7)) * 48 - 144)
+				spawnX = float64(int(rand(0, 6)) * 48 - 144)
 				if spawnBand == 0 {
 					spawnY = 144
 				} else if spawnBand == 1 {
@@ -28,7 +28,7 @@ onStart => {
 				}
 			}
 			setXYpos spawnX, spawnY
-			if !touching("Enemy") {
+			if spawnX >= -144 && spawnX <= 144 && spawnY >= -144 && spawnY <= 144 && !touching("Enemy") {
 				clone
 				spawned++
 				activeEnemies++
