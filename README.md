@@ -1,71 +1,41 @@
-# 坦克大战复刻版（Battle City Remake）
+# Classic Tank Q：XBuilder Q 版坦克大战
 
-经典坦克大战的网页复刻，支持单人、双人、局域网联机、关卡编辑和 AI 托管。
+基于 [Battle City Remake](https://github.com/feichao93/battle-city) 改编的 XBuilder 坦克大战。保留经典坦克大战的砖墙、钢墙、河流、森林、雪地和基地防守玩法，改用明亮的 Q 版坦克与毛绒球炮弹。可直接导入的项目包是 [xbuilder/TankRoadQ.xbp](xbuilder/TankRoadQ.xbp)。
 
-在线游玩：https://battle-city.js.org
+## 当前玩法
 
-XBuilder 原生版：经典第一关固定地图与 Q 版装甲坦克。可导入的项目和使用说明见 [xbuilder/README.md](xbuilder/README.md)。
+- 每次运行从原版 35 张地图中随机选取 3 张，纵向拼成 13 × 39 格的大地图；镜头跟随玩家，三段之间留有通路。
+- 保护底部基地。每击毁 30 辆敌方坦克进入下一波，保留当前地图、分数和剩余生命。场上最多 10 辆敌军，每 3 秒尝试在随机空位生成 1 辆。
+- 第 1 波只有普通坦克（1 血）；第 2 波混入白金坦克（3 血）；第 3 波起再混入黄金坦克（5 血）。每波都先出现普通坦克，升级后仍会混合出现低阶坦克。
+- 保留六种经典道具：坦克加命、星星提升射速、手雷清屏、时钟冻结敌军、头盔提供护盾、铁锹把基地周围的砖墙升级为钢墙。升级波的首件掉落道具固定为铁锹，基地钢墙会保留到后续波次。
 
-- 0.4.0 的设计与实现：[resources/introduction.md](resources/introduction.md)
-- 0.3 版本的开发介绍：[知乎专栏](https://zhuanlan.zhihu.com/p/35551654)
+方向键或 WASD 移动，空格射击。玩家初始有 3 条命；钢墙无法被炮弹击毁，河流会阻挡坦克。
 
-如果游戏过程中发现任何 BUG 的话，欢迎提 [issue](https://github.com/feichao93/battle-city/issues/new)。
+## 导入 XBuilder 并运行
 
-### 命令行一键启动
+1. 下载仓库中的 [TankRoadQ.xbp](xbuilder/TankRoadQ.xbp)。如果 XBuilder 中已有需要保留的项目，先从顶部项目菜单导出备份。
+2. 在 XBuilder 顶部项目菜单选择导入项目，选中 `TankRoadQ.xbp`。导入会替换当前项目的游戏内容。
+3. 保存项目，点击“跑 / Run”进入游戏。
 
-需要 Node.js 18 及以上：
+更新本地代码或 GitHub 仓库后，已打开的 XBuilder 项目不会自动同步；需要重新导入新生成的 `.xbp` 文件。
+
+## 从源码生成项目包
+
+需要 Node.js 18 或更高版本，以及 `zip` 和 `unzip`。在仓库根目录运行：
 
 ```bash
-npx battle-city            # 或者 npm i -g battle-city 之后运行 battle-city
-npx battle-city --port 3000
-npx battle-city host       # 局域网联机主机，把打印出的地址发给同一网络里的另一位玩家
+sh xbuilder/build.sh
 ```
 
-启动后按 Enter 在浏览器中打开，Ctrl+C 退出。默认端口 8080，被占用时依次往后找。
+脚本从 [src/stages](src/stages) 的 35 张原版地图生成地形、三图组合、敌军出生点和美术资源，校验地图与导入包，然后更新 [xbuilder/TankRoadQ.xbp](xbuilder/TankRoadQ.xbp)。XBuilder 游戏脚本及精灵资源位于 [xbuilder/TankRoadQ](xbuilder/TankRoadQ)；更详细的规则和目录说明见 [XBuilder 说明](xbuilder/README.md)。实际运行效果需在 XBuilder 中点击 Run 检查。
 
-### 本地开发
+## 原版网页项目
+
+仓库还保留了上游的 TypeScript/React 网页实现，主要用于参考地图和原版规则。运行该网页版本需要 pnpm：
 
 ```bash
 pnpm install
-pnpm dev         # vite 开发服务器
-pnpm test        # 单测；pnpm arena 跑托管 AI 对 bot 的无头对局统计
-pnpm build       # 按相对路径打包到 dist/，放在任意路径下都能打开
-pnpm build:npm   # 按相对路径打包到 www/，npm 包用的就是它
+pnpm dev
 ```
 
-### 开发进度
-
-**Milestone 0.4.0（2026-09-28）**
-
-在 Claude Opus 5.5 的帮助下全面重写：
-
-- [x] 技术栈：TypeScript + Vite 6 + React 19 + PixiJS v8 + zustand；战场用 PixiJS 绘制，界面用 React + SVG；游戏逻辑为 60Hz 定步引擎，与渲染分离
-- [x] 坦克数值、bot 出生规则对齐 NES 原版；玩家坦克在冰面上会滑行
-- [x] 更合理的电脑玩家：进攻老鹰时按需打砖开路，开局多游荡、越往后越凶，偶尔转身打侧面的玩家
-- [x] 玩家托管：一段时间不操作后由 AI 接管（Options 里可关闭）；双人托管分工配合、躲子弹、守老鹰
-- [x] 局域网联机：`battle-city host` 启动大厅，同一网络里的两人创建或加入房间对战
-- [x] 全键盘操作：标题页、选关、关卡列表、编辑器、画廊和弹窗；Options 页可改键位；Esc 暂停菜单
-- [x] 界面细节：GAME OVER / 通关页展示分数与最高分，双人模式借命提示，页面背景跟随系统亮色 / 暗色主题
-- [x] 无头试打（arena）与对局快照测试，调 AI 时用数据对比
-- [x] npm 包与命令行一键启动
-
-<details>
-  <summary><b>Milestone 0.3（2018-11-03）</b></summary>
-
-- [x] 性能优化
-- [x] 完整的游戏音效（有一些小瑕疵）
-- [x] 双人模式
-
-</details>
-
-<details>
-  <summary><b>Milestone 0.2（2018-04-16）</b></summary>
-
-- [x] 游戏的基本框架
-- [x] 单人模式
-- [x] 展览页面
-- [x] 关卡编辑器与自定义关卡管理
-
-</details>
-
-0.2、0.3 使用 React 将原版素材封装为组件、用 SVG 渲染，使用 Immutable.js、redux 和 redux-saga/little-saga 管理游戏状态与逻辑，开发过程见 [resources/journal.md](resources/journal.md)。
+原版在线演示：[battle-city.js.org](https://battle-city.js.org)。项目沿用上游的 [MIT 许可证](LICENSE)。
