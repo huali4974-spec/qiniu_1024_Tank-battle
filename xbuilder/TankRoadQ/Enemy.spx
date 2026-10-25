@@ -47,33 +47,39 @@ onCloned data => {
 	for running {
 		beforeX = xpos
 		beforeY = ypos
-		step 0.7
+		step 24
 		if xpos < -144 || xpos > 144 || ypos < -144 || ypos > 144 || touching("Brick") || touching("Steel") || touching("Eagle") {
 			setXYpos beforeX, beforeY
-			if ticks % 8 == 0 {
-				turnChoice = int(rand(0, 4))
-				if turnChoice == 0 {
-					setHeading Left
-					setCostume "left"
-				} else if turnChoice == 1 {
-					setHeading Right
-					setCostume "right"
-				} else if turnChoice == 2 {
-					setHeading Down
-					setCostume "down"
-				} else {
-					setHeading Up
-					setCostume "up"
-				}
+			turnChoice = int(rand(0, 4))
+			if turnChoice == 0 {
+				setHeading Left
+				setCostume "left"
+			} else if turnChoice == 1 {
+				setHeading Right
+				setCostume "right"
+			} else if turnChoice == 2 {
+				setHeading Down
+				setCostume "down"
+			} else {
+				setHeading Up
+				setCostume "up"
 			}
 		}
-		if ticks > 0 && ticks % 65 == 0 {
-			EnemyShot.setXYpos xpos, ypos
+		if ticks > 0 && ticks % 2 == 0 {
+			if heading == 0 {
+				EnemyShot.setXYpos xpos-3, ypos+13
+			} else if heading == 90 {
+				EnemyShot.setXYpos xpos+13, ypos+3
+			} else if heading == 180 {
+				EnemyShot.setXYpos xpos-3, ypos-13
+			} else {
+				EnemyShot.setXYpos xpos-13, ypos+3
+			}
 			EnemyShot.setHeading heading
 			EnemyShot.clone
 		}
 		ticks++
-		wait 0.02
+		wait 0.65
 	}
 	destroy
 }

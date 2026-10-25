@@ -1,223 +1,465 @@
 onStart => {
   hide
-  setCostume "f"
-  setXYpos -120, 120
+  setXYpos -126, 126
   clone
-  setCostume "f"
-  setXYpos -72, 120
+  setXYpos -114, 126
   clone
-  setCostume "f"
-  setXYpos -24, 120
+  setXYpos -126, 114
   clone
-  setCostume "f"
-  setXYpos 24, 120
+  setXYpos -114, 114
   clone
-  setCostume "f"
-  setXYpos 72, 120
+  setXYpos -78, 126
   clone
-  setCostume "f"
-  setXYpos 120, 120
+  setXYpos -66, 126
   clone
-  setCostume "f"
-  setXYpos -120, 96
+  setXYpos -78, 114
   clone
-  setCostume "f"
-  setXYpos -72, 96
+  setXYpos -66, 114
   clone
-  setCostume "f"
-  setXYpos -24, 96
+  setXYpos -30, 126
   clone
-  setCostume "f"
-  setXYpos 24, 96
+  setXYpos -18, 126
   clone
-  setCostume "f"
-  setXYpos 72, 96
+  setXYpos -30, 114
   clone
-  setCostume "f"
-  setXYpos 120, 96
+  setXYpos -18, 114
   clone
-  setCostume "f"
-  setXYpos -120, 72
+  setXYpos 18, 126
   clone
-  setCostume "f"
-  setXYpos -72, 72
+  setXYpos 30, 126
   clone
-  setCostume "f"
-  setXYpos -24, 72
+  setXYpos 18, 114
   clone
-  setCostume "f"
-  setXYpos 24, 72
+  setXYpos 30, 114
   clone
-  setCostume "f"
-  setXYpos 72, 72
+  setXYpos 66, 126
   clone
-  setCostume "f"
-  setXYpos 120, 72
+  setXYpos 78, 126
   clone
-  setCostume "f"
-  setXYpos -120, 48
+  setXYpos 66, 114
   clone
-  setCostume "f"
-  setXYpos -72, 48
+  setXYpos 78, 114
   clone
-  setCostume "3"
-  setXYpos -24, 48
+  setXYpos 114, 126
   clone
-  setCostume "3"
-  setXYpos 24, 48
+  setXYpos 126, 126
   clone
-  setCostume "f"
-  setXYpos 72, 48
+  setXYpos 114, 114
   clone
-  setCostume "f"
-  setXYpos 120, 48
+  setXYpos 126, 114
   clone
-  setCostume "3"
-  setXYpos -120, 24
+  setXYpos -126, 102
   clone
-  setCostume "3"
-  setXYpos -72, 24
+  setXYpos -114, 102
   clone
-  setCostume "c"
-  setXYpos -24, 24
+  setXYpos -126, 90
   clone
-  setCostume "c"
-  setXYpos 24, 24
+  setXYpos -114, 90
   clone
-  setCostume "3"
-  setXYpos 72, 24
+  setXYpos -78, 102
   clone
-  setCostume "3"
-  setXYpos 120, 24
+  setXYpos -66, 102
   clone
-  setCostume "c"
-  setXYpos -144, 0
+  setXYpos -78, 90
   clone
-  setCostume "c"
-  setXYpos -96, 0
+  setXYpos -66, 90
   clone
-  setCostume "c"
-  setXYpos -72, 0
+  setXYpos -30, 102
   clone
-  setCostume "3"
-  setXYpos -24, 0
+  setXYpos -18, 102
   clone
-  setCostume "3"
-  setXYpos 24, 0
+  setXYpos -30, 90
   clone
-  setCostume "c"
-  setXYpos 72, 0
+  setXYpos -18, 90
   clone
-  setCostume "c"
-  setXYpos 96, 0
+  setXYpos 18, 102
   clone
-  setCostume "c"
-  setXYpos 144, 0
+  setXYpos 30, 102
   clone
-  setCostume "3"
-  setXYpos -96, -24
+  setXYpos 18, 90
   clone
-  setCostume "3"
-  setXYpos -72, -24
+  setXYpos 30, 90
   clone
-  setCostume "c"
-  setXYpos -24, -24
+  setXYpos 66, 102
   clone
-  setCostume "c"
-  setXYpos 24, -24
+  setXYpos 78, 102
   clone
-  setCostume "3"
-  setXYpos 72, -24
+  setXYpos 66, 90
   clone
-  setCostume "3"
-  setXYpos 96, -24
+  setXYpos 78, 90
   clone
-  setCostume "c"
-  setXYpos -120, -48
+  setXYpos 114, 102
   clone
-  setCostume "c"
-  setXYpos -72, -48
+  setXYpos 126, 102
   clone
-  setCostume "f"
-  setXYpos -24, -48
+  setXYpos 114, 90
   clone
-  setCostume "f"
-  setXYpos 0, -48
+  setXYpos 126, 90
   clone
-  setCostume "f"
-  setXYpos 24, -48
+  setXYpos -126, 78
   clone
-  setCostume "c"
-  setXYpos 72, -48
+  setXYpos -114, 78
   clone
-  setCostume "c"
-  setXYpos 120, -48
+  setXYpos -126, 66
   clone
-  setCostume "f"
-  setXYpos -120, -72
+  setXYpos -114, 66
   clone
-  setCostume "f"
-  setXYpos -72, -72
+  setXYpos -78, 78
   clone
-  setCostume "f"
-  setXYpos -24, -72
+  setXYpos -66, 78
   clone
-  setCostume "f"
-  setXYpos 24, -72
+  setXYpos -78, 66
   clone
-  setCostume "f"
-  setXYpos 72, -72
+  setXYpos -66, 66
   clone
-  setCostume "f"
-  setXYpos 120, -72
+  setXYpos -30, 78
   clone
-  setCostume "f"
-  setXYpos -120, -96
+  setXYpos -18, 78
   clone
-  setCostume "f"
-  setXYpos -72, -96
+  setXYpos -30, 66
   clone
-  setCostume "3"
-  setXYpos -24, -96
+  setXYpos -18, 66
   clone
-  setCostume "3"
-  setXYpos 24, -96
+  setXYpos 18, 78
   clone
-  setCostume "f"
-  setXYpos 72, -96
+  setXYpos 30, 78
   clone
-  setCostume "f"
-  setXYpos 120, -96
+  setXYpos 18, 66
   clone
-  setCostume "f"
-  setXYpos -120, -120
+  setXYpos 30, 66
   clone
-  setCostume "f"
-  setXYpos -72, -120
+  setXYpos 66, 78
   clone
-  setCostume "8"
-  setXYpos -24, -120
+  setXYpos 78, 78
   clone
-  setCostume "c"
-  setXYpos 0, -120
+  setXYpos 66, 66
   clone
-  setCostume "4"
-  setXYpos 24, -120
+  setXYpos 78, 66
   clone
-  setCostume "f"
-  setXYpos 72, -120
+  setXYpos 114, 78
   clone
-  setCostume "f"
-  setXYpos 120, -120
+  setXYpos 126, 78
   clone
-  setCostume "a"
-  setXYpos -24, -144
+  setXYpos 114, 66
   clone
-  setCostume "5"
-  setXYpos 24, -144
+  setXYpos 126, 66
+  clone
+  setXYpos -126, 54
+  clone
+  setXYpos -114, 54
+  clone
+  setXYpos -126, 42
+  clone
+  setXYpos -114, 42
+  clone
+  setXYpos -78, 54
+  clone
+  setXYpos -66, 54
+  clone
+  setXYpos -78, 42
+  clone
+  setXYpos -66, 42
+  clone
+  setXYpos -30, 54
+  clone
+  setXYpos -18, 54
+  clone
+  setXYpos 18, 54
+  clone
+  setXYpos 30, 54
+  clone
+  setXYpos 66, 54
+  clone
+  setXYpos 78, 54
+  clone
+  setXYpos 66, 42
+  clone
+  setXYpos 78, 42
+  clone
+  setXYpos 114, 54
+  clone
+  setXYpos 126, 54
+  clone
+  setXYpos 114, 42
+  clone
+  setXYpos 126, 42
+  clone
+  setXYpos -126, 30
+  clone
+  setXYpos -114, 30
+  clone
+  setXYpos -78, 30
+  clone
+  setXYpos -66, 30
+  clone
+  setXYpos -30, 18
+  clone
+  setXYpos -18, 18
+  clone
+  setXYpos 18, 18
+  clone
+  setXYpos 30, 18
+  clone
+  setXYpos 66, 30
+  clone
+  setXYpos 78, 30
+  clone
+  setXYpos 114, 30
+  clone
+  setXYpos 126, 30
+  clone
+  setXYpos -150, -6
+  clone
+  setXYpos -138, -6
+  clone
+  setXYpos -102, -6
+  clone
+  setXYpos -90, -6
+  clone
+  setXYpos -78, -6
+  clone
+  setXYpos -66, -6
+  clone
+  setXYpos -30, 6
+  clone
+  setXYpos -18, 6
+  clone
+  setXYpos 18, 6
+  clone
+  setXYpos 30, 6
+  clone
+  setXYpos 66, -6
+  clone
+  setXYpos 78, -6
+  clone
+  setXYpos 90, -6
+  clone
+  setXYpos 102, -6
+  clone
+  setXYpos 138, -6
+  clone
+  setXYpos 150, -6
+  clone
+  setXYpos -102, -18
+  clone
+  setXYpos -90, -18
+  clone
+  setXYpos -78, -18
+  clone
+  setXYpos -66, -18
+  clone
+  setXYpos -30, -30
+  clone
+  setXYpos -18, -30
+  clone
+  setXYpos 18, -30
+  clone
+  setXYpos 30, -30
+  clone
+  setXYpos 66, -18
+  clone
+  setXYpos 78, -18
+  clone
+  setXYpos 90, -18
+  clone
+  setXYpos 102, -18
+  clone
+  setXYpos -126, -54
+  clone
+  setXYpos -114, -54
+  clone
+  setXYpos -78, -54
+  clone
+  setXYpos -66, -54
+  clone
+  setXYpos -30, -42
+  clone
+  setXYpos -18, -42
+  clone
+  setXYpos -30, -54
+  clone
+  setXYpos -18, -54
+  clone
+  setXYpos -6, -42
+  clone
+  setXYpos 6, -42
+  clone
+  setXYpos -6, -54
+  clone
+  setXYpos 6, -54
+  clone
+  setXYpos 18, -42
+  clone
+  setXYpos 30, -42
+  clone
+  setXYpos 18, -54
+  clone
+  setXYpos 30, -54
+  clone
+  setXYpos 66, -54
+  clone
+  setXYpos 78, -54
+  clone
+  setXYpos 114, -54
+  clone
+  setXYpos 126, -54
+  clone
+  setXYpos -126, -66
+  clone
+  setXYpos -114, -66
+  clone
+  setXYpos -126, -78
+  clone
+  setXYpos -114, -78
+  clone
+  setXYpos -78, -66
+  clone
+  setXYpos -66, -66
+  clone
+  setXYpos -78, -78
+  clone
+  setXYpos -66, -78
+  clone
+  setXYpos -30, -66
+  clone
+  setXYpos -18, -66
+  clone
+  setXYpos -30, -78
+  clone
+  setXYpos -18, -78
+  clone
+  setXYpos 18, -66
+  clone
+  setXYpos 30, -66
+  clone
+  setXYpos 18, -78
+  clone
+  setXYpos 30, -78
+  clone
+  setXYpos 66, -66
+  clone
+  setXYpos 78, -66
+  clone
+  setXYpos 66, -78
+  clone
+  setXYpos 78, -78
+  clone
+  setXYpos 114, -66
+  clone
+  setXYpos 126, -66
+  clone
+  setXYpos 114, -78
+  clone
+  setXYpos 126, -78
+  clone
+  setXYpos -126, -90
+  clone
+  setXYpos -114, -90
+  clone
+  setXYpos -126, -102
+  clone
+  setXYpos -114, -102
+  clone
+  setXYpos -78, -90
+  clone
+  setXYpos -66, -90
+  clone
+  setXYpos -78, -102
+  clone
+  setXYpos -66, -102
+  clone
+  setXYpos -30, -90
+  clone
+  setXYpos -18, -90
+  clone
+  setXYpos 18, -90
+  clone
+  setXYpos 30, -90
+  clone
+  setXYpos 66, -90
+  clone
+  setXYpos 78, -90
+  clone
+  setXYpos 66, -102
+  clone
+  setXYpos 78, -102
+  clone
+  setXYpos 114, -90
+  clone
+  setXYpos 126, -90
+  clone
+  setXYpos 114, -102
+  clone
+  setXYpos 126, -102
+  clone
+  setXYpos -126, -114
+  clone
+  setXYpos -114, -114
+  clone
+  setXYpos -126, -126
+  clone
+  setXYpos -114, -126
+  clone
+  setXYpos -78, -114
+  clone
+  setXYpos -66, -114
+  clone
+  setXYpos -78, -126
+  clone
+  setXYpos -66, -126
+  clone
+  setXYpos -18, -126
+  clone
+  setXYpos -6, -126
+  clone
+  setXYpos 6, -126
+  clone
+  setXYpos 18, -126
+  clone
+  setXYpos 66, -114
+  clone
+  setXYpos 78, -114
+  clone
+  setXYpos 66, -126
+  clone
+  setXYpos 78, -126
+  clone
+  setXYpos 114, -114
+  clone
+  setXYpos 126, -114
+  clone
+  setXYpos 114, -126
+  clone
+  setXYpos 126, -126
+  clone
+  setXYpos -18, -138
+  clone
+  setXYpos -18, -150
+  clone
+  setXYpos 18, -138
+  clone
+  setXYpos 18, -150
   clone
 }
 
 onCloned data => {
   show
+}
+
+onTouchStart "PlayerShot", sprite => {
+  if !sprite.visible() {
+    return
+  }
+  sprite.hide()
+  sprite.destroy()
+  destroy
+}
+
+onTouchStart "EnemyShot", sprite => {
+  if !sprite.visible() {
+    return
+  }
+  sprite.hide()
+  sprite.destroy()
+  destroy
 }

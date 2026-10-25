@@ -37,15 +37,6 @@ onTouchStart "Eagle", sprite => {
 	destroy
 }
 
-onTouchStart "Brick", sprite => {
-	if consumed {
-		return
-	}
-	consumed = true
-	sprite.destroy
-	destroy
-}
-
 onTouchStart "Steel", sprite => {
 	if consumed {
 		return
