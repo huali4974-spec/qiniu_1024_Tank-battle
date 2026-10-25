@@ -43,11 +43,11 @@ onStart => {
 			setHeading Down
 			changeYpos -3
 		}
-		if xpos < -104 {
-			setXpos -104
+		if xpos < -205 {
+			setXpos -205
 		}
-		if xpos > 104 {
-			setXpos 104
+		if xpos > 205 {
+			setXpos 205
 		}
 		if ypos < -134 {
 			setYpos -134

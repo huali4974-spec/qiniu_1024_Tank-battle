@@ -7,15 +7,15 @@ onStart => {
 	hide
 	for running {
 		if lane == 0 {
-			setXYpos -78, 198
+			setXYpos -146, 198
 		} else if lane == 1 {
 			setXYpos 0, 198
 		} else {
-			setXYpos 78, 198
+			setXYpos 146, 198
 		}
 		clone
 		lane = (lane + 1) % 3
-		wait 1.5
+		wait 2
 	}
 }
 
@@ -26,7 +26,7 @@ onCloned data => {
 	for running {
 		changeYpos -1.7
 		ticks++
-		if ticks == 55 || ticks == 135 {
+		if ticks == 90 {
 			EnemyShot.setXYpos xpos, ypos-24
 			EnemyShot.clone
 		}

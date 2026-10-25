@@ -1,8 +1,8 @@
 {
   "backdrops": [
     {
-      "name": "road",
-      "path": "road.svg",
+      "name": "river",
+      "path": "river.svg",
       "x": 240,
       "y": 180,
       "bitmapResolution": 1,
@@ -19,6 +19,8 @@
   "zorder": [
     "RoadA",
     "RoadB",
+    "RoadC",
+    "RoadD",
     "Player",
     "Enemy",
     "PlayerShot",

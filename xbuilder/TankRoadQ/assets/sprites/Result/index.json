@@ -11,7 +11,7 @@
   "costumes": [
     {
       "name": "win",
-      "path": "win.svg",
+      "path": "win.png",
       "x": 180,
       "y": 70,
       "bitmapResolution": 1,
@@ -20,7 +20,7 @@
     },
     {
       "name": "lose",
-      "path": "lose.svg",
+      "path": "lose.png",
       "x": 180,
       "y": 70,
       "bitmapResolution": 1,
