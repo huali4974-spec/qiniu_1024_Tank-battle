@@ -2,6 +2,12 @@
 
 基于 [Battle City Remake](https://github.com/feichao93/battle-city) 改编的 XBuilder 坦克大战。保留经典坦克大战的砖墙、钢墙、河流、森林、雪地和基地防守玩法，改用明亮的 Q 版坦克与毛绒球炮弹。可直接导入的项目包是 [xbuilder/TankRoadQ.xbp](xbuilder/TankRoadQ.xbp)。
 
+## 游戏演示
+
+[![Classic Tank Q 游戏演示预览](media/gameplay-preview.png)](media/gameplay-demo.mp4)
+
+[观看完整演示视频（MP4，约 2 分 16 秒）](media/gameplay-demo.mp4)
+
 ## 当前玩法
 
 - 每次运行从原版 35 张地图中随机选取 3 张，纵向拼成 13 × 39 格的大地图；镜头跟随玩家，三段之间留有通路。
