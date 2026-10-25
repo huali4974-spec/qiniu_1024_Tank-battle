@@ -15,6 +15,35 @@ const stages = Array.from({ length: 35 }, (_, index) => {
   }
   return { number, cells }
 })
+const terrainCount = (stage) => stage.cells.flat().filter((cell) => 'BTRSF'.includes(cell[0])).length
+const reserveRoute = (cells, start, allowBase) => {
+  const queue = [start]
+  const previous = new Map([[start.join(','), null]])
+  for (let index = 0; index < queue.length; index++) {
+    const [col, row] = queue[index]
+    if (col === 6 && row === 0) break
+    for (const [dx, dy] of [[0, -1], [-1, 0], [1, 0], [0, 1]]) {
+      const nextCol = col + dx
+      const nextRow = row + dy
+      const key = `${nextCol},${nextRow}`
+      if (nextCol < 0 || nextCol >= 13 || nextRow < 0 || nextRow >= 13 || previous.has(key)) continue
+      const cell = cells[nextRow][nextCol]
+      if (cell[0] === 'T' || cell[0] === 'R' || (!allowBase && cell[0] === 'E')) continue
+      previous.set(key, `${col},${row}`)
+      queue.push([nextCol, nextRow])
+    }
+  }
+  const route = new Set()
+  for (let key = '6,0'; key !== null; key = previous.get(key)) {
+    if (!previous.has(key)) throw new Error('A classic stage has no route through its center')
+    route.add(key)
+  }
+  return route
+}
+const reservedCells = stages.map(({ cells }) => new Set([
+  ...reserveRoute(cells, [6, 12], true),
+  ...reserveRoute(cells, [4, 12], false),
+]))
 
 const save = (path, content) => {
   mkdirSync(dirname(path), { recursive: true })
@@ -71,7 +100,7 @@ for (const { type, name, art } of terrainTypes) {
   const layouts = stages.map(({ cells }) => cells.flatMap((row, rowIndex) => row.flatMap((cell, colIndex) => {
     if (cell[0] !== type) return []
     const [x, y] = placement(colIndex, rowIndex)
-    return [{ mask: cell.slice(1).toLowerCase(), x, y }]
+    return [{ mask: cell.slice(1).toLowerCase(), x, y, row: rowIndex, col: colIndex }]
   })))
   const masks = [...new Set(layouts.flatMap((tiles) => tiles.map((tile) => tile.mask)))].sort()
   const costumes = masks.map((mask) => {
@@ -85,11 +114,11 @@ for (const { type, name, art } of terrainTypes) {
     costumeIndex: 0, costumes,
   }, null, 2))
 
-  const randomSteel = (cells) => {
+  const randomSteel = (cells, reserved) => {
     const positions = []
     for (let row = 2; row <= 10; row++) {
       for (let col = 1; col <= 11; col++) {
-        if (cells[row][col] === 'X') positions.push(placement(col, row))
+        if (cells[row][col] === 'X' && !reserved.has(`${col},${row}`)) positions.push(placement(col, row))
       }
     }
     const count = Math.min(3, Math.floor(positions.length / 4))
@@ -99,23 +128,38 @@ for (const { type, name, art } of terrainTypes) {
       return positions.slice(from, to)
     }).map((band) => `    choice = int(rand(0, ${band.length - 1}))
 ${band.map(([x, y], i) => `${i === 0 ? '    if' : ' else if'} choice == ${i} {
-      setXYpos ${x}, ${y}
+      setXYpos ${x}, ${y}+offsetY
     }`).join('')}
     setCostume "f"
     clone`).join('\n')
   }
 
   const branches = layouts.map((tiles, index) => {
-    const placementCode = tiles.map(({ mask, x, y }) => `${art ? `    setCostume "${mask}"\n` : ''}    setXYpos ${x}, ${y}
-    clone`).join('\n')
-    const extra = type === 'T' ? randomSteel(stages[index].cells) : ''
-    return `${index === 0 ? '  if' : ' else if'} stageIndex == ${index + 1} {
+    const placementCode = tiles.map(({ mask, x, y, row, col }) => {
+      const code = `${art ? `    setCostume "${mask}"\n` : ''}    setXYpos ${x}, ${y}+offsetY
+    clone`
+      if (col >= 5 && col <= 7 && row >= 11) return `    if section == 2 {
+${code}
+    }`
+      if (col >= 5 && col <= 7 && row === 0) return `    if section == 0 {
+${code}
+    }`
+      return code
+    }).join('\n')
+    const extra = type === 'T' ? randomSteel(stages[index].cells, reservedCells[index]) : ''
+    return `${index === 0 ? '  if' : ' else if'} targetStage == ${index + 1} {
 ${placementCode}${extra ? `\n${extra}` : ''}
   }`
   }).join('')
-  save(join(project, `${name}.spx`), `${type === 'T' ? 'var choice = 0\n\n' : ''}onMsg "loadStage", => {
-  hide
+  save(join(project, `${name}.spx`), `${type === 'T' ? 'var choice = 0\n\n' : ''}func loadSelected(targetStage int, offsetY float64, section int) {
 ${branches}
+}
+
+onMsg "loadStage", => {
+  hide
+  loadSelected(stageTop, 312, 0)
+  loadSelected(stageMiddle, 0, 1)
+  loadSelected(stageBottom, -312, 2)
 }
 
 onCloned data => {
@@ -129,11 +173,11 @@ const spawnBranches = stages.map(({ number, cells }, index) => {
   const slots = spawnOrder.flatMap((row) => columnOrder.flatMap((col) =>
     cells[row][col] === 'X' ? [placement(col, row)] : [])).slice(0, 24)
   if (slots.length < 8) throw new Error(`Stage ${number} has too few enemy spawn points`)
-  return `${index === 0 ? '            if' : ' else if'} stageIndex == ${number} {
+  return `${index === 0 ? '            if' : ' else if'} spawnMap == ${number} {
                 spawnChoice = int(rand(0, ${slots.length - 1}))
 ${slots.map(([x, y], choice) => `${choice === 0 ? '                if' : ' else if'} spawnChoice == ${choice} {
                     spawnX = ${x}
-                    spawnY = ${y}
+                    spawnY = ${y}+spawnOffset
                 }`).join('')}
             }`
 }).join('')
@@ -143,7 +187,34 @@ const spawnBlock = /[ \t]*\/\/ GENERATED SPAWN START[\s\S]*?\/\/ GENERATED SPAWN
 if (!spawnBlock.test(enemySource)) throw new Error('Enemy spawn block markers are missing')
 save(enemyPath, enemySource.replace(spawnBlock, `\t\t\t// GENERATED SPAWN START\n${spawnBranches}\n\t\t\t// GENERATED SPAWN END`))
 
-const arena = `<svg xmlns="http://www.w3.org/2000/svg" width="480" height="360" viewBox="0 0 480 360">
+const pairsByStage = stages.map((stage) => {
+  const pairs = []
+  for (const middle of stages) {
+    for (const bottom of stages) {
+      if (middle.number >= bottom.number || stage.number === middle.number || stage.number === bottom.number) continue
+      if (terrainCount(stage) + terrainCount(middle) + terrainCount(bottom) <= 250) {
+        pairs.push([middle.number, bottom.number])
+      }
+    }
+  }
+  if (!pairs.length) throw new Error(`Stage ${stage.number} has no valid composite pair`)
+  const count = Math.min(8, pairs.length)
+  return Array.from({ length: count }, (_, index) => pairs[Math.floor((index + 0.5) * pairs.length / count)])
+})
+const compositionBranches = pairsByStage.map((pairs, index) => `${index === 0 ? '  if' : ' else if'} stageTop == ${index + 1} {
+    pairChoice = int(rand(0, ${pairs.length - 1}))
+${pairs.map(([middle, bottom], choice) => `${choice === 0 ? '    if' : ' else if'} pairChoice == ${choice} {
+      stageMiddle = ${middle}
+      stageBottom = ${bottom}
+    }`).join('')}
+  }`).join('')
+const mainPath = join(project, 'main.spx')
+const mainSource = readFileSync(mainPath, 'utf8')
+const compositionBlock = /[ \t]*\/\/ GENERATED COMPOSITION START[\s\S]*?\/\/ GENERATED COMPOSITION END/
+if (!compositionBlock.test(mainSource)) throw new Error('Composite map block markers are missing')
+save(mainPath, mainSource.replace(compositionBlock, `\t// GENERATED COMPOSITION START\n${compositionBranches}\n\t// GENERATED COMPOSITION END`))
+
+const arena = `<svg xmlns="http://www.w3.org/2000/svg" width="480" height="1008" viewBox="0 0 480 1008">
   <defs>
     <pattern id="ground" width="24" height="24" patternUnits="userSpaceOnUse">
       <rect width="24" height="24" fill="#dce9d9"/>
@@ -151,11 +222,11 @@ const arena = `<svg xmlns="http://www.w3.org/2000/svg" width="480" height="360" 
       <circle cx="17" cy="17" r=".8" fill="#b5cab6"/>
     </pattern>
   </defs>
-  <rect width="480" height="360" fill="#eff5e8"/>
-  <rect x="78" y="18" width="324" height="324" rx="9" fill="#9ebdaa"/>
-  <rect x="84" y="24" width="312" height="312" fill="url(#ground)"/>
-  <path d="M84 24h312v312H84z" fill="none" stroke="#6e9d89" stroke-width="2"/>
-  <path d="M48 24h15M48 336h15M417 24h15M417 336h15" stroke="#8eb7a3" stroke-width="3" stroke-linecap="round"/>
+  <rect width="480" height="1008" fill="#eff5e8"/>
+  <rect x="78" y="30" width="324" height="948" rx="9" fill="#9ebdaa"/>
+  <rect x="84" y="36" width="312" height="936" fill="url(#ground)"/>
+  <path d="M84 36h312v936H84z" fill="none" stroke="#6e9d89" stroke-width="2"/>
+  <path d="M48 348h15M48 660h15M417 348h15M417 660h15" stroke="#8eb7a3" stroke-width="3" stroke-linecap="round"/>
 </svg>`
 save(join(assets, 'arena.svg'), arena)
 

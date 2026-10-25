@@ -19,7 +19,7 @@ func takeHit() {
 		return
 	}
 	invulnerable = true
-	setXYpos -48, -144
+	setXYpos -48, -456
 	setHeading Up
 	setCostume "up"
 	wait 1
@@ -27,7 +27,7 @@ func takeHit() {
 }
 
 onStart => {
-	setXYpos -48, -144
+	setXYpos -48, -456
 	setHeading Up
 	setCostume "up"
 	for !gameReady {
@@ -54,8 +54,15 @@ onStart => {
 			setCostume "down"
 			changeYpos -2
 		}
-		if xpos < -144 || xpos > 144 || ypos < -144 || ypos > 144 || touching("Brick") || touching("Steel") || touching("River") || touching("Eagle") {
+		if xpos < -144 || xpos > 144 || ypos < -456 || ypos > 456 || touching("Brick") || touching("Steel") || touching("River") || touching("Eagle") {
 			setXYpos beforeX, beforeY
+		}
+		if ypos > 156 {
+			stageIndex = stageTop
+		} else if ypos > -156 {
+			stageIndex = stageMiddle
+		} else {
+			stageIndex = stageBottom
 		}
 		wait 0.02
 	}

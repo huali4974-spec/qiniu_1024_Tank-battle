@@ -1,13 +1,25 @@
+func centerResult() {
+	if Player.ypos < -324 {
+		setXYpos 0, -324
+	} else if Player.ypos > 324 {
+		setXYpos 0, 324
+	} else {
+		setXYpos 0, Player.ypos
+	}
+}
+
 onStart => {
 	hide
 }
 
 onMsg "win", => {
+	centerResult()
 	setCostume "win"
 	show
 }
 
 onMsg "lose", => {
+	centerResult()
 	setCostume "lose"
 	show
 }

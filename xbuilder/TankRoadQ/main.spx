@@ -6,6 +6,10 @@ var (
 	defeated = 0
 	activeEnemies = 0
 	stageIndex = 1
+	stageTop = 1
+	stageMiddle = 2
+	stageBottom = 3
+	pairChoice = 0
 	gameReady = false
 )
 
@@ -17,7 +21,923 @@ onStart => {
 	defeated = 0
 	activeEnemies = 0
 	gameReady = false
-	stageIndex = int(rand(1, 35))
+	stageTop = int(rand(1, 35))
+	// GENERATED COMPOSITION START
+  if stageTop == 1 {
+    pairChoice = int(rand(0, 7))
+    if pairChoice == 0 {
+      stageMiddle = 2
+      stageBottom = 23
+    } else if pairChoice == 1 {
+      stageMiddle = 5
+      stageBottom = 11
+    } else if pairChoice == 2 {
+      stageMiddle = 7
+      stageBottom = 8
+    } else if pairChoice == 3 {
+      stageMiddle = 8
+      stageBottom = 29
+    } else if pairChoice == 4 {
+      stageMiddle = 12
+      stageBottom = 18
+    } else if pairChoice == 5 {
+      stageMiddle = 14
+      stageBottom = 33
+    } else if pairChoice == 6 {
+      stageMiddle = 19
+      stageBottom = 29
+    } else if pairChoice == 7 {
+      stageMiddle = 25
+      stageBottom = 29
+    }
+  } else if stageTop == 2 {
+    pairChoice = int(rand(0, 7))
+    if pairChoice == 0 {
+      stageMiddle = 1
+      stageBottom = 23
+    } else if pairChoice == 1 {
+      stageMiddle = 5
+      stageBottom = 11
+    } else if pairChoice == 2 {
+      stageMiddle = 7
+      stageBottom = 9
+    } else if pairChoice == 3 {
+      stageMiddle = 8
+      stageBottom = 29
+    } else if pairChoice == 4 {
+      stageMiddle = 12
+      stageBottom = 16
+    } else if pairChoice == 5 {
+      stageMiddle = 14
+      stageBottom = 29
+    } else if pairChoice == 6 {
+      stageMiddle = 19
+      stageBottom = 33
+    } else if pairChoice == 7 {
+      stageMiddle = 25
+      stageBottom = 33
+    }
+  } else if stageTop == 3 {
+    pairChoice = int(rand(0, 7))
+    if pairChoice == 0 {
+      stageMiddle = 1
+      stageBottom = 22
+    } else if pairChoice == 1 {
+      stageMiddle = 2
+      stageBottom = 25
+    } else if pairChoice == 2 {
+      stageMiddle = 5
+      stageBottom = 29
+    } else if pairChoice == 3 {
+      stageMiddle = 7
+      stageBottom = 33
+    } else if pairChoice == 4 {
+      stageMiddle = 12
+      stageBottom = 22
+    } else if pairChoice == 5 {
+      stageMiddle = 16
+      stageBottom = 27
+    } else if pairChoice == 6 {
+      stageMiddle = 20
+      stageBottom = 29
+    } else if pairChoice == 7 {
+      stageMiddle = 25
+      stageBottom = 27
+    }
+  } else if stageTop == 4 {
+    pairChoice = int(rand(0, 7))
+    if pairChoice == 0 {
+      stageMiddle = 1
+      stageBottom = 23
+    } else if pairChoice == 1 {
+      stageMiddle = 5
+      stageBottom = 7
+    } else if pairChoice == 2 {
+      stageMiddle = 5
+      stageBottom = 27
+    } else if pairChoice == 3 {
+      stageMiddle = 7
+      stageBottom = 18
+    } else if pairChoice == 4 {
+      stageMiddle = 7
+      stageBottom = 29
+    } else if pairChoice == 5 {
+      stageMiddle = 16
+      stageBottom = 22
+    } else if pairChoice == 6 {
+      stageMiddle = 20
+      stageBottom = 23
+    } else if pairChoice == 7 {
+      stageMiddle = 23
+      stageBottom = 29
+    }
+  } else if stageTop == 5 {
+    pairChoice = int(rand(0, 7))
+    if pairChoice == 0 {
+      stageMiddle = 1
+      stageBottom = 25
+    } else if pairChoice == 1 {
+      stageMiddle = 3
+      stageBottom = 16
+    } else if pairChoice == 2 {
+      stageMiddle = 7
+      stageBottom = 10
+    } else if pairChoice == 3 {
+      stageMiddle = 9
+      stageBottom = 11
+    } else if pairChoice == 4 {
+      stageMiddle = 12
+      stageBottom = 20
+    } else if pairChoice == 5 {
+      stageMiddle = 16
+      stageBottom = 21
+    } else if pairChoice == 6 {
+      stageMiddle = 20
+      stageBottom = 25
+    } else if pairChoice == 7 {
+      stageMiddle = 26
+      stageBottom = 27
+    }
+  } else if stageTop == 6 {
+    pairChoice = int(rand(0, 7))
+    if pairChoice == 0 {
+      stageMiddle = 1
+      stageBottom = 22
+    } else if pairChoice == 1 {
+      stageMiddle = 2
+      stageBottom = 25
+    } else if pairChoice == 2 {
+      stageMiddle = 5
+      stageBottom = 26
+    } else if pairChoice == 3 {
+      stageMiddle = 7
+      stageBottom = 33
+    } else if pairChoice == 4 {
+      stageMiddle = 12
+      stageBottom = 20
+    } else if pairChoice == 5 {
+      stageMiddle = 16
+      stageBottom = 27
+    } else if pairChoice == 6 {
+      stageMiddle = 20
+      stageBottom = 33
+    } else if pairChoice == 7 {
+      stageMiddle = 25
+      stageBottom = 29
+    }
+  } else if stageTop == 7 {
+    pairChoice = int(rand(0, 7))
+    if pairChoice == 0 {
+      stageMiddle = 1
+      stageBottom = 26
+    } else if pairChoice == 1 {
+      stageMiddle = 3
+      stageBottom = 13
+    } else if pairChoice == 2 {
+      stageMiddle = 5
+      stageBottom = 23
+    } else if pairChoice == 3 {
+      stageMiddle = 9
+      stageBottom = 18
+    } else if pairChoice == 4 {
+      stageMiddle = 12
+      stageBottom = 22
+    } else if pairChoice == 5 {
+      stageMiddle = 16
+      stageBottom = 25
+    } else if pairChoice == 6 {
+      stageMiddle = 20
+      stageBottom = 29
+    } else if pairChoice == 7 {
+      stageMiddle = 26
+      stageBottom = 27
+    }
+  } else if stageTop == 8 {
+    pairChoice = int(rand(0, 7))
+    if pairChoice == 0 {
+      stageMiddle = 1
+      stageBottom = 22
+    } else if pairChoice == 1 {
+      stageMiddle = 2
+      stageBottom = 23
+    } else if pairChoice == 2 {
+      stageMiddle = 5
+      stageBottom = 23
+    } else if pairChoice == 3 {
+      stageMiddle = 7
+      stageBottom = 23
+    } else if pairChoice == 4 {
+      stageMiddle = 9
+      stageBottom = 33
+    } else if pairChoice == 5 {
+      stageMiddle = 16
+      stageBottom = 23
+    } else if pairChoice == 6 {
+      stageMiddle = 22
+      stageBottom = 23
+    } else if pairChoice == 7 {
+      stageMiddle = 25
+      stageBottom = 27
+    }
+  } else if stageTop == 9 {
+    pairChoice = int(rand(0, 7))
+    if pairChoice == 0 {
+      stageMiddle = 1
+      stageBottom = 23
+    } else if pairChoice == 1 {
+      stageMiddle = 3
+      stageBottom = 5
+    } else if pairChoice == 2 {
+      stageMiddle = 5
+      stageBottom = 25
+    } else if pairChoice == 3 {
+      stageMiddle = 7
+      stageBottom = 22
+    } else if pairChoice == 4 {
+      stageMiddle = 12
+      stageBottom = 18
+    } else if pairChoice == 5 {
+      stageMiddle = 14
+      stageBottom = 33
+    } else if pairChoice == 6 {
+      stageMiddle = 19
+      stageBottom = 29
+    } else if pairChoice == 7 {
+      stageMiddle = 25
+      stageBottom = 29
+    }
+  } else if stageTop == 10 {
+    pairChoice = int(rand(0, 7))
+    if pairChoice == 0 {
+      stageMiddle = 2
+      stageBottom = 7
+    } else if pairChoice == 1 {
+      stageMiddle = 5
+      stageBottom = 16
+    } else if pairChoice == 2 {
+      stageMiddle = 7
+      stageBottom = 22
+    } else if pairChoice == 3 {
+      stageMiddle = 7
+      stageBottom = 29
+    } else if pairChoice == 4 {
+      stageMiddle = 12
+      stageBottom = 23
+    } else if pairChoice == 5 {
+      stageMiddle = 18
+      stageBottom = 23
+    } else if pairChoice == 6 {
+      stageMiddle = 23
+      stageBottom = 25
+    } else if pairChoice == 7 {
+      stageMiddle = 23
+      stageBottom = 29
+    }
+  } else if stageTop == 11 {
+    pairChoice = int(rand(0, 7))
+    if pairChoice == 0 {
+      stageMiddle = 1
+      stageBottom = 22
+    } else if pairChoice == 1 {
+      stageMiddle = 2
+      stageBottom = 23
+    } else if pairChoice == 2 {
+      stageMiddle = 5
+      stageBottom = 23
+    } else if pairChoice == 3 {
+      stageMiddle = 7
+      stageBottom = 23
+    } else if pairChoice == 4 {
+      stageMiddle = 9
+      stageBottom = 33
+    } else if pairChoice == 5 {
+      stageMiddle = 16
+      stageBottom = 23
+    } else if pairChoice == 6 {
+      stageMiddle = 22
+      stageBottom = 23
+    } else if pairChoice == 7 {
+      stageMiddle = 25
+      stageBottom = 27
+    }
+  } else if stageTop == 12 {
+    pairChoice = int(rand(0, 7))
+    if pairChoice == 0 {
+      stageMiddle = 1
+      stageBottom = 23
+    } else if pairChoice == 1 {
+      stageMiddle = 3
+      stageBottom = 5
+    } else if pairChoice == 2 {
+      stageMiddle = 5
+      stageBottom = 25
+    } else if pairChoice == 3 {
+      stageMiddle = 7
+      stageBottom = 22
+    } else if pairChoice == 4 {
+      stageMiddle = 9
+      stageBottom = 29
+    } else if pairChoice == 5 {
+      stageMiddle = 14
+      stageBottom = 33
+    } else if pairChoice == 6 {
+      stageMiddle = 19
+      stageBottom = 29
+    } else if pairChoice == 7 {
+      stageMiddle = 25
+      stageBottom = 29
+    }
+  } else if stageTop == 13 {
+    pairChoice = int(rand(0, 7))
+    if pairChoice == 0 {
+      stageMiddle = 1
+      stageBottom = 22
+    } else if pairChoice == 1 {
+      stageMiddle = 2
+      stageBottom = 25
+    } else if pairChoice == 2 {
+      stageMiddle = 5
+      stageBottom = 25
+    } else if pairChoice == 3 {
+      stageMiddle = 7
+      stageBottom = 27
+    } else if pairChoice == 4 {
+      stageMiddle = 12
+      stageBottom = 16
+    } else if pairChoice == 5 {
+      stageMiddle = 16
+      stageBottom = 27
+    } else if pairChoice == 6 {
+      stageMiddle = 20
+      stageBottom = 29
+    } else if pairChoice == 7 {
+      stageMiddle = 25
+      stageBottom = 27
+    }
+  } else if stageTop == 14 {
+    pairChoice = int(rand(0, 7))
+    if pairChoice == 0 {
+      stageMiddle = 1
+      stageBottom = 22
+    } else if pairChoice == 1 {
+      stageMiddle = 2
+      stageBottom = 23
+    } else if pairChoice == 2 {
+      stageMiddle = 5
+      stageBottom = 25
+    } else if pairChoice == 3 {
+      stageMiddle = 7
+      stageBottom = 26
+    } else if pairChoice == 4 {
+      stageMiddle = 12
+      stageBottom = 16
+    } else if pairChoice == 5 {
+      stageMiddle = 16
+      stageBottom = 26
+    } else if pairChoice == 6 {
+      stageMiddle = 22
+      stageBottom = 23
+    } else if pairChoice == 7 {
+      stageMiddle = 25
+      stageBottom = 29
+    }
+  } else if stageTop == 15 {
+    pairChoice = int(rand(0, 7))
+    if pairChoice == 0 {
+      stageMiddle = 1
+      stageBottom = 23
+    } else if pairChoice == 1 {
+      stageMiddle = 5
+      stageBottom = 7
+    } else if pairChoice == 2 {
+      stageMiddle = 7
+      stageBottom = 16
+    } else if pairChoice == 3 {
+      stageMiddle = 9
+      stageBottom = 23
+    } else if pairChoice == 4 {
+      stageMiddle = 16
+      stageBottom = 23
+    } else if pairChoice == 5 {
+      stageMiddle = 22
+      stageBottom = 23
+    } else if pairChoice == 6 {
+      stageMiddle = 23
+      stageBottom = 27
+    } else if pairChoice == 7 {
+      stageMiddle = 23
+      stageBottom = 33
+    }
+  } else if stageTop == 16 {
+    pairChoice = int(rand(0, 7))
+    if pairChoice == 0 {
+      stageMiddle = 1
+      stageBottom = 25
+    } else if pairChoice == 1 {
+      stageMiddle = 3
+      stageBottom = 13
+    } else if pairChoice == 2 {
+      stageMiddle = 5
+      stageBottom = 25
+    } else if pairChoice == 3 {
+      stageMiddle = 7
+      stageBottom = 25
+    } else if pairChoice == 4 {
+      stageMiddle = 9
+      stageBottom = 35
+    } else if pairChoice == 5 {
+      stageMiddle = 13
+      stageBottom = 33
+    } else if pairChoice == 6 {
+      stageMiddle = 20
+      stageBottom = 26
+    } else if pairChoice == 7 {
+      stageMiddle = 26
+      stageBottom = 27
+    }
+  } else if stageTop == 17 {
+    pairChoice = int(rand(0, 7))
+    if pairChoice == 0 {
+      stageMiddle = 1
+      stageBottom = 23
+    } else if pairChoice == 1 {
+      stageMiddle = 5
+      stageBottom = 16
+    } else if pairChoice == 2 {
+      stageMiddle = 7
+      stageBottom = 12
+    } else if pairChoice == 3 {
+      stageMiddle = 7
+      stageBottom = 25
+    } else if pairChoice == 4 {
+      stageMiddle = 7
+      stageBottom = 33
+    } else if pairChoice == 5 {
+      stageMiddle = 16
+      stageBottom = 23
+    } else if pairChoice == 6 {
+      stageMiddle = 22
+      stageBottom = 23
+    } else if pairChoice == 7 {
+      stageMiddle = 23
+      stageBottom = 29
+    }
+  } else if stageTop == 18 {
+    pairChoice = int(rand(0, 7))
+    if pairChoice == 0 {
+      stageMiddle = 1
+      stageBottom = 25
+    } else if pairChoice == 1 {
+      stageMiddle = 3
+      stageBottom = 5
+    } else if pairChoice == 2 {
+      stageMiddle = 5
+      stageBottom = 23
+    } else if pairChoice == 3 {
+      stageMiddle = 7
+      stageBottom = 22
+    } else if pairChoice == 4 {
+      stageMiddle = 9
+      stageBottom = 31
+    } else if pairChoice == 5 {
+      stageMiddle = 13
+      stageBottom = 26
+    } else if pairChoice == 6 {
+      stageMiddle = 20
+      stageBottom = 23
+    } else if pairChoice == 7 {
+      stageMiddle = 25
+      stageBottom = 33
+    }
+  } else if stageTop == 19 {
+    pairChoice = int(rand(0, 7))
+    if pairChoice == 0 {
+      stageMiddle = 1
+      stageBottom = 22
+    } else if pairChoice == 1 {
+      stageMiddle = 2
+      stageBottom = 23
+    } else if pairChoice == 2 {
+      stageMiddle = 5
+      stageBottom = 22
+    } else if pairChoice == 3 {
+      stageMiddle = 7
+      stageBottom = 20
+    } else if pairChoice == 4 {
+      stageMiddle = 9
+      stageBottom = 25
+    } else if pairChoice == 5 {
+      stageMiddle = 16
+      stageBottom = 18
+    } else if pairChoice == 6 {
+      stageMiddle = 20
+      stageBottom = 33
+    } else if pairChoice == 7 {
+      stageMiddle = 25
+      stageBottom = 29
+    }
+  } else if stageTop == 20 {
+    pairChoice = int(rand(0, 7))
+    if pairChoice == 0 {
+      stageMiddle = 1
+      stageBottom = 23
+    } else if pairChoice == 1 {
+      stageMiddle = 3
+      stageBottom = 7
+    } else if pairChoice == 2 {
+      stageMiddle = 5
+      stageBottom = 19
+    } else if pairChoice == 3 {
+      stageMiddle = 7
+      stageBottom = 13
+    } else if pairChoice == 4 {
+      stageMiddle = 9
+      stageBottom = 26
+    } else if pairChoice == 5 {
+      stageMiddle = 13
+      stageBottom = 27
+    } else if pairChoice == 6 {
+      stageMiddle = 18
+      stageBottom = 26
+    } else if pairChoice == 7 {
+      stageMiddle = 25
+      stageBottom = 26
+    }
+  } else if stageTop == 21 {
+    pairChoice = int(rand(0, 7))
+    if pairChoice == 0 {
+      stageMiddle = 1
+      stageBottom = 23
+    } else if pairChoice == 1 {
+      stageMiddle = 5
+      stageBottom = 16
+    } else if pairChoice == 2 {
+      stageMiddle = 7
+      stageBottom = 12
+    } else if pairChoice == 3 {
+      stageMiddle = 7
+      stageBottom = 25
+    } else if pairChoice == 4 {
+      stageMiddle = 7
+      stageBottom = 33
+    } else if pairChoice == 5 {
+      stageMiddle = 16
+      stageBottom = 23
+    } else if pairChoice == 6 {
+      stageMiddle = 22
+      stageBottom = 23
+    } else if pairChoice == 7 {
+      stageMiddle = 23
+      stageBottom = 29
+    }
+  } else if stageTop == 22 {
+    pairChoice = int(rand(0, 7))
+    if pairChoice == 0 {
+      stageMiddle = 1
+      stageBottom = 25
+    } else if pairChoice == 1 {
+      stageMiddle = 3
+      stageBottom = 12
+    } else if pairChoice == 2 {
+      stageMiddle = 5
+      stageBottom = 31
+    } else if pairChoice == 3 {
+      stageMiddle = 7
+      stageBottom = 27
+    } else if pairChoice == 4 {
+      stageMiddle = 9
+      stageBottom = 34
+    } else if pairChoice == 5 {
+      stageMiddle = 13
+      stageBottom = 29
+    } else if pairChoice == 6 {
+      stageMiddle = 18
+      stageBottom = 29
+    } else if pairChoice == 7 {
+      stageMiddle = 25
+      stageBottom = 33
+    }
+  } else if stageTop == 23 {
+    pairChoice = int(rand(0, 7))
+    if pairChoice == 0 {
+      stageMiddle = 1
+      stageBottom = 27
+    } else if pairChoice == 1 {
+      stageMiddle = 3
+      stageBottom = 20
+    } else if pairChoice == 2 {
+      stageMiddle = 5
+      stageBottom = 34
+    } else if pairChoice == 3 {
+      stageMiddle = 8
+      stageBottom = 12
+    } else if pairChoice == 4 {
+      stageMiddle = 11
+      stageBottom = 14
+    } else if pairChoice == 5 {
+      stageMiddle = 14
+      stageBottom = 25
+    } else if pairChoice == 6 {
+      stageMiddle = 18
+      stageBottom = 31
+    } else if pairChoice == 7 {
+      stageMiddle = 25
+      stageBottom = 35
+    }
+  } else if stageTop == 24 {
+    pairChoice = int(rand(0, 7))
+    if pairChoice == 0 {
+      stageMiddle = 1
+      stageBottom = 23
+    } else if pairChoice == 1 {
+      stageMiddle = 5
+      stageBottom = 23
+    } else if pairChoice == 2 {
+      stageMiddle = 7
+      stageBottom = 23
+    } else if pairChoice == 3 {
+      stageMiddle = 12
+      stageBottom = 23
+    } else if pairChoice == 4 {
+      stageMiddle = 16
+      stageBottom = 23
+    } else if pairChoice == 5 {
+      stageMiddle = 23
+      stageBottom = 25
+    } else if pairChoice == 6 {
+      stageMiddle = 23
+      stageBottom = 27
+    } else if pairChoice == 7 {
+      stageMiddle = 23
+      stageBottom = 33
+    }
+  } else if stageTop == 25 {
+    pairChoice = int(rand(0, 7))
+    if pairChoice == 0 {
+      stageMiddle = 1
+      stageBottom = 22
+    } else if pairChoice == 1 {
+      stageMiddle = 3
+      stageBottom = 5
+    } else if pairChoice == 2 {
+      stageMiddle = 5
+      stageBottom = 23
+    } else if pairChoice == 3 {
+      stageMiddle = 7
+      stageBottom = 21
+    } else if pairChoice == 4 {
+      stageMiddle = 9
+      stageBottom = 29
+    } else if pairChoice == 5 {
+      stageMiddle = 13
+      stageBottom = 23
+    } else if pairChoice == 6 {
+      stageMiddle = 18
+      stageBottom = 26
+    } else if pairChoice == 7 {
+      stageMiddle = 23
+      stageBottom = 31
+    }
+  } else if stageTop == 26 {
+    pairChoice = int(rand(0, 7))
+    if pairChoice == 0 {
+      stageMiddle = 1
+      stageBottom = 22
+    } else if pairChoice == 1 {
+      stageMiddle = 3
+      stageBottom = 7
+    } else if pairChoice == 2 {
+      stageMiddle = 5
+      stageBottom = 22
+    } else if pairChoice == 3 {
+      stageMiddle = 7
+      stageBottom = 16
+    } else if pairChoice == 4 {
+      stageMiddle = 9
+      stageBottom = 27
+    } else if pairChoice == 5 {
+      stageMiddle = 13
+      stageBottom = 27
+    } else if pairChoice == 6 {
+      stageMiddle = 18
+      stageBottom = 27
+    } else if pairChoice == 7 {
+      stageMiddle = 23
+      stageBottom = 35
+    }
+  } else if stageTop == 27 {
+    pairChoice = int(rand(0, 7))
+    if pairChoice == 0 {
+      stageMiddle = 1
+      stageBottom = 22
+    } else if pairChoice == 1 {
+      stageMiddle = 3
+      stageBottom = 7
+    } else if pairChoice == 2 {
+      stageMiddle = 5
+      stageBottom = 26
+    } else if pairChoice == 3 {
+      stageMiddle = 7
+      stageBottom = 22
+    } else if pairChoice == 4 {
+      stageMiddle = 9
+      stageBottom = 29
+    } else if pairChoice == 5 {
+      stageMiddle = 13
+      stageBottom = 23
+    } else if pairChoice == 6 {
+      stageMiddle = 18
+      stageBottom = 26
+    } else if pairChoice == 7 {
+      stageMiddle = 23
+      stageBottom = 34
+    }
+  } else if stageTop == 28 {
+    pairChoice = int(rand(0, 7))
+    if pairChoice == 0 {
+      stageMiddle = 1
+      stageBottom = 23
+    } else if pairChoice == 1 {
+      stageMiddle = 5
+      stageBottom = 16
+    } else if pairChoice == 2 {
+      stageMiddle = 7
+      stageBottom = 12
+    } else if pairChoice == 3 {
+      stageMiddle = 7
+      stageBottom = 23
+    } else if pairChoice == 4 {
+      stageMiddle = 7
+      stageBottom = 33
+    } else if pairChoice == 5 {
+      stageMiddle = 16
+      stageBottom = 23
+    } else if pairChoice == 6 {
+      stageMiddle = 22
+      stageBottom = 23
+    } else if pairChoice == 7 {
+      stageMiddle = 23
+      stageBottom = 29
+    }
+  } else if stageTop == 29 {
+    pairChoice = int(rand(0, 7))
+    if pairChoice == 0 {
+      stageMiddle = 1
+      stageBottom = 22
+    } else if pairChoice == 1 {
+      stageMiddle = 3
+      stageBottom = 7
+    } else if pairChoice == 2 {
+      stageMiddle = 5
+      stageBottom = 26
+    } else if pairChoice == 3 {
+      stageMiddle = 7
+      stageBottom = 22
+    } else if pairChoice == 4 {
+      stageMiddle = 9
+      stageBottom = 27
+    } else if pairChoice == 5 {
+      stageMiddle = 13
+      stageBottom = 23
+    } else if pairChoice == 6 {
+      stageMiddle = 18
+      stageBottom = 26
+    } else if pairChoice == 7 {
+      stageMiddle = 23
+      stageBottom = 34
+    }
+  } else if stageTop == 30 {
+    pairChoice = int(rand(0, 3))
+    if pairChoice == 0 {
+      stageMiddle = 5
+      stageBottom = 23
+    } else if pairChoice == 1 {
+      stageMiddle = 7
+      stageBottom = 23
+    } else if pairChoice == 2 {
+      stageMiddle = 16
+      stageBottom = 23
+    } else if pairChoice == 3 {
+      stageMiddle = 23
+      stageBottom = 33
+    }
+  } else if stageTop == 31 {
+    pairChoice = int(rand(0, 7))
+    if pairChoice == 0 {
+      stageMiddle = 1
+      stageBottom = 22
+    } else if pairChoice == 1 {
+      stageMiddle = 2
+      stageBottom = 25
+    } else if pairChoice == 2 {
+      stageMiddle = 5
+      stageBottom = 25
+    } else if pairChoice == 3 {
+      stageMiddle = 7
+      stageBottom = 26
+    } else if pairChoice == 4 {
+      stageMiddle = 11
+      stageBottom = 23
+    } else if pairChoice == 5 {
+      stageMiddle = 16
+      stageBottom = 23
+    } else if pairChoice == 6 {
+      stageMiddle = 20
+      stageBottom = 33
+    } else if pairChoice == 7 {
+      stageMiddle = 25
+      stageBottom = 29
+    }
+  } else if stageTop == 32 {
+    pairChoice = int(rand(0, 0))
+    if pairChoice == 0 {
+      stageMiddle = 7
+      stageBottom = 23
+    }
+  } else if stageTop == 33 {
+    pairChoice = int(rand(0, 7))
+    if pairChoice == 0 {
+      stageMiddle = 1
+      stageBottom = 23
+    } else if pairChoice == 1 {
+      stageMiddle = 3
+      stageBottom = 16
+    } else if pairChoice == 2 {
+      stageMiddle = 5
+      stageBottom = 27
+    } else if pairChoice == 3 {
+      stageMiddle = 7
+      stageBottom = 26
+    } else if pairChoice == 4 {
+      stageMiddle = 10
+      stageBottom = 16
+    } else if pairChoice == 5 {
+      stageMiddle = 13
+      stageBottom = 29
+    } else if pairChoice == 6 {
+      stageMiddle = 18
+      stageBottom = 29
+    } else if pairChoice == 7 {
+      stageMiddle = 23
+      stageBottom = 31
+    }
+  } else if stageTop == 34 {
+    pairChoice = int(rand(0, 7))
+    if pairChoice == 0 {
+      stageMiddle = 1
+      stageBottom = 22
+    } else if pairChoice == 1 {
+      stageMiddle = 2
+      stageBottom = 25
+    } else if pairChoice == 2 {
+      stageMiddle = 5
+      stageBottom = 25
+    } else if pairChoice == 3 {
+      stageMiddle = 7
+      stageBottom = 26
+    } else if pairChoice == 4 {
+      stageMiddle = 11
+      stageBottom = 23
+    } else if pairChoice == 5 {
+      stageMiddle = 16
+      stageBottom = 23
+    } else if pairChoice == 6 {
+      stageMiddle = 20
+      stageBottom = 33
+    } else if pairChoice == 7 {
+      stageMiddle = 25
+      stageBottom = 29
+    }
+  } else if stageTop == 35 {
+    pairChoice = int(rand(0, 7))
+    if pairChoice == 0 {
+      stageMiddle = 1
+      stageBottom = 23
+    } else if pairChoice == 1 {
+      stageMiddle = 5
+      stageBottom = 16
+    } else if pairChoice == 2 {
+      stageMiddle = 5
+      stageBottom = 33
+    } else if pairChoice == 3 {
+      stageMiddle = 7
+      stageBottom = 23
+    } else if pairChoice == 4 {
+      stageMiddle = 7
+      stageBottom = 33
+    } else if pairChoice == 5 {
+      stageMiddle = 16
+      stageBottom = 23
+    } else if pairChoice == 6 {
+      stageMiddle = 18
+      stageBottom = 23
+    } else if pairChoice == 7 {
+      stageMiddle = 23
+      stageBottom = 27
+    }
+  }
+	// GENERATED COMPOSITION END
+	stageIndex = stageBottom
 	broadcastAndWait "loadStage"
 	wait 0.02
 	gameReady = true

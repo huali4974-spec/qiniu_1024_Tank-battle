@@ -1,4391 +1,4777 @@
+func loadSelected(targetStage int, offsetY float64, section int) {
+  if targetStage == 1 {
+    setCostume "f"
+    setXYpos -120, 120+offsetY
+    clone
+    setCostume "f"
+    setXYpos -72, 120+offsetY
+    clone
+    setCostume "f"
+    setXYpos -24, 120+offsetY
+    clone
+    setCostume "f"
+    setXYpos 24, 120+offsetY
+    clone
+    setCostume "f"
+    setXYpos 72, 120+offsetY
+    clone
+    setCostume "f"
+    setXYpos 120, 120+offsetY
+    clone
+    setCostume "f"
+    setXYpos -120, 96+offsetY
+    clone
+    setCostume "f"
+    setXYpos -72, 96+offsetY
+    clone
+    setCostume "f"
+    setXYpos -24, 96+offsetY
+    clone
+    setCostume "f"
+    setXYpos 24, 96+offsetY
+    clone
+    setCostume "f"
+    setXYpos 72, 96+offsetY
+    clone
+    setCostume "f"
+    setXYpos 120, 96+offsetY
+    clone
+    setCostume "f"
+    setXYpos -120, 72+offsetY
+    clone
+    setCostume "f"
+    setXYpos -72, 72+offsetY
+    clone
+    setCostume "f"
+    setXYpos -24, 72+offsetY
+    clone
+    setCostume "f"
+    setXYpos 24, 72+offsetY
+    clone
+    setCostume "f"
+    setXYpos 72, 72+offsetY
+    clone
+    setCostume "f"
+    setXYpos 120, 72+offsetY
+    clone
+    setCostume "f"
+    setXYpos -120, 48+offsetY
+    clone
+    setCostume "f"
+    setXYpos -72, 48+offsetY
+    clone
+    setCostume "3"
+    setXYpos -24, 48+offsetY
+    clone
+    setCostume "3"
+    setXYpos 24, 48+offsetY
+    clone
+    setCostume "f"
+    setXYpos 72, 48+offsetY
+    clone
+    setCostume "f"
+    setXYpos 120, 48+offsetY
+    clone
+    setCostume "3"
+    setXYpos -120, 24+offsetY
+    clone
+    setCostume "3"
+    setXYpos -72, 24+offsetY
+    clone
+    setCostume "c"
+    setXYpos -24, 24+offsetY
+    clone
+    setCostume "c"
+    setXYpos 24, 24+offsetY
+    clone
+    setCostume "3"
+    setXYpos 72, 24+offsetY
+    clone
+    setCostume "3"
+    setXYpos 120, 24+offsetY
+    clone
+    setCostume "c"
+    setXYpos -144, 0+offsetY
+    clone
+    setCostume "c"
+    setXYpos -96, 0+offsetY
+    clone
+    setCostume "c"
+    setXYpos -72, 0+offsetY
+    clone
+    setCostume "3"
+    setXYpos -24, 0+offsetY
+    clone
+    setCostume "3"
+    setXYpos 24, 0+offsetY
+    clone
+    setCostume "c"
+    setXYpos 72, 0+offsetY
+    clone
+    setCostume "c"
+    setXYpos 96, 0+offsetY
+    clone
+    setCostume "c"
+    setXYpos 144, 0+offsetY
+    clone
+    setCostume "3"
+    setXYpos -96, -24+offsetY
+    clone
+    setCostume "3"
+    setXYpos -72, -24+offsetY
+    clone
+    setCostume "c"
+    setXYpos -24, -24+offsetY
+    clone
+    setCostume "c"
+    setXYpos 24, -24+offsetY
+    clone
+    setCostume "3"
+    setXYpos 72, -24+offsetY
+    clone
+    setCostume "3"
+    setXYpos 96, -24+offsetY
+    clone
+    setCostume "c"
+    setXYpos -120, -48+offsetY
+    clone
+    setCostume "c"
+    setXYpos -72, -48+offsetY
+    clone
+    setCostume "f"
+    setXYpos -24, -48+offsetY
+    clone
+    setCostume "f"
+    setXYpos 0, -48+offsetY
+    clone
+    setCostume "f"
+    setXYpos 24, -48+offsetY
+    clone
+    setCostume "c"
+    setXYpos 72, -48+offsetY
+    clone
+    setCostume "c"
+    setXYpos 120, -48+offsetY
+    clone
+    setCostume "f"
+    setXYpos -120, -72+offsetY
+    clone
+    setCostume "f"
+    setXYpos -72, -72+offsetY
+    clone
+    setCostume "f"
+    setXYpos -24, -72+offsetY
+    clone
+    setCostume "f"
+    setXYpos 24, -72+offsetY
+    clone
+    setCostume "f"
+    setXYpos 72, -72+offsetY
+    clone
+    setCostume "f"
+    setXYpos 120, -72+offsetY
+    clone
+    setCostume "f"
+    setXYpos -120, -96+offsetY
+    clone
+    setCostume "f"
+    setXYpos -72, -96+offsetY
+    clone
+    setCostume "3"
+    setXYpos -24, -96+offsetY
+    clone
+    setCostume "3"
+    setXYpos 24, -96+offsetY
+    clone
+    setCostume "f"
+    setXYpos 72, -96+offsetY
+    clone
+    setCostume "f"
+    setXYpos 120, -96+offsetY
+    clone
+    setCostume "f"
+    setXYpos -120, -120+offsetY
+    clone
+    setCostume "f"
+    setXYpos -72, -120+offsetY
+    clone
+    if section == 2 {
+    setCostume "8"
+    setXYpos -24, -120+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "c"
+    setXYpos 0, -120+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "4"
+    setXYpos 24, -120+offsetY
+    clone
+    }
+    setCostume "f"
+    setXYpos 72, -120+offsetY
+    clone
+    setCostume "f"
+    setXYpos 120, -120+offsetY
+    clone
+    if section == 2 {
+    setCostume "a"
+    setXYpos -24, -144+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "5"
+    setXYpos 24, -144+offsetY
+    clone
+    }
+  } else if targetStage == 2 {
+    setCostume "3"
+    setXYpos -120, 120+offsetY
+    clone
+    setCostume "f"
+    setXYpos 24, 120+offsetY
+    clone
+    setCostume "f"
+    setXYpos 72, 120+offsetY
+    clone
+    setCostume "f"
+    setXYpos 120, 120+offsetY
+    clone
+    setCostume "f"
+    setXYpos -120, 96+offsetY
+    clone
+    setCostume "f"
+    setXYpos 0, 96+offsetY
+    clone
+    setCostume "f"
+    setXYpos 24, 96+offsetY
+    clone
+    setCostume "f"
+    setXYpos 72, 96+offsetY
+    clone
+    setCostume "f"
+    setXYpos 120, 96+offsetY
+    clone
+    setCostume "f"
+    setXYpos -72, 72+offsetY
+    clone
+    setCostume "f"
+    setXYpos -72, 48+offsetY
+    clone
+    setCostume "f"
+    setXYpos 72, 48+offsetY
+    clone
+    setCostume "f"
+    setXYpos 120, 48+offsetY
+    clone
+    setCostume "f"
+    setXYpos -24, 24+offsetY
+    clone
+    setCostume "f"
+    setXYpos -120, 0+offsetY
+    clone
+    setCostume "f"
+    setXYpos -96, 0+offsetY
+    clone
+    setCostume "f"
+    setXYpos -72, 0+offsetY
+    clone
+    setCostume "f"
+    setXYpos 120, 0+offsetY
+    clone
+    setCostume "f"
+    setXYpos -24, -24+offsetY
+    clone
+    setCostume "f"
+    setXYpos 24, -24+offsetY
+    clone
+    setCostume "f"
+    setXYpos 72, -24+offsetY
+    clone
+    setCostume "f"
+    setXYpos 120, -24+offsetY
+    clone
+    setCostume "f"
+    setXYpos -120, -48+offsetY
+    clone
+    setCostume "f"
+    setXYpos -24, -48+offsetY
+    clone
+    setCostume "f"
+    setXYpos 24, -48+offsetY
+    clone
+    setCostume "f"
+    setXYpos 120, -48+offsetY
+    clone
+    setCostume "f"
+    setXYpos -120, -72+offsetY
+    clone
+    setCostume "f"
+    setXYpos -72, -72+offsetY
+    clone
+    setCostume "f"
+    setXYpos -24, -72+offsetY
+    clone
+    setCostume "f"
+    setXYpos 0, -72+offsetY
+    clone
+    setCostume "f"
+    setXYpos 24, -72+offsetY
+    clone
+    setCostume "f"
+    setXYpos 72, -72+offsetY
+    clone
+    setCostume "f"
+    setXYpos 120, -72+offsetY
+    clone
+    setCostume "f"
+    setXYpos -120, -96+offsetY
+    clone
+    setCostume "f"
+    setXYpos -72, -96+offsetY
+    clone
+    setCostume "f"
+    setXYpos -24, -96+offsetY
+    clone
+    setCostume "f"
+    setXYpos 0, -96+offsetY
+    clone
+    setCostume "f"
+    setXYpos 24, -96+offsetY
+    clone
+    setCostume "f"
+    setXYpos -120, -120+offsetY
+    clone
+    if section == 2 {
+    setCostume "8"
+    setXYpos -24, -120+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "c"
+    setXYpos 0, -120+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "4"
+    setXYpos 24, -120+offsetY
+    clone
+    }
+    setCostume "f"
+    setXYpos 72, -120+offsetY
+    clone
+    setCostume "f"
+    setXYpos 120, -120+offsetY
+    clone
+    setCostume "f"
+    setXYpos -120, -144+offsetY
+    clone
+    setCostume "f"
+    setXYpos -72, -144+offsetY
+    clone
+    if section == 2 {
+    setCostume "a"
+    setXYpos -24, -144+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "5"
+    setXYpos 24, -144+offsetY
+    clone
+    }
+    setCostume "f"
+    setXYpos 72, -144+offsetY
+    clone
+    setCostume "f"
+    setXYpos 96, -144+offsetY
+    clone
+    setCostume "f"
+    setXYpos 120, -144+offsetY
+    clone
+  } else if targetStage == 3 {
+    setCostume "f"
+    setXYpos -48, 144+offsetY
+    clone
+    setCostume "f"
+    setXYpos 48, 144+offsetY
+    clone
+    setCostume "f"
+    setXYpos -48, 120+offsetY
+    clone
+    setCostume "f"
+    setXYpos -144, 96+offsetY
+    clone
+    setCostume "f"
+    setXYpos 24, 72+offsetY
+    clone
+    setCostume "f"
+    setXYpos 72, 72+offsetY
+    clone
+    setCostume "f"
+    setXYpos 96, 72+offsetY
+    clone
+    setCostume "f"
+    setXYpos 120, 72+offsetY
+    clone
+    setCostume "5"
+    setXYpos 144, 72+offsetY
+    clone
+    setCostume "f"
+    setXYpos -48, 48+offsetY
+    clone
+    setCostume "f"
+    setXYpos -24, 48+offsetY
+    clone
+    setCostume "f"
+    setXYpos 0, 48+offsetY
+    clone
+    setCostume "3"
+    setXYpos 24, 48+offsetY
+    clone
+    setCostume "f"
+    setXYpos 72, 48+offsetY
+    clone
+    setCostume "a"
+    setXYpos 120, 48+offsetY
+    clone
+    setCostume "f"
+    setXYpos 0, 24+offsetY
+    clone
+    setCostume "a"
+    setXYpos 120, 24+offsetY
+    clone
+    setCostume "c"
+    setXYpos -120, -24+offsetY
+    clone
+    setCostume "f"
+    setXYpos -72, -24+offsetY
+    clone
+    setCostume "f"
+    setXYpos -144, -48+offsetY
+    clone
+    setCostume "5"
+    setXYpos -120, -48+offsetY
+    clone
+    setCostume "a"
+    setXYpos -96, -48+offsetY
+    clone
+    setCostume "f"
+    setXYpos -72, -48+offsetY
+    clone
+    setCostume "5"
+    setXYpos -48, -48+offsetY
+    clone
+    setCostume "c"
+    setXYpos -24, -48+offsetY
+    clone
+    setCostume "3"
+    setXYpos 0, -48+offsetY
+    clone
+    setCostume "3"
+    setXYpos 24, -48+offsetY
+    clone
+    setCostume "3"
+    setXYpos 48, -48+offsetY
+    clone
+    setCostume "f"
+    setXYpos -24, -72+offsetY
+    clone
+    setCostume "c"
+    setXYpos 24, -72+offsetY
+    clone
+    setCostume "c"
+    setXYpos 48, -72+offsetY
+    clone
+    setCostume "f"
+    setXYpos -144, -96+offsetY
+    clone
+    setCostume "3"
+    setXYpos 24, -96+offsetY
+    clone
+    setCostume "3"
+    setXYpos 48, -96+offsetY
+    clone
+    setCostume "f"
+    setXYpos -144, -120+offsetY
+    clone
+    setCostume "f"
+    setXYpos -120, -120+offsetY
+    clone
+    if section == 2 {
+    setCostume "8"
+    setXYpos -24, -120+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "c"
+    setXYpos 0, -120+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "4"
+    setXYpos 24, -120+offsetY
+    clone
+    }
+    setCostume "f"
+    setXYpos -120, -144+offsetY
+    clone
+    setCostume "f"
+    setXYpos -96, -144+offsetY
+    clone
+    if section == 2 {
+    setCostume "a"
+    setXYpos -24, -144+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "5"
+    setXYpos 24, -144+offsetY
+    clone
+    }
+    setCostume "f"
+    setXYpos 72, -144+offsetY
+    clone
+  } else if targetStage == 4 {
+    setCostume "c"
+    setXYpos -48, 120+offsetY
+    clone
+    setCostume "f"
+    setXYpos -24, 120+offsetY
+    clone
+    setCostume "f"
+    setXYpos 0, 120+offsetY
+    clone
+    setCostume "c"
+    setXYpos 24, 120+offsetY
+    clone
+    setCostume "c"
+    setXYpos 48, 120+offsetY
+    clone
+    setCostume "a"
+    setXYpos -72, 96+offsetY
+    clone
+    setCostume "f"
+    setXYpos -48, 96+offsetY
+    clone
+    setCostume "f"
+    setXYpos -24, 96+offsetY
+    clone
+    setCostume "f"
+    setXYpos 0, 96+offsetY
+    clone
+    setCostume "f"
+    setXYpos 24, 96+offsetY
+    clone
+    setCostume "f"
+    setXYpos 48, 96+offsetY
+    clone
+    setCostume "f"
+    setXYpos 72, 96+offsetY
+    clone
+    setCostume "c"
+    setXYpos 96, 96+offsetY
+    clone
+    setCostume "f"
+    setXYpos -72, 72+offsetY
+    clone
+    setCostume "f"
+    setXYpos -48, 72+offsetY
+    clone
+    setCostume "f"
+    setXYpos -24, 72+offsetY
+    clone
+    setCostume "f"
+    setXYpos 0, 72+offsetY
+    clone
+    setCostume "f"
+    setXYpos 24, 72+offsetY
+    clone
+    setCostume "f"
+    setXYpos 48, 72+offsetY
+    clone
+    setCostume "f"
+    setXYpos 72, 72+offsetY
+    clone
+    setCostume "f"
+    setXYpos 96, 72+offsetY
+    clone
+    setCostume "5"
+    setXYpos 120, 72+offsetY
+    clone
+    setCostume "a"
+    setXYpos -96, 48+offsetY
+    clone
+    setCostume "3"
+    setXYpos -72, 48+offsetY
+    clone
+    setCostume "3"
+    setXYpos 24, 48+offsetY
+    clone
+    setCostume "f"
+    setXYpos 48, 48+offsetY
+    clone
+    setCostume "f"
+    setXYpos 72, 48+offsetY
+    clone
+    setCostume "5"
+    setXYpos 120, 48+offsetY
+    clone
+    setCostume "a"
+    setXYpos -96, 24+offsetY
+    clone
+    setCostume "f"
+    setXYpos 48, 24+offsetY
+    clone
+    setCostume "5"
+    setXYpos 72, 24+offsetY
+    clone
+    setCostume "f"
+    setXYpos -96, 0+offsetY
+    clone
+    setCostume "c"
+    setXYpos -48, 0+offsetY
+    clone
+    setCostume "c"
+    setXYpos -24, 0+offsetY
+    clone
+    setCostume "f"
+    setXYpos 48, 0+offsetY
+    clone
+    setCostume "5"
+    setXYpos 72, 0+offsetY
+    clone
+    setCostume "f"
+    setXYpos -96, -24+offsetY
+    clone
+    setCostume "f"
+    setXYpos -72, -24+offsetY
+    clone
+    setCostume "f"
+    setXYpos -48, -24+offsetY
+    clone
+    setCostume "f"
+    setXYpos -24, -24+offsetY
+    clone
+    setCostume "f"
+    setXYpos 0, -24+offsetY
+    clone
+    setCostume "f"
+    setXYpos 24, -24+offsetY
+    clone
+    setCostume "f"
+    setXYpos 48, -24+offsetY
+    clone
+    setCostume "f"
+    setXYpos 72, -24+offsetY
+    clone
+    setCostume "a"
+    setXYpos -120, -48+offsetY
+    clone
+    setCostume "f"
+    setXYpos -96, -48+offsetY
+    clone
+    setCostume "f"
+    setXYpos -72, -48+offsetY
+    clone
+    setCostume "f"
+    setXYpos -48, -48+offsetY
+    clone
+    setCostume "f"
+    setXYpos -24, -48+offsetY
+    clone
+    setCostume "f"
+    setXYpos 0, -48+offsetY
+    clone
+    setCostume "f"
+    setXYpos 24, -48+offsetY
+    clone
+    setCostume "f"
+    setXYpos 48, -48+offsetY
+    clone
+    setCostume "f"
+    setXYpos 72, -48+offsetY
+    clone
+    setCostume "5"
+    setXYpos 96, -48+offsetY
+    clone
+    setCostume "3"
+    setXYpos -120, -72+offsetY
+    clone
+    setCostume "3"
+    setXYpos -96, -72+offsetY
+    clone
+    setCostume "f"
+    setXYpos -72, -72+offsetY
+    clone
+    setCostume "f"
+    setXYpos -48, -72+offsetY
+    clone
+    setCostume "f"
+    setXYpos -24, -72+offsetY
+    clone
+    setCostume "f"
+    setXYpos 0, -72+offsetY
+    clone
+    setCostume "f"
+    setXYpos 24, -72+offsetY
+    clone
+    setCostume "f"
+    setXYpos 48, -72+offsetY
+    clone
+    setCostume "3"
+    setXYpos 72, -72+offsetY
+    clone
+    setCostume "3"
+    setXYpos 96, -72+offsetY
+    clone
+    setCostume "f"
+    setXYpos -120, -96+offsetY
+    clone
+    setCostume "f"
+    setXYpos -96, -96+offsetY
+    clone
+    setCostume "c"
+    setXYpos -72, -96+offsetY
+    clone
+    setCostume "3"
+    setXYpos -48, -96+offsetY
+    clone
+    setCostume "f"
+    setXYpos -24, -96+offsetY
+    clone
+    setCostume "f"
+    setXYpos 0, -96+offsetY
+    clone
+    setCostume "3"
+    setXYpos 24, -96+offsetY
+    clone
+    setCostume "c"
+    setXYpos 48, -96+offsetY
+    clone
+    setCostume "f"
+    setXYpos 72, -96+offsetY
+    clone
+    setCostume "f"
+    setXYpos 96, -96+offsetY
+    clone
+    setCostume "3"
+    setXYpos -96, -120+offsetY
+    clone
+    setCostume "3"
+    setXYpos -72, -120+offsetY
+    clone
+    if section == 2 {
+    setCostume "8"
+    setXYpos -24, -120+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "c"
+    setXYpos 0, -120+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "4"
+    setXYpos 24, -120+offsetY
+    clone
+    }
+    setCostume "3"
+    setXYpos 48, -120+offsetY
+    clone
+    setCostume "3"
+    setXYpos 72, -120+offsetY
+    clone
+    if section == 2 {
+    setCostume "a"
+    setXYpos -24, -144+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "5"
+    setXYpos 24, -144+offsetY
+    clone
+    }
+  } else if targetStage == 5 {
+    setCostume "f"
+    setXYpos -48, 144+offsetY
+    clone
+    if section == 0 {
+    setCostume "f"
+    setXYpos -24, 144+offsetY
+    clone
+    }
+    setCostume "c"
+    setXYpos -96, 120+offsetY
+    clone
+    setCostume "f"
+    setXYpos -48, 120+offsetY
+    clone
+    setCostume "f"
+    setXYpos -96, 96+offsetY
+    clone
+    setCostume "f"
+    setXYpos 0, 96+offsetY
+    clone
+    setCostume "f"
+    setXYpos -144, 72+offsetY
+    clone
+    setCostume "f"
+    setXYpos -96, 72+offsetY
+    clone
+    setCostume "f"
+    setXYpos -72, 72+offsetY
+    clone
+    setCostume "f"
+    setXYpos -48, 72+offsetY
+    clone
+    setCostume "f"
+    setXYpos 0, 72+offsetY
+    clone
+    setCostume "f"
+    setXYpos 24, 72+offsetY
+    clone
+    setCostume "3"
+    setXYpos -144, 48+offsetY
+    clone
+    setCostume "3"
+    setXYpos -48, 48+offsetY
+    clone
+    setCostume "c"
+    setXYpos -96, 24+offsetY
+    clone
+    setCostume "f"
+    setXYpos 120, 24+offsetY
+    clone
+    setCostume "f"
+    setXYpos 144, 24+offsetY
+    clone
+    setCostume "f"
+    setXYpos -144, 0+offsetY
+    clone
+    setCostume "f"
+    setXYpos -120, 0+offsetY
+    clone
+    setCostume "f"
+    setXYpos -24, 0+offsetY
+    clone
+    setCostume "f"
+    setXYpos 24, 0+offsetY
+    clone
+    setCostume "f"
+    setXYpos 48, 0+offsetY
+    clone
+    setCostume "f"
+    setXYpos 48, -48+offsetY
+    clone
+    setCostume "c"
+    setXYpos -72, -72+offsetY
+    clone
+    setCostume "c"
+    setXYpos -48, -72+offsetY
+    clone
+    setCostume "f"
+    setXYpos 120, -72+offsetY
+    clone
+    setCostume "f"
+    setXYpos 144, -72+offsetY
+    clone
+    setCostume "f"
+    setXYpos -48, -96+offsetY
+    clone
+    setCostume "3"
+    setXYpos -24, -96+offsetY
+    clone
+    setCostume "3"
+    setXYpos 0, -96+offsetY
+    clone
+    setCostume "3"
+    setXYpos 24, -96+offsetY
+    clone
+    setCostume "f"
+    setXYpos 48, -96+offsetY
+    clone
+    setCostume "c"
+    setXYpos 72, -96+offsetY
+    clone
+    setCostume "f"
+    setXYpos -144, -120+offsetY
+    clone
+    setCostume "f"
+    setXYpos -120, -120+offsetY
+    clone
+    setCostume "3"
+    setXYpos -96, -120+offsetY
+    clone
+    if section == 2 {
+    setCostume "8"
+    setXYpos -24, -120+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "c"
+    setXYpos 0, -120+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "4"
+    setXYpos 24, -120+offsetY
+    clone
+    }
+    setCostume "3"
+    setXYpos 72, -120+offsetY
+    clone
+    setCostume "f"
+    setXYpos 96, -120+offsetY
+    clone
+    setCostume "3"
+    setXYpos -144, -144+offsetY
+    clone
+    if section == 2 {
+    setCostume "a"
+    setXYpos -24, -144+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "5"
+    setXYpos 24, -144+offsetY
+    clone
+    }
+  } else if targetStage == 6 {
+    if section == 0 {
+    setCostume "a"
+    setXYpos -24, 144+offsetY
+    clone
+    }
+    if section == 0 {
+    setCostume "5"
+    setXYpos 24, 144+offsetY
+    clone
+    }
+    setCostume "5"
+    setXYpos -120, 120+offsetY
+    clone
+    setCostume "5"
+    setXYpos -48, 120+offsetY
+    clone
+    setCostume "a"
+    setXYpos 48, 120+offsetY
+    clone
+    setCostume "5"
+    setXYpos 96, 120+offsetY
+    clone
+    setCostume "a"
+    setXYpos 120, 120+offsetY
+    clone
+    setCostume "5"
+    setXYpos -120, 96+offsetY
+    clone
+    setCostume "5"
+    setXYpos -48, 96+offsetY
+    clone
+    setCostume "f"
+    setXYpos 0, 96+offsetY
+    clone
+    setCostume "a"
+    setXYpos 48, 96+offsetY
+    clone
+    setCostume "5"
+    setXYpos 96, 96+offsetY
+    clone
+    setCostume "a"
+    setXYpos 120, 96+offsetY
+    clone
+    setCostume "f"
+    setXYpos -120, 72+offsetY
+    clone
+    setCostume "f"
+    setXYpos -48, 72+offsetY
+    clone
+    setCostume "f"
+    setXYpos 48, 72+offsetY
+    clone
+    setCostume "f"
+    setXYpos 120, 72+offsetY
+    clone
+    setCostume "a"
+    setXYpos -72, 48+offsetY
+    clone
+    setCostume "f"
+    setXYpos 0, 48+offsetY
+    clone
+    setCostume "3"
+    setXYpos 48, 48+offsetY
+    clone
+    setCostume "f"
+    setXYpos -144, 24+offsetY
+    clone
+    setCostume "f"
+    setXYpos -120, 24+offsetY
+    clone
+    setCostume "5"
+    setXYpos -96, 24+offsetY
+    clone
+    setCostume "f"
+    setXYpos 0, 24+offsetY
+    clone
+    setCostume "a"
+    setXYpos 96, 24+offsetY
+    clone
+    setCostume "f"
+    setXYpos 120, 24+offsetY
+    clone
+    setCostume "f"
+    setXYpos 144, 24+offsetY
+    clone
+    setCostume "a"
+    setXYpos -48, 0+offsetY
+    clone
+    setCostume "5"
+    setXYpos 48, 0+offsetY
+    clone
+    setCostume "f"
+    setXYpos -120, -24+offsetY
+    clone
+    setCostume "f"
+    setXYpos -96, -24+offsetY
+    clone
+    setCostume "3"
+    setXYpos -48, -24+offsetY
+    clone
+    setCostume "3"
+    setXYpos 48, -24+offsetY
+    clone
+    setCostume "a"
+    setXYpos 72, -24+offsetY
+    clone
+    setCostume "f"
+    setXYpos 96, -24+offsetY
+    clone
+    setCostume "f"
+    setXYpos 120, -24+offsetY
+    clone
+    setCostume "c"
+    setXYpos -48, -48+offsetY
+    clone
+    setCostume "c"
+    setXYpos 48, -48+offsetY
+    clone
+    setCostume "f"
+    setXYpos -120, -72+offsetY
+    clone
+    setCostume "f"
+    setXYpos -48, -72+offsetY
+    clone
+    setCostume "f"
+    setXYpos 48, -72+offsetY
+    clone
+    setCostume "f"
+    setXYpos -120, -96+offsetY
+    clone
+    setCostume "5"
+    setXYpos -96, -96+offsetY
+    clone
+    setCostume "3"
+    setXYpos -24, -96+offsetY
+    clone
+    setCostume "3"
+    setXYpos 24, -96+offsetY
+    clone
+    setCostume "a"
+    setXYpos 96, -96+offsetY
+    clone
+    setCostume "f"
+    setXYpos 120, -96+offsetY
+    clone
+    setCostume "3"
+    setXYpos -96, -120+offsetY
+    clone
+    if section == 2 {
+    setCostume "8"
+    setXYpos -24, -120+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "c"
+    setXYpos 0, -120+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "4"
+    setXYpos 24, -120+offsetY
+    clone
+    }
+    setCostume "c"
+    setXYpos -96, -144+offsetY
+    clone
+    if section == 2 {
+    setCostume "a"
+    setXYpos -24, -144+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "5"
+    setXYpos 24, -144+offsetY
+    clone
+    }
+    setCostume "c"
+    setXYpos 96, -144+offsetY
+    clone
+  } else if targetStage == 7 {
+    if section == 2 {
+    setCostume "8"
+    setXYpos -24, -120+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "c"
+    setXYpos 0, -120+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "4"
+    setXYpos 24, -120+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "a"
+    setXYpos -24, -144+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "5"
+    setXYpos 24, -144+offsetY
+    clone
+    }
+  } else if targetStage == 8 {
+    setCostume "f"
+    setXYpos -96, 144+offsetY
+    clone
+    if section == 0 {
+    setCostume "f"
+    setXYpos -24, 144+offsetY
+    clone
+    }
+    if section == 0 {
+    setCostume "c"
+    setXYpos 24, 144+offsetY
+    clone
+    }
+    setCostume "f"
+    setXYpos 72, 144+offsetY
+    clone
+    setCostume "f"
+    setXYpos -120, 120+offsetY
+    clone
+    setCostume "f"
+    setXYpos -96, 120+offsetY
+    clone
+    setCostume "f"
+    setXYpos -72, 120+offsetY
+    clone
+    setCostume "f"
+    setXYpos -24, 120+offsetY
+    clone
+    setCostume "f"
+    setXYpos 72, 120+offsetY
+    clone
+    setCostume "5"
+    setXYpos 96, 120+offsetY
+    clone
+    setCostume "3"
+    setXYpos -24, 96+offsetY
+    clone
+    setCostume "f"
+    setXYpos 24, 96+offsetY
+    clone
+    setCostume "3"
+    setXYpos 72, 96+offsetY
+    clone
+    setCostume "a"
+    setXYpos 120, 96+offsetY
+    clone
+    setCostume "5"
+    setXYpos 144, 96+offsetY
+    clone
+    setCostume "f"
+    setXYpos -120, 48+offsetY
+    clone
+    setCostume "c"
+    setXYpos 0, 48+offsetY
+    clone
+    setCostume "c"
+    setXYpos 24, 48+offsetY
+    clone
+    setCostume "f"
+    setXYpos -96, 24+offsetY
+    clone
+    setCostume "a"
+    setXYpos -24, 24+offsetY
+    clone
+    setCostume "f"
+    setXYpos 0, 24+offsetY
+    clone
+    setCostume "f"
+    setXYpos 24, 24+offsetY
+    clone
+    setCostume "3"
+    setXYpos 48, 24+offsetY
+    clone
+    setCostume "f"
+    setXYpos 72, 24+offsetY
+    clone
+    setCostume "3"
+    setXYpos 96, 24+offsetY
+    clone
+    setCostume "f"
+    setXYpos -144, 0+offsetY
+    clone
+    setCostume "f"
+    setXYpos -120, 0+offsetY
+    clone
+    setCostume "f"
+    setXYpos -72, 0+offsetY
+    clone
+    setCostume "a"
+    setXYpos -24, 0+offsetY
+    clone
+    setCostume "f"
+    setXYpos 0, 0+offsetY
+    clone
+    setCostume "f"
+    setXYpos 24, 0+offsetY
+    clone
+    setCostume "f"
+    setXYpos 72, 0+offsetY
+    clone
+    setCostume "f"
+    setXYpos 144, 0+offsetY
+    clone
+    setCostume "a"
+    setXYpos -72, -72+offsetY
+    clone
+    setCostume "c"
+    setXYpos 0, -72+offsetY
+    clone
+    setCostume "c"
+    setXYpos 24, -72+offsetY
+    clone
+    setCostume "f"
+    setXYpos -96, -96+offsetY
+    clone
+    setCostume "5"
+    setXYpos -48, -96+offsetY
+    clone
+    setCostume "a"
+    setXYpos 24, -96+offsetY
+    clone
+    setCostume "c"
+    setXYpos 96, -96+offsetY
+    clone
+    setCostume "f"
+    setXYpos 120, -96+offsetY
+    clone
+    setCostume "f"
+    setXYpos -96, -120+offsetY
+    clone
+    setCostume "5"
+    setXYpos -48, -120+offsetY
+    clone
+    if section == 2 {
+    setCostume "8"
+    setXYpos -24, -120+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "c"
+    setXYpos 0, -120+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "4"
+    setXYpos 24, -120+offsetY
+    clone
+    }
+    setCostume "3"
+    setXYpos 72, -120+offsetY
+    clone
+    setCostume "f"
+    setXYpos 120, -120+offsetY
+    clone
+    if section == 2 {
+    setCostume "a"
+    setXYpos -24, -144+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "5"
+    setXYpos 24, -144+offsetY
+    clone
+    }
+    setCostume "c"
+    setXYpos 72, -144+offsetY
+    clone
+    setCostume "3"
+    setXYpos 120, -144+offsetY
+    clone
+  } else if targetStage == 9 {
+    setCostume "f"
+    setXYpos -72, 144+offsetY
+    clone
+    setCostume "f"
+    setXYpos -144, 120+offsetY
+    clone
+    setCostume "f"
+    setXYpos 144, 120+offsetY
+    clone
+    setCostume "f"
+    setXYpos -120, 0+offsetY
+    clone
+    setCostume "f"
+    setXYpos 120, 0+offsetY
+    clone
+    setCostume "f"
+    setXYpos -144, -72+offsetY
+    clone
+    setCostume "f"
+    setXYpos 144, -72+offsetY
+    clone
+    setCostume "f"
+    setXYpos -144, -96+offsetY
+    clone
+    setCostume "f"
+    setXYpos 144, -96+offsetY
+    clone
+    setCostume "c"
+    setXYpos -96, -120+offsetY
+    clone
+    if section == 2 {
+    setCostume "8"
+    setXYpos -24, -120+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "c"
+    setXYpos 0, -120+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "4"
+    setXYpos 24, -120+offsetY
+    clone
+    }
+    setCostume "c"
+    setXYpos 96, -120+offsetY
+    clone
+    setCostume "f"
+    setXYpos -96, -144+offsetY
+    clone
+    setCostume "f"
+    setXYpos -72, -144+offsetY
+    clone
+    if section == 2 {
+    setCostume "a"
+    setXYpos -24, -144+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "5"
+    setXYpos 24, -144+offsetY
+    clone
+    }
+    setCostume "f"
+    setXYpos 72, -144+offsetY
+    clone
+    setCostume "f"
+    setXYpos 96, -144+offsetY
+    clone
+  } else if targetStage == 10 {
+    setCostume "a"
+    setXYpos -120, 120+offsetY
+    clone
+    setCostume "3"
+    setXYpos -96, 120+offsetY
+    clone
+    setCostume "f"
+    setXYpos -72, 120+offsetY
+    clone
+    setCostume "f"
+    setXYpos 96, 120+offsetY
+    clone
+    setCostume "3"
+    setXYpos 120, 120+offsetY
+    clone
+    setCostume "5"
+    setXYpos 144, 120+offsetY
+    clone
+    setCostume "a"
+    setXYpos -144, 96+offsetY
+    clone
+    setCostume "3"
+    setXYpos -120, 96+offsetY
+    clone
+    setCostume "f"
+    setXYpos -48, 96+offsetY
+    clone
+    setCostume "f"
+    setXYpos 72, 96+offsetY
+    clone
+    setCostume "a"
+    setXYpos 144, 96+offsetY
+    clone
+    setCostume "f"
+    setXYpos -144, 72+offsetY
+    clone
+    setCostume "f"
+    setXYpos -48, 72+offsetY
+    clone
+    setCostume "f"
+    setXYpos 72, 72+offsetY
+    clone
+    setCostume "a"
+    setXYpos 144, 72+offsetY
+    clone
+    setCostume "f"
+    setXYpos -144, 48+offsetY
+    clone
+    setCostume "f"
+    setXYpos -48, 48+offsetY
+    clone
+    setCostume "f"
+    setXYpos 72, 48+offsetY
+    clone
+    setCostume "f"
+    setXYpos 144, 48+offsetY
+    clone
+    setCostume "a"
+    setXYpos -144, 24+offsetY
+    clone
+    setCostume "c"
+    setXYpos -120, 24+offsetY
+    clone
+    setCostume "c"
+    setXYpos -96, 24+offsetY
+    clone
+    setCostume "f"
+    setXYpos -72, 24+offsetY
+    clone
+    setCostume "f"
+    setXYpos 96, 24+offsetY
+    clone
+    setCostume "f"
+    setXYpos 120, 24+offsetY
+    clone
+    setCostume "f"
+    setXYpos 144, 24+offsetY
+    clone
+    setCostume "f"
+    setXYpos -120, 0+offsetY
+    clone
+    setCostume "f"
+    setXYpos -96, 0+offsetY
+    clone
+    setCostume "f"
+    setXYpos -72, 0+offsetY
+    clone
+    setCostume "f"
+    setXYpos 0, 0+offsetY
+    clone
+    setCostume "f"
+    setXYpos 72, 0+offsetY
+    clone
+    setCostume "f"
+    setXYpos 96, 0+offsetY
+    clone
+    setCostume "f"
+    setXYpos 120, 0+offsetY
+    clone
+    setCostume "5"
+    setXYpos 144, 0+offsetY
+    clone
+    setCostume "f"
+    setXYpos -96, -24+offsetY
+    clone
+    setCostume "f"
+    setXYpos -72, -24+offsetY
+    clone
+    setCostume "f"
+    setXYpos 0, -24+offsetY
+    clone
+    setCostume "f"
+    setXYpos 72, -24+offsetY
+    clone
+    setCostume "f"
+    setXYpos 96, -24+offsetY
+    clone
+    setCostume "5"
+    setXYpos 120, -24+offsetY
+    clone
+    setCostume "f"
+    setXYpos -96, -48+offsetY
+    clone
+    setCostume "f"
+    setXYpos -72, -48+offsetY
+    clone
+    setCostume "f"
+    setXYpos -48, -48+offsetY
+    clone
+    setCostume "f"
+    setXYpos -24, -48+offsetY
+    clone
+    setCostume "f"
+    setXYpos 0, -48+offsetY
+    clone
+    setCostume "f"
+    setXYpos 24, -48+offsetY
+    clone
+    setCostume "f"
+    setXYpos 48, -48+offsetY
+    clone
+    setCostume "f"
+    setXYpos 72, -48+offsetY
+    clone
+    setCostume "f"
+    setXYpos 96, -48+offsetY
+    clone
+    setCostume "5"
+    setXYpos 120, -48+offsetY
+    clone
+    setCostume "f"
+    setXYpos -144, -72+offsetY
+    clone
+    setCostume "3"
+    setXYpos -96, -72+offsetY
+    clone
+    setCostume "3"
+    setXYpos -72, -72+offsetY
+    clone
+    setCostume "3"
+    setXYpos -48, -72+offsetY
+    clone
+    setCostume "3"
+    setXYpos 24, -72+offsetY
+    clone
+    setCostume "3"
+    setXYpos 48, -72+offsetY
+    clone
+    setCostume "3"
+    setXYpos 72, -72+offsetY
+    clone
+    setCostume "3"
+    setXYpos 96, -72+offsetY
+    clone
+    setCostume "f"
+    setXYpos 144, -72+offsetY
+    clone
+    setCostume "f"
+    setXYpos -144, -96+offsetY
+    clone
+    setCostume "f"
+    setXYpos 144, -96+offsetY
+    clone
+    if section == 2 {
+    setCostume "8"
+    setXYpos -24, -120+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "c"
+    setXYpos 0, -120+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "4"
+    setXYpos 24, -120+offsetY
+    clone
+    }
+    setCostume "5"
+    setXYpos -72, -144+offsetY
+    clone
+    if section == 2 {
+    setCostume "a"
+    setXYpos -24, -144+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "5"
+    setXYpos 24, -144+offsetY
+    clone
+    }
+    setCostume "5"
+    setXYpos 96, -144+offsetY
+    clone
+  } else if targetStage == 11 {
+    if section == 0 {
+    setCostume "f"
+    setXYpos 24, 144+offsetY
+    clone
+    }
+    setCostume "f"
+    setXYpos 72, 144+offsetY
+    clone
+    setCostume "f"
+    setXYpos 96, 144+offsetY
+    clone
+    setCostume "a"
+    setXYpos -120, 120+offsetY
+    clone
+    setCostume "f"
+    setXYpos -96, 120+offsetY
+    clone
+    setCostume "f"
+    setXYpos -72, 120+offsetY
+    clone
+    setCostume "f"
+    setXYpos -48, 120+offsetY
+    clone
+    setCostume "f"
+    setXYpos -24, 120+offsetY
+    clone
+    setCostume "f"
+    setXYpos 24, 120+offsetY
+    clone
+    setCostume "5"
+    setXYpos -72, 96+offsetY
+    clone
+    setCostume "f"
+    setXYpos -24, 96+offsetY
+    clone
+    setCostume "f"
+    setXYpos 24, 96+offsetY
+    clone
+    setCostume "f"
+    setXYpos 48, 96+offsetY
+    clone
+    setCostume "a"
+    setXYpos -120, 72+offsetY
+    clone
+    setCostume "a"
+    setXYpos -120, 48+offsetY
+    clone
+    setCostume "f"
+    setXYpos -72, 48+offsetY
+    clone
+    setCostume "f"
+    setXYpos -48, 48+offsetY
+    clone
+    setCostume "f"
+    setXYpos -24, 48+offsetY
+    clone
+    setCostume "f"
+    setXYpos 24, 48+offsetY
+    clone
+    setCostume "f"
+    setXYpos 48, 48+offsetY
+    clone
+    setCostume "3"
+    setXYpos 120, 48+offsetY
+    clone
+    setCostume "3"
+    setXYpos -120, 24+offsetY
+    clone
+    setCostume "3"
+    setXYpos -96, 24+offsetY
+    clone
+    setCostume "3"
+    setXYpos -72, 24+offsetY
+    clone
+    setCostume "f"
+    setXYpos 24, 24+offsetY
+    clone
+    setCostume "a"
+    setXYpos 144, 24+offsetY
+    clone
+    setCostume "a"
+    setXYpos -144, 0+offsetY
+    clone
+    setCostume "f"
+    setXYpos -120, 0+offsetY
+    clone
+    setCostume "f"
+    setXYpos -96, 0+offsetY
+    clone
+    setCostume "f"
+    setXYpos -72, 0+offsetY
+    clone
+    setCostume "f"
+    setXYpos 120, -24+offsetY
+    clone
+    setCostume "f"
+    setXYpos -120, -48+offsetY
+    clone
+    setCostume "f"
+    setXYpos 120, -48+offsetY
+    clone
+    setCostume "a"
+    setXYpos -144, -72+offsetY
+    clone
+    setCostume "f"
+    setXYpos -120, -72+offsetY
+    clone
+    setCostume "f"
+    setXYpos 120, -72+offsetY
+    clone
+    setCostume "5"
+    setXYpos 144, -72+offsetY
+    clone
+    setCostume "f"
+    setXYpos -120, -96+offsetY
+    clone
+    setCostume "f"
+    setXYpos 72, -96+offsetY
+    clone
+    setCostume "f"
+    setXYpos 96, -96+offsetY
+    clone
+    setCostume "f"
+    setXYpos 120, -96+offsetY
+    clone
+    if section == 2 {
+    setCostume "8"
+    setXYpos -24, -120+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "c"
+    setXYpos 0, -120+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "4"
+    setXYpos 24, -120+offsetY
+    clone
+    }
+    setCostume "f"
+    setXYpos 72, -120+offsetY
+    clone
+    setCostume "a"
+    setXYpos 120, -120+offsetY
+    clone
+    setCostume "c"
+    setXYpos -120, -144+offsetY
+    clone
+    if section == 2 {
+    setCostume "a"
+    setXYpos -24, -144+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "5"
+    setXYpos 24, -144+offsetY
+    clone
+    }
+  } else if targetStage == 12 {
+    if section == 0 {
+    setCostume "f"
+    setXYpos 24, 144+offsetY
+    clone
+    }
+    setCostume "f"
+    setXYpos 48, 144+offsetY
+    clone
+    setCostume "f"
+    setXYpos 72, 144+offsetY
+    clone
+    setCostume "f"
+    setXYpos -120, 120+offsetY
+    clone
+    setCostume "f"
+    setXYpos -96, 120+offsetY
+    clone
+    setCostume "f"
+    setXYpos -72, 120+offsetY
+    clone
+    setCostume "c"
+    setXYpos -48, 120+offsetY
+    clone
+    setCostume "c"
+    setXYpos 0, 120+offsetY
+    clone
+    setCostume "f"
+    setXYpos 72, 120+offsetY
+    clone
+    setCostume "f"
+    setXYpos -48, 96+offsetY
+    clone
+    setCostume "3"
+    setXYpos 0, 96+offsetY
+    clone
+    setCostume "f"
+    setXYpos 120, 96+offsetY
+    clone
+    setCostume "f"
+    setXYpos 144, 96+offsetY
+    clone
+    setCostume "f"
+    setXYpos 24, 72+offsetY
+    clone
+    setCostume "5"
+    setXYpos 48, 72+offsetY
+    clone
+    setCostume "f"
+    setXYpos 120, 72+offsetY
+    clone
+    setCostume "f"
+    setXYpos 24, 48+offsetY
+    clone
+    setCostume "f"
+    setXYpos 120, 48+offsetY
+    clone
+    setCostume "f"
+    setXYpos -144, 24+offsetY
+    clone
+    setCostume "f"
+    setXYpos -96, 24+offsetY
+    clone
+    setCostume "f"
+    setXYpos -72, 24+offsetY
+    clone
+    setCostume "f"
+    setXYpos -48, 24+offsetY
+    clone
+    setCostume "f"
+    setXYpos 96, 24+offsetY
+    clone
+    setCostume "f"
+    setXYpos 120, 24+offsetY
+    clone
+    setCostume "f"
+    setXYpos 0, -24+offsetY
+    clone
+    setCostume "f"
+    setXYpos 24, -24+offsetY
+    clone
+    setCostume "f"
+    setXYpos -24, -48+offsetY
+    clone
+    setCostume "f"
+    setXYpos -144, -72+offsetY
+    clone
+    setCostume "f"
+    setXYpos -120, -72+offsetY
+    clone
+    setCostume "f"
+    setXYpos -96, -72+offsetY
+    clone
+    setCostume "f"
+    setXYpos -96, -96+offsetY
+    clone
+    setCostume "f"
+    setXYpos 72, -96+offsetY
+    clone
+    setCostume "f"
+    setXYpos 96, -96+offsetY
+    clone
+    setCostume "a"
+    setXYpos 144, -96+offsetY
+    clone
+    setCostume "f"
+    setXYpos -144, -120+offsetY
+    clone
+    if section == 2 {
+    setCostume "8"
+    setXYpos -24, -120+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "c"
+    setXYpos 0, -120+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "4"
+    setXYpos 24, -120+offsetY
+    clone
+    }
+    setCostume "f"
+    setXYpos 72, -120+offsetY
+    clone
+    setCostume "f"
+    setXYpos 144, -120+offsetY
+    clone
+    if section == 2 {
+    setCostume "a"
+    setXYpos -24, -144+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "5"
+    setXYpos 24, -144+offsetY
+    clone
+    }
+  } else if targetStage == 13 {
+    setCostume "c"
+    setXYpos -48, 144+offsetY
+    clone
+    setCostume "c"
+    setXYpos 48, 144+offsetY
+    clone
+    setCostume "f"
+    setXYpos -120, 120+offsetY
+    clone
+    setCostume "f"
+    setXYpos -96, 120+offsetY
+    clone
+    setCostume "f"
+    setXYpos -72, 120+offsetY
+    clone
+    setCostume "f"
+    setXYpos -48, 120+offsetY
+    clone
+    setCostume "f"
+    setXYpos 48, 120+offsetY
+    clone
+    setCostume "f"
+    setXYpos 72, 120+offsetY
+    clone
+    setCostume "f"
+    setXYpos 96, 120+offsetY
+    clone
+    setCostume "f"
+    setXYpos 120, 120+offsetY
+    clone
+    setCostume "f"
+    setXYpos -120, 96+offsetY
+    clone
+    setCostume "f"
+    setXYpos 0, 96+offsetY
+    clone
+    setCostume "f"
+    setXYpos -72, 72+offsetY
+    clone
+    setCostume "3"
+    setXYpos -48, 72+offsetY
+    clone
+    setCostume "3"
+    setXYpos 48, 72+offsetY
+    clone
+    setCostume "f"
+    setXYpos 72, 72+offsetY
+    clone
+    setCostume "f"
+    setXYpos 120, 72+offsetY
+    clone
+    setCostume "f"
+    setXYpos 144, 72+offsetY
+    clone
+    setCostume "f"
+    setXYpos -120, 48+offsetY
+    clone
+    setCostume "5"
+    setXYpos -72, 48+offsetY
+    clone
+    setCostume "a"
+    setXYpos 72, 48+offsetY
+    clone
+    setCostume "f"
+    setXYpos 144, 48+offsetY
+    clone
+    setCostume "3"
+    setXYpos -120, 24+offsetY
+    clone
+    setCostume "f"
+    setXYpos 144, 24+offsetY
+    clone
+    setCostume "f"
+    setXYpos -144, 0+offsetY
+    clone
+    setCostume "c"
+    setXYpos 120, 0+offsetY
+    clone
+    setCostume "f"
+    setXYpos 144, 0+offsetY
+    clone
+    setCostume "f"
+    setXYpos -144, -24+offsetY
+    clone
+    setCostume "5"
+    setXYpos -72, -24+offsetY
+    clone
+    setCostume "a"
+    setXYpos 72, -24+offsetY
+    clone
+    setCostume "f"
+    setXYpos 120, -24+offsetY
+    clone
+    setCostume "f"
+    setXYpos -144, -48+offsetY
+    clone
+    setCostume "f"
+    setXYpos -120, -48+offsetY
+    clone
+    setCostume "f"
+    setXYpos -72, -48+offsetY
+    clone
+    setCostume "c"
+    setXYpos -48, -48+offsetY
+    clone
+    setCostume "c"
+    setXYpos 48, -48+offsetY
+    clone
+    setCostume "f"
+    setXYpos 72, -48+offsetY
+    clone
+    setCostume "f"
+    setXYpos -144, -72+offsetY
+    clone
+    setCostume "f"
+    setXYpos 0, -72+offsetY
+    clone
+    setCostume "f"
+    setXYpos 120, -72+offsetY
+    clone
+    setCostume "f"
+    setXYpos -144, -96+offsetY
+    clone
+    setCostume "f"
+    setXYpos -120, -96+offsetY
+    clone
+    setCostume "f"
+    setXYpos -96, -96+offsetY
+    clone
+    setCostume "f"
+    setXYpos -72, -96+offsetY
+    clone
+    setCostume "f"
+    setXYpos -48, -96+offsetY
+    clone
+    setCostume "f"
+    setXYpos 48, -96+offsetY
+    clone
+    setCostume "f"
+    setXYpos 72, -96+offsetY
+    clone
+    setCostume "f"
+    setXYpos 96, -96+offsetY
+    clone
+    setCostume "f"
+    setXYpos -144, -120+offsetY
+    clone
+    setCostume "f"
+    setXYpos -120, -120+offsetY
+    clone
+    setCostume "3"
+    setXYpos -48, -120+offsetY
+    clone
+    if section == 2 {
+    setCostume "8"
+    setXYpos -24, -120+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "c"
+    setXYpos 0, -120+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "4"
+    setXYpos 24, -120+offsetY
+    clone
+    }
+    setCostume "3"
+    setXYpos 48, -120+offsetY
+    clone
+    setCostume "f"
+    setXYpos 120, -120+offsetY
+    clone
+    setCostume "f"
+    setXYpos -144, -144+offsetY
+    clone
+    setCostume "f"
+    setXYpos -120, -144+offsetY
+    clone
+    if section == 2 {
+    setCostume "a"
+    setXYpos -24, -144+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "5"
+    setXYpos 24, -144+offsetY
+    clone
+    }
+  } else if targetStage == 14 {
+    setCostume "c"
+    setXYpos -48, 120+offsetY
+    clone
+    setCostume "f"
+    setXYpos -24, 120+offsetY
+    clone
+    setCostume "f"
+    setXYpos 0, 120+offsetY
+    clone
+    setCostume "f"
+    setXYpos 24, 120+offsetY
+    clone
+    setCostume "c"
+    setXYpos 48, 120+offsetY
+    clone
+    setCostume "a"
+    setXYpos -72, 96+offsetY
+    clone
+    setCostume "f"
+    setXYpos -48, 96+offsetY
+    clone
+    setCostume "f"
+    setXYpos -24, 96+offsetY
+    clone
+    setCostume "f"
+    setXYpos 0, 96+offsetY
+    clone
+    setCostume "f"
+    setXYpos 24, 96+offsetY
+    clone
+    setCostume "f"
+    setXYpos 48, 96+offsetY
+    clone
+    setCostume "5"
+    setXYpos 72, 96+offsetY
+    clone
+    setCostume "f"
+    setXYpos -72, 72+offsetY
+    clone
+    setCostume "f"
+    setXYpos -48, 72+offsetY
+    clone
+    setCostume "f"
+    setXYpos 0, 72+offsetY
+    clone
+    setCostume "f"
+    setXYpos 48, 72+offsetY
+    clone
+    setCostume "f"
+    setXYpos 72, 72+offsetY
+    clone
+    setCostume "f"
+    setXYpos -72, 48+offsetY
+    clone
+    setCostume "f"
+    setXYpos 0, 48+offsetY
+    clone
+    setCostume "f"
+    setXYpos 72, 48+offsetY
+    clone
+    setCostume "f"
+    setXYpos -72, 24+offsetY
+    clone
+    setCostume "f"
+    setXYpos -48, 24+offsetY
+    clone
+    setCostume "f"
+    setXYpos -24, 24+offsetY
+    clone
+    setCostume "f"
+    setXYpos 0, 24+offsetY
+    clone
+    setCostume "f"
+    setXYpos 24, 24+offsetY
+    clone
+    setCostume "f"
+    setXYpos 48, 24+offsetY
+    clone
+    setCostume "f"
+    setXYpos 72, 24+offsetY
+    clone
+    setCostume "f"
+    setXYpos -48, 0+offsetY
+    clone
+    setCostume "f"
+    setXYpos 0, 0+offsetY
+    clone
+    setCostume "f"
+    setXYpos 48, 0+offsetY
+    clone
+    setCostume "f"
+    setXYpos -48, -24+offsetY
+    clone
+    setCostume "f"
+    setXYpos -24, -24+offsetY
+    clone
+    setCostume "f"
+    setXYpos 0, -24+offsetY
+    clone
+    setCostume "f"
+    setXYpos 24, -24+offsetY
+    clone
+    setCostume "f"
+    setXYpos 48, -24+offsetY
+    clone
+    setCostume "a"
+    setXYpos -48, -48+offsetY
+    clone
+    setCostume "a"
+    setXYpos -24, -48+offsetY
+    clone
+    setCostume "a"
+    setXYpos 0, -48+offsetY
+    clone
+    setCostume "a"
+    setXYpos 24, -48+offsetY
+    clone
+    setCostume "a"
+    setXYpos 48, -48+offsetY
+    clone
+    setCostume "5"
+    setXYpos -48, -72+offsetY
+    clone
+    setCostume "5"
+    setXYpos -24, -72+offsetY
+    clone
+    setCostume "5"
+    setXYpos 0, -72+offsetY
+    clone
+    setCostume "5"
+    setXYpos 24, -72+offsetY
+    clone
+    setCostume "5"
+    setXYpos 48, -72+offsetY
+    clone
+    setCostume "5"
+    setXYpos -144, -120+offsetY
+    clone
+    setCostume "5"
+    setXYpos -120, -120+offsetY
+    clone
+    setCostume "5"
+    setXYpos -96, -120+offsetY
+    clone
+    if section == 2 {
+    setCostume "8"
+    setXYpos -24, -120+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "c"
+    setXYpos 0, -120+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "4"
+    setXYpos 24, -120+offsetY
+    clone
+    }
+    setCostume "a"
+    setXYpos 96, -120+offsetY
+    clone
+    setCostume "a"
+    setXYpos 120, -120+offsetY
+    clone
+    setCostume "a"
+    setXYpos 144, -120+offsetY
+    clone
+    if section == 2 {
+    setCostume "a"
+    setXYpos -24, -144+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "5"
+    setXYpos 24, -144+offsetY
+    clone
+    }
+  } else if targetStage == 15 {
+    setCostume "f"
+    setXYpos -48, 144+offsetY
+    clone
+    if section == 0 {
+    setCostume "f"
+    setXYpos -24, 144+offsetY
+    clone
+    }
+    setCostume "f"
+    setXYpos 48, 144+offsetY
+    clone
+    setCostume "f"
+    setXYpos -72, 120+offsetY
+    clone
+    setCostume "f"
+    setXYpos -48, 120+offsetY
+    clone
+    setCostume "f"
+    setXYpos 48, 120+offsetY
+    clone
+    setCostume "f"
+    setXYpos 48, 96+offsetY
+    clone
+    setCostume "f"
+    setXYpos 72, 96+offsetY
+    clone
+    setCostume "f"
+    setXYpos -96, 72+offsetY
+    clone
+    setCostume "f"
+    setXYpos -48, 72+offsetY
+    clone
+    setCostume "f"
+    setXYpos -24, 72+offsetY
+    clone
+    setCostume "f"
+    setXYpos 0, 72+offsetY
+    clone
+    setCostume "f"
+    setXYpos 120, 72+offsetY
+    clone
+    setCostume "f"
+    setXYpos -96, 48+offsetY
+    clone
+    setCostume "f"
+    setXYpos 72, 48+offsetY
+    clone
+    setCostume "f"
+    setXYpos 120, 48+offsetY
+    clone
+    setCostume "f"
+    setXYpos -72, 24+offsetY
+    clone
+    setCostume "f"
+    setXYpos 72, 24+offsetY
+    clone
+    setCostume "f"
+    setXYpos 120, 24+offsetY
+    clone
+    setCostume "f"
+    setXYpos -120, 0+offsetY
+    clone
+    setCostume "f"
+    setXYpos -96, 0+offsetY
+    clone
+    setCostume "f"
+    setXYpos -72, 0+offsetY
+    clone
+    setCostume "f"
+    setXYpos -48, 0+offsetY
+    clone
+    setCostume "f"
+    setXYpos -24, 0+offsetY
+    clone
+    setCostume "f"
+    setXYpos 48, 0+offsetY
+    clone
+    setCostume "f"
+    setXYpos 72, 0+offsetY
+    clone
+    setCostume "5"
+    setXYpos 96, 0+offsetY
+    clone
+    setCostume "f"
+    setXYpos -96, -24+offsetY
+    clone
+    setCostume "f"
+    setXYpos -72, -24+offsetY
+    clone
+    setCostume "f"
+    setXYpos 24, -24+offsetY
+    clone
+    setCostume "3"
+    setXYpos 48, -24+offsetY
+    clone
+    setCostume "f"
+    setXYpos -120, -48+offsetY
+    clone
+    setCostume "f"
+    setXYpos -72, -48+offsetY
+    clone
+    setCostume "c"
+    setXYpos 0, -48+offsetY
+    clone
+    setCostume "3"
+    setXYpos 24, -48+offsetY
+    clone
+    setCostume "f"
+    setXYpos 96, -48+offsetY
+    clone
+    setCostume "5"
+    setXYpos 120, -48+offsetY
+    clone
+    setCostume "f"
+    setXYpos -120, -72+offsetY
+    clone
+    setCostume "a"
+    setXYpos -48, -72+offsetY
+    clone
+    setCostume "f"
+    setXYpos -24, -72+offsetY
+    clone
+    setCostume "3"
+    setXYpos 0, -72+offsetY
+    clone
+    setCostume "f"
+    setXYpos 72, -72+offsetY
+    clone
+    setCostume "f"
+    setXYpos -120, -96+offsetY
+    clone
+    setCostume "f"
+    setXYpos -96, -96+offsetY
+    clone
+    setCostume "5"
+    setXYpos -72, -96+offsetY
+    clone
+    setCostume "a"
+    setXYpos -48, -96+offsetY
+    clone
+    setCostume "3"
+    setXYpos -24, -96+offsetY
+    clone
+    setCostume "c"
+    setXYpos 48, -96+offsetY
+    clone
+    setCostume "f"
+    setXYpos 96, -96+offsetY
+    clone
+    setCostume "f"
+    setXYpos -96, -120+offsetY
+    clone
+    if section == 2 {
+    setCostume "8"
+    setXYpos -24, -120+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "c"
+    setXYpos 0, -120+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "4"
+    setXYpos 24, -120+offsetY
+    clone
+    }
+    setCostume "f"
+    setXYpos 48, -120+offsetY
+    clone
+    setCostume "3"
+    setXYpos 96, -120+offsetY
+    clone
+    setCostume "3"
+    setXYpos -96, -144+offsetY
+    clone
+    if section == 2 {
+    setCostume "a"
+    setXYpos -24, -144+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "5"
+    setXYpos 24, -144+offsetY
+    clone
+    }
+  } else if targetStage == 16 {
+    setCostume "c"
+    setXYpos 24, 72+offsetY
+    clone
+    setCostume "c"
+    setXYpos 72, 24+offsetY
+    clone
+    setCostume "c"
+    setXYpos 120, -24+offsetY
+    clone
+    setCostume "f"
+    setXYpos -144, -72+offsetY
+    clone
+    setCostume "f"
+    setXYpos -144, -96+offsetY
+    clone
+    setCostume "f"
+    setXYpos -120, -96+offsetY
+    clone
+    setCostume "f"
+    setXYpos -120, -120+offsetY
+    clone
+    setCostume "f"
+    setXYpos -96, -120+offsetY
+    clone
+    if section == 2 {
+    setCostume "8"
+    setXYpos -24, -120+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "c"
+    setXYpos 0, -120+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "4"
+    setXYpos 24, -120+offsetY
+    clone
+    }
+    setCostume "f"
+    setXYpos -96, -144+offsetY
+    clone
+    setCostume "f"
+    setXYpos -72, -144+offsetY
+    clone
+    if section == 2 {
+    setCostume "a"
+    setXYpos -24, -144+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "5"
+    setXYpos 24, -144+offsetY
+    clone
+    }
+  } else if targetStage == 17 {
+    setCostume "c"
+    setXYpos -48, 144+offsetY
+    clone
+    setCostume "c"
+    setXYpos 96, 144+offsetY
+    clone
+    setCostume "f"
+    setXYpos -120, 120+offsetY
+    clone
+    setCostume "f"
+    setXYpos -72, 120+offsetY
+    clone
+    setCostume "f"
+    setXYpos -48, 120+offsetY
+    clone
+    setCostume "f"
+    setXYpos 96, 120+offsetY
+    clone
+    setCostume "f"
+    setXYpos 120, 120+offsetY
+    clone
+    setCostume "f"
+    setXYpos -120, 96+offsetY
+    clone
+    setCostume "f"
+    setXYpos -48, 96+offsetY
+    clone
+    setCostume "f"
+    setXYpos -48, 72+offsetY
+    clone
+    setCostume "f"
+    setXYpos 24, 72+offsetY
+    clone
+    setCostume "f"
+    setXYpos 0, 48+offsetY
+    clone
+    setCostume "f"
+    setXYpos 24, 48+offsetY
+    clone
+    setCostume "a"
+    setXYpos 48, 48+offsetY
+    clone
+    setCostume "5"
+    setXYpos 72, 48+offsetY
+    clone
+    setCostume "f"
+    setXYpos 24, 24+offsetY
+    clone
+    setCostume "a"
+    setXYpos 48, 24+offsetY
+    clone
+    setCostume "5"
+    setXYpos 72, 24+offsetY
+    clone
+    setCostume "f"
+    setXYpos -144, 0+offsetY
+    clone
+    setCostume "f"
+    setXYpos -120, 0+offsetY
+    clone
+    setCostume "f"
+    setXYpos -96, 0+offsetY
+    clone
+    setCostume "f"
+    setXYpos -72, 0+offsetY
+    clone
+    setCostume "f"
+    setXYpos 120, 0+offsetY
+    clone
+    setCostume "f"
+    setXYpos 144, 0+offsetY
+    clone
+    setCostume "f"
+    setXYpos -72, -24+offsetY
+    clone
+    setCostume "f"
+    setXYpos -48, -24+offsetY
+    clone
+    setCostume "f"
+    setXYpos -120, -48+offsetY
+    clone
+    setCostume "f"
+    setXYpos -96, -48+offsetY
+    clone
+    setCostume "f"
+    setXYpos -72, -48+offsetY
+    clone
+    setCostume "f"
+    setXYpos 48, -48+offsetY
+    clone
+    setCostume "f"
+    setXYpos 72, -48+offsetY
+    clone
+    setCostume "f"
+    setXYpos 120, -48+offsetY
+    clone
+    setCostume "f"
+    setXYpos -72, -72+offsetY
+    clone
+    setCostume "f"
+    setXYpos 72, -72+offsetY
+    clone
+    setCostume "f"
+    setXYpos 120, -72+offsetY
+    clone
+    setCostume "c"
+    setXYpos 96, -96+offsetY
+    clone
+    setCostume "f"
+    setXYpos 120, -96+offsetY
+    clone
+    setCostume "f"
+    setXYpos -144, -120+offsetY
+    clone
+    if section == 2 {
+    setCostume "8"
+    setXYpos -24, -120+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "c"
+    setXYpos 0, -120+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "4"
+    setXYpos 24, -120+offsetY
+    clone
+    }
+    setCostume "f"
+    setXYpos 72, -120+offsetY
+    clone
+    setCostume "f"
+    setXYpos -144, -144+offsetY
+    clone
+    setCostume "f"
+    setXYpos -120, -144+offsetY
+    clone
+    if section == 2 {
+    setCostume "a"
+    setXYpos -24, -144+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "5"
+    setXYpos 24, -144+offsetY
+    clone
+    }
+    setCostume "f"
+    setXYpos 72, -144+offsetY
+    clone
+    setCostume "f"
+    setXYpos 120, -144+offsetY
+    clone
+  } else if targetStage == 18 {
+    setCostume "f"
+    setXYpos -120, 120+offsetY
+    clone
+    setCostume "f"
+    setXYpos -144, 96+offsetY
+    clone
+    setCostume "f"
+    setXYpos -96, 96+offsetY
+    clone
+    setCostume "f"
+    setXYpos 0, 96+offsetY
+    clone
+    setCostume "f"
+    setXYpos 24, 96+offsetY
+    clone
+    setCostume "f"
+    setXYpos 48, 96+offsetY
+    clone
+    setCostume "f"
+    setXYpos 72, 96+offsetY
+    clone
+    setCostume "f"
+    setXYpos -120, 72+offsetY
+    clone
+    setCostume "f"
+    setXYpos -72, 72+offsetY
+    clone
+    setCostume "f"
+    setXYpos 0, 72+offsetY
+    clone
+    setCostume "f"
+    setXYpos 72, 72+offsetY
+    clone
+    setCostume "f"
+    setXYpos -96, 48+offsetY
+    clone
+    setCostume "f"
+    setXYpos 0, 48+offsetY
+    clone
+    setCostume "f"
+    setXYpos 72, 48+offsetY
+    clone
+    setCostume "f"
+    setXYpos 0, 24+offsetY
+    clone
+    setCostume "f"
+    setXYpos 48, 24+offsetY
+    clone
+    setCostume "f"
+    setXYpos 72, 24+offsetY
+    clone
+    setCostume "f"
+    setXYpos -96, 0+offsetY
+    clone
+    setCostume "f"
+    setXYpos -72, 0+offsetY
+    clone
+    setCostume "f"
+    setXYpos -24, 0+offsetY
+    clone
+    setCostume "f"
+    setXYpos -96, -24+offsetY
+    clone
+    setCostume "f"
+    setXYpos -24, -24+offsetY
+    clone
+    setCostume "f"
+    setXYpos -24, -48+offsetY
+    clone
+    setCostume "f"
+    setXYpos 48, -48+offsetY
+    clone
+    setCostume "f"
+    setXYpos 72, -48+offsetY
+    clone
+    setCostume "f"
+    setXYpos -96, -72+offsetY
+    clone
+    setCostume "f"
+    setXYpos -72, -72+offsetY
+    clone
+    setCostume "f"
+    setXYpos -48, -72+offsetY
+    clone
+    setCostume "f"
+    setXYpos -24, -72+offsetY
+    clone
+    setCostume "f"
+    setXYpos 48, -72+offsetY
+    clone
+    setCostume "f"
+    setXYpos 96, -96+offsetY
+    clone
+    setCostume "f"
+    setXYpos 120, -96+offsetY
+    clone
+    if section == 2 {
+    setCostume "8"
+    setXYpos -24, -120+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "c"
+    setXYpos 0, -120+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "4"
+    setXYpos 24, -120+offsetY
+    clone
+    }
+    setCostume "f"
+    setXYpos 96, -120+offsetY
+    clone
+    if section == 2 {
+    setCostume "a"
+    setXYpos -24, -144+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "5"
+    setXYpos 24, -144+offsetY
+    clone
+    }
+  } else if targetStage == 19 {
+    setCostume "f"
+    setXYpos -120, 144+offsetY
+    clone
+    setCostume "f"
+    setXYpos -72, 144+offsetY
+    clone
+    if section == 0 {
+    setCostume "f"
+    setXYpos -24, 144+offsetY
+    clone
+    }
+    if section == 0 {
+    setCostume "f"
+    setXYpos 24, 144+offsetY
+    clone
+    }
+    setCostume "f"
+    setXYpos 72, 144+offsetY
+    clone
+    setCostume "f"
+    setXYpos 120, 144+offsetY
+    clone
+    setCostume "f"
+    setXYpos -120, 120+offsetY
+    clone
+    setCostume "f"
+    setXYpos -72, 120+offsetY
+    clone
+    setCostume "f"
+    setXYpos -24, 120+offsetY
+    clone
+    setCostume "f"
+    setXYpos 24, 120+offsetY
+    clone
+    setCostume "f"
+    setXYpos 72, 120+offsetY
+    clone
+    setCostume "f"
+    setXYpos 120, 120+offsetY
+    clone
+    setCostume "c"
+    setXYpos -144, 72+offsetY
+    clone
+    setCostume "c"
+    setXYpos -96, 72+offsetY
+    clone
+    setCostume "f"
+    setXYpos -48, 72+offsetY
+    clone
+    setCostume "f"
+    setXYpos 48, 72+offsetY
+    clone
+    setCostume "c"
+    setXYpos 96, 72+offsetY
+    clone
+    setCostume "c"
+    setXYpos 144, 72+offsetY
+    clone
+    setCostume "f"
+    setXYpos -144, 48+offsetY
+    clone
+    setCostume "f"
+    setXYpos -96, 48+offsetY
+    clone
+    setCostume "3"
+    setXYpos -72, 48+offsetY
+    clone
+    setCostume "f"
+    setXYpos -48, 48+offsetY
+    clone
+    setCostume "f"
+    setXYpos 0, 48+offsetY
+    clone
+    setCostume "f"
+    setXYpos 48, 48+offsetY
+    clone
+    setCostume "3"
+    setXYpos 72, 48+offsetY
+    clone
+    setCostume "f"
+    setXYpos 96, 48+offsetY
+    clone
+    setCostume "f"
+    setXYpos 144, 48+offsetY
+    clone
+    setCostume "f"
+    setXYpos -48, 0+offsetY
+    clone
+    setCostume "f"
+    setXYpos 48, 0+offsetY
+    clone
+    setCostume "f"
+    setXYpos -48, -24+offsetY
+    clone
+    setCostume "3"
+    setXYpos -24, -24+offsetY
+    clone
+    setCostume "3"
+    setXYpos 24, -24+offsetY
+    clone
+    setCostume "f"
+    setXYpos 48, -24+offsetY
+    clone
+    setCostume "c"
+    setXYpos -144, -72+offsetY
+    clone
+    setCostume "c"
+    setXYpos -96, -72+offsetY
+    clone
+    setCostume "f"
+    setXYpos -48, -72+offsetY
+    clone
+    setCostume "f"
+    setXYpos 48, -72+offsetY
+    clone
+    setCostume "c"
+    setXYpos 96, -72+offsetY
+    clone
+    setCostume "c"
+    setXYpos 144, -72+offsetY
+    clone
+    setCostume "f"
+    setXYpos -120, -96+offsetY
+    clone
+    setCostume "f"
+    setXYpos -72, -96+offsetY
+    clone
+    setCostume "f"
+    setXYpos 72, -96+offsetY
+    clone
+    setCostume "f"
+    setXYpos 120, -96+offsetY
+    clone
+    setCostume "f"
+    setXYpos -120, -120+offsetY
+    clone
+    setCostume "f"
+    setXYpos -72, -120+offsetY
+    clone
+    if section == 2 {
+    setCostume "8"
+    setXYpos -24, -120+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "c"
+    setXYpos 0, -120+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "4"
+    setXYpos 24, -120+offsetY
+    clone
+    }
+    setCostume "f"
+    setXYpos 72, -120+offsetY
+    clone
+    setCostume "f"
+    setXYpos 120, -120+offsetY
+    clone
+    setCostume "3"
+    setXYpos -120, -144+offsetY
+    clone
+    setCostume "3"
+    setXYpos -72, -144+offsetY
+    clone
+    if section == 2 {
+    setCostume "a"
+    setXYpos -24, -144+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "5"
+    setXYpos 24, -144+offsetY
+    clone
+    }
+    setCostume "3"
+    setXYpos 72, -144+offsetY
+    clone
+    setCostume "3"
+    setXYpos 120, -144+offsetY
+    clone
+  } else if targetStage == 20 {
+    if section == 0 {
+    setCostume "f"
+    setXYpos -24, 144+offsetY
+    clone
+    }
+    setCostume "f"
+    setXYpos 48, 144+offsetY
+    clone
+    setCostume "f"
+    setXYpos 96, 144+offsetY
+    clone
+    setCostume "f"
+    setXYpos 48, 120+offsetY
+    clone
+    setCostume "c"
+    setXYpos -24, 96+offsetY
+    clone
+    setCostume "f"
+    setXYpos 48, 96+offsetY
+    clone
+    setCostume "f"
+    setXYpos 96, 96+offsetY
+    clone
+    setCostume "f"
+    setXYpos -96, 72+offsetY
+    clone
+    setCostume "c"
+    setXYpos 24, 72+offsetY
+    clone
+    setCostume "3"
+    setXYpos 48, 72+offsetY
+    clone
+    setCostume "f"
+    setXYpos 96, 72+offsetY
+    clone
+    setCostume "f"
+    setXYpos -96, 48+offsetY
+    clone
+    setCostume "f"
+    setXYpos 24, 48+offsetY
+    clone
+    setCostume "f"
+    setXYpos -144, 24+offsetY
+    clone
+    setCostume "f"
+    setXYpos -96, 24+offsetY
+    clone
+    setCostume "f"
+    setXYpos 144, 24+offsetY
+    clone
+    setCostume "c"
+    setXYpos -72, 0+offsetY
+    clone
+    setCostume "f"
+    setXYpos -144, -24+offsetY
+    clone
+    setCostume "f"
+    setXYpos -120, -24+offsetY
+    clone
+    setCostume "a"
+    setXYpos -96, -24+offsetY
+    clone
+    setCostume "f"
+    setXYpos -72, -24+offsetY
+    clone
+    setCostume "c"
+    setXYpos 120, -24+offsetY
+    clone
+    setCostume "c"
+    setXYpos 144, -24+offsetY
+    clone
+    setCostume "3"
+    setXYpos -144, -48+offsetY
+    clone
+    setCostume "a"
+    setXYpos -96, -48+offsetY
+    clone
+    setCostume "f"
+    setXYpos -24, -48+offsetY
+    clone
+    setCostume "f"
+    setXYpos 120, -48+offsetY
+    clone
+    setCostume "f"
+    setXYpos -24, -72+offsetY
+    clone
+    setCostume "f"
+    setXYpos -120, -96+offsetY
+    clone
+    setCostume "3"
+    setXYpos -24, -96+offsetY
+    clone
+    setCostume "3"
+    setXYpos 0, -96+offsetY
+    clone
+    setCostume "3"
+    setXYpos 24, -96+offsetY
+    clone
+    setCostume "f"
+    setXYpos -120, -120+offsetY
+    clone
+    setCostume "f"
+    setXYpos -72, -120+offsetY
+    clone
+    if section == 2 {
+    setCostume "8"
+    setXYpos -24, -120+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "c"
+    setXYpos 0, -120+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "4"
+    setXYpos 24, -120+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "a"
+    setXYpos -24, -144+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "5"
+    setXYpos 24, -144+offsetY
+    clone
+    }
+  } else if targetStage == 21 {
+    setCostume "c"
+    setXYpos -72, 144+offsetY
+    clone
+    setCostume "c"
+    setXYpos -48, 144+offsetY
+    clone
+    if section == 0 {
+    setCostume "c"
+    setXYpos -24, 144+offsetY
+    clone
+    }
+    setCostume "c"
+    setXYpos 48, 144+offsetY
+    clone
+    setCostume "c"
+    setXYpos -120, 120+offsetY
+    clone
+    setCostume "f"
+    setXYpos -96, 120+offsetY
+    clone
+    setCostume "f"
+    setXYpos -72, 120+offsetY
+    clone
+    setCostume "f"
+    setXYpos -48, 120+offsetY
+    clone
+    setCostume "f"
+    setXYpos -24, 120+offsetY
+    clone
+    setCostume "f"
+    setXYpos 0, 120+offsetY
+    clone
+    setCostume "f"
+    setXYpos 24, 120+offsetY
+    clone
+    setCostume "f"
+    setXYpos 48, 120+offsetY
+    clone
+    setCostume "f"
+    setXYpos 72, 120+offsetY
+    clone
+    setCostume "f"
+    setXYpos 72, 96+offsetY
+    clone
+    setCostume "f"
+    setXYpos 96, 96+offsetY
+    clone
+    setCostume "f"
+    setXYpos 96, 72+offsetY
+    clone
+    setCostume "f"
+    setXYpos 120, 72+offsetY
+    clone
+    setCostume "f"
+    setXYpos 96, 0+offsetY
+    clone
+    setCostume "f"
+    setXYpos 120, 0+offsetY
+    clone
+    setCostume "5"
+    setXYpos 144, 0+offsetY
+    clone
+    setCostume "f"
+    setXYpos 72, -24+offsetY
+    clone
+    setCostume "f"
+    setXYpos 96, -24+offsetY
+    clone
+    setCostume "f"
+    setXYpos 120, -24+offsetY
+    clone
+    setCostume "5"
+    setXYpos 144, -24+offsetY
+    clone
+    setCostume "f"
+    setXYpos -144, -48+offsetY
+    clone
+    setCostume "f"
+    setXYpos -72, -48+offsetY
+    clone
+    setCostume "f"
+    setXYpos -48, -48+offsetY
+    clone
+    setCostume "f"
+    setXYpos 48, -48+offsetY
+    clone
+    setCostume "f"
+    setXYpos 72, -48+offsetY
+    clone
+    setCostume "f"
+    setXYpos 96, -48+offsetY
+    clone
+    setCostume "f"
+    setXYpos 120, -48+offsetY
+    clone
+    setCostume "f"
+    setXYpos -120, -72+offsetY
+    clone
+    setCostume "f"
+    setXYpos -96, -72+offsetY
+    clone
+    setCostume "f"
+    setXYpos -72, -72+offsetY
+    clone
+    setCostume "f"
+    setXYpos -48, -72+offsetY
+    clone
+    setCostume "f"
+    setXYpos -24, -72+offsetY
+    clone
+    setCostume "f"
+    setXYpos 0, -72+offsetY
+    clone
+    setCostume "f"
+    setXYpos 24, -72+offsetY
+    clone
+    setCostume "f"
+    setXYpos 48, -72+offsetY
+    clone
+    setCostume "f"
+    setXYpos 72, -72+offsetY
+    clone
+    setCostume "f"
+    setXYpos 96, -72+offsetY
+    clone
+    setCostume "f"
+    setXYpos -96, -96+offsetY
+    clone
+    setCostume "f"
+    setXYpos -48, -96+offsetY
+    clone
+    setCostume "f"
+    setXYpos -24, -96+offsetY
+    clone
+    setCostume "f"
+    setXYpos 0, -96+offsetY
+    clone
+    setCostume "f"
+    setXYpos 24, -96+offsetY
+    clone
+    setCostume "f"
+    setXYpos 48, -96+offsetY
+    clone
+    setCostume "f"
+    setXYpos 72, -96+offsetY
+    clone
+    setCostume "5"
+    setXYpos 96, -96+offsetY
+    clone
+    setCostume "f"
+    setXYpos -96, -120+offsetY
+    clone
+    setCostume "3"
+    setXYpos -72, -120+offsetY
+    clone
+    if section == 2 {
+    setCostume "8"
+    setXYpos -24, -120+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "c"
+    setXYpos 0, -120+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "4"
+    setXYpos 24, -120+offsetY
+    clone
+    }
+    setCostume "f"
+    setXYpos 48, -120+offsetY
+    clone
+    setCostume "f"
+    setXYpos 72, -120+offsetY
+    clone
+    if section == 2 {
+    setCostume "a"
+    setXYpos -24, -144+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "5"
+    setXYpos 24, -144+offsetY
+    clone
+    }
+  } else if targetStage == 22 {
+    setCostume "f"
+    setXYpos -96, 72+offsetY
+    clone
+    setCostume "f"
+    setXYpos 48, 72+offsetY
+    clone
+    setCostume "f"
+    setXYpos 72, 72+offsetY
+    clone
+    setCostume "f"
+    setXYpos -72, 48+offsetY
+    clone
+    setCostume "f"
+    setXYpos -144, 0+offsetY
+    clone
+    setCostume "f"
+    setXYpos -120, -24+offsetY
+    clone
+    setCostume "f"
+    setXYpos -144, -48+offsetY
+    clone
+    setCostume "f"
+    setXYpos -48, -72+offsetY
+    clone
+    setCostume "f"
+    setXYpos 48, -72+offsetY
+    clone
+    setCostume "f"
+    setXYpos -48, -96+offsetY
+    clone
+    if section == 2 {
+    setCostume "8"
+    setXYpos -24, -120+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "c"
+    setXYpos 0, -120+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "4"
+    setXYpos 24, -120+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "a"
+    setXYpos -24, -144+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "5"
+    setXYpos 24, -144+offsetY
+    clone
+    }
+    setCostume "f"
+    setXYpos 96, -144+offsetY
+    clone
+  } else if targetStage == 23 {
+    setCostume "f"
+    setXYpos -24, 72+offsetY
+    clone
+    setCostume "f"
+    setXYpos 24, 72+offsetY
+    clone
+    if section == 2 {
+    setCostume "8"
+    setXYpos -24, -120+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "c"
+    setXYpos 0, -120+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "4"
+    setXYpos 24, -120+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "a"
+    setXYpos -24, -144+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "5"
+    setXYpos 24, -144+offsetY
+    clone
+    }
+  } else if targetStage == 24 {
+    setCostume "f"
+    setXYpos -48, 144+offsetY
+    clone
+    setCostume "a"
+    setXYpos 96, 144+offsetY
+    clone
+    setCostume "f"
+    setXYpos -96, 120+offsetY
+    clone
+    setCostume "f"
+    setXYpos -48, 120+offsetY
+    clone
+    setCostume "3"
+    setXYpos 24, 120+offsetY
+    clone
+    setCostume "f"
+    setXYpos 48, 120+offsetY
+    clone
+    setCostume "f"
+    setXYpos 72, 120+offsetY
+    clone
+    setCostume "f"
+    setXYpos 96, 120+offsetY
+    clone
+    setCostume "f"
+    setXYpos -48, 96+offsetY
+    clone
+    setCostume "a"
+    setXYpos 0, 96+offsetY
+    clone
+    setCostume "5"
+    setXYpos 24, 96+offsetY
+    clone
+    setCostume "f"
+    setXYpos 0, 72+offsetY
+    clone
+    setCostume "f"
+    setXYpos 24, 72+offsetY
+    clone
+    setCostume "f"
+    setXYpos 48, 72+offsetY
+    clone
+    setCostume "a"
+    setXYpos 96, 72+offsetY
+    clone
+    setCostume "f"
+    setXYpos 120, 72+offsetY
+    clone
+    setCostume "c"
+    setXYpos -48, 48+offsetY
+    clone
+    setCostume "c"
+    setXYpos -24, 48+offsetY
+    clone
+    setCostume "f"
+    setXYpos 24, 48+offsetY
+    clone
+    setCostume "a"
+    setXYpos 72, 48+offsetY
+    clone
+    setCostume "f"
+    setXYpos 96, 48+offsetY
+    clone
+    setCostume "3"
+    setXYpos 120, 48+offsetY
+    clone
+    setCostume "a"
+    setXYpos 144, 48+offsetY
+    clone
+    setCostume "f"
+    setXYpos -144, 24+offsetY
+    clone
+    setCostume "c"
+    setXYpos -72, 24+offsetY
+    clone
+    setCostume "3"
+    setXYpos -48, 24+offsetY
+    clone
+    setCostume "3"
+    setXYpos -24, 24+offsetY
+    clone
+    setCostume "f"
+    setXYpos 72, 24+offsetY
+    clone
+    setCostume "3"
+    setXYpos 96, 24+offsetY
+    clone
+    setCostume "a"
+    setXYpos 144, 24+offsetY
+    clone
+    setCostume "a"
+    setXYpos -144, 0+offsetY
+    clone
+    setCostume "c"
+    setXYpos -96, 0+offsetY
+    clone
+    setCostume "f"
+    setXYpos -72, 0+offsetY
+    clone
+    setCostume "a"
+    setXYpos -144, -24+offsetY
+    clone
+    setCostume "3"
+    setXYpos -96, -24+offsetY
+    clone
+    setCostume "f"
+    setXYpos -144, -72+offsetY
+    clone
+    setCostume "f"
+    setXYpos -96, -72+offsetY
+    clone
+    setCostume "a"
+    setXYpos -144, -96+offsetY
+    clone
+    setCostume "f"
+    setXYpos -96, -96+offsetY
+    clone
+    setCostume "a"
+    setXYpos -144, -120+offsetY
+    clone
+    setCostume "f"
+    setXYpos -96, -120+offsetY
+    clone
+    if section == 2 {
+    setCostume "8"
+    setXYpos -24, -120+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "c"
+    setXYpos 0, -120+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "4"
+    setXYpos 24, -120+offsetY
+    clone
+    }
+    setCostume "3"
+    setXYpos -96, -144+offsetY
+    clone
+    if section == 2 {
+    setCostume "a"
+    setXYpos -24, -144+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "5"
+    setXYpos 24, -144+offsetY
+    clone
+    }
+  } else if targetStage == 25 {
+    if section == 0 {
+    setCostume "f"
+    setXYpos -24, 144+offsetY
+    clone
+    }
+    if section == 0 {
+    setCostume "f"
+    setXYpos 24, 144+offsetY
+    clone
+    }
+    setCostume "f"
+    setXYpos 72, 144+offsetY
+    clone
+    setCostume "f"
+    setXYpos -120, 120+offsetY
+    clone
+    setCostume "f"
+    setXYpos -72, 120+offsetY
+    clone
+    setCostume "f"
+    setXYpos -120, 96+offsetY
+    clone
+    setCostume "f"
+    setXYpos -72, 96+offsetY
+    clone
+    setCostume "f"
+    setXYpos -120, 72+offsetY
+    clone
+    setCostume "f"
+    setXYpos -24, 72+offsetY
+    clone
+    setCostume "f"
+    setXYpos 48, 72+offsetY
+    clone
+    setCostume "f"
+    setXYpos -48, 48+offsetY
+    clone
+    setCostume "f"
+    setXYpos -24, 48+offsetY
+    clone
+    setCostume "f"
+    setXYpos 24, 48+offsetY
+    clone
+    setCostume "f"
+    setXYpos 48, 48+offsetY
+    clone
+    setCostume "f"
+    setXYpos -48, 24+offsetY
+    clone
+    setCostume "f"
+    setXYpos 24, 24+offsetY
+    clone
+    setCostume "f"
+    setXYpos 48, 24+offsetY
+    clone
+    setCostume "f"
+    setXYpos 96, 24+offsetY
+    clone
+    setCostume "f"
+    setXYpos 120, 24+offsetY
+    clone
+    setCostume "f"
+    setXYpos -24, 0+offsetY
+    clone
+    setCostume "f"
+    setXYpos 120, 0+offsetY
+    clone
+    setCostume "f"
+    setXYpos -96, -24+offsetY
+    clone
+    setCostume "f"
+    setXYpos -72, -24+offsetY
+    clone
+    setCostume "f"
+    setXYpos -24, -24+offsetY
+    clone
+    setCostume "f"
+    setXYpos 72, -24+offsetY
+    clone
+    setCostume "f"
+    setXYpos -96, -48+offsetY
+    clone
+    setCostume "f"
+    setXYpos -72, -48+offsetY
+    clone
+    setCostume "f"
+    setXYpos -24, -48+offsetY
+    clone
+    setCostume "f"
+    setXYpos 0, -48+offsetY
+    clone
+    setCostume "f"
+    setXYpos 48, -48+offsetY
+    clone
+    setCostume "f"
+    setXYpos 72, -48+offsetY
+    clone
+    setCostume "f"
+    setXYpos 144, -48+offsetY
+    clone
+    setCostume "f"
+    setXYpos -120, -72+offsetY
+    clone
+    setCostume "f"
+    setXYpos -24, -72+offsetY
+    clone
+    setCostume "f"
+    setXYpos 120, -72+offsetY
+    clone
+    setCostume "f"
+    setXYpos 144, -72+offsetY
+    clone
+    setCostume "f"
+    setXYpos -72, -96+offsetY
+    clone
+    setCostume "f"
+    setXYpos -24, -96+offsetY
+    clone
+    setCostume "f"
+    setXYpos 0, -96+offsetY
+    clone
+    setCostume "f"
+    setXYpos 144, -96+offsetY
+    clone
+    setCostume "f"
+    setXYpos -144, -120+offsetY
+    clone
+    setCostume "f"
+    setXYpos -96, -120+offsetY
+    clone
+    setCostume "f"
+    setXYpos -72, -120+offsetY
+    clone
+    if section == 2 {
+    setCostume "8"
+    setXYpos -24, -120+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "c"
+    setXYpos 0, -120+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "4"
+    setXYpos 24, -120+offsetY
+    clone
+    }
+    setCostume "f"
+    setXYpos 72, -120+offsetY
+    clone
+    setCostume "f"
+    setXYpos -144, -144+offsetY
+    clone
+    setCostume "f"
+    setXYpos -96, -144+offsetY
+    clone
+    if section == 2 {
+    setCostume "a"
+    setXYpos -24, -144+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "5"
+    setXYpos 24, -144+offsetY
+    clone
+    }
+    setCostume "f"
+    setXYpos 72, -144+offsetY
+    clone
+    setCostume "f"
+    setXYpos 96, -144+offsetY
+    clone
+    setCostume "f"
+    setXYpos 120, -144+offsetY
+    clone
+  } else if targetStage == 26 {
+    setCostume "5"
+    setXYpos 0, 120+offsetY
+    clone
+    setCostume "5"
+    setXYpos 48, 96+offsetY
+    clone
+    setCostume "c"
+    setXYpos -48, 72+offsetY
+    clone
+    setCostume "a"
+    setXYpos -24, 72+offsetY
+    clone
+    setCostume "c"
+    setXYpos 0, 48+offsetY
+    clone
+    setCostume "a"
+    setXYpos 24, 48+offsetY
+    clone
+    setCostume "a"
+    setXYpos -24, 24+offsetY
+    clone
+    setCostume "c"
+    setXYpos 48, 24+offsetY
+    clone
+    setCostume "3"
+    setXYpos -48, 0+offsetY
+    clone
+    setCostume "a"
+    setXYpos 24, 0+offsetY
+    clone
+    setCostume "5"
+    setXYpos -24, -24+offsetY
+    clone
+    setCostume "3"
+    setXYpos 0, -24+offsetY
+    clone
+    setCostume "5"
+    setXYpos 24, -48+offsetY
+    clone
+    setCostume "3"
+    setXYpos 48, -48+offsetY
+    clone
+    setCostume "a"
+    setXYpos -48, -72+offsetY
+    clone
+    setCostume "a"
+    setXYpos 0, -96+offsetY
+    clone
+    if section == 2 {
+    setCostume "8"
+    setXYpos -24, -120+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "c"
+    setXYpos 0, -120+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "4"
+    setXYpos 24, -120+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "a"
+    setXYpos -24, -144+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "5"
+    setXYpos 24, -144+offsetY
+    clone
+    }
+  } else if targetStage == 27 {
+    setCostume "f"
+    setXYpos -120, 48+offsetY
+    clone
+    setCostume "f"
+    setXYpos -24, 24+offsetY
+    clone
+    setCostume "f"
+    setXYpos 24, 24+offsetY
+    clone
+    setCostume "f"
+    setXYpos 48, 24+offsetY
+    clone
+    setCostume "f"
+    setXYpos 48, 0+offsetY
+    clone
+    setCostume "f"
+    setXYpos -96, -48+offsetY
+    clone
+    setCostume "f"
+    setXYpos 96, -48+offsetY
+    clone
+    setCostume "f"
+    setXYpos 0, -72+offsetY
+    clone
+    setCostume "f"
+    setXYpos 96, -72+offsetY
+    clone
+    setCostume "f"
+    setXYpos -72, -96+offsetY
+    clone
+    setCostume "f"
+    setXYpos 120, -96+offsetY
+    clone
+    if section == 2 {
+    setCostume "8"
+    setXYpos -24, -120+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "c"
+    setXYpos 0, -120+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "4"
+    setXYpos 24, -120+offsetY
+    clone
+    }
+    setCostume "f"
+    setXYpos 120, -120+offsetY
+    clone
+    if section == 2 {
+    setCostume "a"
+    setXYpos -24, -144+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "5"
+    setXYpos 24, -144+offsetY
+    clone
+    }
+    setCostume "f"
+    setXYpos 120, -144+offsetY
+    clone
+  } else if targetStage == 28 {
+    setCostume "c"
+    setXYpos -24, 96+offsetY
+    clone
+    setCostume "c"
+    setXYpos 24, 96+offsetY
+    clone
+    setCostume "f"
+    setXYpos 72, 96+offsetY
+    clone
+    setCostume "5"
+    setXYpos 96, 96+offsetY
+    clone
+    setCostume "f"
+    setXYpos 72, 72+offsetY
+    clone
+    setCostume "5"
+    setXYpos 96, 72+offsetY
+    clone
+    setCostume "c"
+    setXYpos -72, 48+offsetY
+    clone
+    setCostume "f"
+    setXYpos 72, 48+offsetY
+    clone
+    setCostume "5"
+    setXYpos 96, 48+offsetY
+    clone
+    setCostume "5"
+    setXYpos 96, 24+offsetY
+    clone
+    setCostume "c"
+    setXYpos -120, 0+offsetY
+    clone
+    setCostume "c"
+    setXYpos 120, 0+offsetY
+    clone
+    if section == 2 {
+    setCostume "8"
+    setXYpos -24, -120+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "c"
+    setXYpos 0, -120+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "4"
+    setXYpos 24, -120+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "a"
+    setXYpos -24, -144+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "5"
+    setXYpos 24, -144+offsetY
+    clone
+    }
+  } else if targetStage == 29 {
+    setCostume "f"
+    setXYpos 96, 144+offsetY
+    clone
+    setCostume "f"
+    setXYpos -120, 120+offsetY
+    clone
+    setCostume "f"
+    setXYpos 24, 120+offsetY
+    clone
+    setCostume "f"
+    setXYpos -48, 96+offsetY
+    clone
+    setCostume "f"
+    setXYpos 96, 72+offsetY
+    clone
+    setCostume "f"
+    setXYpos -96, 24+offsetY
+    clone
+    setCostume "f"
+    setXYpos 120, 24+offsetY
+    clone
+    setCostume "f"
+    setXYpos -120, -24+offsetY
+    clone
+    setCostume "f"
+    setXYpos -24, -24+offsetY
+    clone
+    setCostume "f"
+    setXYpos 120, -48+offsetY
+    clone
+    setCostume "f"
+    setXYpos -96, -120+offsetY
+    clone
+    setCostume "f"
+    setXYpos -48, -120+offsetY
+    clone
+    if section == 2 {
+    setCostume "8"
+    setXYpos -24, -120+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "c"
+    setXYpos 0, -120+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "4"
+    setXYpos 24, -120+offsetY
+    clone
+    }
+    setCostume "f"
+    setXYpos -144, -144+offsetY
+    clone
+    if section == 2 {
+    setCostume "a"
+    setXYpos -24, -144+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "5"
+    setXYpos 24, -144+offsetY
+    clone
+    }
+    setCostume "f"
+    setXYpos 72, -144+offsetY
+    clone
+  } else if targetStage == 30 {
+    setCostume "c"
+    setXYpos -24, 120+offsetY
+    clone
+    setCostume "c"
+    setXYpos 0, 120+offsetY
+    clone
+    setCostume "c"
+    setXYpos -48, 96+offsetY
+    clone
+    setCostume "c"
+    setXYpos 72, 96+offsetY
+    clone
+    setCostume "c"
+    setXYpos 120, 96+offsetY
+    clone
+    setCostume "c"
+    setXYpos -144, 72+offsetY
+    clone
+    setCostume "c"
+    setXYpos -72, 72+offsetY
+    clone
+    setCostume "c"
+    setXYpos 48, 72+offsetY
+    clone
+    setCostume "c"
+    setXYpos 144, 72+offsetY
+    clone
+    setCostume "3"
+    setXYpos -24, -72+offsetY
+    clone
+    setCostume "3"
+    setXYpos 0, -72+offsetY
+    clone
+    setCostume "3"
+    setXYpos -48, -96+offsetY
+    clone
+    setCostume "3"
+    setXYpos 24, -96+offsetY
+    clone
+    setCostume "3"
+    setXYpos -96, -120+offsetY
+    clone
+    setCostume "3"
+    setXYpos -72, -120+offsetY
+    clone
+    if section == 2 {
+    setCostume "8"
+    setXYpos -24, -120+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "c"
+    setXYpos 0, -120+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "4"
+    setXYpos 24, -120+offsetY
+    clone
+    }
+    setCostume "3"
+    setXYpos 48, -120+offsetY
+    clone
+    setCostume "3"
+    setXYpos 72, -120+offsetY
+    clone
+    setCostume "3"
+    setXYpos 96, -120+offsetY
+    clone
+    if section == 2 {
+    setCostume "a"
+    setXYpos -24, -144+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "5"
+    setXYpos 24, -144+offsetY
+    clone
+    }
+  } else if targetStage == 31 {
+    setCostume "f"
+    setXYpos -96, 96+offsetY
+    clone
+    setCostume "f"
+    setXYpos -24, 96+offsetY
+    clone
+    setCostume "f"
+    setXYpos 72, 72+offsetY
+    clone
+    setCostume "f"
+    setXYpos -96, 0+offsetY
+    clone
+    setCostume "f"
+    setXYpos -48, 0+offsetY
+    clone
+    setCostume "f"
+    setXYpos 0, 0+offsetY
+    clone
+    setCostume "f"
+    setXYpos 96, -24+offsetY
+    clone
+    setCostume "f"
+    setXYpos -144, -48+offsetY
+    clone
+    setCostume "f"
+    setXYpos -72, -48+offsetY
+    clone
+    setCostume "f"
+    setXYpos 24, -72+offsetY
+    clone
+    setCostume "f"
+    setXYpos -96, -96+offsetY
+    clone
+    if section == 2 {
+    setCostume "8"
+    setXYpos -24, -120+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "c"
+    setXYpos 0, -120+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "4"
+    setXYpos 24, -120+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "a"
+    setXYpos -24, -144+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "5"
+    setXYpos 24, -144+offsetY
+    clone
+    }
+  } else if targetStage == 32 {
+    setCostume "f"
+    setXYpos -72, 96+offsetY
+    clone
+    setCostume "f"
+    setXYpos 72, 96+offsetY
+    clone
+    setCostume "f"
+    setXYpos -120, 72+offsetY
+    clone
+    setCostume "f"
+    setXYpos -72, 72+offsetY
+    clone
+    setCostume "f"
+    setXYpos -24, 72+offsetY
+    clone
+    setCostume "f"
+    setXYpos 24, 72+offsetY
+    clone
+    setCostume "f"
+    setXYpos 72, 72+offsetY
+    clone
+    setCostume "f"
+    setXYpos 120, 72+offsetY
+    clone
+    setCostume "3"
+    setXYpos -120, 48+offsetY
+    clone
+    setCostume "3"
+    setXYpos -96, 48+offsetY
+    clone
+    setCostume "f"
+    setXYpos -72, 48+offsetY
+    clone
+    setCostume "f"
+    setXYpos 72, 48+offsetY
+    clone
+    setCostume "3"
+    setXYpos 96, 48+offsetY
+    clone
+    setCostume "3"
+    setXYpos 120, 48+offsetY
+    clone
+    setCostume "f"
+    setXYpos -72, 24+offsetY
+    clone
+    setCostume "c"
+    setXYpos -48, 24+offsetY
+    clone
+    setCostume "f"
+    setXYpos -24, 24+offsetY
+    clone
+    setCostume "f"
+    setXYpos 24, 24+offsetY
+    clone
+    setCostume "c"
+    setXYpos 48, 24+offsetY
+    clone
+    setCostume "f"
+    setXYpos 72, 24+offsetY
+    clone
+    setCostume "c"
+    setXYpos -24, -24+offsetY
+    clone
+    setCostume "c"
+    setXYpos 24, -24+offsetY
+    clone
+    setCostume "f"
+    setXYpos -24, -48+offsetY
+    clone
+    setCostume "f"
+    setXYpos 24, -48+offsetY
+    clone
+    setCostume "f"
+    setXYpos -72, -72+offsetY
+    clone
+    setCostume "c"
+    setXYpos 0, -72+offsetY
+    clone
+    setCostume "f"
+    setXYpos 72, -72+offsetY
+    clone
+    setCostume "f"
+    setXYpos -120, -96+offsetY
+    clone
+    setCostume "f"
+    setXYpos -72, -96+offsetY
+    clone
+    setCostume "f"
+    setXYpos 72, -96+offsetY
+    clone
+    setCostume "f"
+    setXYpos 120, -96+offsetY
+    clone
+    setCostume "f"
+    setXYpos -120, -120+offsetY
+    clone
+    setCostume "c"
+    setXYpos -96, -120+offsetY
+    clone
+    setCostume "f"
+    setXYpos -72, -120+offsetY
+    clone
+    if section == 2 {
+    setCostume "8"
+    setXYpos -24, -120+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "c"
+    setXYpos 0, -120+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "4"
+    setXYpos 24, -120+offsetY
+    clone
+    }
+    setCostume "f"
+    setXYpos 72, -120+offsetY
+    clone
+    setCostume "c"
+    setXYpos 96, -120+offsetY
+    clone
+    setCostume "f"
+    setXYpos 120, -120+offsetY
+    clone
+    setCostume "3"
+    setXYpos -120, -144+offsetY
+    clone
+    if section == 2 {
+    setCostume "a"
+    setXYpos -24, -144+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "5"
+    setXYpos 24, -144+offsetY
+    clone
+    }
+    setCostume "3"
+    setXYpos 120, -144+offsetY
+    clone
+  } else if targetStage == 33 {
+    if section == 2 {
+    setCostume "8"
+    setXYpos -24, -120+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "c"
+    setXYpos 0, -120+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "4"
+    setXYpos 24, -120+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "a"
+    setXYpos -24, -144+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "5"
+    setXYpos 24, -144+offsetY
+    clone
+    }
+  } else if targetStage == 34 {
+    setCostume "5"
+    setXYpos -48, 144+offsetY
+    clone
+    if section == 0 {
+    setCostume "a"
+    setXYpos -24, 144+offsetY
+    clone
+    }
+    setCostume "5"
+    setXYpos -144, 120+offsetY
+    clone
+    setCostume "5"
+    setXYpos -120, 120+offsetY
+    clone
+    setCostume "5"
+    setXYpos -96, 120+offsetY
+    clone
+    setCostume "a"
+    setXYpos -72, 120+offsetY
+    clone
+    setCostume "5"
+    setXYpos -24, 120+offsetY
+    clone
+    setCostume "5"
+    setXYpos 48, 120+offsetY
+    clone
+    setCostume "5"
+    setXYpos 72, 120+offsetY
+    clone
+    setCostume "5"
+    setXYpos -144, 96+offsetY
+    clone
+    setCostume "5"
+    setXYpos -120, 96+offsetY
+    clone
+    setCostume "5"
+    setXYpos -96, 96+offsetY
+    clone
+    setCostume "f"
+    setXYpos -72, 96+offsetY
+    clone
+    setCostume "f"
+    setXYpos -48, 96+offsetY
+    clone
+    setCostume "5"
+    setXYpos 48, 96+offsetY
+    clone
+    setCostume "f"
+    setXYpos 72, 96+offsetY
+    clone
+    setCostume "5"
+    setXYpos 96, 96+offsetY
+    clone
+    setCostume "a"
+    setXYpos -144, 72+offsetY
+    clone
+    setCostume "a"
+    setXYpos -120, 72+offsetY
+    clone
+    setCostume "f"
+    setXYpos -72, 72+offsetY
+    clone
+    setCostume "5"
+    setXYpos -48, 72+offsetY
+    clone
+    setCostume "a"
+    setXYpos 24, 72+offsetY
+    clone
+    setCostume "5"
+    setXYpos 48, 72+offsetY
+    clone
+    setCostume "f"
+    setXYpos 72, 72+offsetY
+    clone
+    setCostume "f"
+    setXYpos 96, 72+offsetY
+    clone
+    setCostume "5"
+    setXYpos -120, 48+offsetY
+    clone
+    setCostume "f"
+    setXYpos -72, 48+offsetY
+    clone
+    setCostume "a"
+    setXYpos -48, 48+offsetY
+    clone
+    setCostume "5"
+    setXYpos -24, 48+offsetY
+    clone
+    setCostume "5"
+    setXYpos 24, 48+offsetY
+    clone
+    setCostume "f"
+    setXYpos 48, 48+offsetY
+    clone
+    setCostume "f"
+    setXYpos 72, 48+offsetY
+    clone
+    setCostume "f"
+    setXYpos 96, 48+offsetY
+    clone
+    setCostume "5"
+    setXYpos -120, 24+offsetY
+    clone
+    setCostume "a"
+    setXYpos -96, 24+offsetY
+    clone
+    setCostume "f"
+    setXYpos -24, 24+offsetY
+    clone
+    setCostume "5"
+    setXYpos 0, 24+offsetY
+    clone
+    setCostume "f"
+    setXYpos 24, 24+offsetY
+    clone
+    setCostume "a"
+    setXYpos 48, 24+offsetY
+    clone
+    setCostume "a"
+    setXYpos 72, 24+offsetY
+    clone
+    setCostume "f"
+    setXYpos 96, 24+offsetY
+    clone
+    setCostume "5"
+    setXYpos -120, 0+offsetY
+    clone
+    setCostume "a"
+    setXYpos -48, 0+offsetY
+    clone
+    setCostume "f"
+    setXYpos -24, 0+offsetY
+    clone
+    setCostume "f"
+    setXYpos 0, 0+offsetY
+    clone
+    setCostume "5"
+    setXYpos 24, 0+offsetY
+    clone
+    setCostume "5"
+    setXYpos 72, 0+offsetY
+    clone
+    setCostume "f"
+    setXYpos 96, 0+offsetY
+    clone
+    setCostume "a"
+    setXYpos -120, -24+offsetY
+    clone
+    setCostume "5"
+    setXYpos -48, -24+offsetY
+    clone
+    setCostume "f"
+    setXYpos -24, -24+offsetY
+    clone
+    setCostume "f"
+    setXYpos 0, -24+offsetY
+    clone
+    setCostume "5"
+    setXYpos 24, -24+offsetY
+    clone
+    setCostume "5"
+    setXYpos 72, -24+offsetY
+    clone
+    setCostume "f"
+    setXYpos 96, -24+offsetY
+    clone
+    setCostume "a"
+    setXYpos -120, -48+offsetY
+    clone
+    setCostume "3"
+    setXYpos -96, -48+offsetY
+    clone
+    setCostume "3"
+    setXYpos -72, -48+offsetY
+    clone
+    setCostume "f"
+    setXYpos -24, -48+offsetY
+    clone
+    setCostume "f"
+    setXYpos 0, -48+offsetY
+    clone
+    setCostume "f"
+    setXYpos 24, -48+offsetY
+    clone
+    setCostume "5"
+    setXYpos 72, -48+offsetY
+    clone
+    setCostume "5"
+    setXYpos 96, -48+offsetY
+    clone
+    setCostume "3"
+    setXYpos 120, -48+offsetY
+    clone
+    setCostume "f"
+    setXYpos 144, -48+offsetY
+    clone
+    setCostume "a"
+    setXYpos -120, -72+offsetY
+    clone
+    setCostume "a"
+    setXYpos -48, -72+offsetY
+    clone
+    setCostume "5"
+    setXYpos -24, -72+offsetY
+    clone
+    setCostume "f"
+    setXYpos 0, -72+offsetY
+    clone
+    setCostume "a"
+    setXYpos 24, -72+offsetY
+    clone
+    setCostume "5"
+    setXYpos 48, -72+offsetY
+    clone
+    setCostume "5"
+    setXYpos 72, -72+offsetY
+    clone
+    setCostume "5"
+    setXYpos 96, -72+offsetY
+    clone
+    setCostume "a"
+    setXYpos 120, -72+offsetY
+    clone
+    setCostume "a"
+    setXYpos 144, -72+offsetY
+    clone
+    setCostume "5"
+    setXYpos -96, -96+offsetY
+    clone
+    setCostume "f"
+    setXYpos -48, -96+offsetY
+    clone
+    setCostume "a"
+    setXYpos -24, -96+offsetY
+    clone
+    setCostume "5"
+    setXYpos 0, -96+offsetY
+    clone
+    setCostume "f"
+    setXYpos 24, -96+offsetY
+    clone
+    setCostume "f"
+    setXYpos 48, -96+offsetY
+    clone
+    setCostume "a"
+    setXYpos 120, -96+offsetY
+    clone
+    setCostume "5"
+    setXYpos -96, -120+offsetY
+    clone
+    setCostume "a"
+    setXYpos -72, -120+offsetY
+    clone
+    setCostume "5"
+    setXYpos -48, -120+offsetY
+    clone
+    if section == 2 {
+    setCostume "8"
+    setXYpos -24, -120+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "c"
+    setXYpos 0, -120+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "4"
+    setXYpos 24, -120+offsetY
+    clone
+    }
+    setCostume "f"
+    setXYpos 48, -120+offsetY
+    clone
+    setCostume "5"
+    setXYpos 72, -120+offsetY
+    clone
+    setCostume "5"
+    setXYpos 120, -120+offsetY
+    clone
+    setCostume "5"
+    setXYpos -96, -144+offsetY
+    clone
+    setCostume "a"
+    setXYpos -72, -144+offsetY
+    clone
+    if section == 2 {
+    setCostume "a"
+    setXYpos -24, -144+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "5"
+    setXYpos 24, -144+offsetY
+    clone
+    }
+    setCostume "f"
+    setXYpos 72, -144+offsetY
+    clone
+    setCostume "f"
+    setXYpos 96, -144+offsetY
+    clone
+  } else if targetStage == 35 {
+    setCostume "f"
+    setXYpos -48, 120+offsetY
+    clone
+    setCostume "f"
+    setXYpos 0, 120+offsetY
+    clone
+    setCostume "f"
+    setXYpos -48, 96+offsetY
+    clone
+    setCostume "f"
+    setXYpos 0, 96+offsetY
+    clone
+    setCostume "f"
+    setXYpos -144, 72+offsetY
+    clone
+    setCostume "f"
+    setXYpos -72, 72+offsetY
+    clone
+    setCostume "f"
+    setXYpos -48, 72+offsetY
+    clone
+    setCostume "f"
+    setXYpos -24, 72+offsetY
+    clone
+    setCostume "f"
+    setXYpos 0, 72+offsetY
+    clone
+    setCostume "f"
+    setXYpos 24, 72+offsetY
+    clone
+    setCostume "f"
+    setXYpos 96, 72+offsetY
+    clone
+    setCostume "f"
+    setXYpos -144, 48+offsetY
+    clone
+    setCostume "f"
+    setXYpos -120, 48+offsetY
+    clone
+    setCostume "f"
+    setXYpos -96, 48+offsetY
+    clone
+    setCostume "f"
+    setXYpos -72, 48+offsetY
+    clone
+    setCostume "f"
+    setXYpos -24, 48+offsetY
+    clone
+    setCostume "f"
+    setXYpos 24, 48+offsetY
+    clone
+    setCostume "f"
+    setXYpos 48, 48+offsetY
+    clone
+    setCostume "f"
+    setXYpos 72, 48+offsetY
+    clone
+    setCostume "f"
+    setXYpos 96, 48+offsetY
+    clone
+    setCostume "f"
+    setXYpos -72, 24+offsetY
+    clone
+    setCostume "f"
+    setXYpos -48, 24+offsetY
+    clone
+    setCostume "f"
+    setXYpos -24, 24+offsetY
+    clone
+    setCostume "f"
+    setXYpos 0, 24+offsetY
+    clone
+    setCostume "f"
+    setXYpos 24, 24+offsetY
+    clone
+    setCostume "f"
+    setXYpos -120, 0+offsetY
+    clone
+    setCostume "f"
+    setXYpos -96, 0+offsetY
+    clone
+    setCostume "f"
+    setXYpos -72, 0+offsetY
+    clone
+    setCostume "f"
+    setXYpos -48, 0+offsetY
+    clone
+    setCostume "f"
+    setXYpos -24, 0+offsetY
+    clone
+    setCostume "f"
+    setXYpos 0, 0+offsetY
+    clone
+    setCostume "f"
+    setXYpos 24, 0+offsetY
+    clone
+    setCostume "f"
+    setXYpos 48, 0+offsetY
+    clone
+    setCostume "f"
+    setXYpos 72, 0+offsetY
+    clone
+    setCostume "f"
+    setXYpos -144, -24+offsetY
+    clone
+    setCostume "f"
+    setXYpos -120, -24+offsetY
+    clone
+    setCostume "f"
+    setXYpos -96, -24+offsetY
+    clone
+    setCostume "f"
+    setXYpos -48, -24+offsetY
+    clone
+    setCostume "f"
+    setXYpos -24, -24+offsetY
+    clone
+    setCostume "f"
+    setXYpos 0, -24+offsetY
+    clone
+    setCostume "f"
+    setXYpos 48, -24+offsetY
+    clone
+    setCostume "f"
+    setXYpos 72, -24+offsetY
+    clone
+    setCostume "f"
+    setXYpos 96, -24+offsetY
+    clone
+    setCostume "f"
+    setXYpos -144, -48+offsetY
+    clone
+    setCostume "f"
+    setXYpos -120, -48+offsetY
+    clone
+    setCostume "f"
+    setXYpos -24, -48+offsetY
+    clone
+    setCostume "f"
+    setXYpos 72, -48+offsetY
+    clone
+    setCostume "f"
+    setXYpos 96, -48+offsetY
+    clone
+    if section == 2 {
+    setCostume "8"
+    setXYpos -24, -120+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "c"
+    setXYpos 0, -120+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "4"
+    setXYpos 24, -120+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "a"
+    setXYpos -24, -144+offsetY
+    clone
+    }
+    if section == 2 {
+    setCostume "5"
+    setXYpos 24, -144+offsetY
+    clone
+    }
+  }
+}
+
 onMsg "loadStage", => {
   hide
-  if stageIndex == 1 {
-    setCostume "f"
-    setXYpos -120, 120
-    clone
-    setCostume "f"
-    setXYpos -72, 120
-    clone
-    setCostume "f"
-    setXYpos -24, 120
-    clone
-    setCostume "f"
-    setXYpos 24, 120
-    clone
-    setCostume "f"
-    setXYpos 72, 120
-    clone
-    setCostume "f"
-    setXYpos 120, 120
-    clone
-    setCostume "f"
-    setXYpos -120, 96
-    clone
-    setCostume "f"
-    setXYpos -72, 96
-    clone
-    setCostume "f"
-    setXYpos -24, 96
-    clone
-    setCostume "f"
-    setXYpos 24, 96
-    clone
-    setCostume "f"
-    setXYpos 72, 96
-    clone
-    setCostume "f"
-    setXYpos 120, 96
-    clone
-    setCostume "f"
-    setXYpos -120, 72
-    clone
-    setCostume "f"
-    setXYpos -72, 72
-    clone
-    setCostume "f"
-    setXYpos -24, 72
-    clone
-    setCostume "f"
-    setXYpos 24, 72
-    clone
-    setCostume "f"
-    setXYpos 72, 72
-    clone
-    setCostume "f"
-    setXYpos 120, 72
-    clone
-    setCostume "f"
-    setXYpos -120, 48
-    clone
-    setCostume "f"
-    setXYpos -72, 48
-    clone
-    setCostume "3"
-    setXYpos -24, 48
-    clone
-    setCostume "3"
-    setXYpos 24, 48
-    clone
-    setCostume "f"
-    setXYpos 72, 48
-    clone
-    setCostume "f"
-    setXYpos 120, 48
-    clone
-    setCostume "3"
-    setXYpos -120, 24
-    clone
-    setCostume "3"
-    setXYpos -72, 24
-    clone
-    setCostume "c"
-    setXYpos -24, 24
-    clone
-    setCostume "c"
-    setXYpos 24, 24
-    clone
-    setCostume "3"
-    setXYpos 72, 24
-    clone
-    setCostume "3"
-    setXYpos 120, 24
-    clone
-    setCostume "c"
-    setXYpos -144, 0
-    clone
-    setCostume "c"
-    setXYpos -96, 0
-    clone
-    setCostume "c"
-    setXYpos -72, 0
-    clone
-    setCostume "3"
-    setXYpos -24, 0
-    clone
-    setCostume "3"
-    setXYpos 24, 0
-    clone
-    setCostume "c"
-    setXYpos 72, 0
-    clone
-    setCostume "c"
-    setXYpos 96, 0
-    clone
-    setCostume "c"
-    setXYpos 144, 0
-    clone
-    setCostume "3"
-    setXYpos -96, -24
-    clone
-    setCostume "3"
-    setXYpos -72, -24
-    clone
-    setCostume "c"
-    setXYpos -24, -24
-    clone
-    setCostume "c"
-    setXYpos 24, -24
-    clone
-    setCostume "3"
-    setXYpos 72, -24
-    clone
-    setCostume "3"
-    setXYpos 96, -24
-    clone
-    setCostume "c"
-    setXYpos -120, -48
-    clone
-    setCostume "c"
-    setXYpos -72, -48
-    clone
-    setCostume "f"
-    setXYpos -24, -48
-    clone
-    setCostume "f"
-    setXYpos 0, -48
-    clone
-    setCostume "f"
-    setXYpos 24, -48
-    clone
-    setCostume "c"
-    setXYpos 72, -48
-    clone
-    setCostume "c"
-    setXYpos 120, -48
-    clone
-    setCostume "f"
-    setXYpos -120, -72
-    clone
-    setCostume "f"
-    setXYpos -72, -72
-    clone
-    setCostume "f"
-    setXYpos -24, -72
-    clone
-    setCostume "f"
-    setXYpos 24, -72
-    clone
-    setCostume "f"
-    setXYpos 72, -72
-    clone
-    setCostume "f"
-    setXYpos 120, -72
-    clone
-    setCostume "f"
-    setXYpos -120, -96
-    clone
-    setCostume "f"
-    setXYpos -72, -96
-    clone
-    setCostume "3"
-    setXYpos -24, -96
-    clone
-    setCostume "3"
-    setXYpos 24, -96
-    clone
-    setCostume "f"
-    setXYpos 72, -96
-    clone
-    setCostume "f"
-    setXYpos 120, -96
-    clone
-    setCostume "f"
-    setXYpos -120, -120
-    clone
-    setCostume "f"
-    setXYpos -72, -120
-    clone
-    setCostume "8"
-    setXYpos -24, -120
-    clone
-    setCostume "c"
-    setXYpos 0, -120
-    clone
-    setCostume "4"
-    setXYpos 24, -120
-    clone
-    setCostume "f"
-    setXYpos 72, -120
-    clone
-    setCostume "f"
-    setXYpos 120, -120
-    clone
-    setCostume "a"
-    setXYpos -24, -144
-    clone
-    setCostume "5"
-    setXYpos 24, -144
-    clone
-  } else if stageIndex == 2 {
-    setCostume "3"
-    setXYpos -120, 120
-    clone
-    setCostume "f"
-    setXYpos 24, 120
-    clone
-    setCostume "f"
-    setXYpos 72, 120
-    clone
-    setCostume "f"
-    setXYpos 120, 120
-    clone
-    setCostume "f"
-    setXYpos -120, 96
-    clone
-    setCostume "f"
-    setXYpos 0, 96
-    clone
-    setCostume "f"
-    setXYpos 24, 96
-    clone
-    setCostume "f"
-    setXYpos 72, 96
-    clone
-    setCostume "f"
-    setXYpos 120, 96
-    clone
-    setCostume "f"
-    setXYpos -72, 72
-    clone
-    setCostume "f"
-    setXYpos -72, 48
-    clone
-    setCostume "f"
-    setXYpos 72, 48
-    clone
-    setCostume "f"
-    setXYpos 120, 48
-    clone
-    setCostume "f"
-    setXYpos -24, 24
-    clone
-    setCostume "f"
-    setXYpos -120, 0
-    clone
-    setCostume "f"
-    setXYpos -96, 0
-    clone
-    setCostume "f"
-    setXYpos -72, 0
-    clone
-    setCostume "f"
-    setXYpos 120, 0
-    clone
-    setCostume "f"
-    setXYpos -24, -24
-    clone
-    setCostume "f"
-    setXYpos 24, -24
-    clone
-    setCostume "f"
-    setXYpos 72, -24
-    clone
-    setCostume "f"
-    setXYpos 120, -24
-    clone
-    setCostume "f"
-    setXYpos -120, -48
-    clone
-    setCostume "f"
-    setXYpos -24, -48
-    clone
-    setCostume "f"
-    setXYpos 24, -48
-    clone
-    setCostume "f"
-    setXYpos 120, -48
-    clone
-    setCostume "f"
-    setXYpos -120, -72
-    clone
-    setCostume "f"
-    setXYpos -72, -72
-    clone
-    setCostume "f"
-    setXYpos -24, -72
-    clone
-    setCostume "f"
-    setXYpos 0, -72
-    clone
-    setCostume "f"
-    setXYpos 24, -72
-    clone
-    setCostume "f"
-    setXYpos 72, -72
-    clone
-    setCostume "f"
-    setXYpos 120, -72
-    clone
-    setCostume "f"
-    setXYpos -120, -96
-    clone
-    setCostume "f"
-    setXYpos -72, -96
-    clone
-    setCostume "f"
-    setXYpos -24, -96
-    clone
-    setCostume "f"
-    setXYpos 0, -96
-    clone
-    setCostume "f"
-    setXYpos 24, -96
-    clone
-    setCostume "f"
-    setXYpos -120, -120
-    clone
-    setCostume "8"
-    setXYpos -24, -120
-    clone
-    setCostume "c"
-    setXYpos 0, -120
-    clone
-    setCostume "4"
-    setXYpos 24, -120
-    clone
-    setCostume "f"
-    setXYpos 72, -120
-    clone
-    setCostume "f"
-    setXYpos 120, -120
-    clone
-    setCostume "f"
-    setXYpos -120, -144
-    clone
-    setCostume "f"
-    setXYpos -72, -144
-    clone
-    setCostume "a"
-    setXYpos -24, -144
-    clone
-    setCostume "5"
-    setXYpos 24, -144
-    clone
-    setCostume "f"
-    setXYpos 72, -144
-    clone
-    setCostume "f"
-    setXYpos 96, -144
-    clone
-    setCostume "f"
-    setXYpos 120, -144
-    clone
-  } else if stageIndex == 3 {
-    setCostume "f"
-    setXYpos -48, 144
-    clone
-    setCostume "f"
-    setXYpos 48, 144
-    clone
-    setCostume "f"
-    setXYpos -48, 120
-    clone
-    setCostume "f"
-    setXYpos -144, 96
-    clone
-    setCostume "f"
-    setXYpos 24, 72
-    clone
-    setCostume "f"
-    setXYpos 72, 72
-    clone
-    setCostume "f"
-    setXYpos 96, 72
-    clone
-    setCostume "f"
-    setXYpos 120, 72
-    clone
-    setCostume "5"
-    setXYpos 144, 72
-    clone
-    setCostume "f"
-    setXYpos -48, 48
-    clone
-    setCostume "f"
-    setXYpos -24, 48
-    clone
-    setCostume "f"
-    setXYpos 0, 48
-    clone
-    setCostume "3"
-    setXYpos 24, 48
-    clone
-    setCostume "f"
-    setXYpos 72, 48
-    clone
-    setCostume "a"
-    setXYpos 120, 48
-    clone
-    setCostume "f"
-    setXYpos 0, 24
-    clone
-    setCostume "a"
-    setXYpos 120, 24
-    clone
-    setCostume "c"
-    setXYpos -120, -24
-    clone
-    setCostume "f"
-    setXYpos -72, -24
-    clone
-    setCostume "f"
-    setXYpos -144, -48
-    clone
-    setCostume "5"
-    setXYpos -120, -48
-    clone
-    setCostume "a"
-    setXYpos -96, -48
-    clone
-    setCostume "f"
-    setXYpos -72, -48
-    clone
-    setCostume "5"
-    setXYpos -48, -48
-    clone
-    setCostume "c"
-    setXYpos -24, -48
-    clone
-    setCostume "3"
-    setXYpos 0, -48
-    clone
-    setCostume "3"
-    setXYpos 24, -48
-    clone
-    setCostume "3"
-    setXYpos 48, -48
-    clone
-    setCostume "f"
-    setXYpos -24, -72
-    clone
-    setCostume "c"
-    setXYpos 24, -72
-    clone
-    setCostume "c"
-    setXYpos 48, -72
-    clone
-    setCostume "f"
-    setXYpos -144, -96
-    clone
-    setCostume "3"
-    setXYpos 24, -96
-    clone
-    setCostume "3"
-    setXYpos 48, -96
-    clone
-    setCostume "f"
-    setXYpos -144, -120
-    clone
-    setCostume "f"
-    setXYpos -120, -120
-    clone
-    setCostume "8"
-    setXYpos -24, -120
-    clone
-    setCostume "c"
-    setXYpos 0, -120
-    clone
-    setCostume "4"
-    setXYpos 24, -120
-    clone
-    setCostume "f"
-    setXYpos -120, -144
-    clone
-    setCostume "f"
-    setXYpos -96, -144
-    clone
-    setCostume "a"
-    setXYpos -24, -144
-    clone
-    setCostume "5"
-    setXYpos 24, -144
-    clone
-    setCostume "f"
-    setXYpos 72, -144
-    clone
-  } else if stageIndex == 4 {
-    setCostume "c"
-    setXYpos -48, 120
-    clone
-    setCostume "f"
-    setXYpos -24, 120
-    clone
-    setCostume "f"
-    setXYpos 0, 120
-    clone
-    setCostume "c"
-    setXYpos 24, 120
-    clone
-    setCostume "c"
-    setXYpos 48, 120
-    clone
-    setCostume "a"
-    setXYpos -72, 96
-    clone
-    setCostume "f"
-    setXYpos -48, 96
-    clone
-    setCostume "f"
-    setXYpos -24, 96
-    clone
-    setCostume "f"
-    setXYpos 0, 96
-    clone
-    setCostume "f"
-    setXYpos 24, 96
-    clone
-    setCostume "f"
-    setXYpos 48, 96
-    clone
-    setCostume "f"
-    setXYpos 72, 96
-    clone
-    setCostume "c"
-    setXYpos 96, 96
-    clone
-    setCostume "f"
-    setXYpos -72, 72
-    clone
-    setCostume "f"
-    setXYpos -48, 72
-    clone
-    setCostume "f"
-    setXYpos -24, 72
-    clone
-    setCostume "f"
-    setXYpos 0, 72
-    clone
-    setCostume "f"
-    setXYpos 24, 72
-    clone
-    setCostume "f"
-    setXYpos 48, 72
-    clone
-    setCostume "f"
-    setXYpos 72, 72
-    clone
-    setCostume "f"
-    setXYpos 96, 72
-    clone
-    setCostume "5"
-    setXYpos 120, 72
-    clone
-    setCostume "a"
-    setXYpos -96, 48
-    clone
-    setCostume "3"
-    setXYpos -72, 48
-    clone
-    setCostume "3"
-    setXYpos 24, 48
-    clone
-    setCostume "f"
-    setXYpos 48, 48
-    clone
-    setCostume "f"
-    setXYpos 72, 48
-    clone
-    setCostume "5"
-    setXYpos 120, 48
-    clone
-    setCostume "a"
-    setXYpos -96, 24
-    clone
-    setCostume "f"
-    setXYpos 48, 24
-    clone
-    setCostume "5"
-    setXYpos 72, 24
-    clone
-    setCostume "f"
-    setXYpos -96, 0
-    clone
-    setCostume "c"
-    setXYpos -48, 0
-    clone
-    setCostume "c"
-    setXYpos -24, 0
-    clone
-    setCostume "f"
-    setXYpos 48, 0
-    clone
-    setCostume "5"
-    setXYpos 72, 0
-    clone
-    setCostume "f"
-    setXYpos -96, -24
-    clone
-    setCostume "f"
-    setXYpos -72, -24
-    clone
-    setCostume "f"
-    setXYpos -48, -24
-    clone
-    setCostume "f"
-    setXYpos -24, -24
-    clone
-    setCostume "f"
-    setXYpos 0, -24
-    clone
-    setCostume "f"
-    setXYpos 24, -24
-    clone
-    setCostume "f"
-    setXYpos 48, -24
-    clone
-    setCostume "f"
-    setXYpos 72, -24
-    clone
-    setCostume "a"
-    setXYpos -120, -48
-    clone
-    setCostume "f"
-    setXYpos -96, -48
-    clone
-    setCostume "f"
-    setXYpos -72, -48
-    clone
-    setCostume "f"
-    setXYpos -48, -48
-    clone
-    setCostume "f"
-    setXYpos -24, -48
-    clone
-    setCostume "f"
-    setXYpos 0, -48
-    clone
-    setCostume "f"
-    setXYpos 24, -48
-    clone
-    setCostume "f"
-    setXYpos 48, -48
-    clone
-    setCostume "f"
-    setXYpos 72, -48
-    clone
-    setCostume "5"
-    setXYpos 96, -48
-    clone
-    setCostume "3"
-    setXYpos -120, -72
-    clone
-    setCostume "3"
-    setXYpos -96, -72
-    clone
-    setCostume "f"
-    setXYpos -72, -72
-    clone
-    setCostume "f"
-    setXYpos -48, -72
-    clone
-    setCostume "f"
-    setXYpos -24, -72
-    clone
-    setCostume "f"
-    setXYpos 0, -72
-    clone
-    setCostume "f"
-    setXYpos 24, -72
-    clone
-    setCostume "f"
-    setXYpos 48, -72
-    clone
-    setCostume "3"
-    setXYpos 72, -72
-    clone
-    setCostume "3"
-    setXYpos 96, -72
-    clone
-    setCostume "f"
-    setXYpos -120, -96
-    clone
-    setCostume "f"
-    setXYpos -96, -96
-    clone
-    setCostume "c"
-    setXYpos -72, -96
-    clone
-    setCostume "3"
-    setXYpos -48, -96
-    clone
-    setCostume "f"
-    setXYpos -24, -96
-    clone
-    setCostume "f"
-    setXYpos 0, -96
-    clone
-    setCostume "3"
-    setXYpos 24, -96
-    clone
-    setCostume "c"
-    setXYpos 48, -96
-    clone
-    setCostume "f"
-    setXYpos 72, -96
-    clone
-    setCostume "f"
-    setXYpos 96, -96
-    clone
-    setCostume "3"
-    setXYpos -96, -120
-    clone
-    setCostume "3"
-    setXYpos -72, -120
-    clone
-    setCostume "8"
-    setXYpos -24, -120
-    clone
-    setCostume "c"
-    setXYpos 0, -120
-    clone
-    setCostume "4"
-    setXYpos 24, -120
-    clone
-    setCostume "3"
-    setXYpos 48, -120
-    clone
-    setCostume "3"
-    setXYpos 72, -120
-    clone
-    setCostume "a"
-    setXYpos -24, -144
-    clone
-    setCostume "5"
-    setXYpos 24, -144
-    clone
-  } else if stageIndex == 5 {
-    setCostume "f"
-    setXYpos -48, 144
-    clone
-    setCostume "f"
-    setXYpos -24, 144
-    clone
-    setCostume "c"
-    setXYpos -96, 120
-    clone
-    setCostume "f"
-    setXYpos -48, 120
-    clone
-    setCostume "f"
-    setXYpos -96, 96
-    clone
-    setCostume "f"
-    setXYpos 0, 96
-    clone
-    setCostume "f"
-    setXYpos -144, 72
-    clone
-    setCostume "f"
-    setXYpos -96, 72
-    clone
-    setCostume "f"
-    setXYpos -72, 72
-    clone
-    setCostume "f"
-    setXYpos -48, 72
-    clone
-    setCostume "f"
-    setXYpos 0, 72
-    clone
-    setCostume "f"
-    setXYpos 24, 72
-    clone
-    setCostume "3"
-    setXYpos -144, 48
-    clone
-    setCostume "3"
-    setXYpos -48, 48
-    clone
-    setCostume "c"
-    setXYpos -96, 24
-    clone
-    setCostume "f"
-    setXYpos 120, 24
-    clone
-    setCostume "f"
-    setXYpos 144, 24
-    clone
-    setCostume "f"
-    setXYpos -144, 0
-    clone
-    setCostume "f"
-    setXYpos -120, 0
-    clone
-    setCostume "f"
-    setXYpos -24, 0
-    clone
-    setCostume "f"
-    setXYpos 24, 0
-    clone
-    setCostume "f"
-    setXYpos 48, 0
-    clone
-    setCostume "f"
-    setXYpos 48, -48
-    clone
-    setCostume "c"
-    setXYpos -72, -72
-    clone
-    setCostume "c"
-    setXYpos -48, -72
-    clone
-    setCostume "f"
-    setXYpos 120, -72
-    clone
-    setCostume "f"
-    setXYpos 144, -72
-    clone
-    setCostume "f"
-    setXYpos -48, -96
-    clone
-    setCostume "3"
-    setXYpos -24, -96
-    clone
-    setCostume "3"
-    setXYpos 0, -96
-    clone
-    setCostume "3"
-    setXYpos 24, -96
-    clone
-    setCostume "f"
-    setXYpos 48, -96
-    clone
-    setCostume "c"
-    setXYpos 72, -96
-    clone
-    setCostume "f"
-    setXYpos -144, -120
-    clone
-    setCostume "f"
-    setXYpos -120, -120
-    clone
-    setCostume "3"
-    setXYpos -96, -120
-    clone
-    setCostume "8"
-    setXYpos -24, -120
-    clone
-    setCostume "c"
-    setXYpos 0, -120
-    clone
-    setCostume "4"
-    setXYpos 24, -120
-    clone
-    setCostume "3"
-    setXYpos 72, -120
-    clone
-    setCostume "f"
-    setXYpos 96, -120
-    clone
-    setCostume "3"
-    setXYpos -144, -144
-    clone
-    setCostume "a"
-    setXYpos -24, -144
-    clone
-    setCostume "5"
-    setXYpos 24, -144
-    clone
-  } else if stageIndex == 6 {
-    setCostume "a"
-    setXYpos -24, 144
-    clone
-    setCostume "5"
-    setXYpos 24, 144
-    clone
-    setCostume "5"
-    setXYpos -120, 120
-    clone
-    setCostume "5"
-    setXYpos -48, 120
-    clone
-    setCostume "a"
-    setXYpos 48, 120
-    clone
-    setCostume "5"
-    setXYpos 96, 120
-    clone
-    setCostume "a"
-    setXYpos 120, 120
-    clone
-    setCostume "5"
-    setXYpos -120, 96
-    clone
-    setCostume "5"
-    setXYpos -48, 96
-    clone
-    setCostume "f"
-    setXYpos 0, 96
-    clone
-    setCostume "a"
-    setXYpos 48, 96
-    clone
-    setCostume "5"
-    setXYpos 96, 96
-    clone
-    setCostume "a"
-    setXYpos 120, 96
-    clone
-    setCostume "f"
-    setXYpos -120, 72
-    clone
-    setCostume "f"
-    setXYpos -48, 72
-    clone
-    setCostume "f"
-    setXYpos 48, 72
-    clone
-    setCostume "f"
-    setXYpos 120, 72
-    clone
-    setCostume "a"
-    setXYpos -72, 48
-    clone
-    setCostume "f"
-    setXYpos 0, 48
-    clone
-    setCostume "3"
-    setXYpos 48, 48
-    clone
-    setCostume "f"
-    setXYpos -144, 24
-    clone
-    setCostume "f"
-    setXYpos -120, 24
-    clone
-    setCostume "5"
-    setXYpos -96, 24
-    clone
-    setCostume "f"
-    setXYpos 0, 24
-    clone
-    setCostume "a"
-    setXYpos 96, 24
-    clone
-    setCostume "f"
-    setXYpos 120, 24
-    clone
-    setCostume "f"
-    setXYpos 144, 24
-    clone
-    setCostume "a"
-    setXYpos -48, 0
-    clone
-    setCostume "5"
-    setXYpos 48, 0
-    clone
-    setCostume "f"
-    setXYpos -120, -24
-    clone
-    setCostume "f"
-    setXYpos -96, -24
-    clone
-    setCostume "3"
-    setXYpos -48, -24
-    clone
-    setCostume "3"
-    setXYpos 48, -24
-    clone
-    setCostume "a"
-    setXYpos 72, -24
-    clone
-    setCostume "f"
-    setXYpos 96, -24
-    clone
-    setCostume "f"
-    setXYpos 120, -24
-    clone
-    setCostume "c"
-    setXYpos -48, -48
-    clone
-    setCostume "c"
-    setXYpos 48, -48
-    clone
-    setCostume "f"
-    setXYpos -120, -72
-    clone
-    setCostume "f"
-    setXYpos -48, -72
-    clone
-    setCostume "f"
-    setXYpos 48, -72
-    clone
-    setCostume "f"
-    setXYpos -120, -96
-    clone
-    setCostume "5"
-    setXYpos -96, -96
-    clone
-    setCostume "3"
-    setXYpos -24, -96
-    clone
-    setCostume "3"
-    setXYpos 24, -96
-    clone
-    setCostume "a"
-    setXYpos 96, -96
-    clone
-    setCostume "f"
-    setXYpos 120, -96
-    clone
-    setCostume "3"
-    setXYpos -96, -120
-    clone
-    setCostume "8"
-    setXYpos -24, -120
-    clone
-    setCostume "c"
-    setXYpos 0, -120
-    clone
-    setCostume "4"
-    setXYpos 24, -120
-    clone
-    setCostume "c"
-    setXYpos -96, -144
-    clone
-    setCostume "a"
-    setXYpos -24, -144
-    clone
-    setCostume "5"
-    setXYpos 24, -144
-    clone
-    setCostume "c"
-    setXYpos 96, -144
-    clone
-  } else if stageIndex == 7 {
-    setCostume "8"
-    setXYpos -24, -120
-    clone
-    setCostume "c"
-    setXYpos 0, -120
-    clone
-    setCostume "4"
-    setXYpos 24, -120
-    clone
-    setCostume "a"
-    setXYpos -24, -144
-    clone
-    setCostume "5"
-    setXYpos 24, -144
-    clone
-  } else if stageIndex == 8 {
-    setCostume "f"
-    setXYpos -96, 144
-    clone
-    setCostume "f"
-    setXYpos -24, 144
-    clone
-    setCostume "c"
-    setXYpos 24, 144
-    clone
-    setCostume "f"
-    setXYpos 72, 144
-    clone
-    setCostume "f"
-    setXYpos -120, 120
-    clone
-    setCostume "f"
-    setXYpos -96, 120
-    clone
-    setCostume "f"
-    setXYpos -72, 120
-    clone
-    setCostume "f"
-    setXYpos -24, 120
-    clone
-    setCostume "f"
-    setXYpos 72, 120
-    clone
-    setCostume "5"
-    setXYpos 96, 120
-    clone
-    setCostume "3"
-    setXYpos -24, 96
-    clone
-    setCostume "f"
-    setXYpos 24, 96
-    clone
-    setCostume "3"
-    setXYpos 72, 96
-    clone
-    setCostume "a"
-    setXYpos 120, 96
-    clone
-    setCostume "5"
-    setXYpos 144, 96
-    clone
-    setCostume "f"
-    setXYpos -120, 48
-    clone
-    setCostume "c"
-    setXYpos 0, 48
-    clone
-    setCostume "c"
-    setXYpos 24, 48
-    clone
-    setCostume "f"
-    setXYpos -96, 24
-    clone
-    setCostume "a"
-    setXYpos -24, 24
-    clone
-    setCostume "f"
-    setXYpos 0, 24
-    clone
-    setCostume "f"
-    setXYpos 24, 24
-    clone
-    setCostume "3"
-    setXYpos 48, 24
-    clone
-    setCostume "f"
-    setXYpos 72, 24
-    clone
-    setCostume "3"
-    setXYpos 96, 24
-    clone
-    setCostume "f"
-    setXYpos -144, 0
-    clone
-    setCostume "f"
-    setXYpos -120, 0
-    clone
-    setCostume "f"
-    setXYpos -72, 0
-    clone
-    setCostume "a"
-    setXYpos -24, 0
-    clone
-    setCostume "f"
-    setXYpos 0, 0
-    clone
-    setCostume "f"
-    setXYpos 24, 0
-    clone
-    setCostume "f"
-    setXYpos 72, 0
-    clone
-    setCostume "f"
-    setXYpos 144, 0
-    clone
-    setCostume "a"
-    setXYpos -72, -72
-    clone
-    setCostume "c"
-    setXYpos 0, -72
-    clone
-    setCostume "c"
-    setXYpos 24, -72
-    clone
-    setCostume "f"
-    setXYpos -96, -96
-    clone
-    setCostume "5"
-    setXYpos -48, -96
-    clone
-    setCostume "a"
-    setXYpos 24, -96
-    clone
-    setCostume "c"
-    setXYpos 96, -96
-    clone
-    setCostume "f"
-    setXYpos 120, -96
-    clone
-    setCostume "f"
-    setXYpos -96, -120
-    clone
-    setCostume "5"
-    setXYpos -48, -120
-    clone
-    setCostume "8"
-    setXYpos -24, -120
-    clone
-    setCostume "c"
-    setXYpos 0, -120
-    clone
-    setCostume "4"
-    setXYpos 24, -120
-    clone
-    setCostume "3"
-    setXYpos 72, -120
-    clone
-    setCostume "f"
-    setXYpos 120, -120
-    clone
-    setCostume "a"
-    setXYpos -24, -144
-    clone
-    setCostume "5"
-    setXYpos 24, -144
-    clone
-    setCostume "c"
-    setXYpos 72, -144
-    clone
-    setCostume "3"
-    setXYpos 120, -144
-    clone
-  } else if stageIndex == 9 {
-    setCostume "f"
-    setXYpos -72, 144
-    clone
-    setCostume "f"
-    setXYpos -144, 120
-    clone
-    setCostume "f"
-    setXYpos 144, 120
-    clone
-    setCostume "f"
-    setXYpos -120, 0
-    clone
-    setCostume "f"
-    setXYpos 120, 0
-    clone
-    setCostume "f"
-    setXYpos -144, -72
-    clone
-    setCostume "f"
-    setXYpos 144, -72
-    clone
-    setCostume "f"
-    setXYpos -144, -96
-    clone
-    setCostume "f"
-    setXYpos 144, -96
-    clone
-    setCostume "c"
-    setXYpos -96, -120
-    clone
-    setCostume "8"
-    setXYpos -24, -120
-    clone
-    setCostume "c"
-    setXYpos 0, -120
-    clone
-    setCostume "4"
-    setXYpos 24, -120
-    clone
-    setCostume "c"
-    setXYpos 96, -120
-    clone
-    setCostume "f"
-    setXYpos -96, -144
-    clone
-    setCostume "f"
-    setXYpos -72, -144
-    clone
-    setCostume "a"
-    setXYpos -24, -144
-    clone
-    setCostume "5"
-    setXYpos 24, -144
-    clone
-    setCostume "f"
-    setXYpos 72, -144
-    clone
-    setCostume "f"
-    setXYpos 96, -144
-    clone
-  } else if stageIndex == 10 {
-    setCostume "a"
-    setXYpos -120, 120
-    clone
-    setCostume "3"
-    setXYpos -96, 120
-    clone
-    setCostume "f"
-    setXYpos -72, 120
-    clone
-    setCostume "f"
-    setXYpos 96, 120
-    clone
-    setCostume "3"
-    setXYpos 120, 120
-    clone
-    setCostume "5"
-    setXYpos 144, 120
-    clone
-    setCostume "a"
-    setXYpos -144, 96
-    clone
-    setCostume "3"
-    setXYpos -120, 96
-    clone
-    setCostume "f"
-    setXYpos -48, 96
-    clone
-    setCostume "f"
-    setXYpos 72, 96
-    clone
-    setCostume "a"
-    setXYpos 144, 96
-    clone
-    setCostume "f"
-    setXYpos -144, 72
-    clone
-    setCostume "f"
-    setXYpos -48, 72
-    clone
-    setCostume "f"
-    setXYpos 72, 72
-    clone
-    setCostume "a"
-    setXYpos 144, 72
-    clone
-    setCostume "f"
-    setXYpos -144, 48
-    clone
-    setCostume "f"
-    setXYpos -48, 48
-    clone
-    setCostume "f"
-    setXYpos 72, 48
-    clone
-    setCostume "f"
-    setXYpos 144, 48
-    clone
-    setCostume "a"
-    setXYpos -144, 24
-    clone
-    setCostume "c"
-    setXYpos -120, 24
-    clone
-    setCostume "c"
-    setXYpos -96, 24
-    clone
-    setCostume "f"
-    setXYpos -72, 24
-    clone
-    setCostume "f"
-    setXYpos 96, 24
-    clone
-    setCostume "f"
-    setXYpos 120, 24
-    clone
-    setCostume "f"
-    setXYpos 144, 24
-    clone
-    setCostume "f"
-    setXYpos -120, 0
-    clone
-    setCostume "f"
-    setXYpos -96, 0
-    clone
-    setCostume "f"
-    setXYpos -72, 0
-    clone
-    setCostume "f"
-    setXYpos 0, 0
-    clone
-    setCostume "f"
-    setXYpos 72, 0
-    clone
-    setCostume "f"
-    setXYpos 96, 0
-    clone
-    setCostume "f"
-    setXYpos 120, 0
-    clone
-    setCostume "5"
-    setXYpos 144, 0
-    clone
-    setCostume "f"
-    setXYpos -96, -24
-    clone
-    setCostume "f"
-    setXYpos -72, -24
-    clone
-    setCostume "f"
-    setXYpos 0, -24
-    clone
-    setCostume "f"
-    setXYpos 72, -24
-    clone
-    setCostume "f"
-    setXYpos 96, -24
-    clone
-    setCostume "5"
-    setXYpos 120, -24
-    clone
-    setCostume "f"
-    setXYpos -96, -48
-    clone
-    setCostume "f"
-    setXYpos -72, -48
-    clone
-    setCostume "f"
-    setXYpos -48, -48
-    clone
-    setCostume "f"
-    setXYpos -24, -48
-    clone
-    setCostume "f"
-    setXYpos 0, -48
-    clone
-    setCostume "f"
-    setXYpos 24, -48
-    clone
-    setCostume "f"
-    setXYpos 48, -48
-    clone
-    setCostume "f"
-    setXYpos 72, -48
-    clone
-    setCostume "f"
-    setXYpos 96, -48
-    clone
-    setCostume "5"
-    setXYpos 120, -48
-    clone
-    setCostume "f"
-    setXYpos -144, -72
-    clone
-    setCostume "3"
-    setXYpos -96, -72
-    clone
-    setCostume "3"
-    setXYpos -72, -72
-    clone
-    setCostume "3"
-    setXYpos -48, -72
-    clone
-    setCostume "3"
-    setXYpos 24, -72
-    clone
-    setCostume "3"
-    setXYpos 48, -72
-    clone
-    setCostume "3"
-    setXYpos 72, -72
-    clone
-    setCostume "3"
-    setXYpos 96, -72
-    clone
-    setCostume "f"
-    setXYpos 144, -72
-    clone
-    setCostume "f"
-    setXYpos -144, -96
-    clone
-    setCostume "f"
-    setXYpos 144, -96
-    clone
-    setCostume "8"
-    setXYpos -24, -120
-    clone
-    setCostume "c"
-    setXYpos 0, -120
-    clone
-    setCostume "4"
-    setXYpos 24, -120
-    clone
-    setCostume "5"
-    setXYpos -72, -144
-    clone
-    setCostume "a"
-    setXYpos -24, -144
-    clone
-    setCostume "5"
-    setXYpos 24, -144
-    clone
-    setCostume "5"
-    setXYpos 96, -144
-    clone
-  } else if stageIndex == 11 {
-    setCostume "f"
-    setXYpos 24, 144
-    clone
-    setCostume "f"
-    setXYpos 72, 144
-    clone
-    setCostume "f"
-    setXYpos 96, 144
-    clone
-    setCostume "a"
-    setXYpos -120, 120
-    clone
-    setCostume "f"
-    setXYpos -96, 120
-    clone
-    setCostume "f"
-    setXYpos -72, 120
-    clone
-    setCostume "f"
-    setXYpos -48, 120
-    clone
-    setCostume "f"
-    setXYpos -24, 120
-    clone
-    setCostume "f"
-    setXYpos 24, 120
-    clone
-    setCostume "5"
-    setXYpos -72, 96
-    clone
-    setCostume "f"
-    setXYpos -24, 96
-    clone
-    setCostume "f"
-    setXYpos 24, 96
-    clone
-    setCostume "f"
-    setXYpos 48, 96
-    clone
-    setCostume "a"
-    setXYpos -120, 72
-    clone
-    setCostume "a"
-    setXYpos -120, 48
-    clone
-    setCostume "f"
-    setXYpos -72, 48
-    clone
-    setCostume "f"
-    setXYpos -48, 48
-    clone
-    setCostume "f"
-    setXYpos -24, 48
-    clone
-    setCostume "f"
-    setXYpos 24, 48
-    clone
-    setCostume "f"
-    setXYpos 48, 48
-    clone
-    setCostume "3"
-    setXYpos 120, 48
-    clone
-    setCostume "3"
-    setXYpos -120, 24
-    clone
-    setCostume "3"
-    setXYpos -96, 24
-    clone
-    setCostume "3"
-    setXYpos -72, 24
-    clone
-    setCostume "f"
-    setXYpos 24, 24
-    clone
-    setCostume "a"
-    setXYpos 144, 24
-    clone
-    setCostume "a"
-    setXYpos -144, 0
-    clone
-    setCostume "f"
-    setXYpos -120, 0
-    clone
-    setCostume "f"
-    setXYpos -96, 0
-    clone
-    setCostume "f"
-    setXYpos -72, 0
-    clone
-    setCostume "f"
-    setXYpos 120, -24
-    clone
-    setCostume "f"
-    setXYpos -120, -48
-    clone
-    setCostume "f"
-    setXYpos 120, -48
-    clone
-    setCostume "a"
-    setXYpos -144, -72
-    clone
-    setCostume "f"
-    setXYpos -120, -72
-    clone
-    setCostume "f"
-    setXYpos 120, -72
-    clone
-    setCostume "5"
-    setXYpos 144, -72
-    clone
-    setCostume "f"
-    setXYpos -120, -96
-    clone
-    setCostume "f"
-    setXYpos 72, -96
-    clone
-    setCostume "f"
-    setXYpos 96, -96
-    clone
-    setCostume "f"
-    setXYpos 120, -96
-    clone
-    setCostume "8"
-    setXYpos -24, -120
-    clone
-    setCostume "c"
-    setXYpos 0, -120
-    clone
-    setCostume "4"
-    setXYpos 24, -120
-    clone
-    setCostume "f"
-    setXYpos 72, -120
-    clone
-    setCostume "a"
-    setXYpos 120, -120
-    clone
-    setCostume "c"
-    setXYpos -120, -144
-    clone
-    setCostume "a"
-    setXYpos -24, -144
-    clone
-    setCostume "5"
-    setXYpos 24, -144
-    clone
-  } else if stageIndex == 12 {
-    setCostume "f"
-    setXYpos 24, 144
-    clone
-    setCostume "f"
-    setXYpos 48, 144
-    clone
-    setCostume "f"
-    setXYpos 72, 144
-    clone
-    setCostume "f"
-    setXYpos -120, 120
-    clone
-    setCostume "f"
-    setXYpos -96, 120
-    clone
-    setCostume "f"
-    setXYpos -72, 120
-    clone
-    setCostume "c"
-    setXYpos -48, 120
-    clone
-    setCostume "c"
-    setXYpos 0, 120
-    clone
-    setCostume "f"
-    setXYpos 72, 120
-    clone
-    setCostume "f"
-    setXYpos -48, 96
-    clone
-    setCostume "3"
-    setXYpos 0, 96
-    clone
-    setCostume "f"
-    setXYpos 120, 96
-    clone
-    setCostume "f"
-    setXYpos 144, 96
-    clone
-    setCostume "f"
-    setXYpos 24, 72
-    clone
-    setCostume "5"
-    setXYpos 48, 72
-    clone
-    setCostume "f"
-    setXYpos 120, 72
-    clone
-    setCostume "f"
-    setXYpos 24, 48
-    clone
-    setCostume "f"
-    setXYpos 120, 48
-    clone
-    setCostume "f"
-    setXYpos -144, 24
-    clone
-    setCostume "f"
-    setXYpos -96, 24
-    clone
-    setCostume "f"
-    setXYpos -72, 24
-    clone
-    setCostume "f"
-    setXYpos -48, 24
-    clone
-    setCostume "f"
-    setXYpos 96, 24
-    clone
-    setCostume "f"
-    setXYpos 120, 24
-    clone
-    setCostume "f"
-    setXYpos 0, -24
-    clone
-    setCostume "f"
-    setXYpos 24, -24
-    clone
-    setCostume "f"
-    setXYpos -24, -48
-    clone
-    setCostume "f"
-    setXYpos -144, -72
-    clone
-    setCostume "f"
-    setXYpos -120, -72
-    clone
-    setCostume "f"
-    setXYpos -96, -72
-    clone
-    setCostume "f"
-    setXYpos -96, -96
-    clone
-    setCostume "f"
-    setXYpos 72, -96
-    clone
-    setCostume "f"
-    setXYpos 96, -96
-    clone
-    setCostume "a"
-    setXYpos 144, -96
-    clone
-    setCostume "f"
-    setXYpos -144, -120
-    clone
-    setCostume "8"
-    setXYpos -24, -120
-    clone
-    setCostume "c"
-    setXYpos 0, -120
-    clone
-    setCostume "4"
-    setXYpos 24, -120
-    clone
-    setCostume "f"
-    setXYpos 72, -120
-    clone
-    setCostume "f"
-    setXYpos 144, -120
-    clone
-    setCostume "a"
-    setXYpos -24, -144
-    clone
-    setCostume "5"
-    setXYpos 24, -144
-    clone
-  } else if stageIndex == 13 {
-    setCostume "c"
-    setXYpos -48, 144
-    clone
-    setCostume "c"
-    setXYpos 48, 144
-    clone
-    setCostume "f"
-    setXYpos -120, 120
-    clone
-    setCostume "f"
-    setXYpos -96, 120
-    clone
-    setCostume "f"
-    setXYpos -72, 120
-    clone
-    setCostume "f"
-    setXYpos -48, 120
-    clone
-    setCostume "f"
-    setXYpos 48, 120
-    clone
-    setCostume "f"
-    setXYpos 72, 120
-    clone
-    setCostume "f"
-    setXYpos 96, 120
-    clone
-    setCostume "f"
-    setXYpos 120, 120
-    clone
-    setCostume "f"
-    setXYpos -120, 96
-    clone
-    setCostume "f"
-    setXYpos 0, 96
-    clone
-    setCostume "f"
-    setXYpos -72, 72
-    clone
-    setCostume "3"
-    setXYpos -48, 72
-    clone
-    setCostume "3"
-    setXYpos 48, 72
-    clone
-    setCostume "f"
-    setXYpos 72, 72
-    clone
-    setCostume "f"
-    setXYpos 120, 72
-    clone
-    setCostume "f"
-    setXYpos 144, 72
-    clone
-    setCostume "f"
-    setXYpos -120, 48
-    clone
-    setCostume "5"
-    setXYpos -72, 48
-    clone
-    setCostume "a"
-    setXYpos 72, 48
-    clone
-    setCostume "f"
-    setXYpos 144, 48
-    clone
-    setCostume "3"
-    setXYpos -120, 24
-    clone
-    setCostume "f"
-    setXYpos 144, 24
-    clone
-    setCostume "f"
-    setXYpos -144, 0
-    clone
-    setCostume "c"
-    setXYpos 120, 0
-    clone
-    setCostume "f"
-    setXYpos 144, 0
-    clone
-    setCostume "f"
-    setXYpos -144, -24
-    clone
-    setCostume "5"
-    setXYpos -72, -24
-    clone
-    setCostume "a"
-    setXYpos 72, -24
-    clone
-    setCostume "f"
-    setXYpos 120, -24
-    clone
-    setCostume "f"
-    setXYpos -144, -48
-    clone
-    setCostume "f"
-    setXYpos -120, -48
-    clone
-    setCostume "f"
-    setXYpos -72, -48
-    clone
-    setCostume "c"
-    setXYpos -48, -48
-    clone
-    setCostume "c"
-    setXYpos 48, -48
-    clone
-    setCostume "f"
-    setXYpos 72, -48
-    clone
-    setCostume "f"
-    setXYpos -144, -72
-    clone
-    setCostume "f"
-    setXYpos 0, -72
-    clone
-    setCostume "f"
-    setXYpos 120, -72
-    clone
-    setCostume "f"
-    setXYpos -144, -96
-    clone
-    setCostume "f"
-    setXYpos -120, -96
-    clone
-    setCostume "f"
-    setXYpos -96, -96
-    clone
-    setCostume "f"
-    setXYpos -72, -96
-    clone
-    setCostume "f"
-    setXYpos -48, -96
-    clone
-    setCostume "f"
-    setXYpos 48, -96
-    clone
-    setCostume "f"
-    setXYpos 72, -96
-    clone
-    setCostume "f"
-    setXYpos 96, -96
-    clone
-    setCostume "f"
-    setXYpos -144, -120
-    clone
-    setCostume "f"
-    setXYpos -120, -120
-    clone
-    setCostume "3"
-    setXYpos -48, -120
-    clone
-    setCostume "8"
-    setXYpos -24, -120
-    clone
-    setCostume "c"
-    setXYpos 0, -120
-    clone
-    setCostume "4"
-    setXYpos 24, -120
-    clone
-    setCostume "3"
-    setXYpos 48, -120
-    clone
-    setCostume "f"
-    setXYpos 120, -120
-    clone
-    setCostume "f"
-    setXYpos -144, -144
-    clone
-    setCostume "f"
-    setXYpos -120, -144
-    clone
-    setCostume "a"
-    setXYpos -24, -144
-    clone
-    setCostume "5"
-    setXYpos 24, -144
-    clone
-  } else if stageIndex == 14 {
-    setCostume "c"
-    setXYpos -48, 120
-    clone
-    setCostume "f"
-    setXYpos -24, 120
-    clone
-    setCostume "f"
-    setXYpos 0, 120
-    clone
-    setCostume "f"
-    setXYpos 24, 120
-    clone
-    setCostume "c"
-    setXYpos 48, 120
-    clone
-    setCostume "a"
-    setXYpos -72, 96
-    clone
-    setCostume "f"
-    setXYpos -48, 96
-    clone
-    setCostume "f"
-    setXYpos -24, 96
-    clone
-    setCostume "f"
-    setXYpos 0, 96
-    clone
-    setCostume "f"
-    setXYpos 24, 96
-    clone
-    setCostume "f"
-    setXYpos 48, 96
-    clone
-    setCostume "5"
-    setXYpos 72, 96
-    clone
-    setCostume "f"
-    setXYpos -72, 72
-    clone
-    setCostume "f"
-    setXYpos -48, 72
-    clone
-    setCostume "f"
-    setXYpos 0, 72
-    clone
-    setCostume "f"
-    setXYpos 48, 72
-    clone
-    setCostume "f"
-    setXYpos 72, 72
-    clone
-    setCostume "f"
-    setXYpos -72, 48
-    clone
-    setCostume "f"
-    setXYpos 0, 48
-    clone
-    setCostume "f"
-    setXYpos 72, 48
-    clone
-    setCostume "f"
-    setXYpos -72, 24
-    clone
-    setCostume "f"
-    setXYpos -48, 24
-    clone
-    setCostume "f"
-    setXYpos -24, 24
-    clone
-    setCostume "f"
-    setXYpos 0, 24
-    clone
-    setCostume "f"
-    setXYpos 24, 24
-    clone
-    setCostume "f"
-    setXYpos 48, 24
-    clone
-    setCostume "f"
-    setXYpos 72, 24
-    clone
-    setCostume "f"
-    setXYpos -48, 0
-    clone
-    setCostume "f"
-    setXYpos 0, 0
-    clone
-    setCostume "f"
-    setXYpos 48, 0
-    clone
-    setCostume "f"
-    setXYpos -48, -24
-    clone
-    setCostume "f"
-    setXYpos -24, -24
-    clone
-    setCostume "f"
-    setXYpos 0, -24
-    clone
-    setCostume "f"
-    setXYpos 24, -24
-    clone
-    setCostume "f"
-    setXYpos 48, -24
-    clone
-    setCostume "a"
-    setXYpos -48, -48
-    clone
-    setCostume "a"
-    setXYpos -24, -48
-    clone
-    setCostume "a"
-    setXYpos 0, -48
-    clone
-    setCostume "a"
-    setXYpos 24, -48
-    clone
-    setCostume "a"
-    setXYpos 48, -48
-    clone
-    setCostume "5"
-    setXYpos -48, -72
-    clone
-    setCostume "5"
-    setXYpos -24, -72
-    clone
-    setCostume "5"
-    setXYpos 0, -72
-    clone
-    setCostume "5"
-    setXYpos 24, -72
-    clone
-    setCostume "5"
-    setXYpos 48, -72
-    clone
-    setCostume "5"
-    setXYpos -144, -120
-    clone
-    setCostume "5"
-    setXYpos -120, -120
-    clone
-    setCostume "5"
-    setXYpos -96, -120
-    clone
-    setCostume "8"
-    setXYpos -24, -120
-    clone
-    setCostume "c"
-    setXYpos 0, -120
-    clone
-    setCostume "4"
-    setXYpos 24, -120
-    clone
-    setCostume "a"
-    setXYpos 96, -120
-    clone
-    setCostume "a"
-    setXYpos 120, -120
-    clone
-    setCostume "a"
-    setXYpos 144, -120
-    clone
-    setCostume "a"
-    setXYpos -24, -144
-    clone
-    setCostume "5"
-    setXYpos 24, -144
-    clone
-  } else if stageIndex == 15 {
-    setCostume "f"
-    setXYpos -48, 144
-    clone
-    setCostume "f"
-    setXYpos -24, 144
-    clone
-    setCostume "f"
-    setXYpos 48, 144
-    clone
-    setCostume "f"
-    setXYpos -72, 120
-    clone
-    setCostume "f"
-    setXYpos -48, 120
-    clone
-    setCostume "f"
-    setXYpos 48, 120
-    clone
-    setCostume "f"
-    setXYpos 48, 96
-    clone
-    setCostume "f"
-    setXYpos 72, 96
-    clone
-    setCostume "f"
-    setXYpos -96, 72
-    clone
-    setCostume "f"
-    setXYpos -48, 72
-    clone
-    setCostume "f"
-    setXYpos -24, 72
-    clone
-    setCostume "f"
-    setXYpos 0, 72
-    clone
-    setCostume "f"
-    setXYpos 120, 72
-    clone
-    setCostume "f"
-    setXYpos -96, 48
-    clone
-    setCostume "f"
-    setXYpos 72, 48
-    clone
-    setCostume "f"
-    setXYpos 120, 48
-    clone
-    setCostume "f"
-    setXYpos -72, 24
-    clone
-    setCostume "f"
-    setXYpos 72, 24
-    clone
-    setCostume "f"
-    setXYpos 120, 24
-    clone
-    setCostume "f"
-    setXYpos -120, 0
-    clone
-    setCostume "f"
-    setXYpos -96, 0
-    clone
-    setCostume "f"
-    setXYpos -72, 0
-    clone
-    setCostume "f"
-    setXYpos -48, 0
-    clone
-    setCostume "f"
-    setXYpos -24, 0
-    clone
-    setCostume "f"
-    setXYpos 48, 0
-    clone
-    setCostume "f"
-    setXYpos 72, 0
-    clone
-    setCostume "5"
-    setXYpos 96, 0
-    clone
-    setCostume "f"
-    setXYpos -96, -24
-    clone
-    setCostume "f"
-    setXYpos -72, -24
-    clone
-    setCostume "f"
-    setXYpos 24, -24
-    clone
-    setCostume "3"
-    setXYpos 48, -24
-    clone
-    setCostume "f"
-    setXYpos -120, -48
-    clone
-    setCostume "f"
-    setXYpos -72, -48
-    clone
-    setCostume "c"
-    setXYpos 0, -48
-    clone
-    setCostume "3"
-    setXYpos 24, -48
-    clone
-    setCostume "f"
-    setXYpos 96, -48
-    clone
-    setCostume "5"
-    setXYpos 120, -48
-    clone
-    setCostume "f"
-    setXYpos -120, -72
-    clone
-    setCostume "a"
-    setXYpos -48, -72
-    clone
-    setCostume "f"
-    setXYpos -24, -72
-    clone
-    setCostume "3"
-    setXYpos 0, -72
-    clone
-    setCostume "f"
-    setXYpos 72, -72
-    clone
-    setCostume "f"
-    setXYpos -120, -96
-    clone
-    setCostume "f"
-    setXYpos -96, -96
-    clone
-    setCostume "5"
-    setXYpos -72, -96
-    clone
-    setCostume "a"
-    setXYpos -48, -96
-    clone
-    setCostume "3"
-    setXYpos -24, -96
-    clone
-    setCostume "c"
-    setXYpos 48, -96
-    clone
-    setCostume "f"
-    setXYpos 96, -96
-    clone
-    setCostume "f"
-    setXYpos -96, -120
-    clone
-    setCostume "8"
-    setXYpos -24, -120
-    clone
-    setCostume "c"
-    setXYpos 0, -120
-    clone
-    setCostume "4"
-    setXYpos 24, -120
-    clone
-    setCostume "f"
-    setXYpos 48, -120
-    clone
-    setCostume "3"
-    setXYpos 96, -120
-    clone
-    setCostume "3"
-    setXYpos -96, -144
-    clone
-    setCostume "a"
-    setXYpos -24, -144
-    clone
-    setCostume "5"
-    setXYpos 24, -144
-    clone
-  } else if stageIndex == 16 {
-    setCostume "c"
-    setXYpos 24, 72
-    clone
-    setCostume "c"
-    setXYpos 72, 24
-    clone
-    setCostume "c"
-    setXYpos 120, -24
-    clone
-    setCostume "f"
-    setXYpos -144, -72
-    clone
-    setCostume "f"
-    setXYpos -144, -96
-    clone
-    setCostume "f"
-    setXYpos -120, -96
-    clone
-    setCostume "f"
-    setXYpos -120, -120
-    clone
-    setCostume "f"
-    setXYpos -96, -120
-    clone
-    setCostume "8"
-    setXYpos -24, -120
-    clone
-    setCostume "c"
-    setXYpos 0, -120
-    clone
-    setCostume "4"
-    setXYpos 24, -120
-    clone
-    setCostume "f"
-    setXYpos -96, -144
-    clone
-    setCostume "f"
-    setXYpos -72, -144
-    clone
-    setCostume "a"
-    setXYpos -24, -144
-    clone
-    setCostume "5"
-    setXYpos 24, -144
-    clone
-  } else if stageIndex == 17 {
-    setCostume "c"
-    setXYpos -48, 144
-    clone
-    setCostume "c"
-    setXYpos 96, 144
-    clone
-    setCostume "f"
-    setXYpos -120, 120
-    clone
-    setCostume "f"
-    setXYpos -72, 120
-    clone
-    setCostume "f"
-    setXYpos -48, 120
-    clone
-    setCostume "f"
-    setXYpos 96, 120
-    clone
-    setCostume "f"
-    setXYpos 120, 120
-    clone
-    setCostume "f"
-    setXYpos -120, 96
-    clone
-    setCostume "f"
-    setXYpos -48, 96
-    clone
-    setCostume "f"
-    setXYpos -48, 72
-    clone
-    setCostume "f"
-    setXYpos 24, 72
-    clone
-    setCostume "f"
-    setXYpos 0, 48
-    clone
-    setCostume "f"
-    setXYpos 24, 48
-    clone
-    setCostume "a"
-    setXYpos 48, 48
-    clone
-    setCostume "5"
-    setXYpos 72, 48
-    clone
-    setCostume "f"
-    setXYpos 24, 24
-    clone
-    setCostume "a"
-    setXYpos 48, 24
-    clone
-    setCostume "5"
-    setXYpos 72, 24
-    clone
-    setCostume "f"
-    setXYpos -144, 0
-    clone
-    setCostume "f"
-    setXYpos -120, 0
-    clone
-    setCostume "f"
-    setXYpos -96, 0
-    clone
-    setCostume "f"
-    setXYpos -72, 0
-    clone
-    setCostume "f"
-    setXYpos 120, 0
-    clone
-    setCostume "f"
-    setXYpos 144, 0
-    clone
-    setCostume "f"
-    setXYpos -72, -24
-    clone
-    setCostume "f"
-    setXYpos -48, -24
-    clone
-    setCostume "f"
-    setXYpos -120, -48
-    clone
-    setCostume "f"
-    setXYpos -96, -48
-    clone
-    setCostume "f"
-    setXYpos -72, -48
-    clone
-    setCostume "f"
-    setXYpos 48, -48
-    clone
-    setCostume "f"
-    setXYpos 72, -48
-    clone
-    setCostume "f"
-    setXYpos 120, -48
-    clone
-    setCostume "f"
-    setXYpos -72, -72
-    clone
-    setCostume "f"
-    setXYpos 72, -72
-    clone
-    setCostume "f"
-    setXYpos 120, -72
-    clone
-    setCostume "c"
-    setXYpos 96, -96
-    clone
-    setCostume "f"
-    setXYpos 120, -96
-    clone
-    setCostume "f"
-    setXYpos -144, -120
-    clone
-    setCostume "8"
-    setXYpos -24, -120
-    clone
-    setCostume "c"
-    setXYpos 0, -120
-    clone
-    setCostume "4"
-    setXYpos 24, -120
-    clone
-    setCostume "f"
-    setXYpos 72, -120
-    clone
-    setCostume "f"
-    setXYpos -144, -144
-    clone
-    setCostume "f"
-    setXYpos -120, -144
-    clone
-    setCostume "a"
-    setXYpos -24, -144
-    clone
-    setCostume "5"
-    setXYpos 24, -144
-    clone
-    setCostume "f"
-    setXYpos 72, -144
-    clone
-    setCostume "f"
-    setXYpos 120, -144
-    clone
-  } else if stageIndex == 18 {
-    setCostume "f"
-    setXYpos -120, 120
-    clone
-    setCostume "f"
-    setXYpos -144, 96
-    clone
-    setCostume "f"
-    setXYpos -96, 96
-    clone
-    setCostume "f"
-    setXYpos 0, 96
-    clone
-    setCostume "f"
-    setXYpos 24, 96
-    clone
-    setCostume "f"
-    setXYpos 48, 96
-    clone
-    setCostume "f"
-    setXYpos 72, 96
-    clone
-    setCostume "f"
-    setXYpos -120, 72
-    clone
-    setCostume "f"
-    setXYpos -72, 72
-    clone
-    setCostume "f"
-    setXYpos 0, 72
-    clone
-    setCostume "f"
-    setXYpos 72, 72
-    clone
-    setCostume "f"
-    setXYpos -96, 48
-    clone
-    setCostume "f"
-    setXYpos 0, 48
-    clone
-    setCostume "f"
-    setXYpos 72, 48
-    clone
-    setCostume "f"
-    setXYpos 0, 24
-    clone
-    setCostume "f"
-    setXYpos 48, 24
-    clone
-    setCostume "f"
-    setXYpos 72, 24
-    clone
-    setCostume "f"
-    setXYpos -96, 0
-    clone
-    setCostume "f"
-    setXYpos -72, 0
-    clone
-    setCostume "f"
-    setXYpos -24, 0
-    clone
-    setCostume "f"
-    setXYpos -96, -24
-    clone
-    setCostume "f"
-    setXYpos -24, -24
-    clone
-    setCostume "f"
-    setXYpos -24, -48
-    clone
-    setCostume "f"
-    setXYpos 48, -48
-    clone
-    setCostume "f"
-    setXYpos 72, -48
-    clone
-    setCostume "f"
-    setXYpos -96, -72
-    clone
-    setCostume "f"
-    setXYpos -72, -72
-    clone
-    setCostume "f"
-    setXYpos -48, -72
-    clone
-    setCostume "f"
-    setXYpos -24, -72
-    clone
-    setCostume "f"
-    setXYpos 48, -72
-    clone
-    setCostume "f"
-    setXYpos 96, -96
-    clone
-    setCostume "f"
-    setXYpos 120, -96
-    clone
-    setCostume "8"
-    setXYpos -24, -120
-    clone
-    setCostume "c"
-    setXYpos 0, -120
-    clone
-    setCostume "4"
-    setXYpos 24, -120
-    clone
-    setCostume "f"
-    setXYpos 96, -120
-    clone
-    setCostume "a"
-    setXYpos -24, -144
-    clone
-    setCostume "5"
-    setXYpos 24, -144
-    clone
-  } else if stageIndex == 19 {
-    setCostume "f"
-    setXYpos -120, 144
-    clone
-    setCostume "f"
-    setXYpos -72, 144
-    clone
-    setCostume "f"
-    setXYpos -24, 144
-    clone
-    setCostume "f"
-    setXYpos 24, 144
-    clone
-    setCostume "f"
-    setXYpos 72, 144
-    clone
-    setCostume "f"
-    setXYpos 120, 144
-    clone
-    setCostume "f"
-    setXYpos -120, 120
-    clone
-    setCostume "f"
-    setXYpos -72, 120
-    clone
-    setCostume "f"
-    setXYpos -24, 120
-    clone
-    setCostume "f"
-    setXYpos 24, 120
-    clone
-    setCostume "f"
-    setXYpos 72, 120
-    clone
-    setCostume "f"
-    setXYpos 120, 120
-    clone
-    setCostume "c"
-    setXYpos -144, 72
-    clone
-    setCostume "c"
-    setXYpos -96, 72
-    clone
-    setCostume "f"
-    setXYpos -48, 72
-    clone
-    setCostume "f"
-    setXYpos 48, 72
-    clone
-    setCostume "c"
-    setXYpos 96, 72
-    clone
-    setCostume "c"
-    setXYpos 144, 72
-    clone
-    setCostume "f"
-    setXYpos -144, 48
-    clone
-    setCostume "f"
-    setXYpos -96, 48
-    clone
-    setCostume "3"
-    setXYpos -72, 48
-    clone
-    setCostume "f"
-    setXYpos -48, 48
-    clone
-    setCostume "f"
-    setXYpos 0, 48
-    clone
-    setCostume "f"
-    setXYpos 48, 48
-    clone
-    setCostume "3"
-    setXYpos 72, 48
-    clone
-    setCostume "f"
-    setXYpos 96, 48
-    clone
-    setCostume "f"
-    setXYpos 144, 48
-    clone
-    setCostume "f"
-    setXYpos -48, 0
-    clone
-    setCostume "f"
-    setXYpos 48, 0
-    clone
-    setCostume "f"
-    setXYpos -48, -24
-    clone
-    setCostume "3"
-    setXYpos -24, -24
-    clone
-    setCostume "3"
-    setXYpos 24, -24
-    clone
-    setCostume "f"
-    setXYpos 48, -24
-    clone
-    setCostume "c"
-    setXYpos -144, -72
-    clone
-    setCostume "c"
-    setXYpos -96, -72
-    clone
-    setCostume "f"
-    setXYpos -48, -72
-    clone
-    setCostume "f"
-    setXYpos 48, -72
-    clone
-    setCostume "c"
-    setXYpos 96, -72
-    clone
-    setCostume "c"
-    setXYpos 144, -72
-    clone
-    setCostume "f"
-    setXYpos -120, -96
-    clone
-    setCostume "f"
-    setXYpos -72, -96
-    clone
-    setCostume "f"
-    setXYpos 72, -96
-    clone
-    setCostume "f"
-    setXYpos 120, -96
-    clone
-    setCostume "f"
-    setXYpos -120, -120
-    clone
-    setCostume "f"
-    setXYpos -72, -120
-    clone
-    setCostume "8"
-    setXYpos -24, -120
-    clone
-    setCostume "c"
-    setXYpos 0, -120
-    clone
-    setCostume "4"
-    setXYpos 24, -120
-    clone
-    setCostume "f"
-    setXYpos 72, -120
-    clone
-    setCostume "f"
-    setXYpos 120, -120
-    clone
-    setCostume "3"
-    setXYpos -120, -144
-    clone
-    setCostume "3"
-    setXYpos -72, -144
-    clone
-    setCostume "a"
-    setXYpos -24, -144
-    clone
-    setCostume "5"
-    setXYpos 24, -144
-    clone
-    setCostume "3"
-    setXYpos 72, -144
-    clone
-    setCostume "3"
-    setXYpos 120, -144
-    clone
-  } else if stageIndex == 20 {
-    setCostume "f"
-    setXYpos -24, 144
-    clone
-    setCostume "f"
-    setXYpos 48, 144
-    clone
-    setCostume "f"
-    setXYpos 96, 144
-    clone
-    setCostume "f"
-    setXYpos 48, 120
-    clone
-    setCostume "c"
-    setXYpos -24, 96
-    clone
-    setCostume "f"
-    setXYpos 48, 96
-    clone
-    setCostume "f"
-    setXYpos 96, 96
-    clone
-    setCostume "f"
-    setXYpos -96, 72
-    clone
-    setCostume "c"
-    setXYpos 24, 72
-    clone
-    setCostume "3"
-    setXYpos 48, 72
-    clone
-    setCostume "f"
-    setXYpos 96, 72
-    clone
-    setCostume "f"
-    setXYpos -96, 48
-    clone
-    setCostume "f"
-    setXYpos 24, 48
-    clone
-    setCostume "f"
-    setXYpos -144, 24
-    clone
-    setCostume "f"
-    setXYpos -96, 24
-    clone
-    setCostume "f"
-    setXYpos 144, 24
-    clone
-    setCostume "c"
-    setXYpos -72, 0
-    clone
-    setCostume "f"
-    setXYpos -144, -24
-    clone
-    setCostume "f"
-    setXYpos -120, -24
-    clone
-    setCostume "a"
-    setXYpos -96, -24
-    clone
-    setCostume "f"
-    setXYpos -72, -24
-    clone
-    setCostume "c"
-    setXYpos 120, -24
-    clone
-    setCostume "c"
-    setXYpos 144, -24
-    clone
-    setCostume "3"
-    setXYpos -144, -48
-    clone
-    setCostume "a"
-    setXYpos -96, -48
-    clone
-    setCostume "f"
-    setXYpos -24, -48
-    clone
-    setCostume "f"
-    setXYpos 120, -48
-    clone
-    setCostume "f"
-    setXYpos -24, -72
-    clone
-    setCostume "f"
-    setXYpos -120, -96
-    clone
-    setCostume "3"
-    setXYpos -24, -96
-    clone
-    setCostume "3"
-    setXYpos 0, -96
-    clone
-    setCostume "3"
-    setXYpos 24, -96
-    clone
-    setCostume "f"
-    setXYpos -120, -120
-    clone
-    setCostume "f"
-    setXYpos -72, -120
-    clone
-    setCostume "8"
-    setXYpos -24, -120
-    clone
-    setCostume "c"
-    setXYpos 0, -120
-    clone
-    setCostume "4"
-    setXYpos 24, -120
-    clone
-    setCostume "a"
-    setXYpos -24, -144
-    clone
-    setCostume "5"
-    setXYpos 24, -144
-    clone
-  } else if stageIndex == 21 {
-    setCostume "c"
-    setXYpos -72, 144
-    clone
-    setCostume "c"
-    setXYpos -48, 144
-    clone
-    setCostume "c"
-    setXYpos -24, 144
-    clone
-    setCostume "c"
-    setXYpos 48, 144
-    clone
-    setCostume "c"
-    setXYpos -120, 120
-    clone
-    setCostume "f"
-    setXYpos -96, 120
-    clone
-    setCostume "f"
-    setXYpos -72, 120
-    clone
-    setCostume "f"
-    setXYpos -48, 120
-    clone
-    setCostume "f"
-    setXYpos -24, 120
-    clone
-    setCostume "f"
-    setXYpos 0, 120
-    clone
-    setCostume "f"
-    setXYpos 24, 120
-    clone
-    setCostume "f"
-    setXYpos 48, 120
-    clone
-    setCostume "f"
-    setXYpos 72, 120
-    clone
-    setCostume "f"
-    setXYpos 72, 96
-    clone
-    setCostume "f"
-    setXYpos 96, 96
-    clone
-    setCostume "f"
-    setXYpos 96, 72
-    clone
-    setCostume "f"
-    setXYpos 120, 72
-    clone
-    setCostume "f"
-    setXYpos 96, 0
-    clone
-    setCostume "f"
-    setXYpos 120, 0
-    clone
-    setCostume "5"
-    setXYpos 144, 0
-    clone
-    setCostume "f"
-    setXYpos 72, -24
-    clone
-    setCostume "f"
-    setXYpos 96, -24
-    clone
-    setCostume "f"
-    setXYpos 120, -24
-    clone
-    setCostume "5"
-    setXYpos 144, -24
-    clone
-    setCostume "f"
-    setXYpos -144, -48
-    clone
-    setCostume "f"
-    setXYpos -72, -48
-    clone
-    setCostume "f"
-    setXYpos -48, -48
-    clone
-    setCostume "f"
-    setXYpos 48, -48
-    clone
-    setCostume "f"
-    setXYpos 72, -48
-    clone
-    setCostume "f"
-    setXYpos 96, -48
-    clone
-    setCostume "f"
-    setXYpos 120, -48
-    clone
-    setCostume "f"
-    setXYpos -120, -72
-    clone
-    setCostume "f"
-    setXYpos -96, -72
-    clone
-    setCostume "f"
-    setXYpos -72, -72
-    clone
-    setCostume "f"
-    setXYpos -48, -72
-    clone
-    setCostume "f"
-    setXYpos -24, -72
-    clone
-    setCostume "f"
-    setXYpos 0, -72
-    clone
-    setCostume "f"
-    setXYpos 24, -72
-    clone
-    setCostume "f"
-    setXYpos 48, -72
-    clone
-    setCostume "f"
-    setXYpos 72, -72
-    clone
-    setCostume "f"
-    setXYpos 96, -72
-    clone
-    setCostume "f"
-    setXYpos -96, -96
-    clone
-    setCostume "f"
-    setXYpos -48, -96
-    clone
-    setCostume "f"
-    setXYpos -24, -96
-    clone
-    setCostume "f"
-    setXYpos 0, -96
-    clone
-    setCostume "f"
-    setXYpos 24, -96
-    clone
-    setCostume "f"
-    setXYpos 48, -96
-    clone
-    setCostume "f"
-    setXYpos 72, -96
-    clone
-    setCostume "5"
-    setXYpos 96, -96
-    clone
-    setCostume "f"
-    setXYpos -96, -120
-    clone
-    setCostume "3"
-    setXYpos -72, -120
-    clone
-    setCostume "8"
-    setXYpos -24, -120
-    clone
-    setCostume "c"
-    setXYpos 0, -120
-    clone
-    setCostume "4"
-    setXYpos 24, -120
-    clone
-    setCostume "f"
-    setXYpos 48, -120
-    clone
-    setCostume "f"
-    setXYpos 72, -120
-    clone
-    setCostume "a"
-    setXYpos -24, -144
-    clone
-    setCostume "5"
-    setXYpos 24, -144
-    clone
-  } else if stageIndex == 22 {
-    setCostume "f"
-    setXYpos -96, 72
-    clone
-    setCostume "f"
-    setXYpos 48, 72
-    clone
-    setCostume "f"
-    setXYpos 72, 72
-    clone
-    setCostume "f"
-    setXYpos -72, 48
-    clone
-    setCostume "f"
-    setXYpos -144, 0
-    clone
-    setCostume "f"
-    setXYpos -120, -24
-    clone
-    setCostume "f"
-    setXYpos -144, -48
-    clone
-    setCostume "f"
-    setXYpos -48, -72
-    clone
-    setCostume "f"
-    setXYpos 48, -72
-    clone
-    setCostume "f"
-    setXYpos -48, -96
-    clone
-    setCostume "8"
-    setXYpos -24, -120
-    clone
-    setCostume "c"
-    setXYpos 0, -120
-    clone
-    setCostume "4"
-    setXYpos 24, -120
-    clone
-    setCostume "a"
-    setXYpos -24, -144
-    clone
-    setCostume "5"
-    setXYpos 24, -144
-    clone
-    setCostume "f"
-    setXYpos 96, -144
-    clone
-  } else if stageIndex == 23 {
-    setCostume "f"
-    setXYpos -24, 72
-    clone
-    setCostume "f"
-    setXYpos 24, 72
-    clone
-    setCostume "8"
-    setXYpos -24, -120
-    clone
-    setCostume "c"
-    setXYpos 0, -120
-    clone
-    setCostume "4"
-    setXYpos 24, -120
-    clone
-    setCostume "a"
-    setXYpos -24, -144
-    clone
-    setCostume "5"
-    setXYpos 24, -144
-    clone
-  } else if stageIndex == 24 {
-    setCostume "f"
-    setXYpos -48, 144
-    clone
-    setCostume "a"
-    setXYpos 96, 144
-    clone
-    setCostume "f"
-    setXYpos -96, 120
-    clone
-    setCostume "f"
-    setXYpos -48, 120
-    clone
-    setCostume "3"
-    setXYpos 24, 120
-    clone
-    setCostume "f"
-    setXYpos 48, 120
-    clone
-    setCostume "f"
-    setXYpos 72, 120
-    clone
-    setCostume "f"
-    setXYpos 96, 120
-    clone
-    setCostume "f"
-    setXYpos -48, 96
-    clone
-    setCostume "a"
-    setXYpos 0, 96
-    clone
-    setCostume "5"
-    setXYpos 24, 96
-    clone
-    setCostume "f"
-    setXYpos 0, 72
-    clone
-    setCostume "f"
-    setXYpos 24, 72
-    clone
-    setCostume "f"
-    setXYpos 48, 72
-    clone
-    setCostume "a"
-    setXYpos 96, 72
-    clone
-    setCostume "f"
-    setXYpos 120, 72
-    clone
-    setCostume "c"
-    setXYpos -48, 48
-    clone
-    setCostume "c"
-    setXYpos -24, 48
-    clone
-    setCostume "f"
-    setXYpos 24, 48
-    clone
-    setCostume "a"
-    setXYpos 72, 48
-    clone
-    setCostume "f"
-    setXYpos 96, 48
-    clone
-    setCostume "3"
-    setXYpos 120, 48
-    clone
-    setCostume "a"
-    setXYpos 144, 48
-    clone
-    setCostume "f"
-    setXYpos -144, 24
-    clone
-    setCostume "c"
-    setXYpos -72, 24
-    clone
-    setCostume "3"
-    setXYpos -48, 24
-    clone
-    setCostume "3"
-    setXYpos -24, 24
-    clone
-    setCostume "f"
-    setXYpos 72, 24
-    clone
-    setCostume "3"
-    setXYpos 96, 24
-    clone
-    setCostume "a"
-    setXYpos 144, 24
-    clone
-    setCostume "a"
-    setXYpos -144, 0
-    clone
-    setCostume "c"
-    setXYpos -96, 0
-    clone
-    setCostume "f"
-    setXYpos -72, 0
-    clone
-    setCostume "a"
-    setXYpos -144, -24
-    clone
-    setCostume "3"
-    setXYpos -96, -24
-    clone
-    setCostume "f"
-    setXYpos -144, -72
-    clone
-    setCostume "f"
-    setXYpos -96, -72
-    clone
-    setCostume "a"
-    setXYpos -144, -96
-    clone
-    setCostume "f"
-    setXYpos -96, -96
-    clone
-    setCostume "a"
-    setXYpos -144, -120
-    clone
-    setCostume "f"
-    setXYpos -96, -120
-    clone
-    setCostume "8"
-    setXYpos -24, -120
-    clone
-    setCostume "c"
-    setXYpos 0, -120
-    clone
-    setCostume "4"
-    setXYpos 24, -120
-    clone
-    setCostume "3"
-    setXYpos -96, -144
-    clone
-    setCostume "a"
-    setXYpos -24, -144
-    clone
-    setCostume "5"
-    setXYpos 24, -144
-    clone
-  } else if stageIndex == 25 {
-    setCostume "f"
-    setXYpos -24, 144
-    clone
-    setCostume "f"
-    setXYpos 24, 144
-    clone
-    setCostume "f"
-    setXYpos 72, 144
-    clone
-    setCostume "f"
-    setXYpos -120, 120
-    clone
-    setCostume "f"
-    setXYpos -72, 120
-    clone
-    setCostume "f"
-    setXYpos -120, 96
-    clone
-    setCostume "f"
-    setXYpos -72, 96
-    clone
-    setCostume "f"
-    setXYpos -120, 72
-    clone
-    setCostume "f"
-    setXYpos -24, 72
-    clone
-    setCostume "f"
-    setXYpos 48, 72
-    clone
-    setCostume "f"
-    setXYpos -48, 48
-    clone
-    setCostume "f"
-    setXYpos -24, 48
-    clone
-    setCostume "f"
-    setXYpos 24, 48
-    clone
-    setCostume "f"
-    setXYpos 48, 48
-    clone
-    setCostume "f"
-    setXYpos -48, 24
-    clone
-    setCostume "f"
-    setXYpos 24, 24
-    clone
-    setCostume "f"
-    setXYpos 48, 24
-    clone
-    setCostume "f"
-    setXYpos 96, 24
-    clone
-    setCostume "f"
-    setXYpos 120, 24
-    clone
-    setCostume "f"
-    setXYpos -24, 0
-    clone
-    setCostume "f"
-    setXYpos 120, 0
-    clone
-    setCostume "f"
-    setXYpos -96, -24
-    clone
-    setCostume "f"
-    setXYpos -72, -24
-    clone
-    setCostume "f"
-    setXYpos -24, -24
-    clone
-    setCostume "f"
-    setXYpos 72, -24
-    clone
-    setCostume "f"
-    setXYpos -96, -48
-    clone
-    setCostume "f"
-    setXYpos -72, -48
-    clone
-    setCostume "f"
-    setXYpos -24, -48
-    clone
-    setCostume "f"
-    setXYpos 0, -48
-    clone
-    setCostume "f"
-    setXYpos 48, -48
-    clone
-    setCostume "f"
-    setXYpos 72, -48
-    clone
-    setCostume "f"
-    setXYpos 144, -48
-    clone
-    setCostume "f"
-    setXYpos -120, -72
-    clone
-    setCostume "f"
-    setXYpos -24, -72
-    clone
-    setCostume "f"
-    setXYpos 120, -72
-    clone
-    setCostume "f"
-    setXYpos 144, -72
-    clone
-    setCostume "f"
-    setXYpos -72, -96
-    clone
-    setCostume "f"
-    setXYpos -24, -96
-    clone
-    setCostume "f"
-    setXYpos 0, -96
-    clone
-    setCostume "f"
-    setXYpos 144, -96
-    clone
-    setCostume "f"
-    setXYpos -144, -120
-    clone
-    setCostume "f"
-    setXYpos -96, -120
-    clone
-    setCostume "f"
-    setXYpos -72, -120
-    clone
-    setCostume "8"
-    setXYpos -24, -120
-    clone
-    setCostume "c"
-    setXYpos 0, -120
-    clone
-    setCostume "4"
-    setXYpos 24, -120
-    clone
-    setCostume "f"
-    setXYpos 72, -120
-    clone
-    setCostume "f"
-    setXYpos -144, -144
-    clone
-    setCostume "f"
-    setXYpos -96, -144
-    clone
-    setCostume "a"
-    setXYpos -24, -144
-    clone
-    setCostume "5"
-    setXYpos 24, -144
-    clone
-    setCostume "f"
-    setXYpos 72, -144
-    clone
-    setCostume "f"
-    setXYpos 96, -144
-    clone
-    setCostume "f"
-    setXYpos 120, -144
-    clone
-  } else if stageIndex == 26 {
-    setCostume "5"
-    setXYpos 0, 120
-    clone
-    setCostume "5"
-    setXYpos 48, 96
-    clone
-    setCostume "c"
-    setXYpos -48, 72
-    clone
-    setCostume "a"
-    setXYpos -24, 72
-    clone
-    setCostume "c"
-    setXYpos 0, 48
-    clone
-    setCostume "a"
-    setXYpos 24, 48
-    clone
-    setCostume "a"
-    setXYpos -24, 24
-    clone
-    setCostume "c"
-    setXYpos 48, 24
-    clone
-    setCostume "3"
-    setXYpos -48, 0
-    clone
-    setCostume "a"
-    setXYpos 24, 0
-    clone
-    setCostume "5"
-    setXYpos -24, -24
-    clone
-    setCostume "3"
-    setXYpos 0, -24
-    clone
-    setCostume "5"
-    setXYpos 24, -48
-    clone
-    setCostume "3"
-    setXYpos 48, -48
-    clone
-    setCostume "a"
-    setXYpos -48, -72
-    clone
-    setCostume "a"
-    setXYpos 0, -96
-    clone
-    setCostume "8"
-    setXYpos -24, -120
-    clone
-    setCostume "c"
-    setXYpos 0, -120
-    clone
-    setCostume "4"
-    setXYpos 24, -120
-    clone
-    setCostume "a"
-    setXYpos -24, -144
-    clone
-    setCostume "5"
-    setXYpos 24, -144
-    clone
-  } else if stageIndex == 27 {
-    setCostume "f"
-    setXYpos -120, 48
-    clone
-    setCostume "f"
-    setXYpos -24, 24
-    clone
-    setCostume "f"
-    setXYpos 24, 24
-    clone
-    setCostume "f"
-    setXYpos 48, 24
-    clone
-    setCostume "f"
-    setXYpos 48, 0
-    clone
-    setCostume "f"
-    setXYpos -96, -48
-    clone
-    setCostume "f"
-    setXYpos 96, -48
-    clone
-    setCostume "f"
-    setXYpos 0, -72
-    clone
-    setCostume "f"
-    setXYpos 96, -72
-    clone
-    setCostume "f"
-    setXYpos -72, -96
-    clone
-    setCostume "f"
-    setXYpos 120, -96
-    clone
-    setCostume "8"
-    setXYpos -24, -120
-    clone
-    setCostume "c"
-    setXYpos 0, -120
-    clone
-    setCostume "4"
-    setXYpos 24, -120
-    clone
-    setCostume "f"
-    setXYpos 120, -120
-    clone
-    setCostume "a"
-    setXYpos -24, -144
-    clone
-    setCostume "5"
-    setXYpos 24, -144
-    clone
-    setCostume "f"
-    setXYpos 120, -144
-    clone
-  } else if stageIndex == 28 {
-    setCostume "c"
-    setXYpos -24, 96
-    clone
-    setCostume "c"
-    setXYpos 24, 96
-    clone
-    setCostume "f"
-    setXYpos 72, 96
-    clone
-    setCostume "5"
-    setXYpos 96, 96
-    clone
-    setCostume "f"
-    setXYpos 72, 72
-    clone
-    setCostume "5"
-    setXYpos 96, 72
-    clone
-    setCostume "c"
-    setXYpos -72, 48
-    clone
-    setCostume "f"
-    setXYpos 72, 48
-    clone
-    setCostume "5"
-    setXYpos 96, 48
-    clone
-    setCostume "5"
-    setXYpos 96, 24
-    clone
-    setCostume "c"
-    setXYpos -120, 0
-    clone
-    setCostume "c"
-    setXYpos 120, 0
-    clone
-    setCostume "8"
-    setXYpos -24, -120
-    clone
-    setCostume "c"
-    setXYpos 0, -120
-    clone
-    setCostume "4"
-    setXYpos 24, -120
-    clone
-    setCostume "a"
-    setXYpos -24, -144
-    clone
-    setCostume "5"
-    setXYpos 24, -144
-    clone
-  } else if stageIndex == 29 {
-    setCostume "f"
-    setXYpos 96, 144
-    clone
-    setCostume "f"
-    setXYpos -120, 120
-    clone
-    setCostume "f"
-    setXYpos 24, 120
-    clone
-    setCostume "f"
-    setXYpos -48, 96
-    clone
-    setCostume "f"
-    setXYpos 96, 72
-    clone
-    setCostume "f"
-    setXYpos -96, 24
-    clone
-    setCostume "f"
-    setXYpos 120, 24
-    clone
-    setCostume "f"
-    setXYpos -120, -24
-    clone
-    setCostume "f"
-    setXYpos -24, -24
-    clone
-    setCostume "f"
-    setXYpos 120, -48
-    clone
-    setCostume "f"
-    setXYpos -96, -120
-    clone
-    setCostume "f"
-    setXYpos -48, -120
-    clone
-    setCostume "8"
-    setXYpos -24, -120
-    clone
-    setCostume "c"
-    setXYpos 0, -120
-    clone
-    setCostume "4"
-    setXYpos 24, -120
-    clone
-    setCostume "f"
-    setXYpos -144, -144
-    clone
-    setCostume "a"
-    setXYpos -24, -144
-    clone
-    setCostume "5"
-    setXYpos 24, -144
-    clone
-    setCostume "f"
-    setXYpos 72, -144
-    clone
-  } else if stageIndex == 30 {
-    setCostume "c"
-    setXYpos -24, 120
-    clone
-    setCostume "c"
-    setXYpos 0, 120
-    clone
-    setCostume "c"
-    setXYpos -48, 96
-    clone
-    setCostume "c"
-    setXYpos 72, 96
-    clone
-    setCostume "c"
-    setXYpos 120, 96
-    clone
-    setCostume "c"
-    setXYpos -144, 72
-    clone
-    setCostume "c"
-    setXYpos -72, 72
-    clone
-    setCostume "c"
-    setXYpos 48, 72
-    clone
-    setCostume "c"
-    setXYpos 144, 72
-    clone
-    setCostume "3"
-    setXYpos -24, -72
-    clone
-    setCostume "3"
-    setXYpos 0, -72
-    clone
-    setCostume "3"
-    setXYpos -48, -96
-    clone
-    setCostume "3"
-    setXYpos 24, -96
-    clone
-    setCostume "3"
-    setXYpos -96, -120
-    clone
-    setCostume "3"
-    setXYpos -72, -120
-    clone
-    setCostume "8"
-    setXYpos -24, -120
-    clone
-    setCostume "c"
-    setXYpos 0, -120
-    clone
-    setCostume "4"
-    setXYpos 24, -120
-    clone
-    setCostume "3"
-    setXYpos 48, -120
-    clone
-    setCostume "3"
-    setXYpos 72, -120
-    clone
-    setCostume "3"
-    setXYpos 96, -120
-    clone
-    setCostume "a"
-    setXYpos -24, -144
-    clone
-    setCostume "5"
-    setXYpos 24, -144
-    clone
-  } else if stageIndex == 31 {
-    setCostume "f"
-    setXYpos -96, 96
-    clone
-    setCostume "f"
-    setXYpos -24, 96
-    clone
-    setCostume "f"
-    setXYpos 72, 72
-    clone
-    setCostume "f"
-    setXYpos -96, 0
-    clone
-    setCostume "f"
-    setXYpos -48, 0
-    clone
-    setCostume "f"
-    setXYpos 0, 0
-    clone
-    setCostume "f"
-    setXYpos 96, -24
-    clone
-    setCostume "f"
-    setXYpos -144, -48
-    clone
-    setCostume "f"
-    setXYpos -72, -48
-    clone
-    setCostume "f"
-    setXYpos 24, -72
-    clone
-    setCostume "f"
-    setXYpos -96, -96
-    clone
-    setCostume "8"
-    setXYpos -24, -120
-    clone
-    setCostume "c"
-    setXYpos 0, -120
-    clone
-    setCostume "4"
-    setXYpos 24, -120
-    clone
-    setCostume "a"
-    setXYpos -24, -144
-    clone
-    setCostume "5"
-    setXYpos 24, -144
-    clone
-  } else if stageIndex == 32 {
-    setCostume "f"
-    setXYpos -72, 96
-    clone
-    setCostume "f"
-    setXYpos 72, 96
-    clone
-    setCostume "f"
-    setXYpos -120, 72
-    clone
-    setCostume "f"
-    setXYpos -72, 72
-    clone
-    setCostume "f"
-    setXYpos -24, 72
-    clone
-    setCostume "f"
-    setXYpos 24, 72
-    clone
-    setCostume "f"
-    setXYpos 72, 72
-    clone
-    setCostume "f"
-    setXYpos 120, 72
-    clone
-    setCostume "3"
-    setXYpos -120, 48
-    clone
-    setCostume "3"
-    setXYpos -96, 48
-    clone
-    setCostume "f"
-    setXYpos -72, 48
-    clone
-    setCostume "f"
-    setXYpos 72, 48
-    clone
-    setCostume "3"
-    setXYpos 96, 48
-    clone
-    setCostume "3"
-    setXYpos 120, 48
-    clone
-    setCostume "f"
-    setXYpos -72, 24
-    clone
-    setCostume "c"
-    setXYpos -48, 24
-    clone
-    setCostume "f"
-    setXYpos -24, 24
-    clone
-    setCostume "f"
-    setXYpos 24, 24
-    clone
-    setCostume "c"
-    setXYpos 48, 24
-    clone
-    setCostume "f"
-    setXYpos 72, 24
-    clone
-    setCostume "c"
-    setXYpos -24, -24
-    clone
-    setCostume "c"
-    setXYpos 24, -24
-    clone
-    setCostume "f"
-    setXYpos -24, -48
-    clone
-    setCostume "f"
-    setXYpos 24, -48
-    clone
-    setCostume "f"
-    setXYpos -72, -72
-    clone
-    setCostume "c"
-    setXYpos 0, -72
-    clone
-    setCostume "f"
-    setXYpos 72, -72
-    clone
-    setCostume "f"
-    setXYpos -120, -96
-    clone
-    setCostume "f"
-    setXYpos -72, -96
-    clone
-    setCostume "f"
-    setXYpos 72, -96
-    clone
-    setCostume "f"
-    setXYpos 120, -96
-    clone
-    setCostume "f"
-    setXYpos -120, -120
-    clone
-    setCostume "c"
-    setXYpos -96, -120
-    clone
-    setCostume "f"
-    setXYpos -72, -120
-    clone
-    setCostume "8"
-    setXYpos -24, -120
-    clone
-    setCostume "c"
-    setXYpos 0, -120
-    clone
-    setCostume "4"
-    setXYpos 24, -120
-    clone
-    setCostume "f"
-    setXYpos 72, -120
-    clone
-    setCostume "c"
-    setXYpos 96, -120
-    clone
-    setCostume "f"
-    setXYpos 120, -120
-    clone
-    setCostume "3"
-    setXYpos -120, -144
-    clone
-    setCostume "a"
-    setXYpos -24, -144
-    clone
-    setCostume "5"
-    setXYpos 24, -144
-    clone
-    setCostume "3"
-    setXYpos 120, -144
-    clone
-  } else if stageIndex == 33 {
-    setCostume "8"
-    setXYpos -24, -120
-    clone
-    setCostume "c"
-    setXYpos 0, -120
-    clone
-    setCostume "4"
-    setXYpos 24, -120
-    clone
-    setCostume "a"
-    setXYpos -24, -144
-    clone
-    setCostume "5"
-    setXYpos 24, -144
-    clone
-  } else if stageIndex == 34 {
-    setCostume "5"
-    setXYpos -48, 144
-    clone
-    setCostume "a"
-    setXYpos -24, 144
-    clone
-    setCostume "5"
-    setXYpos -144, 120
-    clone
-    setCostume "5"
-    setXYpos -120, 120
-    clone
-    setCostume "5"
-    setXYpos -96, 120
-    clone
-    setCostume "a"
-    setXYpos -72, 120
-    clone
-    setCostume "5"
-    setXYpos -24, 120
-    clone
-    setCostume "5"
-    setXYpos 48, 120
-    clone
-    setCostume "5"
-    setXYpos 72, 120
-    clone
-    setCostume "5"
-    setXYpos -144, 96
-    clone
-    setCostume "5"
-    setXYpos -120, 96
-    clone
-    setCostume "5"
-    setXYpos -96, 96
-    clone
-    setCostume "f"
-    setXYpos -72, 96
-    clone
-    setCostume "f"
-    setXYpos -48, 96
-    clone
-    setCostume "5"
-    setXYpos 48, 96
-    clone
-    setCostume "f"
-    setXYpos 72, 96
-    clone
-    setCostume "5"
-    setXYpos 96, 96
-    clone
-    setCostume "a"
-    setXYpos -144, 72
-    clone
-    setCostume "a"
-    setXYpos -120, 72
-    clone
-    setCostume "f"
-    setXYpos -72, 72
-    clone
-    setCostume "5"
-    setXYpos -48, 72
-    clone
-    setCostume "a"
-    setXYpos 24, 72
-    clone
-    setCostume "5"
-    setXYpos 48, 72
-    clone
-    setCostume "f"
-    setXYpos 72, 72
-    clone
-    setCostume "f"
-    setXYpos 96, 72
-    clone
-    setCostume "5"
-    setXYpos -120, 48
-    clone
-    setCostume "f"
-    setXYpos -72, 48
-    clone
-    setCostume "a"
-    setXYpos -48, 48
-    clone
-    setCostume "5"
-    setXYpos -24, 48
-    clone
-    setCostume "5"
-    setXYpos 24, 48
-    clone
-    setCostume "f"
-    setXYpos 48, 48
-    clone
-    setCostume "f"
-    setXYpos 72, 48
-    clone
-    setCostume "f"
-    setXYpos 96, 48
-    clone
-    setCostume "5"
-    setXYpos -120, 24
-    clone
-    setCostume "a"
-    setXYpos -96, 24
-    clone
-    setCostume "f"
-    setXYpos -24, 24
-    clone
-    setCostume "5"
-    setXYpos 0, 24
-    clone
-    setCostume "f"
-    setXYpos 24, 24
-    clone
-    setCostume "a"
-    setXYpos 48, 24
-    clone
-    setCostume "a"
-    setXYpos 72, 24
-    clone
-    setCostume "f"
-    setXYpos 96, 24
-    clone
-    setCostume "5"
-    setXYpos -120, 0
-    clone
-    setCostume "a"
-    setXYpos -48, 0
-    clone
-    setCostume "f"
-    setXYpos -24, 0
-    clone
-    setCostume "f"
-    setXYpos 0, 0
-    clone
-    setCostume "5"
-    setXYpos 24, 0
-    clone
-    setCostume "5"
-    setXYpos 72, 0
-    clone
-    setCostume "f"
-    setXYpos 96, 0
-    clone
-    setCostume "a"
-    setXYpos -120, -24
-    clone
-    setCostume "5"
-    setXYpos -48, -24
-    clone
-    setCostume "f"
-    setXYpos -24, -24
-    clone
-    setCostume "f"
-    setXYpos 0, -24
-    clone
-    setCostume "5"
-    setXYpos 24, -24
-    clone
-    setCostume "5"
-    setXYpos 72, -24
-    clone
-    setCostume "f"
-    setXYpos 96, -24
-    clone
-    setCostume "a"
-    setXYpos -120, -48
-    clone
-    setCostume "3"
-    setXYpos -96, -48
-    clone
-    setCostume "3"
-    setXYpos -72, -48
-    clone
-    setCostume "f"
-    setXYpos -24, -48
-    clone
-    setCostume "f"
-    setXYpos 0, -48
-    clone
-    setCostume "f"
-    setXYpos 24, -48
-    clone
-    setCostume "5"
-    setXYpos 72, -48
-    clone
-    setCostume "5"
-    setXYpos 96, -48
-    clone
-    setCostume "3"
-    setXYpos 120, -48
-    clone
-    setCostume "f"
-    setXYpos 144, -48
-    clone
-    setCostume "a"
-    setXYpos -120, -72
-    clone
-    setCostume "a"
-    setXYpos -48, -72
-    clone
-    setCostume "5"
-    setXYpos -24, -72
-    clone
-    setCostume "f"
-    setXYpos 0, -72
-    clone
-    setCostume "a"
-    setXYpos 24, -72
-    clone
-    setCostume "5"
-    setXYpos 48, -72
-    clone
-    setCostume "5"
-    setXYpos 72, -72
-    clone
-    setCostume "5"
-    setXYpos 96, -72
-    clone
-    setCostume "a"
-    setXYpos 120, -72
-    clone
-    setCostume "a"
-    setXYpos 144, -72
-    clone
-    setCostume "5"
-    setXYpos -96, -96
-    clone
-    setCostume "f"
-    setXYpos -48, -96
-    clone
-    setCostume "a"
-    setXYpos -24, -96
-    clone
-    setCostume "5"
-    setXYpos 0, -96
-    clone
-    setCostume "f"
-    setXYpos 24, -96
-    clone
-    setCostume "f"
-    setXYpos 48, -96
-    clone
-    setCostume "a"
-    setXYpos 120, -96
-    clone
-    setCostume "5"
-    setXYpos -96, -120
-    clone
-    setCostume "a"
-    setXYpos -72, -120
-    clone
-    setCostume "5"
-    setXYpos -48, -120
-    clone
-    setCostume "8"
-    setXYpos -24, -120
-    clone
-    setCostume "c"
-    setXYpos 0, -120
-    clone
-    setCostume "4"
-    setXYpos 24, -120
-    clone
-    setCostume "f"
-    setXYpos 48, -120
-    clone
-    setCostume "5"
-    setXYpos 72, -120
-    clone
-    setCostume "5"
-    setXYpos 120, -120
-    clone
-    setCostume "5"
-    setXYpos -96, -144
-    clone
-    setCostume "a"
-    setXYpos -72, -144
-    clone
-    setCostume "a"
-    setXYpos -24, -144
-    clone
-    setCostume "5"
-    setXYpos 24, -144
-    clone
-    setCostume "f"
-    setXYpos 72, -144
-    clone
-    setCostume "f"
-    setXYpos 96, -144
-    clone
-  } else if stageIndex == 35 {
-    setCostume "f"
-    setXYpos -48, 120
-    clone
-    setCostume "f"
-    setXYpos 0, 120
-    clone
-    setCostume "f"
-    setXYpos -48, 96
-    clone
-    setCostume "f"
-    setXYpos 0, 96
-    clone
-    setCostume "f"
-    setXYpos -144, 72
-    clone
-    setCostume "f"
-    setXYpos -72, 72
-    clone
-    setCostume "f"
-    setXYpos -48, 72
-    clone
-    setCostume "f"
-    setXYpos -24, 72
-    clone
-    setCostume "f"
-    setXYpos 0, 72
-    clone
-    setCostume "f"
-    setXYpos 24, 72
-    clone
-    setCostume "f"
-    setXYpos 96, 72
-    clone
-    setCostume "f"
-    setXYpos -144, 48
-    clone
-    setCostume "f"
-    setXYpos -120, 48
-    clone
-    setCostume "f"
-    setXYpos -96, 48
-    clone
-    setCostume "f"
-    setXYpos -72, 48
-    clone
-    setCostume "f"
-    setXYpos -24, 48
-    clone
-    setCostume "f"
-    setXYpos 24, 48
-    clone
-    setCostume "f"
-    setXYpos 48, 48
-    clone
-    setCostume "f"
-    setXYpos 72, 48
-    clone
-    setCostume "f"
-    setXYpos 96, 48
-    clone
-    setCostume "f"
-    setXYpos -72, 24
-    clone
-    setCostume "f"
-    setXYpos -48, 24
-    clone
-    setCostume "f"
-    setXYpos -24, 24
-    clone
-    setCostume "f"
-    setXYpos 0, 24
-    clone
-    setCostume "f"
-    setXYpos 24, 24
-    clone
-    setCostume "f"
-    setXYpos -120, 0
-    clone
-    setCostume "f"
-    setXYpos -96, 0
-    clone
-    setCostume "f"
-    setXYpos -72, 0
-    clone
-    setCostume "f"
-    setXYpos -48, 0
-    clone
-    setCostume "f"
-    setXYpos -24, 0
-    clone
-    setCostume "f"
-    setXYpos 0, 0
-    clone
-    setCostume "f"
-    setXYpos 24, 0
-    clone
-    setCostume "f"
-    setXYpos 48, 0
-    clone
-    setCostume "f"
-    setXYpos 72, 0
-    clone
-    setCostume "f"
-    setXYpos -144, -24
-    clone
-    setCostume "f"
-    setXYpos -120, -24
-    clone
-    setCostume "f"
-    setXYpos -96, -24
-    clone
-    setCostume "f"
-    setXYpos -48, -24
-    clone
-    setCostume "f"
-    setXYpos -24, -24
-    clone
-    setCostume "f"
-    setXYpos 0, -24
-    clone
-    setCostume "f"
-    setXYpos 48, -24
-    clone
-    setCostume "f"
-    setXYpos 72, -24
-    clone
-    setCostume "f"
-    setXYpos 96, -24
-    clone
-    setCostume "f"
-    setXYpos -144, -48
-    clone
-    setCostume "f"
-    setXYpos -120, -48
-    clone
-    setCostume "f"
-    setXYpos -24, -48
-    clone
-    setCostume "f"
-    setXYpos 72, -48
-    clone
-    setCostume "f"
-    setXYpos 96, -48
-    clone
-    setCostume "8"
-    setXYpos -24, -120
-    clone
-    setCostume "c"
-    setXYpos 0, -120
-    clone
-    setCostume "4"
-    setXYpos 24, -120
-    clone
-    setCostume "a"
-    setXYpos -24, -144
-    clone
-    setCostume "5"
-    setXYpos 24, -144
-    clone
-  }
+  loadSelected(stageTop, 312, 0)
+  loadSelected(stageMiddle, 0, 1)
+  loadSelected(stageBottom, -312, 2)
 }
 
 onCloned data => {

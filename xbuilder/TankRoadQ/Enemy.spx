@@ -3,6 +3,9 @@ var (
 	beforeX = 0.0
 	beforeY = 0.0
 	spawnChoice = 0
+	spawnSection = 0
+	spawnMap = 1
+	spawnOffset = 0.0
 	spawnX = 0.0
 	spawnY = 0.0
 	turnChoice = 0
@@ -16,2594 +19,2605 @@ onStart => {
 	}
 	for running {
 		if spawned < 20 && activeEnemies < 4 {
+			spawnSection = int(rand(0, 2))
+			if spawnSection == 0 {
+				spawnMap = stageTop
+				spawnOffset = 312
+			} else if spawnSection == 1 {
+				spawnMap = stageMiddle
+				spawnOffset = 0
+			} else {
+				spawnMap = stageBottom
+				spawnOffset = -312
+			}
 			// GENERATED SPAWN START
-            if stageIndex == 1 {
+            if spawnMap == 1 {
                 spawnChoice = int(rand(0, 23))
                 if spawnChoice == 0 {
                     spawnX = -144
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 1 {
                     spawnX = 0
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 2 {
                     spawnX = 144
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 3 {
                     spawnX = -72
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 4 {
                     spawnX = 72
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 5 {
                     spawnX = -120
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 6 {
                     spawnX = 120
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 7 {
                     spawnX = -24
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 8 {
                     spawnX = 24
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 9 {
                     spawnX = -96
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 10 {
                     spawnX = 96
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 11 {
                     spawnX = -48
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 12 {
                     spawnX = 48
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 13 {
                     spawnX = -144
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 14 {
                     spawnX = 144
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 15 {
                     spawnX = -96
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 16 {
                     spawnX = 96
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 17 {
                     spawnX = -48
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 18 {
                     spawnX = 48
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 19 {
                     spawnX = -144
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 20 {
                     spawnX = 0
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 21 {
                     spawnX = 144
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 22 {
                     spawnX = -96
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 23 {
                     spawnX = 96
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 }
-            } else if stageIndex == 2 {
+            } else if spawnMap == 2 {
                 spawnChoice = int(rand(0, 23))
                 if spawnChoice == 0 {
                     spawnX = -144
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 1 {
                     spawnX = 0
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 2 {
                     spawnX = 144
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 3 {
                     spawnX = 72
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 4 {
                     spawnX = -120
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 5 {
                     spawnX = 120
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 6 {
                     spawnX = -24
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 7 {
                     spawnX = -96
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 8 {
                     spawnX = 96
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 9 {
                     spawnX = -48
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 10 {
                     spawnX = 48
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 11 {
                     spawnX = -144
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 12 {
                     spawnX = 0
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 13 {
                     spawnX = 144
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 14 {
                     spawnX = -120
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 15 {
                     spawnX = 120
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 16 {
                     spawnX = -24
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 17 {
                     spawnX = 24
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 18 {
                     spawnX = -96
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 19 {
                     spawnX = 96
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 20 {
                     spawnX = -48
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 21 {
                     spawnX = 48
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 22 {
                     spawnX = -144
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 23 {
                     spawnX = 0
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 }
-            } else if stageIndex == 3 {
+            } else if spawnMap == 3 {
                 spawnChoice = int(rand(0, 23))
                 if spawnChoice == 0 {
                     spawnX = -144
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 1 {
                     spawnX = 0
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 2 {
                     spawnX = 144
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 3 {
                     spawnX = -72
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 4 {
                     spawnX = 72
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 5 {
                     spawnX = -120
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 6 {
                     spawnX = 120
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 7 {
                     spawnX = -24
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 8 {
                     spawnX = 24
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 9 {
                     spawnX = -96
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 10 {
                     spawnX = 96
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 11 {
                     spawnX = 0
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 12 {
                     spawnX = -24
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 13 {
                     spawnX = -48
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 14 {
                     spawnX = 48
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 15 {
                     spawnX = -144
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 16 {
                     spawnX = 0
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 17 {
                     spawnX = 72
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 18 {
                     spawnX = -24
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 19 {
                     spawnX = 24
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 20 {
                     spawnX = 48
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 21 {
                     spawnX = 144
-                    spawnY = 48
+                    spawnY = 48+spawnOffset
                 } else if spawnChoice == 22 {
                     spawnX = 96
-                    spawnY = 48
+                    spawnY = 48+spawnOffset
                 } else if spawnChoice == 23 {
                     spawnX = 48
-                    spawnY = 48
+                    spawnY = 48+spawnOffset
                 }
-            } else if stageIndex == 4 {
+            } else if spawnMap == 4 {
                 spawnChoice = int(rand(0, 23))
                 if spawnChoice == 0 {
                     spawnX = -144
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 1 {
                     spawnX = 0
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 2 {
                     spawnX = 144
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 3 {
                     spawnX = -72
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 4 {
                     spawnX = 72
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 5 {
                     spawnX = -24
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 6 {
                     spawnX = 24
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 7 {
                     spawnX = 96
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 8 {
                     spawnX = -48
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 9 {
                     spawnX = 48
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 10 {
                     spawnX = 144
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 11 {
                     spawnX = -120
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 12 {
                     spawnX = -96
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 13 {
                     spawnX = -72
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 14 {
                     spawnX = 72
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 15 {
                     spawnX = 120
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 16 {
                     spawnX = -96
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 17 {
                     spawnX = 96
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 18 {
                     spawnX = -144
-                    spawnY = 48
+                    spawnY = 48+spawnOffset
                 } else if spawnChoice == 19 {
                     spawnX = 0
-                    spawnY = 48
+                    spawnY = 48+spawnOffset
                 } else if spawnChoice == 20 {
                     spawnX = 144
-                    spawnY = 48
+                    spawnY = 48+spawnOffset
                 } else if spawnChoice == 21 {
                     spawnX = -120
-                    spawnY = 48
+                    spawnY = 48+spawnOffset
                 } else if spawnChoice == 22 {
                     spawnX = -24
-                    spawnY = 48
+                    spawnY = 48+spawnOffset
                 } else if spawnChoice == 23 {
                     spawnX = 96
-                    spawnY = 48
+                    spawnY = 48+spawnOffset
                 }
-            } else if stageIndex == 5 {
+            } else if spawnMap == 5 {
                 spawnChoice = int(rand(0, 23))
                 if spawnChoice == 0 {
                     spawnX = -144
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 1 {
                     spawnX = 0
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 2 {
                     spawnX = 144
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 3 {
                     spawnX = -72
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 4 {
                     spawnX = 72
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 5 {
                     spawnX = -120
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 6 {
                     spawnX = 120
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 7 {
                     spawnX = 24
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 8 {
                     spawnX = -96
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 9 {
                     spawnX = 96
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 10 {
                     spawnX = 48
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 11 {
                     spawnX = -120
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 12 {
                     spawnX = 120
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 13 {
                     spawnX = -24
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 14 {
                     spawnX = 48
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 15 {
                     spawnX = 0
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 16 {
                     spawnX = 144
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 17 {
                     spawnX = -72
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 18 {
                     spawnX = -120
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 19 {
                     spawnX = 120
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 20 {
                     spawnX = -24
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 21 {
                     spawnX = 24
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 22 {
                     spawnX = 0
-                    spawnY = 48
+                    spawnY = 48+spawnOffset
                 } else if spawnChoice == 23 {
                     spawnX = 144
-                    spawnY = 48
+                    spawnY = 48+spawnOffset
                 }
-            } else if stageIndex == 6 {
+            } else if spawnMap == 6 {
                 spawnChoice = int(rand(0, 23))
                 if spawnChoice == 0 {
                     spawnX = -144
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 1 {
                     spawnX = 0
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 2 {
                     spawnX = 144
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 3 {
                     spawnX = -72
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 4 {
                     spawnX = -120
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 5 {
                     spawnX = 120
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 6 {
                     spawnX = -96
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 7 {
                     spawnX = 96
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 8 {
                     spawnX = -48
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 9 {
                     spawnX = -144
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 10 {
                     spawnX = -72
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 11 {
                     spawnX = -24
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 12 {
                     spawnX = 24
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 13 {
                     spawnX = -96
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 14 {
                     spawnX = 96
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 15 {
                     spawnX = -144
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 16 {
                     spawnX = 0
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 17 {
                     spawnX = -72
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 18 {
                     spawnX = -24
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 19 {
                     spawnX = 24
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 20 {
                     spawnX = -144
-                    spawnY = 48
+                    spawnY = 48+spawnOffset
                 } else if spawnChoice == 21 {
                     spawnX = -120
-                    spawnY = 48
+                    spawnY = 48+spawnOffset
                 } else if spawnChoice == 22 {
                     spawnX = -24
-                    spawnY = 48
+                    spawnY = 48+spawnOffset
                 } else if spawnChoice == 23 {
                     spawnX = 24
-                    spawnY = 48
+                    spawnY = 48+spawnOffset
                 }
-            } else if stageIndex == 7 {
+            } else if spawnMap == 7 {
                 spawnChoice = int(rand(0, 23))
                 if spawnChoice == 0 {
                     spawnX = -144
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 1 {
                     spawnX = 0
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 2 {
                     spawnX = 144
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 3 {
                     spawnX = -72
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 4 {
                     spawnX = 72
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 5 {
                     spawnX = -120
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 6 {
                     spawnX = 120
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 7 {
                     spawnX = -24
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 8 {
                     spawnX = -96
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 9 {
                     spawnX = 96
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 10 {
                     spawnX = -48
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 11 {
                     spawnX = -144
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 12 {
                     spawnX = 144
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 13 {
                     spawnX = -72
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 14 {
                     spawnX = 72
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 15 {
                     spawnX = 120
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 16 {
                     spawnX = 24
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 17 {
                     spawnX = -96
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 18 {
                     spawnX = -48
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 19 {
                     spawnX = 48
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 20 {
                     spawnX = -144
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 21 {
                     spawnX = 0
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 22 {
                     spawnX = 144
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 23 {
                     spawnX = 72
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 }
-            } else if stageIndex == 8 {
+            } else if spawnMap == 8 {
                 spawnChoice = int(rand(0, 23))
                 if spawnChoice == 0 {
                     spawnX = -144
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 1 {
                     spawnX = 0
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 2 {
                     spawnX = 144
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 3 {
                     spawnX = -72
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 4 {
                     spawnX = -120
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 5 {
                     spawnX = 120
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 6 {
                     spawnX = 96
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 7 {
                     spawnX = -48
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 8 {
                     spawnX = 48
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 9 {
                     spawnX = 120
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 10 {
                     spawnX = 0
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 11 {
                     spawnX = 144
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 12 {
                     spawnX = 120
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 13 {
                     spawnX = -48
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 14 {
                     spawnX = 48
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 15 {
                     spawnX = -144
-                    spawnY = 48
+                    spawnY = 48+spawnOffset
                 } else if spawnChoice == 16 {
                     spawnX = 144
-                    spawnY = 48
+                    spawnY = 48+spawnOffset
                 } else if spawnChoice == 17 {
                     spawnX = -72
-                    spawnY = 48
+                    spawnY = 48+spawnOffset
                 } else if spawnChoice == 18 {
                     spawnX = 72
-                    spawnY = 48
+                    spawnY = 48+spawnOffset
                 } else if spawnChoice == 19 {
                     spawnX = 120
-                    spawnY = 48
+                    spawnY = 48+spawnOffset
                 } else if spawnChoice == 20 {
                     spawnX = -24
-                    spawnY = 48
+                    spawnY = 48+spawnOffset
                 } else if spawnChoice == 21 {
                     spawnX = -96
-                    spawnY = 48
+                    spawnY = 48+spawnOffset
                 } else if spawnChoice == 22 {
                     spawnX = 96
-                    spawnY = 48
+                    spawnY = 48+spawnOffset
                 } else if spawnChoice == 23 {
                     spawnX = -48
-                    spawnY = 48
+                    spawnY = 48+spawnOffset
                 }
-            } else if stageIndex == 9 {
+            } else if spawnMap == 9 {
                 spawnChoice = int(rand(0, 23))
                 if spawnChoice == 0 {
                     spawnX = -144
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 1 {
                     spawnX = 0
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 2 {
                     spawnX = 144
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 3 {
                     spawnX = -120
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 4 {
                     spawnX = 120
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 5 {
                     spawnX = -24
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 6 {
                     spawnX = 24
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 7 {
                     spawnX = -96
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 8 {
                     spawnX = -48
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 9 {
                     spawnX = 48
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 10 {
                     spawnX = -144
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 11 {
                     spawnX = 144
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 12 {
                     spawnX = 72
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 13 {
                     spawnX = -120
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 14 {
                     spawnX = 120
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 15 {
                     spawnX = -24
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 16 {
                     spawnX = 96
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 17 {
                     spawnX = 48
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 18 {
                     spawnX = -72
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 19 {
                     spawnX = -120
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 20 {
                     spawnX = 120
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 21 {
                     spawnX = -24
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 22 {
                     spawnX = -96
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 23 {
                     spawnX = -48
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 }
-            } else if stageIndex == 10 {
+            } else if spawnMap == 10 {
                 spawnChoice = int(rand(0, 23))
                 if spawnChoice == 0 {
                     spawnX = -144
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 1 {
                     spawnX = 0
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 2 {
                     spawnX = 144
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 3 {
                     spawnX = -72
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 4 {
                     spawnX = 72
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 5 {
                     spawnX = -120
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 6 {
                     spawnX = 120
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 7 {
                     spawnX = -24
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 8 {
                     spawnX = 24
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 9 {
                     spawnX = -96
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 10 {
                     spawnX = 96
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 11 {
                     spawnX = -48
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 12 {
                     spawnX = 48
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 13 {
                     spawnX = -72
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 14 {
                     spawnX = -120
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 15 {
                     spawnX = 120
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 16 {
                     spawnX = -96
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 17 {
                     spawnX = 96
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 18 {
                     spawnX = -144
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 19 {
                     spawnX = 0
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 20 {
                     spawnX = 72
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 21 {
                     spawnX = -24
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 22 {
                     spawnX = 24
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 23 {
                     spawnX = -48
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 }
-            } else if stageIndex == 11 {
+            } else if spawnMap == 11 {
                 spawnChoice = int(rand(0, 23))
                 if spawnChoice == 0 {
                     spawnX = -144
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 1 {
                     spawnX = 0
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 2 {
                     spawnX = 144
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 3 {
                     spawnX = -72
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 4 {
                     spawnX = -120
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 5 {
                     spawnX = 120
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 6 {
                     spawnX = -96
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 7 {
                     spawnX = -48
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 8 {
                     spawnX = 48
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 9 {
                     spawnX = -144
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 10 {
                     spawnX = 0
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 11 {
                     spawnX = -72
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 12 {
                     spawnX = -24
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 13 {
                     spawnX = -96
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 14 {
                     spawnX = -48
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 15 {
                     spawnX = 48
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 16 {
                     spawnX = -144
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 17 {
                     spawnX = 0
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 18 {
                     spawnX = 144
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 19 {
                     spawnX = 72
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 20 {
                     spawnX = 120
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 21 {
                     spawnX = 96
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 22 {
                     spawnX = 48
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 23 {
                     spawnX = -144
-                    spawnY = 48
+                    spawnY = 48+spawnOffset
                 }
-            } else if stageIndex == 12 {
+            } else if spawnMap == 12 {
                 spawnChoice = int(rand(0, 23))
                 if spawnChoice == 0 {
                     spawnX = -144
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 1 {
                     spawnX = 0
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 2 {
                     spawnX = 144
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 3 {
                     spawnX = -72
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 4 {
                     spawnX = -120
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 5 {
                     spawnX = 120
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 6 {
                     spawnX = -24
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 7 {
                     spawnX = -96
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 8 {
                     spawnX = 96
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 9 {
                     spawnX = -48
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 10 {
                     spawnX = -144
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 11 {
                     spawnX = 0
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 12 {
                     spawnX = 72
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 13 {
                     spawnX = 96
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 14 {
                     spawnX = -144
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 15 {
                     spawnX = 144
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 16 {
                     spawnX = 120
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 17 {
                     spawnX = -24
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 18 {
                     spawnX = 24
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 19 {
                     spawnX = 96
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 20 {
                     spawnX = 48
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 21 {
                     spawnX = -144
-                    spawnY = 48
+                    spawnY = 48+spawnOffset
                 } else if spawnChoice == 22 {
                     spawnX = 0
-                    spawnY = 48
+                    spawnY = 48+spawnOffset
                 } else if spawnChoice == 23 {
                     spawnX = 144
-                    spawnY = 48
+                    spawnY = 48+spawnOffset
                 }
-            } else if stageIndex == 13 {
+            } else if spawnMap == 13 {
                 spawnChoice = int(rand(0, 23))
                 if spawnChoice == 0 {
                     spawnX = -144
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 1 {
                     spawnX = 0
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 2 {
                     spawnX = 144
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 3 {
                     spawnX = -72
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 4 {
                     spawnX = 72
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 5 {
                     spawnX = -120
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 6 {
                     spawnX = 120
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 7 {
                     spawnX = -24
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 8 {
                     spawnX = 24
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 9 {
                     spawnX = -96
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 10 {
                     spawnX = 96
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 11 {
                     spawnX = -144
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 12 {
                     spawnX = 0
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 13 {
                     spawnX = -24
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 14 {
                     spawnX = 24
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 15 {
                     spawnX = -96
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 16 {
                     spawnX = 96
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 17 {
                     spawnX = -144
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 18 {
                     spawnX = 0
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 19 {
                     spawnX = 144
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 20 {
                     spawnX = -24
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 21 {
                     spawnX = 24
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 22 {
                     spawnX = -144
-                    spawnY = 48
+                    spawnY = 48+spawnOffset
                 } else if spawnChoice == 23 {
                     spawnX = -96
-                    spawnY = 48
+                    spawnY = 48+spawnOffset
                 }
-            } else if stageIndex == 14 {
+            } else if spawnMap == 14 {
                 spawnChoice = int(rand(0, 23))
                 if spawnChoice == 0 {
                     spawnX = -144
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 1 {
                     spawnX = 0
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 2 {
                     spawnX = 144
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 3 {
                     spawnX = -72
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 4 {
                     spawnX = 72
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 5 {
                     spawnX = -120
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 6 {
                     spawnX = 120
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 7 {
                     spawnX = -24
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 8 {
                     spawnX = 24
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 9 {
                     spawnX = -96
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 10 {
                     spawnX = 96
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 11 {
                     spawnX = -48
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 12 {
                     spawnX = 48
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 13 {
                     spawnX = -144
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 14 {
                     spawnX = 144
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 15 {
                     spawnX = -120
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 16 {
                     spawnX = 120
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 17 {
                     spawnX = -96
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 18 {
                     spawnX = 96
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 19 {
                     spawnX = -72
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 20 {
                     spawnX = 72
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 21 {
                     spawnX = -96
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 22 {
                     spawnX = 96
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 23 {
                     spawnX = -144
-                    spawnY = 48
+                    spawnY = 48+spawnOffset
                 }
-            } else if stageIndex == 15 {
+            } else if spawnMap == 15 {
                 spawnChoice = int(rand(0, 23))
                 if spawnChoice == 0 {
                     spawnX = -144
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 1 {
                     spawnX = 0
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 2 {
                     spawnX = 144
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 3 {
                     spawnX = -72
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 4 {
                     spawnX = 72
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 5 {
                     spawnX = -120
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 6 {
                     spawnX = 120
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 7 {
                     spawnX = 24
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 8 {
                     spawnX = -96
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 9 {
                     spawnX = 96
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 10 {
                     spawnX = -144
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 11 {
                     spawnX = 0
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 12 {
                     spawnX = 144
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 13 {
                     spawnX = 72
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 14 {
                     spawnX = 120
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 15 {
                     spawnX = -24
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 16 {
                     spawnX = 24
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 17 {
                     spawnX = 96
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 18 {
                     spawnX = 144
-                    spawnY = 48
+                    spawnY = 48+spawnOffset
                 } else if spawnChoice == 19 {
                     spawnX = 144
-                    spawnY = 96
+                    spawnY = 96+spawnOffset
                 } else if spawnChoice == 20 {
                     spawnX = 120
-                    spawnY = 96
+                    spawnY = 96+spawnOffset
                 } else if spawnChoice == 21 {
                     spawnX = 96
-                    spawnY = 96
+                    spawnY = 96+spawnOffset
                 } else if spawnChoice == 22 {
                     spawnX = -144
-                    spawnY = 24
+                    spawnY = 24+spawnOffset
                 } else if spawnChoice == 23 {
                     spawnX = 144
-                    spawnY = 24
+                    spawnY = 24+spawnOffset
                 }
-            } else if stageIndex == 16 {
+            } else if spawnMap == 16 {
                 spawnChoice = int(rand(0, 23))
                 if spawnChoice == 0 {
                     spawnX = -144
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 1 {
                     spawnX = 0
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 2 {
                     spawnX = 144
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 3 {
                     spawnX = -72
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 4 {
                     spawnX = 72
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 5 {
                     spawnX = -120
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 6 {
                     spawnX = 120
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 7 {
                     spawnX = -24
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 8 {
                     spawnX = 24
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 9 {
                     spawnX = -96
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 10 {
                     spawnX = 96
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 11 {
                     spawnX = -48
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 12 {
                     spawnX = 48
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 13 {
                     spawnX = -144
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 14 {
                     spawnX = 144
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 15 {
                     spawnX = -72
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 16 {
                     spawnX = 72
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 17 {
                     spawnX = 120
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 18 {
                     spawnX = -24
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 19 {
                     spawnX = -96
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 20 {
                     spawnX = 96
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 21 {
                     spawnX = -48
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 22 {
                     spawnX = 48
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 23 {
                     spawnX = -144
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 }
-            } else if stageIndex == 17 {
+            } else if spawnMap == 17 {
                 spawnChoice = int(rand(0, 23))
                 if spawnChoice == 0 {
                     spawnX = -144
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 1 {
                     spawnX = 0
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 2 {
                     spawnX = 144
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 3 {
                     spawnX = -72
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 4 {
                     spawnX = 72
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 5 {
                     spawnX = -120
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 6 {
                     spawnX = 120
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 7 {
                     spawnX = -24
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 8 {
                     spawnX = 24
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 9 {
                     spawnX = -96
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 10 {
                     spawnX = 48
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 11 {
                     spawnX = 0
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 12 {
                     spawnX = 144
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 13 {
                     spawnX = -24
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 14 {
                     spawnX = -144
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 15 {
                     spawnX = 0
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 16 {
                     spawnX = 144
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 17 {
                     spawnX = -24
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 18 {
                     spawnX = -96
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 19 {
                     spawnX = 144
-                    spawnY = 48
+                    spawnY = 48+spawnOffset
                 } else if spawnChoice == 20 {
                     spawnX = 120
-                    spawnY = 48
+                    spawnY = 48+spawnOffset
                 } else if spawnChoice == 21 {
                     spawnX = 96
-                    spawnY = 48
+                    spawnY = 48+spawnOffset
                 } else if spawnChoice == 22 {
                     spawnX = -144
-                    spawnY = 96
+                    spawnY = 96+spawnOffset
                 } else if spawnChoice == 23 {
                     spawnX = 144
-                    spawnY = 96
+                    spawnY = 96+spawnOffset
                 }
-            } else if stageIndex == 18 {
+            } else if spawnMap == 18 {
                 spawnChoice = int(rand(0, 23))
                 if spawnChoice == 0 {
                     spawnX = -144
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 1 {
                     spawnX = 0
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 2 {
                     spawnX = 144
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 3 {
                     spawnX = -72
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 4 {
                     spawnX = -120
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 5 {
                     spawnX = -24
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 6 {
                     spawnX = 24
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 7 {
                     spawnX = -96
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 8 {
                     spawnX = -48
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 9 {
                     spawnX = -144
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 10 {
                     spawnX = 144
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 11 {
                     spawnX = -24
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 12 {
                     spawnX = 24
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 13 {
                     spawnX = -48
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 14 {
                     spawnX = -144
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 15 {
                     spawnX = 0
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 16 {
                     spawnX = 144
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 17 {
                     spawnX = -72
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 18 {
                     spawnX = 72
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 19 {
                     spawnX = -24
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 20 {
                     spawnX = 24
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 21 {
                     spawnX = -96
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 22 {
                     spawnX = 96
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 23 {
                     spawnX = -48
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 }
-            } else if stageIndex == 19 {
+            } else if spawnMap == 19 {
                 spawnChoice = int(rand(0, 23))
                 if spawnChoice == 0 {
                     spawnX = -144
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 1 {
                     spawnX = 0
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 2 {
                     spawnX = 144
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 3 {
                     spawnX = -96
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 4 {
                     spawnX = 96
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 5 {
                     spawnX = -48
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 6 {
                     spawnX = 48
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 7 {
                     spawnX = 0
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 8 {
                     spawnX = -72
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 9 {
                     spawnX = 72
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 10 {
                     spawnX = -120
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 11 {
                     spawnX = 120
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 12 {
                     spawnX = -24
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 13 {
                     spawnX = 24
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 14 {
                     spawnX = -144
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 15 {
                     spawnX = 0
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 16 {
                     spawnX = 144
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 17 {
                     spawnX = -96
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 18 {
                     spawnX = 96
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 19 {
                     spawnX = -48
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 20 {
                     spawnX = 48
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 21 {
                     spawnX = -120
-                    spawnY = 48
+                    spawnY = 48+spawnOffset
                 } else if spawnChoice == 22 {
                     spawnX = 120
-                    spawnY = 48
+                    spawnY = 48+spawnOffset
                 } else if spawnChoice == 23 {
                     spawnX = -24
-                    spawnY = 48
+                    spawnY = 48+spawnOffset
                 }
-            } else if stageIndex == 20 {
+            } else if spawnMap == 20 {
                 spawnChoice = int(rand(0, 23))
                 if spawnChoice == 0 {
                     spawnX = -144
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 1 {
                     spawnX = 0
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 2 {
                     spawnX = 144
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 3 {
                     spawnX = 72
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 4 {
                     spawnX = -120
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 5 {
                     spawnX = 120
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 6 {
                     spawnX = 24
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 7 {
                     spawnX = -96
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 8 {
                     spawnX = -48
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 9 {
                     spawnX = 0
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 10 {
                     spawnX = 144
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 11 {
                     spawnX = 72
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 12 {
                     spawnX = -120
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 13 {
                     spawnX = 120
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 14 {
                     spawnX = -48
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 15 {
                     spawnX = -144
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 16 {
                     spawnX = 0
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 17 {
                     spawnX = 144
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 18 {
                     spawnX = -72
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 19 {
                     spawnX = 72
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 20 {
                     spawnX = -120
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 21 {
                     spawnX = 120
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 22 {
                     spawnX = -24
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 23 {
                     spawnX = 24
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 }
-            } else if stageIndex == 21 {
+            } else if spawnMap == 21 {
                 spawnChoice = int(rand(0, 23))
                 if spawnChoice == 0 {
                     spawnX = -144
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 1 {
                     spawnX = 0
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 2 {
                     spawnX = 144
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 3 {
                     spawnX = 72
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 4 {
                     spawnX = -120
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 5 {
                     spawnX = 120
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 6 {
                     spawnX = 24
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 7 {
                     spawnX = -96
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 8 {
                     spawnX = 96
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 9 {
                     spawnX = 0
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 10 {
                     spawnX = 144
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 11 {
                     spawnX = -72
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 12 {
                     spawnX = -24
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 13 {
                     spawnX = 24
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 14 {
                     spawnX = -96
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 15 {
                     spawnX = -48
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 16 {
                     spawnX = -144
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 17 {
                     spawnX = 144
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 18 {
                     spawnX = 120
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 19 {
                     spawnX = 96
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 20 {
                     spawnX = 0
-                    spawnY = 48
+                    spawnY = 48+spawnOffset
                 } else if spawnChoice == 21 {
                     spawnX = 144
-                    spawnY = 48
+                    spawnY = 48+spawnOffset
                 } else if spawnChoice == 22 {
                     spawnX = -72
-                    spawnY = 48
+                    spawnY = 48+spawnOffset
                 } else if spawnChoice == 23 {
                     spawnX = -120
-                    spawnY = 48
+                    spawnY = 48+spawnOffset
                 }
-            } else if stageIndex == 22 {
+            } else if spawnMap == 22 {
                 spawnChoice = int(rand(0, 23))
                 if spawnChoice == 0 {
                     spawnX = -144
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 1 {
                     spawnX = 0
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 2 {
                     spawnX = 144
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 3 {
                     spawnX = -72
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 4 {
                     spawnX = 72
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 5 {
                     spawnX = -120
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 6 {
                     spawnX = 120
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 7 {
                     spawnX = 24
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 8 {
                     spawnX = -96
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 9 {
                     spawnX = 96
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 10 {
                     spawnX = -48
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 11 {
                     spawnX = 48
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 12 {
                     spawnX = -144
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 13 {
                     spawnX = 0
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 14 {
                     spawnX = 144
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 15 {
                     spawnX = 120
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 16 {
                     spawnX = -24
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 17 {
                     spawnX = -48
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 18 {
                     spawnX = -144
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 19 {
                     spawnX = 144
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 20 {
                     spawnX = -72
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 21 {
                     spawnX = 72
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 22 {
                     spawnX = -120
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 23 {
                     spawnX = 120
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 }
-            } else if stageIndex == 23 {
+            } else if spawnMap == 23 {
                 spawnChoice = int(rand(0, 23))
                 if spawnChoice == 0 {
                     spawnX = -144
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 1 {
                     spawnX = 0
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 2 {
                     spawnX = 144
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 3 {
                     spawnX = -72
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 4 {
                     spawnX = 72
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 5 {
                     spawnX = -120
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 6 {
                     spawnX = 120
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 7 {
                     spawnX = -24
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 8 {
                     spawnX = 24
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 9 {
                     spawnX = -96
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 10 {
                     spawnX = 96
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 11 {
                     spawnX = -48
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 12 {
                     spawnX = 48
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 13 {
                     spawnX = -144
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 14 {
                     spawnX = 144
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 15 {
                     spawnX = -144
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 16 {
                     spawnX = 144
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 17 {
                     spawnX = -72
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 18 {
                     spawnX = 72
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 19 {
                     spawnX = -120
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 20 {
                     spawnX = 120
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 21 {
                     spawnX = 24
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 22 {
                     spawnX = -96
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 23 {
                     spawnX = 96
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 }
-            } else if stageIndex == 24 {
+            } else if spawnMap == 24 {
                 spawnChoice = int(rand(0, 23))
                 if spawnChoice == 0 {
                     spawnX = -144
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 1 {
                     spawnX = 0
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 2 {
                     spawnX = 144
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 3 {
                     spawnX = -72
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 4 {
                     spawnX = 72
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 5 {
                     spawnX = -120
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 6 {
                     spawnX = 120
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 7 {
                     spawnX = 24
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 8 {
                     spawnX = 48
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 9 {
                     spawnX = 144
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 10 {
                     spawnX = 72
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 11 {
                     spawnX = -144
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 12 {
                     spawnX = 0
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 13 {
                     spawnX = 144
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 14 {
                     spawnX = -72
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 15 {
                     spawnX = -120
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 16 {
                     spawnX = 120
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 17 {
                     spawnX = -144
-                    spawnY = 48
+                    spawnY = 48+spawnOffset
                 } else if spawnChoice == 18 {
                     spawnX = -120
-                    spawnY = 48
+                    spawnY = 48+spawnOffset
                 } else if spawnChoice == 19 {
                     spawnX = 48
-                    spawnY = 48
+                    spawnY = 48+spawnOffset
                 } else if spawnChoice == 20 {
                     spawnX = -144
-                    spawnY = 96
+                    spawnY = 96+spawnOffset
                 } else if spawnChoice == 21 {
                     spawnX = -72
-                    spawnY = 96
+                    spawnY = 96+spawnOffset
                 } else if spawnChoice == 22 {
                     spawnX = 72
-                    spawnY = 96
+                    spawnY = 96+spawnOffset
                 } else if spawnChoice == 23 {
                     spawnX = 96
-                    spawnY = 96
+                    spawnY = 96+spawnOffset
                 }
-            } else if stageIndex == 25 {
+            } else if spawnMap == 25 {
                 spawnChoice = int(rand(0, 23))
                 if spawnChoice == 0 {
                     spawnX = -144
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 1 {
                     spawnX = 0
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 2 {
                     spawnX = 144
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 3 {
                     spawnX = -120
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 4 {
                     spawnX = -96
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 5 {
                     spawnX = 96
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 6 {
                     spawnX = -48
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 7 {
                     spawnX = 48
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 8 {
                     spawnX = -144
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 9 {
                     spawnX = 0
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 10 {
                     spawnX = -72
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 11 {
                     spawnX = 72
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 12 {
                     spawnX = 120
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 13 {
                     spawnX = -96
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 14 {
                     spawnX = 96
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 15 {
                     spawnX = -48
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 16 {
                     spawnX = -144
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 17 {
                     spawnX = 0
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 18 {
                     spawnX = 144
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 19 {
                     spawnX = 120
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 20 {
                     spawnX = -24
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 21 {
                     spawnX = 24
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 22 {
                     spawnX = -96
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 23 {
                     spawnX = 96
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 }
-            } else if stageIndex == 26 {
+            } else if spawnMap == 26 {
                 spawnChoice = int(rand(0, 23))
                 if spawnChoice == 0 {
                     spawnX = -144
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 1 {
                     spawnX = 0
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 2 {
                     spawnX = 144
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 3 {
                     spawnX = 72
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 4 {
                     spawnX = -120
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 5 {
                     spawnX = 120
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 6 {
                     spawnX = -24
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 7 {
                     spawnX = 24
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 8 {
                     spawnX = 96
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 9 {
                     spawnX = -48
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 10 {
                     spawnX = 48
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 11 {
                     spawnX = 0
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 12 {
                     spawnX = 144
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 13 {
                     spawnX = 120
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 14 {
                     spawnX = 24
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 15 {
                     spawnX = -96
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 16 {
                     spawnX = 144
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 17 {
                     spawnX = 72
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 18 {
                     spawnX = -120
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 19 {
                     spawnX = 120
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 20 {
                     spawnX = -24
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 21 {
                     spawnX = 24
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 22 {
                     spawnX = -96
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 23 {
                     spawnX = 96
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 }
-            } else if stageIndex == 27 {
+            } else if spawnMap == 27 {
                 spawnChoice = int(rand(0, 23))
                 if spawnChoice == 0 {
                     spawnX = -144
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 1 {
                     spawnX = 0
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 2 {
                     spawnX = 144
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 3 {
                     spawnX = -72
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 4 {
                     spawnX = 72
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 5 {
                     spawnX = -120
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 6 {
                     spawnX = 120
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 7 {
                     spawnX = -24
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 8 {
                     spawnX = 24
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 9 {
                     spawnX = -96
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 10 {
                     spawnX = 96
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 11 {
                     spawnX = 48
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 12 {
                     spawnX = -144
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 13 {
                     spawnX = 144
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 14 {
                     spawnX = -72
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 15 {
                     spawnX = 72
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 16 {
                     spawnX = 120
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 17 {
                     spawnX = 24
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 18 {
                     spawnX = -96
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 19 {
                     spawnX = 0
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 20 {
                     spawnX = 144
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 21 {
                     spawnX = -72
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 22 {
                     spawnX = 72
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 23 {
                     spawnX = 120
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 }
-            } else if stageIndex == 28 {
+            } else if spawnMap == 28 {
                 spawnChoice = int(rand(0, 23))
                 if spawnChoice == 0 {
                     spawnX = -144
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 1 {
                     spawnX = 0
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 2 {
                     spawnX = 144
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 3 {
                     spawnX = -72
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 4 {
                     spawnX = 72
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 5 {
                     spawnX = -120
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 6 {
                     spawnX = -24
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 7 {
                     spawnX = 24
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 8 {
                     spawnX = -96
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 9 {
                     spawnX = -48
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 10 {
                     spawnX = 48
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 11 {
                     spawnX = -144
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 12 {
                     spawnX = 144
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 13 {
                     spawnX = -72
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 14 {
                     spawnX = -120
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 15 {
                     spawnX = 120
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 16 {
                     spawnX = -96
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 17 {
                     spawnX = -144
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 18 {
                     spawnX = 144
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 19 {
                     spawnX = -72
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 20 {
                     spawnX = 72
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 21 {
                     spawnX = -120
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 22 {
                     spawnX = 120
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 23 {
                     spawnX = -24
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 }
-            } else if stageIndex == 29 {
+            } else if spawnMap == 29 {
                 spawnChoice = int(rand(0, 23))
                 if spawnChoice == 0 {
                     spawnX = -144
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 1 {
                     spawnX = 0
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 2 {
                     spawnX = 144
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 3 {
                     spawnX = -72
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 4 {
                     spawnX = 72
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 5 {
                     spawnX = -120
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 6 {
                     spawnX = 120
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 7 {
                     spawnX = -24
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 8 {
                     spawnX = 24
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 9 {
                     spawnX = -96
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 10 {
                     spawnX = -48
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 11 {
                     spawnX = 48
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 12 {
                     spawnX = -144
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 13 {
                     spawnX = 144
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 14 {
                     spawnX = -72
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 15 {
                     spawnX = -120
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 16 {
                     spawnX = 120
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 17 {
                     spawnX = -96
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 18 {
                     spawnX = -48
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 19 {
                     spawnX = -144
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 20 {
                     spawnX = 0
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 21 {
                     spawnX = 144
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 22 {
                     spawnX = 72
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 23 {
                     spawnX = 120
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 }
-            } else if stageIndex == 30 {
+            } else if spawnMap == 30 {
                 spawnChoice = int(rand(0, 23))
                 if spawnChoice == 0 {
                     spawnX = -144
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 1 {
                     spawnX = 0
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 2 {
                     spawnX = 144
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 3 {
                     spawnX = -72
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 4 {
                     spawnX = 72
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 5 {
                     spawnX = -120
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 6 {
                     spawnX = 120
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 7 {
                     spawnX = -24
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 8 {
                     spawnX = 24
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 9 {
                     spawnX = -96
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 10 {
                     spawnX = 96
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 11 {
                     spawnX = -48
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 12 {
                     spawnX = 48
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 13 {
                     spawnX = -144
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 14 {
                     spawnX = 144
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 15 {
                     spawnX = -72
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 16 {
                     spawnX = 72
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 17 {
                     spawnX = -120
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 18 {
                     spawnX = 120
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 19 {
                     spawnX = 24
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 20 {
                     spawnX = -96
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 21 {
                     spawnX = -48
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 22 {
                     spawnX = 48
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 23 {
                     spawnX = -144
-                    spawnY = 96
+                    spawnY = 96+spawnOffset
                 }
-            } else if stageIndex == 31 {
+            } else if spawnMap == 31 {
                 spawnChoice = int(rand(0, 23))
                 if spawnChoice == 0 {
                     spawnX = -144
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 1 {
                     spawnX = 0
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 2 {
                     spawnX = 144
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 3 {
                     spawnX = 72
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 4 {
                     spawnX = -120
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 5 {
                     spawnX = 120
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 6 {
                     spawnX = -24
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 7 {
                     spawnX = 24
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 8 {
                     spawnX = -96
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 9 {
                     spawnX = 96
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 10 {
                     spawnX = -48
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 11 {
                     spawnX = -24
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 12 {
                     spawnX = 24
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 13 {
                     spawnX = 48
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 14 {
                     spawnX = 72
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 15 {
                     spawnX = -96
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 16 {
                     spawnX = -48
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 17 {
                     spawnX = -24
-                    spawnY = 48
+                    spawnY = 48+spawnOffset
                 } else if spawnChoice == 18 {
                     spawnX = 24
-                    spawnY = 48
+                    spawnY = 48+spawnOffset
                 } else if spawnChoice == 19 {
                     spawnX = -96
-                    spawnY = 48
+                    spawnY = 48+spawnOffset
                 } else if spawnChoice == 20 {
                     spawnX = -48
-                    spawnY = 48
+                    spawnY = 48+spawnOffset
                 } else if spawnChoice == 21 {
                     spawnX = 0
-                    spawnY = 96
+                    spawnY = 96+spawnOffset
                 } else if spawnChoice == 22 {
                     spawnX = -72
-                    spawnY = 96
+                    spawnY = 96+spawnOffset
                 } else if spawnChoice == 23 {
                     spawnX = 72
-                    spawnY = 96
+                    spawnY = 96+spawnOffset
                 }
-            } else if stageIndex == 32 {
+            } else if spawnMap == 32 {
                 spawnChoice = int(rand(0, 9))
                 if spawnChoice == 0 {
                     spawnX = 0
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 1 {
                     spawnX = -96
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 2 {
                     spawnX = 96
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 3 {
                     spawnX = -48
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 4 {
                     spawnX = 48
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 5 {
                     spawnX = 0
-                    spawnY = 48
+                    spawnY = 48+spawnOffset
                 } else if spawnChoice == 6 {
                     spawnX = -24
-                    spawnY = 48
+                    spawnY = 48+spawnOffset
                 } else if spawnChoice == 7 {
                     spawnX = 24
-                    spawnY = 48
+                    spawnY = 48+spawnOffset
                 } else if spawnChoice == 8 {
                     spawnX = -48
-                    spawnY = 48
+                    spawnY = 48+spawnOffset
                 } else if spawnChoice == 9 {
                     spawnX = 48
-                    spawnY = 48
+                    spawnY = 48+spawnOffset
                 }
-            } else if stageIndex == 33 {
+            } else if spawnMap == 33 {
                 spawnChoice = int(rand(0, 23))
                 if spawnChoice == 0 {
                     spawnX = -144
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 1 {
                     spawnX = 0
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 2 {
                     spawnX = 144
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 3 {
                     spawnX = -72
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 4 {
                     spawnX = -120
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 5 {
                     spawnX = 120
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 6 {
                     spawnX = -24
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 7 {
                     spawnX = 24
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 8 {
                     spawnX = -96
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 9 {
                     spawnX = 96
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 10 {
                     spawnX = 48
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 11 {
                     spawnX = -144
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 12 {
                     spawnX = 144
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 13 {
                     spawnX = -120
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 14 {
                     spawnX = -96
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 15 {
                     spawnX = 96
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 16 {
                     spawnX = -48
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 17 {
                     spawnX = -144
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 18 {
                     spawnX = 0
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 19 {
                     spawnX = 144
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 20 {
                     spawnX = -72
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 21 {
                     spawnX = 120
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 22 {
                     spawnX = 24
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 23 {
                     spawnX = -96
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 }
-            } else if stageIndex == 34 {
+            } else if spawnMap == 34 {
                 spawnChoice = int(rand(0, 23))
                 if spawnChoice == 0 {
                     spawnX = -144
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 1 {
                     spawnX = 0
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 2 {
                     spawnX = 144
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 3 {
                     spawnX = -72
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 4 {
                     spawnX = 72
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 5 {
                     spawnX = -120
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 6 {
                     spawnX = 120
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 7 {
                     spawnX = 24
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 8 {
                     spawnX = -96
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 9 {
                     spawnX = 96
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 10 {
                     spawnX = 48
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 11 {
                     spawnX = 0
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 12 {
                     spawnX = 144
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 13 {
                     spawnX = 120
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 14 {
                     spawnX = -24
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 15 {
                     spawnX = -96
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 16 {
                     spawnX = 0
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 17 {
                     spawnX = 144
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 18 {
                     spawnX = 120
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 19 {
                     spawnX = 24
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 20 {
                     spawnX = 96
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 21 {
                     spawnX = -48
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 22 {
                     spawnX = -144
-                    spawnY = 48
+                    spawnY = 48+spawnOffset
                 } else if spawnChoice == 23 {
                     spawnX = 0
-                    spawnY = 48
+                    spawnY = 48+spawnOffset
                 }
-            } else if stageIndex == 35 {
+            } else if spawnMap == 35 {
                 spawnChoice = int(rand(0, 23))
                 if spawnChoice == 0 {
                     spawnX = -144
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 1 {
                     spawnX = 0
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 2 {
                     spawnX = 144
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 3 {
                     spawnX = -72
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 4 {
                     spawnX = 72
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 5 {
                     spawnX = -120
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 6 {
                     spawnX = 120
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 7 {
                     spawnX = -24
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 8 {
                     spawnX = 24
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 9 {
                     spawnX = -96
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 10 {
                     spawnX = 96
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 11 {
                     spawnX = -48
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 12 {
                     spawnX = 48
-                    spawnY = 144
+                    spawnY = 144+spawnOffset
                 } else if spawnChoice == 13 {
                     spawnX = 144
-                    spawnY = 72
+                    spawnY = 72+spawnOffset
                 } else if spawnChoice == 14 {
                     spawnX = -144
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 15 {
                     spawnX = 144
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 16 {
                     spawnX = -72
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 17 {
                     spawnX = 72
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 18 {
                     spawnX = -120
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 19 {
                     spawnX = 120
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 20 {
                     spawnX = -24
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 21 {
                     spawnX = 24
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 22 {
                     spawnX = -96
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 } else if spawnChoice == 23 {
                     spawnX = 96
-                    spawnY = 120
+                    spawnY = 120+spawnOffset
                 }
             }
 			// GENERATED SPAWN END
 			setXYpos spawnX, spawnY
-			if gameReady && spawnX >= -144 && spawnX <= 144 && spawnY >= -144 && spawnY <= 144 && !touching("Enemy") && !touching("Brick") && !touching("Steel") && !touching("River") {
+			if gameReady && spawnX >= -144 && spawnX <= 144 && spawnY >= -456 && spawnY <= 456 && !touching("Enemy") && !touching("Player") && !touching("Brick") && !touching("Steel") && !touching("River") {
 				clone
 				spawned++
 				activeEnemies++
@@ -2623,7 +2637,7 @@ onCloned data => {
 		beforeX = xpos
 		beforeY = ypos
 		step 0.7
-		if xpos < -144 || xpos > 144 || ypos < -144 || ypos > 144 || touching("Brick") || touching("Steel") || touching("River") || touching("Eagle") {
+		if xpos < -144 || xpos > 144 || ypos < -456 || ypos > 456 || touching("Brick") || touching("Steel") || touching("River") || touching("Eagle") {
 			setXYpos beforeX, beforeY
 			if ticks % 8 == 0 {
 				turnChoice = int(rand(0, 4))

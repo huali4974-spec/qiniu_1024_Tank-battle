@@ -1,4 +1,7 @@
-var consumed = false
+var (
+	consumed = false
+	flightTicks = 0
+)
 
 onStart => {
 	hide
@@ -6,14 +9,16 @@ onStart => {
 
 onCloned data => {
 	consumed = false
+	flightTicks = 0
 	show
 	for running {
 		step 4
+		flightTicks++
 		if touching("Steel") {
 			consumed = true
 			destroy
 		}
-		if xpos < -156 || xpos > 156 || ypos < -156 || ypos > 156 {
+		if xpos < -156 || xpos > 156 || ypos < -468 || ypos > 468 || flightTicks >= 75 {
 			destroy
 		}
 		wait 0.02

@@ -4,15 +4,16 @@
       "name": "classic arena",
       "path": "arena.svg",
       "x": 240,
-      "y": 180,
+      "y": 504,
       "bitmapResolution": 1,
       "imageWidth": 480,
-      "imageHeight": 360
+      "imageHeight": 1008
     }
   ],
   "backdropIndex": 0,
-  "map": { "width": 480, "height": 360, "mode": "fillRatio" },
+  "map": { "width": 480, "height": 1008, "mode": "fillRatio" },
   "run": { "width": 480, "height": 360 },
+  "camera": { "on": "Player" },
   "physics": false,
   "autoSetCollisionLayer": true,
   "maxFPS": 60,
