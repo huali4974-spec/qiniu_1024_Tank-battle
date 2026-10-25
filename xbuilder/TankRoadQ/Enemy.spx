@@ -10,7 +10,82 @@ var (
 	spawnY = 0.0
 	turnChoice = 0
 	hit = false
+	enemyTier = 0
+	enemyHP = 1
 )
+
+func updateEnemyCostume() {
+	if enemyTier == 2 {
+		if heading == 0 {
+			setCostume "gold_up"
+		} else if heading == 90 {
+			setCostume "gold_right"
+		} else if heading == 180 {
+			setCostume "gold_down"
+		} else {
+			setCostume "gold_left"
+		}
+	} else if enemyTier == 1 {
+		if heading == 0 {
+			setCostume "platinum_up"
+		} else if heading == 90 {
+			setCostume "platinum_right"
+		} else if heading == 180 {
+			setCostume "platinum_down"
+		} else {
+			setCostume "platinum_left"
+		}
+	} else if heading == 0 {
+		setCostume "up"
+	} else if heading == 90 {
+		setCostume "right"
+	} else if heading == 180 {
+		setCostume "down"
+	} else {
+		setCostume "left"
+	}
+}
+
+func defeatEnemy() {
+	if enemyTier == 2 {
+		score += 500
+	} else if enemyTier == 1 {
+		score += 300
+	} else {
+		score += 100
+	}
+	defeated++
+	activeEnemies--
+	Burst.setXYpos xpos, ypos
+	Burst.clone
+	if defeated == 4 || defeated == 11 || defeated == 18 || defeated == 25 {
+		broadcastAndWait "clearPowerUp"
+		PowerUp.setXYpos xpos, ypos
+		if roundNumber >= 2 && defeated == 4 {
+			PowerUp.setCostume "shovel"
+		} else {
+			turnChoice = int(rand(0, 5))
+			if turnChoice == 0 {
+				PowerUp.setCostume "tank"
+			} else if turnChoice == 1 {
+				PowerUp.setCostume "star"
+			} else if turnChoice == 2 {
+				PowerUp.setCostume "grenade"
+			} else if turnChoice == 3 {
+				PowerUp.setCostume "timer"
+			} else if turnChoice == 4 {
+				PowerUp.setCostume "helmet"
+			} else {
+				PowerUp.setCostume "shovel"
+			}
+		}
+		PowerUp.clone
+	}
+	if defeated >= 30 {
+		broadcast "roundCleared"
+	}
+	destroy
+}
 
 onStart => {
 	hide
@@ -18,7 +93,7 @@ onStart => {
 		wait 0.02
 	}
 	for running {
-		if spawned < 30 && activeEnemies < 10 {
+		if gameReady && spawned < 30 && activeEnemies < 10 {
 			spawnSection = int(rand(0, 2))
 			if spawnSection == 0 {
 				spawnMap = stageTop
@@ -2618,6 +2693,18 @@ onStart => {
 			// GENERATED SPAWN END
 			setXYpos spawnX, spawnY
 			if gameReady && spawnX >= -144 && spawnX <= 144 && spawnY >= -456 && spawnY <= 456 && !touching("Enemy") && !touching("Player") && !touching("Brick") && !touching("Steel") && !touching("River") {
+				enemyTier = 0
+				if roundNumber >= 3 && spawned >= 8 && spawned % 6 == 2 {
+					enemyTier = 2
+				} else if roundNumber >= 2 && spawned >= 4 && spawned % 3 == 1 {
+					enemyTier = 1
+				}
+				enemyHP = 1
+				if enemyTier == 1 {
+					enemyHP = 3
+				} else if enemyTier == 2 {
+					enemyHP = 5
+				}
 				clone
 				spawned++
 				activeEnemies++
@@ -2631,9 +2718,13 @@ onCloned data => {
 	ticks = 0
 	hit = false
 	setHeading Down
-	setCostume "down"
+	updateEnemyCostume()
 	show
 	for running {
+		if !gameReady || timer < enemyFreezeUntil {
+			wait 0.02
+			continue
+		}
 		beforeX = xpos
 		beforeY = ypos
 		step 0.7
@@ -2643,20 +2734,17 @@ onCloned data => {
 				turnChoice = int(rand(0, 4))
 				if turnChoice == 0 {
 					setHeading Left
-					setCostume "left"
 				} else if turnChoice == 1 {
 					setHeading Right
-					setCostume "right"
 				} else if turnChoice == 2 {
 					setHeading Down
-					setCostume "down"
 				} else {
 					setHeading Up
-					setCostume "up"
 				}
+				updateEnemyCostume()
 			}
 		}
-		if ticks > 0 && ticks % 65 == 0 {
+		if ticks > 0 && ticks % 90 == 0 {
 			EnemyShot.setXYpos xpos, ypos
 			EnemyShot.setHeading heading
 			EnemyShot.clone
@@ -2668,18 +2756,22 @@ onCloned data => {
 }
 
 onTouchStart "PlayerShot", sprite => {
-	if hit || !running {
+	if hit || !running || !gameReady {
+		return
+	}
+	enemyHP--
+	if enemyHP > 0 {
+		Burst.setXYpos xpos, ypos
+		Burst.clone
 		return
 	}
 	hit = true
-	score += 100
-	defeated++
-	activeEnemies--
-	Burst.setXYpos xpos, ypos
-	Burst.clone
-	if defeated >= 30 {
-		running = false
-		broadcast "win"
+	defeatEnemy()
+}
+
+onMsg "grenade", => {
+	if visible && !hit && running && gameReady {
+		hit = true
+		defeatEnemy()
 	}
-	destroy
 }

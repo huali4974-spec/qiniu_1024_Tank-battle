@@ -4777,3 +4777,9 @@ onMsg "loadStage", => {
 onCloned data => {
   show
 }
+
+onMsg "clearBaseWall", => {
+  if xpos >= -24 && xpos <= 24 && ypos >= -456 && ypos <= -432 {
+    deleteThisClone
+  }
+}

@@ -5,6 +5,11 @@ var (
 	spawned = 0
 	defeated = 0
 	activeEnemies = 0
+	roundNumber = 1
+	enemyFreezeUntil = 0.0
+	playerShieldUntil = 0.0
+	playerUpgrade = 0
+	baseFortified = false
 	stageIndex = 1
 	stageTop = 1
 	stageMiddle = 2
@@ -20,6 +25,11 @@ onStart => {
 	spawned = 0
 	defeated = 0
 	activeEnemies = 0
+	roundNumber = 1
+	enemyFreezeUntil = 0.0
+	playerShieldUntil = 0.0
+	playerUpgrade = 0
+	baseFortified = false
 	gameReady = false
 	stageTop = int(rand(1, 35))
 	// GENERATED COMPOSITION START
@@ -940,5 +950,19 @@ onStart => {
 	stageIndex = stageBottom
 	broadcastAndWait "loadStage"
 	wait 0.02
+	gameReady = true
+}
+
+onMsg "roundCleared", => {
+	if !running || !gameReady || defeated < 30 {
+		return
+	}
+	gameReady = false
+	roundNumber++
+	spawned = 0
+	defeated = 0
+	activeEnemies = 0
+	broadcastAndWait "resetPlayer"
+	wait 1
 	gameReady = true
 }

@@ -7,12 +7,119 @@
   "rotationStyle": "none",
   "physicsMode": "no",
   "collisionShapeType": "rect",
-  "collisionShapeParams": [20, 20],
+  "collisionShapeParams": [
+    20,
+    20
+  ],
   "costumeIndex": 2,
   "costumes": [
-    { "name": "up", "path": "up.svg", "x": 13, "y": 13, "bitmapResolution": 1, "imageWidth": 26, "imageHeight": 26 },
-    { "name": "right", "path": "right.svg", "x": 13, "y": 13, "bitmapResolution": 1, "imageWidth": 26, "imageHeight": 26 },
-    { "name": "down", "path": "down.svg", "x": 13, "y": 13, "bitmapResolution": 1, "imageWidth": 26, "imageHeight": 26 },
-    { "name": "left", "path": "left.svg", "x": 13, "y": 13, "bitmapResolution": 1, "imageWidth": 26, "imageHeight": 26 }
+    {
+      "name": "up",
+      "path": "up.svg",
+      "x": 13,
+      "y": 13,
+      "bitmapResolution": 1,
+      "imageWidth": 26,
+      "imageHeight": 26
+    },
+    {
+      "name": "right",
+      "path": "right.svg",
+      "x": 13,
+      "y": 13,
+      "bitmapResolution": 1,
+      "imageWidth": 26,
+      "imageHeight": 26
+    },
+    {
+      "name": "down",
+      "path": "down.svg",
+      "x": 13,
+      "y": 13,
+      "bitmapResolution": 1,
+      "imageWidth": 26,
+      "imageHeight": 26
+    },
+    {
+      "name": "left",
+      "path": "left.svg",
+      "x": 13,
+      "y": 13,
+      "bitmapResolution": 1,
+      "imageWidth": 26,
+      "imageHeight": 26
+    },
+    {
+      "name": "platinum_up",
+      "path": "platinum_up.svg",
+      "x": 13,
+      "y": 13,
+      "bitmapResolution": 1,
+      "imageWidth": 26,
+      "imageHeight": 26
+    },
+    {
+      "name": "platinum_right",
+      "path": "platinum_right.svg",
+      "x": 13,
+      "y": 13,
+      "bitmapResolution": 1,
+      "imageWidth": 26,
+      "imageHeight": 26
+    },
+    {
+      "name": "platinum_down",
+      "path": "platinum_down.svg",
+      "x": 13,
+      "y": 13,
+      "bitmapResolution": 1,
+      "imageWidth": 26,
+      "imageHeight": 26
+    },
+    {
+      "name": "platinum_left",
+      "path": "platinum_left.svg",
+      "x": 13,
+      "y": 13,
+      "bitmapResolution": 1,
+      "imageWidth": 26,
+      "imageHeight": 26
+    },
+    {
+      "name": "gold_up",
+      "path": "gold_up.svg",
+      "x": 13,
+      "y": 13,
+      "bitmapResolution": 1,
+      "imageWidth": 26,
+      "imageHeight": 26
+    },
+    {
+      "name": "gold_right",
+      "path": "gold_right.svg",
+      "x": 13,
+      "y": 13,
+      "bitmapResolution": 1,
+      "imageWidth": 26,
+      "imageHeight": 26
+    },
+    {
+      "name": "gold_down",
+      "path": "gold_down.svg",
+      "x": 13,
+      "y": 13,
+      "bitmapResolution": 1,
+      "imageWidth": 26,
+      "imageHeight": 26
+    },
+    {
+      "name": "gold_left",
+      "path": "gold_left.svg",
+      "x": 13,
+      "y": 13,
+      "bitmapResolution": 1,
+      "imageWidth": 26,
+      "imageHeight": 26
+    }
   ]
 }

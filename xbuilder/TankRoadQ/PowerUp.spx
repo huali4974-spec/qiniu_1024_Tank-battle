@@ -1,0 +1,40 @@
+onStart => {
+	hide
+}
+
+onCloned data => {
+	show
+}
+
+onTouchStart "Player", sprite => {
+	if !running || !gameReady || !visible {
+		return
+	}
+	hide
+	score += 500
+	if costumeName == "tank" {
+		lives++
+	} else if costumeName == "star" {
+		if playerUpgrade < 3 {
+			playerUpgrade++
+		}
+	} else if costumeName == "grenade" {
+		broadcast "grenade"
+	} else if costumeName == "timer" {
+		enemyFreezeUntil = timer + 8
+	} else if costumeName == "helmet" {
+		playerShieldUntil = timer + 10
+	} else if costumeName == "shovel" {
+		if Player.xpos > -45 && Player.xpos < 45 && Player.ypos >= -466 && Player.ypos <= -420 {
+			Player.setXYpos -48, -456
+		}
+		baseFortified = true
+		broadcastAndWait "clearBaseWall"
+		broadcastAndWait "buildBaseWall"
+	}
+	destroy
+}
+
+onMsg "clearPowerUp", => {
+	deleteThisClone
+}

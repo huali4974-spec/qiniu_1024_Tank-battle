@@ -1,0 +1,71 @@
+{
+  "x": 0,
+  "y": 0,
+  "size": 1,
+  "heading": 0,
+  "visible": false,
+  "rotationStyle": "none",
+  "physicsMode": "no",
+  "collisionShapeType": "rect",
+  "collisionShapeParams": [
+    16,
+    16
+  ],
+  "costumeIndex": 0,
+  "costumes": [
+    {
+      "name": "tank",
+      "path": "tank.svg",
+      "x": 12,
+      "y": 12,
+      "bitmapResolution": 1,
+      "imageWidth": 24,
+      "imageHeight": 24
+    },
+    {
+      "name": "star",
+      "path": "star.svg",
+      "x": 12,
+      "y": 12,
+      "bitmapResolution": 1,
+      "imageWidth": 24,
+      "imageHeight": 24
+    },
+    {
+      "name": "grenade",
+      "path": "grenade.svg",
+      "x": 12,
+      "y": 12,
+      "bitmapResolution": 1,
+      "imageWidth": 24,
+      "imageHeight": 24
+    },
+    {
+      "name": "timer",
+      "path": "timer.svg",
+      "x": 12,
+      "y": 12,
+      "bitmapResolution": 1,
+      "imageWidth": 24,
+      "imageHeight": 24
+    },
+    {
+      "name": "helmet",
+      "path": "helmet.svg",
+      "x": 12,
+      "y": 12,
+      "bitmapResolution": 1,
+      "imageWidth": 24,
+      "imageHeight": 24
+    },
+    {
+      "name": "shovel",
+      "path": "shovel.svg",
+      "x": 12,
+      "y": 12,
+      "bitmapResolution": 1,
+      "imageWidth": 24,
+      "imageHeight": 24
+    }
+  ]
+}

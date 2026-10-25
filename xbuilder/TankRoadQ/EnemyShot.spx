@@ -58,3 +58,7 @@ onTouchStart "Steel", sprite => {
 	consumed = true
 	destroy
 }
+
+onMsg "roundCleared", => {
+	deleteThisClone
+}

@@ -2,5 +2,5 @@
   "type": "game",
   "displayName": "Classic Tank Q",
   "description": "每局拼接3张经典地图的纵向大关卡，镜头跟随Q版坦克",
-  "instructions": "Move with WASD or arrow keys. Press Space to fire. Protect the base and destroy 20 enemies."
+  "instructions": "Move with WASD or arrow keys. Press Space to fire. Protect the base and clear waves of 30 enemies."
 }

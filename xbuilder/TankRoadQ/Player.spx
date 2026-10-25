@@ -16,7 +16,7 @@ func syncCamera() {
 }
 
 func takeHit() {
-	if invulnerable || !running {
+	if invulnerable || timer < playerShieldUntil || !running || !gameReady {
 		return
 	}
 	lives--
@@ -29,6 +29,7 @@ func takeHit() {
 		return
 	}
 	invulnerable = true
+	playerUpgrade = 0
 	setXYpos -48, -456
 	setHeading Up
 	setCostume "up"
@@ -49,6 +50,10 @@ onStart => {
 		wait 0.02
 	}
 	for running {
+		if !gameReady {
+			wait 0.02
+			continue
+		}
 		beforeX = xpos
 		beforeY = ypos
 		if keyPressed(KeyLeft) || keyPressed(KeyA) {
@@ -84,7 +89,7 @@ onStart => {
 }
 
 onKey KeySpace, => {
-	if !gameReady || !running || timer-lastShot < 0.22 {
+	if !gameReady || !running || timer-lastShot < 0.22-0.03*float64(playerUpgrade) {
 		return
 	}
 	lastShot = timer
@@ -107,4 +112,13 @@ onTouchStart "Enemy", sprite => {
 
 onTouchStart "EnemyShot", sprite => {
 	takeHit()
+}
+
+onMsg "resetPlayer", => {
+	setXYpos -48, -456
+	setHeading Up
+	setCostume "up"
+	syncCamera()
+	Camera.Follow Player
+	show
 }

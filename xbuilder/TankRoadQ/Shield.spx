@@ -1,0 +1,13 @@
+onStart => {
+	hide
+	for running {
+		if gameReady && timer < playerShieldUntil {
+			setXYpos Player.xpos, Player.ypos
+			show
+		} else {
+			hide
+		}
+		wait 0.02
+	}
+	hide
+}

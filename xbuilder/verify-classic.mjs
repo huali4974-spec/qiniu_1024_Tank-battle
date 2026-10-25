@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict'
-import { readFileSync } from 'node:fs'
+import { existsSync, readFileSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
 import { dirname, join, resolve } from 'node:path'
 
@@ -129,4 +129,27 @@ const assets = JSON.parse(readFileSync(join(project, 'assets/index.json'), 'utf8
 assert.equal(assets.map.height, 1008)
 assert.equal(assets.run.height, 360)
 assert.equal(assets.camera.on, 'Player')
+assert(assets.zorder.includes('PowerUp') && assets.zorder.includes('Shield'))
+assert(assets.zorder.some((entry) => entry?.val === 'roundNumber'))
+
+const enemyCostumes = JSON.parse(readFileSync(join(project, 'assets/sprites/Enemy/index.json'), 'utf8')).costumes
+const expectedEnemyCostumes = ['', 'platinum_', 'gold_'].flatMap((prefix) =>
+  ['up', 'right', 'down', 'left'].map((direction) => `${prefix}${direction}`))
+assert.deepEqual(enemyCostumes.map((costume) => costume.name), expectedEnemyCostumes)
+for (const costume of enemyCostumes) {
+  assert(existsSync(join(project, 'assets/sprites/Enemy', costume.path)))
+}
+const powerUpCostumes = JSON.parse(readFileSync(join(project, 'assets/sprites/PowerUp/index.json'), 'utf8')).costumes
+assert.deepEqual(powerUpCostumes.map((costume) => costume.name),
+  ['tank', 'star', 'grenade', 'timer', 'helmet', 'shovel'])
+for (const costume of powerUpCostumes) {
+  assert(existsSync(join(project, 'assets/sprites/PowerUp', costume.path)))
+}
+assert.match(enemy, /enemyHP = 3/)
+assert.match(enemy, /enemyHP = 5/)
+assert.match(enemy, /roundNumber >= 3 && spawned >= 8 && spawned % 6 == 2/)
+assert.match(enemy, /roundNumber >= 2 && spawned >= 4 && spawned % 3 == 1/)
+assert.match(main, /broadcastAndWait "resetPlayer"/)
+assert.match(source.Brick, /onMsg "clearBaseWall"/)
+assert.match(source.Steel, /onMsg "buildBaseWall"/)
 console.log(`Verified 35 source maps, ${compositeCount} connected composites and spawn points; maximum base terrain ${maxComposite}`)

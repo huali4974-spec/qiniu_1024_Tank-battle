@@ -151,6 +151,31 @@ ${code}
 ${placementCode}${extra ? `\n${extra}` : ''}
   }`
   }).join('')
+  const baseWall = type === 'B' || type === 'T' ? `
+
+onMsg "clearBaseWall", => {
+  if xpos >= -24 && xpos <= 24 && ypos >= -456 && ypos <= -432 {
+    deleteThisClone
+  }
+}` : ''
+  const buildBaseWall = type === 'T' ? `
+
+onMsg "buildBaseWall", => {
+  if visible {
+    return
+  }
+  setCostume "f"
+  setXYpos -24, -456
+  clone
+  setXYpos 24, -456
+  clone
+  setXYpos -24, -432
+  clone
+  setXYpos 0, -432
+  clone
+  setXYpos 24, -432
+  clone
+}` : ''
   save(join(project, `${name}.spx`), `${type === 'T' ? 'var choice = 0\n\n' : ''}func loadSelected(targetStage int, offsetY float64, section int) {
 ${branches}
 }
@@ -164,7 +189,7 @@ onMsg "loadStage", => {
 
 onCloned data => {
   show
-}`)
+}${baseWall}${buildBaseWall}`)
 }
 
 const spawnOrder = [0, 3, 1, 4, 2, 5]
@@ -233,6 +258,8 @@ save(join(assets, 'arena.svg'), arena)
 const palette = {
   Player: { outline: '#183f60', track: '#244862', tread: '#72b8d3', hull: '#3689bc', armor: '#79ccef', light: '#c6f4ff', turret: '#57b1de', visor: '#144b6e' },
   Enemy: { outline: '#583a52', track: '#60475a', tread: '#e6a5a3', hull: '#bd6980', armor: '#f4a68e', light: '#ffe0b0', turret: '#df8894', visor: '#75394b' },
+  EnemyPlatinum: { outline: '#435b68', track: '#526d77', tread: '#d3e4e7', hull: '#8eaeb9', armor: '#e0eff0', light: '#ffffff', turret: '#bed9df', visor: '#326075' },
+  EnemyGold: { outline: '#66512c', track: '#776534', tread: '#f5d985', hull: '#c79a41', armor: '#f6cd66', light: '#fff2bb', turret: '#ecc057', visor: '#795c2e' },
 }
 const tankBody = (p) => `
   <ellipse cx="48" cy="80" rx="35" ry="8" fill="#274a50" opacity=".2"/>
@@ -259,11 +286,48 @@ const tankBody = (p) => `
   <path d="M32 74h32" stroke="${p.outline}" stroke-width="2"/>
 `
 for (const [name, colors] of Object.entries(palette)) {
+  const spriteName = name.startsWith('Enemy') ? 'Enemy' : name
+  const prefix = name === 'EnemyPlatinum' ? 'platinum_' : name === 'EnemyGold' ? 'gold_' : ''
   for (const [direction, angle] of Object.entries({ up: 0, right: 90, down: 180, left: 270 })) {
     const art = `<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 96 96"><g transform="rotate(${angle} 48 48)">${tankBody(colors)}</g></svg>`
-    save(join(sprites, name, `${direction}.svg`), art)
+    save(join(sprites, spriteName, `${prefix}${direction}.svg`), art)
   }
 }
+const enemyIndexPath = join(sprites, 'Enemy', 'index.json')
+const enemyIndex = JSON.parse(readFileSync(enemyIndexPath, 'utf8'))
+enemyIndex.costumes = ['', 'platinum_', 'gold_'].flatMap((prefix) =>
+  ['up', 'right', 'down', 'left'].map((direction) => ({
+    name: `${prefix}${direction}`, path: `${prefix}${direction}.svg`,
+    x: 13, y: 13, bitmapResolution: 1, imageWidth: 26, imageHeight: 26,
+  })))
+save(enemyIndexPath, JSON.stringify(enemyIndex, null, 2))
+
+const powerUps = {
+  tank: `<rect x="2" y="3" width="20" height="18" rx="3" fill="#d7f3e3" stroke="#477c68" stroke-width="2"/><path d="M6 9v8m12-8v8M9 11h6v5H9zM12 7v4" stroke="#306f62" stroke-width="2" stroke-linecap="round" fill="none"/>`,
+  star: `<rect x="2" y="2" width="20" height="20" rx="3" fill="#fff2c8" stroke="#bc8e40" stroke-width="2"/><path d="M12 4l2.3 5 5.5.7-4 3.9 1 5.5-4.8-2.6-4.8 2.6 1-5.5-4-3.9 5.5-.7z" fill="#f7c55b" stroke="#b9853f" stroke-width="1.2"/>`,
+  grenade: `<rect x="2" y="2" width="20" height="20" rx="3" fill="#f8e2db" stroke="#af665b" stroke-width="2"/><circle cx="12" cy="13" r="6" fill="#dc8574" stroke="#8e514f" stroke-width="1.5"/><path d="M10 7V5h5l2 2" fill="none" stroke="#8e514f" stroke-width="2" stroke-linecap="round"/>`,
+  timer: `<rect x="2" y="2" width="20" height="20" rx="3" fill="#e0f1f8" stroke="#5890a2" stroke-width="2"/><circle cx="12" cy="13" r="6" fill="#fff" stroke="#4d8295" stroke-width="1.5"/><path d="M12 8v5l3 2M9 5h6" fill="none" stroke="#4d8295" stroke-width="1.7" stroke-linecap="round"/>`,
+  helmet: `<rect x="2" y="2" width="20" height="20" rx="3" fill="#dfe9fc" stroke="#6682b0" stroke-width="2"/><path d="M12 5l7 3v4c0 4-3 6-7 8-4-2-7-4-7-8V8z" fill="#9dbbea" stroke="#4f6eaa" stroke-width="1.5"/><path d="M9 12l2 2 4-4" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"/>`,
+  shovel: `<rect x="2" y="2" width="20" height="20" rx="3" fill="#e6eee9" stroke="#647d73" stroke-width="2"/><path d="M7 7l3-3 2 2-3 3M9 9l8 8M15 17l3-3 2 2-3 3z" fill="#b9ced0" stroke="#476977" stroke-width="1.6" stroke-linejoin="round"/>`,
+}
+for (const [name, art] of Object.entries(powerUps)) {
+  save(join(sprites, 'PowerUp', `${name}.svg`), svg(art))
+}
+save(join(sprites, 'PowerUp', 'index.json'), JSON.stringify({
+  x: 0, y: 0, size: 1, heading: 0, visible: false, rotationStyle: 'none',
+  physicsMode: 'no', collisionShapeType: 'rect', collisionShapeParams: [16, 16],
+  costumeIndex: 0, costumes: Object.keys(powerUps).map((name) => ({
+    name, path: `${name}.svg`, x: 12, y: 12,
+    bitmapResolution: 1, imageWidth: 24, imageHeight: 24,
+  })),
+}, null, 2))
+save(join(sprites, 'Shield', 'shield.svg'), `<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><circle cx="16" cy="16" r="14" fill="#77def0" fill-opacity=".18" stroke="#c8f8ff" stroke-width="2.5"/><path d="M7 10a13 13 0 0 1 18-3M26 21a13 13 0 0 1-18 4" fill="none" stroke="#54bfd8" stroke-width="2" stroke-linecap="round"/></svg>`)
+save(join(sprites, 'Shield', 'index.json'), JSON.stringify({
+  x: 0, y: 0, size: 1, heading: 0, visible: false, rotationStyle: 'none',
+  physicsMode: 'no', collisionShapeType: 'rect', collisionShapeParams: [1, 1],
+  costumeIndex: 0, costumes: [{ name: 'shield', path: 'shield.svg', x: 16, y: 16,
+    bitmapResolution: 1, imageWidth: 32, imageHeight: 32 }],
+}, null, 2))
 
 for (const [name, colors] of Object.entries({ PlayerShot: ['#e6f8ff', '#67bce5', '#2a718e'], EnemyShot: ['#fff1df', '#efa394', '#a95d72'] })) {
   const [light, fill, edge] = colors

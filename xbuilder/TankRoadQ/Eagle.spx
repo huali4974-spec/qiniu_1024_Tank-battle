@@ -4,14 +4,14 @@ onStart => {
 }
 
 onTouchStart "EnemyShot", sprite => {
-	if running {
+	if running && gameReady && !baseFortified {
 		running = false
 		broadcast "lose"
 	}
 }
 
 onTouchStart "Enemy", sprite => {
-	if running {
+	if running && gameReady && !baseFortified {
 		running = false
 		broadcast "lose"
 	}
